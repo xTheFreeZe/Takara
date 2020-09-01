@@ -15,11 +15,11 @@ const activities_list = [
     "in the Syntax Terror Tournaments"
 ];
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('The bot is online')
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        bot.user.setActivity(activities_list[index]);
+        client.user.setActivity(activities_list[index]);
     }, 30000);
 });
 
