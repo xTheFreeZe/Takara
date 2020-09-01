@@ -62,6 +62,20 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^avatar") {
+        const embed = new MessageEmbed()
+            .setTitle('Here is your avatar!')
+            .setColor('#E3F01B')
+            .setImage(msg.author.displayAvatarURL())            
+            .setFooter('Powered by STT Productions')
+        msg.channel.send(embed);
+
+    }
+})
+
+
+
 
 client.on('message', msg => {
     if (msg.content === "^whypremium") {
@@ -107,7 +121,7 @@ client.on('message', async message => {
             message.react('👍')
         } else {
             const embed = new MessageEmbed()
-                .setDescription('Make sure I am in the same voice channel as you!')
+                .setDescription('Make sure I am in the same voice channel as you.')
                 .setColor('#E8EE17')
             message.reply(embed);
             message.react('👎')
