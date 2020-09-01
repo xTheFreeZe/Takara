@@ -46,6 +46,8 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', async message => {
+    if (!message.guild) return;
 if (message.content === '^join') {
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
@@ -63,6 +65,7 @@ if (message.content === '^join') {
         message.react('👎');
     }
 }
+});
 
 
 client.on('message', async message => {
