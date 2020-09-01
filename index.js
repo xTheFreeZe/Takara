@@ -54,7 +54,7 @@ client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
-            .setColor('#331FDC')
+            .setColor('#e2b007')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
         msg.channel.send(embed);
         console.log('Ping command used!')
