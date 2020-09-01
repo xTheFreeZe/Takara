@@ -32,6 +32,20 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if(msg.content === "^whypremium") {
+        const embed = new MessageEmbed()
+        .setColor('#EFEC26')
+        .setThumbnail(msg.author.displayAvatarURL())
+        .setDescription('You may ask yourself : **Why should I use the Premium Version?** Here are some perks you get:')
+        .addField('Perks you get:', '`faster answers` `premium commands`')
+        .setFooter('Premium Commands are : all the Voice Channel Commands')
+    msg.reply(embed);
+    msg.delete();
+        
+    }
+})
+
 
 
 
