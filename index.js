@@ -102,7 +102,7 @@ if (message.content === '^leave') {
 
 client.on('message', msg => {
 if (msg.content === "^play") {
-    msg.reply('That doesnt work yet...');
+    msg.reply('That doesnt work yet! We are working hard to get this going 🔧');
 }
 })
 
