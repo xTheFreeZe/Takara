@@ -70,6 +70,7 @@ client.on('message', msg => {
             .setImage(msg.author.displayAvatarURL())            
             .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
+        msg.delete();
 
     }
 })
