@@ -142,7 +142,7 @@ client.on('message', message => {
             } else {
                 const embed = new MessageEmbed()
                     .setColor('#3F2DD2 ')
-                    .setDescription('You need to specify a Person! You need to use SST!kick @[member]. Make sure I have the right Permissions to kick someone!')
+                    .setDescription('You need to specify a Person! You need to use ^kick @[member]. Make sure I have the right Permissions to kick someone!')
                 message.channel.send(embed);
                 message.delete();
 
