@@ -2,10 +2,25 @@ const Discord = require('discord.js');
 const {Client, MessageEmbed } = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = '^';
+const activities_list = [
+    "with friends",
+    "Overwatch",
+    "in a Tournament",
+    "with JavaScript",
+    "^help",
+    "with premium",
+    "games",
+    "games with friends",
+    "Overwatch ranked",
+    "in the Syntax Terror Tournaments"
+];
 
-client.on('ready', () => {
-    console.log('The bot is online! yaaaaaaaay')
-
+bot.on('ready', () => {
+    console.log('The bot is online')
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        bot.user.setActivity(activities_list[index]);
+    }, 30000);
 });
 
 client.on('message', msg => {
