@@ -48,6 +48,19 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    if (msg.content === "$ping") {
+        var ping = bot.ws.ping;
+        const embed = new MessageEmbed()
+            .setColor('#331FDC')
+            .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
+        msg.channel.send(embed);
+        console.log('Ping command used!')
+        msg.delete();
+    }
+})
+
+
+client.on('message', msg => {
     if(msg.content === "^whypremium") {
         const embed = new MessageEmbed()
         .setColor('#EFEC26')
