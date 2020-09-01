@@ -52,7 +52,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^ping") {
-        var ping = bot.ws.ping;
+        var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#331FDC')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
