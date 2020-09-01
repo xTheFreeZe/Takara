@@ -39,6 +39,7 @@ client.on('message', msg => {
                 value: 'Commands for Staff',
                 inline: true
             }, )
+            .addField('`^whypremium`', 'Why you should upgrade to the premium version', true)
             .addField('🛠`^help dev`', 'Developer options', true)
             .setFooter('This is the new STT Premium Bot. If you want to use it please DM:Marwin#8376');
 
