@@ -91,6 +91,75 @@ if (msg.content === "^play") {
 }
 })
 
+client.on('message', message => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case 'kick':
+
+
+
+            const user = message.mentions.users.first();
+
+            if (user) {
+                const member = message.guild.member(user);
+                if (member) {
+                    member.kick(`I kicked ${user.tag}`).then(() => {
+                        const embed = new MessageEmbed()
+                            .setColor('#229954')
+                            .setDescription(`:white_check_mark: STT Premium kicked ${user.tag}`)
+                        message.reply(embed);
+                        message.delete();
+
+
+
+
+
+
+
+                    }).catch(err => {
+                            const embed = new MessageEmbed()
+                                .setColor('#F1C40F')
+                                .setDescription('I was unable to kick this Person. Missing Permissions:`ADMINISTRATOR,KICK_MEMBERS` ')
+                            message.reply(embed);
+                            message.delete();
+
+                            console.log(err);
+
+
+
+                        }
+
+                    )
+
+
+
+                } else {
+                    message.reply("That user isnt  on the Server")
+
+                }
+            } else {
+                const embed = new MessageEmbed()
+                    .setColor('#3F2DD2 ')
+                    .setDescription('You need to specify a Person! You need to use SST!kick @[member]. Make sure I have the right Permissions to kick someone!')
+                message.channel.send(embed);
+                message.delete();
+
+
+            }
+
+
+
+
+            break;
+
+
+
+    }
+
+})
+
 
 
 
