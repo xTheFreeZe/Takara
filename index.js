@@ -46,6 +46,48 @@ client.on('message', msg => {
     }
 })
 
+if (message.content === '^join') {
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+        const embed = new MessageEmbed()
+            .setDescription('I joined your voice channel!')
+            .setColor('#15DB1B')
+        message.reply(embed);
+        message.react('👍')
+
+    } else {
+        const embed = new MessageEmbed()
+            .setDescription('Please enter a voice channel and try `$join` again!')
+            .setColor('#E8EE17')
+        message.reply(embed);
+        message.react('👎');
+    }
+}
+
+
+client.on('message', async message => {
+if (!message.guild) return;
+if (message.content === '^leave') {
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.leave();
+        message.react('👍')
+    } else {
+        const embed = new MessageEmbed()
+            .setDescription('Make sure I am in the same voice channel as you!')
+            .setColor('#E8EE17')
+        message.reply(embed);
+        message.react('👎')
+    }
+}
+
+});
+
+client.on('message', msg => {
+if (msg.content === "^play") {
+    msg.reply('That doesnt work yet...');
+}
+})
+
 
 
 
