@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const PREFIX = '^';
 
 client.on('ready', () => {
-    console.log('The bot is online!')
+    console.log('The bot is online! yaaaaaaaay')
 
 });
 
