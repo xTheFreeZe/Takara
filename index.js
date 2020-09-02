@@ -55,6 +55,7 @@ client.on('message', msg => {
 
     switch(args[0]){
         case "suggest":
+            const user = msg.mentions.users.first();
             const embed = new MessageEmbed()
             .setColor('0xFFC300')
             .setDescription('^suggest [suggestion] to start a poll')
@@ -65,7 +66,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             
-            msg.channel.send("📋 "+"**"+msgArgs+"**").then(messagereaction => {
+            msg.channel.send("📋 "+"**"+`New Suggestion from ${user.tag}:`+msgArgs+"**").then(messagereaction => {
                 messagereaction.react("👍");
                 messagereaction.react("👎");
                 msg.delete();
