@@ -141,6 +141,17 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if(msg.content === "^help suggestion") {
+        const embed = new MessageEmbed()
+        .setColor('#F613A4')     
+        .setDescription('Here is how to use the `^suggestion` command:')   
+        .addField('Type ^suggest @{your tag } [suggestion ]  to start a poll.', 'Example: ^suggest @Marwin#8376 Is this cool?', true)
+        msg.channel.send(embed);
+        
+    }
+})
+
 client.on('message', async message => {
     if (!message.guild) return;
     if (message.content === '^join') {
