@@ -64,7 +64,7 @@ client.on('message', msg => {
                 msg.channel.send(embed);
             }
 
-            let msgArgs = args.slice(1).join(" ");
+            let msgArgs = args.slice(2).join(" ");
             
             msg.channel.send("📋 "+"**"+`New Suggestion from ${user.tag}:`+msgArgs+"**").then(messagereaction => {
                 messagereaction.react("👍");
