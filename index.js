@@ -65,7 +65,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             
-            msg.channel.send(msgArgs).then(messagereaction => {
+            msg.channel.send("📋 "+"**"+msgArgs+"**").then(messagereaction => {
                 messagereaction.react("👍");
                 messagereaction.react("👎");
                 msg.delete();
@@ -87,7 +87,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             
-            msg.channel.send(msgArgs).then(messagereaction => {
+            msg.channel.send("**"+msgArgs+"**").then(messagereaction => {
                 msg.delete();
                 console.log(`In deleted the message of ${user} `)
             })
