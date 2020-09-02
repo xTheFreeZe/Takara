@@ -79,6 +79,25 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+        case "talk":
+
+            let msgArgs = args.slice(1).join(" ");
+            
+            msg.channel.send(msgArgs).then(messagereaction => {
+                msg.delete();
+            })
+
+        break;
+        
+
+
+    }
+})
+
+client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
