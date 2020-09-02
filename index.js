@@ -51,6 +51,34 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+        case "suggest":
+            const embed = new MessageEmbed()
+            .setColor('0xFFC300')
+            .setDescription('^suggest [suggestion] to start a poll')
+
+            if(!args[1]){
+                msg.channel.send(embed);
+            }
+
+            let msgArgs = args.slice(1).join(" ");
+            
+            msg.channel.send(msgArgs).then(messagereaction => {
+                messagereaction.react("👍");
+                messagereaction.react("👎");
+                msg.delete();
+            })
+
+        break;
+        
+
+
+    }
+})
+
+client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
