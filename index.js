@@ -145,7 +145,8 @@ client.on('message', msg => {
     if(msg.content === "^help suggestion") {
         const embed = new MessageEmbed()
         .setColor('#F613A4')     
-        .setDescription('Here is how to use the `^suggestion` command:')   
+        .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+        .setDescription('Here is how to use the `^suggest` command:')   
         .addField('Type ^suggest @{your tag } [suggestion ]  to start a poll.', 'Example: ^suggest @Marwin#8376 Is this cool?', true)
         .setFooter('Please note that it has to be your tag, otherwise it wont work!')
         msg.channel.send(embed);
