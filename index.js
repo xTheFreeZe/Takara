@@ -88,6 +88,7 @@ client.on('message', msg => {
             
             msg.channel.send(msgArgs).then(messagereaction => {
                 msg.delete();
+                console.log(`In deleted the message of ${member} `)
             })
 
         break;
