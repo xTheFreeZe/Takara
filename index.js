@@ -264,7 +264,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-bot.on('message', msg => {
+client.on('message', msg => {
     if (msg.content === "^twitter") {
         const embed = new MessageEmbed()
             .setTitle(':small_blue_diamond: Click on me to get to our twitter :small_blue_diamond:')
@@ -276,7 +276,7 @@ bot.on('message', msg => {
     }
 })
 
-bot.on('message', msg => {
+client.on('message', msg => {
     if (msg.content === "^website") {
         const embed = new MessageEmbed()
             .setTitle(':wrench: This our Battlefy Page :tools:')
