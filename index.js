@@ -154,7 +154,7 @@ client.on('message', message => {
                     member.kick(`I kicked ${user.tag}`).then(() => {
                         const embed = new MessageEmbed()
                             .setColor('#229954')
-                            .setDescription(`:white_check_mark: STT Premium kicked ${user.tag}`)
+                            .setDescription(`:white_check_mark: STT Premium kicked ${member}`)
                         message.reply(embed);
                         message.delete();
 
@@ -211,7 +211,7 @@ client.on('guildMemberAdd', member => {
 
     if (!channel) return;
 
-    channel.send(`Welcome to the server, ${member}. Make sure you read the rules! :wink: `);
+    channel.send(`Welcome to the server, ${member}. Make sure you read the rules. We hope you enjoy your stay on our Server! `);
 });
 
 
