@@ -264,6 +264,32 @@ client.on('guildMemberAdd', member => {
 
 
 
+bot.on('message', msg => {
+    if (msg.content === "^twitter") {
+        const embed = new MessageEmbed()
+            .setTitle(':small_blue_diamond: Click on me to get to our twitter :small_blue_diamond:')
+            .setColor('#20ACE8 ')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setURL('https://twitter.com/SyntaxTerror_T')
+        msg.channel.send(embed);
+
+    }
+})
+
+bot.on('message', msg => {
+    if (msg.content === "^website") {
+        const embed = new MessageEmbed()
+            .setTitle(':wrench: This our Battlefy Page :tools:')
+            .setColor('#E42162')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setDescription('Sign up here if you want to be part of our Overwatch Tournaments! https://battlefy.com/syntax-terror-tournaments')
+        msg.channel.send(embed);
+
+    }
+})
+
+
+
 
 
 
