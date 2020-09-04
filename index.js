@@ -285,7 +285,7 @@ client.on('message', message => {
                 if (member) {
                     member.ban({ression: 'You were banned!'}).then(() => {
                         const embed = new MessageEmbed()
-                        .setDescription(`:white_check_mark: STT Premium banned **${user.tag}** `)
+                        .setDescription(`:white_check_mark: STT Premium banned **${member}** `)
                         .setColor('#229954')
                     message.channel.send(embed);
                     message.delete();
