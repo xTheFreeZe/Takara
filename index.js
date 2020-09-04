@@ -284,7 +284,7 @@ client.on('message', message => {
                 const member = message.guild.member(user);
                 if (member) {
                     member.ban({ression: 'You were banned!'}).then(() => {
-                        msg.channel.send(`${user.tag} was banned!`)                        
+                        message.channel.send(`${user.tag} was banned!`)                        
                     })
 
 
