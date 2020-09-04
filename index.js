@@ -268,6 +268,59 @@ client.on('message', message => {
 
 })
 
+
+client.on('message', message => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case 'ban':
+
+
+
+            const user = message.mentions.users.first();
+
+            if (user) {
+                const member = message.guild.member(user);
+                if (member) {
+                    member.ban({ression: 'You were banned!'}).then(() => {
+                        msg.channel.send(`${user.tag} was banned!`)                        
+                    })
+
+
+
+
+                        
+
+                    
+
+
+
+                } else {
+                    message.reply("That user isnt  on the Server")
+
+                }
+            } else {
+                const embed = new MessageEmbed()
+                    .setColor('#3F2DD2 ')
+                    .setDescription('You need to specify a Person! You need to use ^ban @[member]. Make sure I have the right Permissions to ban someone!')
+                message.channel.send(embed);
+                message.delete();
+
+
+            }
+
+
+
+
+            break;
+
+
+
+    }
+
+})
+
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 
