@@ -284,8 +284,31 @@ client.on('message', message => {
                 const member = message.guild.member(user);
                 if (member) {
                     member.ban({ression: 'You were banned!'}).then(() => {
-                        message.channel.send(`${user.tag} was banned!`)                        
-                    })
+                        const embed = new MessageEmbed()
+                        .setDescription(`:white_check_mark: STT Premium banned **${user.tag}** `)
+                        .setColor('#229954')
+                    message.channel.send(embed);
+                                                
+                   
+
+
+
+
+
+                }).catch(err => {
+                    const embed = new MessageEmbed()
+                        .setColor('#F1C40F')
+                        .setDescription('I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
+                    message.reply(embed);
+                    message.delete();
+
+                    console.log(err);
+
+
+
+                }
+
+                )
 
 
 
