@@ -288,6 +288,7 @@ client.on('message', message => {
                         .setDescription(`:white_check_mark: STT Premium banned **${member}** `)
                         .setColor('#229954')
                     message.channel.send(embed);
+                    console.log(`I banned ${user.tag}`)
                     message.delete();
                                                 
                    
