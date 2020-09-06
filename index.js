@@ -53,27 +53,27 @@ client.on('message', msg => {
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
-    switch(args[0]){
+    switch (args[0]) {
         case "suggest":
             const user = msg.mentions.users.first();
             const embed = new MessageEmbed()
-            .setColor('0xFFC300')
-            .setDescription('^suggest [suggestion] to start a poll')
+                .setColor('0xFFC300')
+                .setDescription('^suggest [suggestion] to start a poll')
 
-            if(!args[1]){
+            if (!args[1]) {
                 msg.channel.send(embed);
             }
 
             let msgArgs = args.slice(2).join(" ");
-            
-            msg.channel.send("📋 "+"**"+`New Suggestion from ${user.tag}:`+msgArgs+"**").then(messagereaction => {
+
+            msg.channel.send("📋 " + "**" + `New Suggestion from ${user.tag}:` + msgArgs + "**").then(messagereaction => {
                 messagereaction.react("🥵");
                 messagereaction.react("🥶");
                 msg.delete();
             })
 
-        break;
-        
+            break;
+
 
 
     }
@@ -82,18 +82,18 @@ client.on('message', msg => {
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
-    switch(args[0]){
+    switch (args[0]) {
         case "talk":
             const user = msg.mentions.users.first();
 
             let msgArgs = args.slice(1).join(" ");
-            
-            msg.channel.send("**"+msgArgs+"**").then(messagereaction => {
+
+            msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
                 msg.delete();
             })
 
-        break;
-        
+            break;
+
 
 
     }
@@ -116,7 +116,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setTitle('Here is your avatar!')
             .setColor('#E3F01B')
-            .setImage(msg.author.displayAvatarURL())            
+            .setImage(msg.author.displayAvatarURL())
             .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
         msg.delete();
@@ -142,15 +142,15 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if(msg.content === "^help suggestion") {
+    if (msg.content === "^help suggestion") {
         const embed = new MessageEmbed()
-        .setColor('#F613A4')     
-        .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
-        .setDescription('Here is how to use the `^suggest` command:')   
-        .addField('Type ^suggest @{your tag } [suggestion ]  to start a poll.', 'Example: ^suggest @Marwin#8376 Is this cool?', true)
-        .setFooter('Please note that it has to be your tag, otherwise it wont work!')
+            .setColor('#F613A4')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setDescription('Here is how to use the `^suggest` command:')
+            .addField('Type ^suggest @{your tag } [suggestion ]  to start a poll.', 'Example: ^suggest @Marwin#8376 Is this cool?', true)
+            .setFooter('Please note that it has to be your tag, otherwise it wont work!')
         msg.channel.send(embed);
-        
+
     }
 })
 
@@ -283,41 +283,43 @@ client.on('message', message => {
             if (user) {
                 const member = message.guild.member(user);
                 if (member) {
-                    member.ban({ression: 'You were banned!'}).then(() => {
+                    member.ban({
+                        ression: 'You were banned!'
+                    }).then(() => {
                         const embed = new MessageEmbed()
-                        .setDescription(`:white_check_mark: STT Premium banned **${member}** `)
-                        .setColor('#229954')
-                    message.channel.send(embed);
-                    console.log(`I banned ${user.tag}`)
-                    message.delete();
-                                                
-                   
+                            .setDescription(`:white_check_mark: STT Premium banned **${member}** `)
+                            .setColor('#229954')
+                        message.channel.send(embed);
+                        console.log(`I banned ${user.tag}`)
+                        message.delete();
 
 
 
 
 
-                }).catch(err => {
-                    const embed = new MessageEmbed()
-                        .setColor('#F1C40F')
-                        .setDescription('I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
-                    message.reply(embed);
-                    message.delete();
-
-                    console.log(err);
 
 
+                    }).catch(err => {
+                            const embed = new MessageEmbed()
+                                .setColor('#F1C40F')
+                                .setDescription('I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
+                            message.reply(embed);
+                            message.delete();
 
-                }
-
-                )
+                            console.log(err);
 
 
 
+                        }
 
-                        
+                    )
 
-                    
+
+
+
+
+
+
 
 
 
