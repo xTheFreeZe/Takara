@@ -102,6 +102,27 @@ client.on('message', msg => {
     }
 })
 
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "announce":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+
+            msg.channel.send("New Developer update:"+"**" + msgArgs + "**"+`Developer: ${member}`).then(messagereaction => {
+                msg.delete();
+            })
+
+            break;
+
+
+
+    }
+})
+
 client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
