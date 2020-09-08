@@ -383,15 +383,9 @@ client.on('guildMemberAdd', member => {
 
 
 
-client.on('message', msg => {
-    if (msg.content === "^twitter") {
-        const embed = new MessageEmbed()
-            .setTitle(':small_blue_diamond: Click on me to get to our twitter :small_blue_diamond:')
-            .setColor('#20ACE8 ')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
-            .setURL('https://twitter.com/SyntaxTerror_T')
-        msg.channel.send(embed);
-
+client.on("message", msg => {
+    if(msg.content === "^twitter") {
+        msg.channel.send('This is our twitter: https://twitter.com/SyntaxTerror_T');
     }
 })
 
