@@ -15,7 +15,10 @@ const activities_list = [
     "games",
     "games with friends",
     "Overwatch ranked",
-    "in the Syntax Terror Tournaments"
+    "in the Syntax Terror Tournaments",
+    "Overwatch with friends",
+    "nothing",
+    "Apex Legends"
 ];
 
 client.on('ready', () => {
