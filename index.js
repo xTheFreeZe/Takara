@@ -167,7 +167,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "^help suggestion") {
+    if (msg.content === "^help suggest") {
         const embed = new MessageEmbed()
             .setColor('#F613A4')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
@@ -384,7 +384,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on("message", msg => {
-    if(msg.content === "^twitter") {
+    if (msg.content === "^twitter") {
         msg.channel.send('This is our twitter: https://twitter.com/SyntaxTerror_T');
     }
 })
