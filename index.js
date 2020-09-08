@@ -109,6 +109,7 @@ client.on('message', msg => {
     switch (args[0]) {
         case "announce":
             const user = msg.mentions.users.first();
+            const member = message.guild.member(user);
 
             let msgArgs = args.slice(1).join(" ");
 
