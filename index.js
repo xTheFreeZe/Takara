@@ -111,9 +111,9 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
-            let msgArgs = args.slice(1).join(" ");
+            let msgArgs = args.slice(2).join(" ");
 
-            msg.channel.send("New Developer update:" + "**" + msgArgs + "**" + `Developer: ${member}`).then(messagereaction => {
+            msg.channel.send("New Developer update:" + "**" + msgArgs + ".**" + ` Developer: ${member}`).then(messagereaction => {
                 msg.delete();
             })
 
