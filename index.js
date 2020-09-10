@@ -133,13 +133,14 @@ client.on('message', msg => {
             const member = msg.guild.member(user);
 
             let msgArgs = args.slice(2).join(" ");
+            const embed = new MessageEmbed()
+            .setDescription(`${member} has been warned! Reason:` + "**" + msgArgs + "**")
+            .setColor('#E13BA5')
+        msg.channel.send(embed);
+        msg.delete();
+        console.log(`${user.tag} has been warned!`);
 
-            msg.channel.send(`${member} has been warned! Reason:` + "**" + msgArgs + "**").then(messagereaction => {
-                msg.delete();
-                console.log(`${user.tag} has been warned!`);
-            })
-
-            break;
+        break;
 
 
 
