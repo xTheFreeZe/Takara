@@ -134,7 +134,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
 
-            msg.channel.send(`${member} has been warned! Reason:` + "**" + msgArgs + ".**").then(messagereaction => {
+            msg.channel.send(`${member} has been warned! Reason:` + "**" + msgArgs + "**").then(messagereaction => {
                 msg.delete();
                 console.log(`${user.tag} has been warned!`);
             })
