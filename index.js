@@ -164,7 +164,7 @@ client.on('message', msg => {
     if (msg.content === "^avatar") {
         const embed = new MessageEmbed()
             .setTitle('Here is your avatar!')
-            .setColor('#E3F01B')
+            .setColor('RANDOM')
             .setImage(msg.author.displayAvatarURL())
             .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
