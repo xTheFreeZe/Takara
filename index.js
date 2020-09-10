@@ -136,7 +136,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
             .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
-            .setColor('#E13BA5')
+            .setColor('RANDOM')
         msg.channel.send(embed);
         msg.delete();
         console.log(`${user.tag} has been warned!`);
@@ -152,7 +152,7 @@ client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
-            .setColor('#e2b007')
+            .setColor('RANDOM')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
         msg.channel.send(embed);
         console.log('Ping command used!')
