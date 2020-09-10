@@ -30,7 +30,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (msg.content === "#help") {
+    if (msg.content === "^help") {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` command of the Premium bot')
@@ -115,6 +115,28 @@ client.on('message', msg => {
 
             msg.channel.send("New Developer update:" + "**" + msgArgs + ".**" + ` Developer: ${member}`).then(messagereaction => {
                 msg.delete();
+            })
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "warn":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+
+            let msgArgs = args.slice(2).join(" ");
+
+            msg.channel.send(`${member} has been warned! Reason:` + "**" + msgArgs + ".**").then(messagereaction => {
+                msg.delete();
+                console.log(`${user.tag} has been warned!`);
             })
 
             break;
