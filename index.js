@@ -90,10 +90,11 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
 
             let msgArgs = args.slice(1).join(" ");
-
-            msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
-                msg.delete();
-            })
+            const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription("**" + msgArgs + "**")
+        msg.channel.send(embed);
+        msg.delete();
 
             break;
 
