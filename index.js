@@ -91,10 +91,10 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription("**" + msgArgs + "**")
-        msg.channel.send(embed);
-        msg.delete();
+                .setColor('RANDOM')
+                .setDescription("**" + msgArgs + "**")
+            msg.channel.send(embed);
+            msg.delete();
 
             break;
 
@@ -135,13 +135,13 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-            .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
-            .setColor('RANDOM')
-        msg.channel.send(embed);
-        msg.delete();
-        console.log(`${user.tag} has been warned!`);
+                .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
+                .setColor('RANDOM')
+            msg.channel.send(embed);
+            msg.delete();
+            console.log(`${user.tag} has been warned!`);
 
-        break;
+            break;
 
 
 
