@@ -145,8 +145,8 @@ client.on("message", msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription(':white_check_mark: Syntax Terror Premium bot is online!')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
-            .setFooter(":ping_pong: Ping of STT Premium is " + `${ping}` + " ms")
+            .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
+            .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
     }
 })
