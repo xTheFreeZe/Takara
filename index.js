@@ -139,6 +139,17 @@ client.on('message', msg => {
     }
 })
 
+client.on("message", msg => {
+    if (msg.content === "^online") {
+        var ping = client.ws.ping;
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('Syntax Terror Premium bot is online!')
+            .setFooter("Ping of STT Premium is `" + `${ping}` + " ms`")
+        msg.channel.send(embed);
+    }
+})
+
 client.on('message', msg => {
     if (msg.content === "^avatar") {
         const embed = new MessageEmbed()
