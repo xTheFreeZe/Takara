@@ -144,9 +144,9 @@ client.on("message", msg => {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('Syntax Terror Premium bot is online!')
+            .setDescription(':white_check_mark: Syntax Terror Premium bot is online!')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
-            .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
+            .setFooter(":ping_pong: Ping of STT Premium is " + `${ping}` + " ms")
         msg.channel.send(embed);
     }
 })
