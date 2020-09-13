@@ -153,7 +153,7 @@ client.on("message", msg => {
 client.on('message', msg => {
     if (msg.content === "^avatar") {
         const embed = new MessageEmbed()
-            .setTitle('Here is your avatar!')
+            .setTitle('Here is your avatar:')
             .setColor('RANDOM')
             .setImage(msg.author.displayAvatarURL())
             .setFooter('Powered by STT Productions')
