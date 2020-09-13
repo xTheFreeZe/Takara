@@ -146,7 +146,6 @@ client.on("message", msg => {
             .setColor('RANDOM')
             .setDescription(':white_check_mark: Syntax Terror Premium bot is online!')
             .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
-            .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
     }
 })
