@@ -133,6 +133,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
         msg.channel.send(embed);
         console.log('Ping command used!')
         msg.delete();
