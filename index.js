@@ -97,7 +97,7 @@ client.on('message', msg => {
                 msg.channel.send(embed);
             }
 
-            let msgArgs = args.slice(2).join(" ");
+            let msgArgs = args.slice(1).join(" ");
 
             msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
                 messagereaction.react("👍");
