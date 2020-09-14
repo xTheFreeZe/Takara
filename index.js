@@ -91,7 +91,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('0xFFC300')
                 .setDescription('^pred {team vs team} and the bot will react with 👍 👎')
-            msg.channel.send(embed);
+            
 
             if (!args[1]) {
                 msg.channel.send(embed);
