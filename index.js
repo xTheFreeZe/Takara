@@ -177,6 +177,7 @@ client.on("message", msg => {
             .setDescription(':white_check_mark: Syntax Terror Premium bot is online!')
             .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
         msg.channel.send(embed);
+        console.log('Checked if I am online!');
     }
 })
 
