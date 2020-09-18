@@ -160,7 +160,7 @@ client.on('message', msg => {
 //in case there is no second argument giving:
 
 client.on("message", msg => {
-    if (msg.content === "^warn") {
+    if (msg.content === "^help warn") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Argument Error!')
