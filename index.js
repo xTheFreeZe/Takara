@@ -206,7 +206,7 @@ client.on('message', msg => {
             .setColor('#EFEC26')
             .setThumbnail(msg.author.displayAvatarURL())
             .setDescription('You may ask yourself : **Why should I use the Premium Version?** Here are some perks you get:')
-            .addField('Perks you get:', '`faster answers` `premium commands` `15+ custom bot status` `a Ban command`')
+            .addField('Perks you get:', '`faster answers` `premium commands` `a Ban command` `')
             .setFooter('Premium Commands: VC commands. The Suggestion command.')
         msg.reply(embed);
         msg.delete();
