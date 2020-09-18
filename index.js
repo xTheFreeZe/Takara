@@ -113,7 +113,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
+
 
     switch (args[0]) {
         case "talk":
@@ -154,6 +154,19 @@ client.on('message', msg => {
 
 
 
+    }
+})
+
+//in case there is no second argument giving:
+
+client.on("message", msg => {
+    if (msg.content === "^warn") {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setTitle('Argument Error!')
+            .setDescription('There has to be a second argument!')
+            .addField('Example:', '^warn `@Marwin#8376 Bad word usage`')
+        msg.channel.send(embed);
     }
 })
 
