@@ -158,6 +158,7 @@ client.on('message', msg => {
 })
 
 
+
 client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
