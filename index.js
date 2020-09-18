@@ -181,7 +181,7 @@ client.on("message", msg => {
         const embed = new MessageEmbed()
             .setColor('#00FF00')
             .setTitle(':white_check_mark: All Systems operational')
-            .setDescription('All errors have been resolved and the bot is online again!')
+            .setDescription('All errors have been resolved and the STT Bot is online again!')
             .setFooter('Thank you for your patience.')
         msg.channel.send(embed);
         msg.delete();
