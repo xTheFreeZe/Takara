@@ -29,6 +29,8 @@ client.on('ready', () => {
     }, 30000);
 });
 
+//help command
+
 client.on('message', msg => {
     if (msg.content === "^help") {
         const embed = new MessageEmbed()
@@ -52,6 +54,7 @@ client.on('message', msg => {
         msg.delete();
     }
 })
+//suggest command: ^suggest {tag} (suggestion)
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
@@ -81,7 +84,7 @@ client.on('message', msg => {
 
     }
 })
-
+//predict command (just the talk command with reactions)
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
@@ -127,14 +130,14 @@ client.on('message', msg => {
             msg.channel.send(embed);
             msg.delete();
 
-        break;
+            break;
 
 
 
     }
 })
 
-
+//warn command: ^warn (@member) {reason}
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
@@ -158,6 +161,32 @@ client.on('message', msg => {
     }
 })
 
+
+client.on("message", msg => {
+    if (msg.content === "^outage") {
+        const embed = new MessageEmbed()
+            .setColor('#FF0000')
+            .setTitle('Bot Outage!')
+            .setDescription('STT Bot is offline! Please be patient as the Developer is trying to fix it!')
+            .setFooter('Please take note that this may take some time.')
+        msg.channel.send(embed);
+        msg.delete();
+
+    }
+})
+
+
+client.on("message", msg => {
+    if (msg.content === "^outage gone") {
+        const embed = new MessageEmbed()
+            .setColor('#00FF00')
+            .setTitle(':white_check_mark: All Systems operational')
+            .setDescription('All errors have been resolved and the bot is online again!')
+            .setFooter('Thank you for your patience.')
+        msg.channel.send(embed);
+        msg.delete();
+    }
+})
 
 
 client.on('message', msg => {
