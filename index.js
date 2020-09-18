@@ -157,18 +157,6 @@ client.on('message', msg => {
     }
 })
 
-//in case there is no second argument giving:
-
-client.on("message", msg => {
-    if (msg.content === "^help warn") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setTitle('Argument Error!')
-            .setDescription('There has to be a second argument!')
-            .addField('Example:', '^warn `@Marwin#8376 Bad word usage`')
-        msg.channel.send(embed);
-    }
-})
 
 client.on('message', msg => {
     if (msg.content === "^ping") {
