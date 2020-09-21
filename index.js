@@ -257,6 +257,16 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^help ban") {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('Here is how to use the `^ban` command:')
+            .addField('Type ^ban @[member] {reason}', 'Example: ^ban @Marwin#8376 Dont use this word!', true)
+        msg.channel.send(embed);
+    }
+})
+
 client.on('message', async message => {
     if (!message.guild) return;
     if (message.content === '^join') {
