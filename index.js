@@ -261,8 +261,9 @@ client.on('message', msg => {
     if (msg.content === "^help ban") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
             .setDescription('Here is how to use the `^ban` command:')
-            .addField('Type ^ban @[member] {reason}', 'Example: ^ban @Marwin#8376 Dont use this word!', true)
+            .addField('Type `^ban @[member] {reason}`', 'Example: `^ban @Marwin#8376 Dont use this word!`', true)
         msg.channel.send(embed);
     }
 })
