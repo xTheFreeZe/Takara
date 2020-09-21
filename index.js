@@ -229,6 +229,7 @@ client.on('message', msg => {
 
 
 
+
 client.on('message', msg => {
     if (msg.content === "^whypremium") {
         const embed = new MessageEmbed()
@@ -374,6 +375,7 @@ client.on('message', message => {
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
+    let msgArgs = args.slice(2).join(" ");
 
     switch (args[0]) {
         case 'ban':
@@ -389,7 +391,7 @@ client.on('message', message => {
                         ression: 'You were banned!'
                     }).then(() => {
                         const embed = new MessageEmbed()
-                            .setDescription(`:white_check_mark: STT Premium banned **${member}** `)
+                            .setDescription(`:white_check_mark: STT banned  ${member} Reason:**`+msgArgs+"**")
                             .setColor('#229954')
                         message.channel.send(embed);
                         console.log(`I banned ${user.tag}`)
