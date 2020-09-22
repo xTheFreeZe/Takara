@@ -35,7 +35,7 @@ client.on('message', msg => {
     if (msg.content === "^help") {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
-            .setTitle('This is the `^help` command of the Premium bot')
+            .setTitle('This is the `^help` Command of the Premium bot')
             .setDescription('These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
             .addFields({
