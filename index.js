@@ -59,9 +59,9 @@ client.on('message', msg => {
     if (msg.content === "^help fun") {
         const embed = new MessageEmbed()
             .setColor('#E16210')
-            .setTitle('**^help Fun Command**')
+            .setTitle('**Fun Commands**')
             .setDescription('`^avatar`, `^twitter`, `^website`, `^update`, `^announcement`, `^sever`')
-            .addField('Voice Channel commands:', '`$join`, `$play`, `$leave`', true)
+            .addField('Voice Channel commands:', '`^join`, `^play`, `^leave`', true)
         msg.channel.send(embed);
     }
 })
