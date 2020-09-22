@@ -317,7 +317,7 @@ client.on('message', async message => {
 
         } else {
             const embed = new MessageEmbed()
-                .setDescription('Please enter a voice channel and try `$join` again!')
+                .setDescription('Please enter a voice channel and try `^join` again!')
                 .setColor('#E8EE17')
             message.reply(embed);
             message.react('👎');
