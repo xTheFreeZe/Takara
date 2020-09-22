@@ -54,6 +54,19 @@ client.on('message', msg => {
         msg.delete();
     }
 })
+
+client.on('message', msg => {
+    if (msg.content === "^help fun") {
+        const embed = new MessageEmbed()
+            .setColor('#E16210')
+            .setTitle('**:joy:^help Fun Commands**')
+            .setDescription('`^avatar`, `^twitter`, `^website`, `^update`, `^announcement`, `^sever`')
+            .addField('Voice Channel commands:', '`$join`, `$play`, `$leave`', true)
+        msg.channel.send(embed);
+    }
+})
+
+
 //suggest command: ^suggest {tag} (suggestion)
 
 client.on('message', msg => {
@@ -445,7 +458,7 @@ client.on('message', message => {
             } else {
                 const embed = new MessageEmbed()
                     .setColor('#3F2DD2 ')
-                    .setDescription('You need to specify a Person! You need to use ^ban @[member]. Make sure I have the right Permissions to ban someone!')
+                    .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}. Make sure I have the right Permissions to ban someone!')
                 message.channel.send(embed);
                 message.delete();
 
@@ -486,6 +499,43 @@ client.on('message', msg => {
             .setColor('#E42162')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
             .setDescription('Sign up here if you want to be part of our Overwatch Tournaments! https://battlefy.com/syntax-terror-tournaments')
+        msg.channel.send(embed);
+
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^update") {
+        const embed = new MessageEmbed()
+            .setTitle('This is my latest Update:')
+            .setColor('#6F0621')
+            .setDescription('Update from 12.08.2020: I ve added a `^ping` command. Now you can check the bots ping!')
+            .addField('This command is a bit bugged', 'I am working on it!', true)
+        msg.channel.send(embed);
+        msg.delete();
+
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^announcement") {
+        const embed = new MessageEmbed()
+            .setTitle(':satellite: New Announcement :satellite: ')
+            .setColor('#CE3CDF')
+            .setDescription('The `^ping` command is a bit buggy, I am working on it!')
+        msg.channel.send(embed);
+        msg.delete();
+
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^server") {
+        const embed = new MessageEmbed()
+            .setTitle(':boom: Click on me to get on our Server! :boom:')
+            .setColor('#E81B63')
+            .setURL('https://discord.gg/K6WVPb8')
+
         msg.channel.send(embed);
 
     }
