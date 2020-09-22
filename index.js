@@ -331,6 +331,9 @@ client.on('message', async message => {
     if (message.content === '^leave') {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.leave();
+            const embed = new MessageEmbed()
+            .setDescription('I left your voice Channel!')
+            .setColor('#15DB1B')
             message.react('👍')
         } else {
             const embed = new MessageEmbed()
