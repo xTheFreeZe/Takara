@@ -528,19 +528,6 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "^update") {
-        const embed = new MessageEmbed()
-            .setTitle('This is my latest Update:')
-            .setColor('#6F0621')
-            .setDescription('Update from 12.08.2020: I ve added a `^ping` command. Now you can check the bots ping!')
-            .addField('This command is a bit bugged', 'I am working on it!', true)
-        msg.channel.send(embed);
-        msg.delete();
-
-    }
-})
-
-client.on('message', msg => {
     if (msg.content === "^announcement") {
         const embed = new MessageEmbed()
             .setTitle(':satellite: New Announcement :satellite: ')
