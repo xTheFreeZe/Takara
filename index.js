@@ -340,6 +340,7 @@ client.on('message', async message => {
             const embed = new MessageEmbed()
                 .setDescription('Make sure I am in the same voice channel as you.')
                 .setColor('#E8EE17')
+                .addField('Comment is buggy?', 'Please DM @Marwin#8376.', true)
             message.reply(embed);
             message.react('👎')
         }
