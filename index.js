@@ -60,7 +60,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^twitter`, `^website`, `^update`, `^announcement`, `^sever`')
+            .setDescription('`^avatar`, `^twitter`, `^website`, `^announcement`, `^sever`')
             .addField('Voice Channel commands:', '`^join`, `^play`, `^leave`', true)
         msg.channel.send(embed);
     }
@@ -138,6 +138,29 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
+                .setColor('RANDOM')
+                .setDescription("**" + msgArgs + "**")
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
+        case "update":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setTitle('New Update!')
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
