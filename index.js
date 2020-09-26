@@ -369,7 +369,7 @@ client.on('message', message => {
             if (user) {
                 const member = message.guild.member(user);
                 if (member) {
-                    member.kick(`I kicked ${user.tag}`).then(() => {
+                    member.kick(msgArgs).then(() => {
                         const embed = new MessageEmbed()
                             .setColor('#229954')
                             .setDescription(`:white_check_mark: STT Premium kicked **${member}**`)
