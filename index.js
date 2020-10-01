@@ -397,7 +397,7 @@ client.on('message', message => {
                     member.kick(msgArgs).then(() => {
                         const embed = new MessageEmbed()
                             .setColor('#229954')
-                            .setDescription(`:white_check_mark: STT Premium kicked **${member}**`)
+                            .setDescription(`:white_check_mark: STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
                         message.reply(embed);
                         message.delete();
 
