@@ -31,6 +31,7 @@ client.on('ready', () => {
 
 //help command
 
+
 client.on('message', msg => {
     if (msg.content === "^help") {
         const embed = new MessageEmbed()
