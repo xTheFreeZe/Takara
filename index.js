@@ -152,7 +152,6 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
 
 
     switch (args[0]) {
@@ -160,17 +159,19 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
 
             let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setTitle('New Update!')
-                .setColor('RANDOM')
-                .setDescription("**" + msgArgs + "**")
-            msg.channel.send(embed);
-            msg.delete();
+            if (msg.content === "^update") {
+                const embed = new MessageEmbed()
+                    .setTitle('New Update!')
+                    .setColor('RANDOM')
+                    .setDescription("**" + msgArgs + "**")
+                msg.channel.send(embed);
+                msg.delete();
 
-            break;
+                break;
 
 
 
+            }
     }
 })
 
