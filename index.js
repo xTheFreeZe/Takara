@@ -163,9 +163,6 @@ client.on('message', msg => {
         msg.channel.send(embed);
         msg.delete();
 
-        break;
-
-
 
     }
 })
