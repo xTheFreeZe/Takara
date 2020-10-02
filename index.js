@@ -152,26 +152,21 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    const user = msg.mentions.users.first();
 
+    let msgArgs = args.slice(1).join(" ");
+    if (msg.content === "^update") {
+        const embed = new MessageEmbed()
+            .setTitle('New Update!')
+            .setColor('RANDOM')
+            .setDescription("**" + msgArgs + "**")
+        msg.channel.send(embed);
+        msg.delete();
 
-    switch (args[0]) {
-        case "update":
-            const user = msg.mentions.users.first();
-
-            let msgArgs = args.slice(1).join(" ");
-            if (msg.content === "^update") {
-                const embed = new MessageEmbed()
-                    .setTitle('New Update!')
-                    .setColor('RANDOM')
-                    .setDescription("**" + msgArgs + "**")
-                msg.channel.send(embed);
-                msg.delete();
-
-                break;
+        break;
 
 
 
-            }
     }
 })
 
