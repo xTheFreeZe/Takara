@@ -44,7 +44,7 @@ client.on('message', msg => {
                 value: 'Some fun commands',
                 inline: true
             }, {
-                name: '⚔`^help staff`',
+                name: '⚔`^help mod`',
                 value: 'Commands for Staff',
                 inline: true
             })
@@ -68,7 +68,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "^help staff") {
+    if (msg.content === "^help mod") {
         const embed = new MessageEmbed()
             .setColor('#2E0E81')
             .setTitle('**⚔^help Moderator**')
