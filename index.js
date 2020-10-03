@@ -67,6 +67,19 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^help staff") {
+        const embed = new MessageEmbed()
+            .setColor('#2E0E81')
+            .setTitle('**⚔^help Moderator**')
+            .setDescription('This is only ment for Staff Members!')
+            .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
+            .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`', true)
+        msg.channel.send(embed);
+
+    }
+})
+
 
 //suggest command: ^suggest {tag} (suggestion)
 
@@ -580,6 +593,37 @@ client.on('message', msg => {
         msg.channel.send(embed);
 
     }
+})
+
+client.on('message', msg => {
+        if (msg.content === "^topic") {
+            const embed = new MessageEmbed()
+                .setTitle('Watch out!')
+                .setColor('#EC0808')
+                .setDescription('Please change the topic or make sure your conversation is relevant to the current channel!')
+            msg.channel.send(embed);
+            msg.delete();
+
+
+        }
+    }
+
+
+
+)
+
+
+client.on('message', msg => {
+    if (msg.content.includes("^ID")) {
+        let user = msg.mentions.users.first();
+        msg.channel.send("This is your Discord ID: " + user);
+
+
+
+
+
+    }
+
 })
 
 
