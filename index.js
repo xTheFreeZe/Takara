@@ -75,8 +75,45 @@ client.on('message', msg => {
             .setDescription('This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`', true)
+            .setFooter('^help ban to get more info on how to ban people')
         msg.channel.send(embed);
 
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^help dev") {
+        const embed = new MessageEmbed()
+            .setColor('#56E448')
+            .setTitle('🛠^help Developer')
+            .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
+            .addField('Basic commands:', '`^ping`, `^ID`', true)
+            .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`', true)
+        msg.channel.send(embed);
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info help") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743851801878462504/Help_command.PNG');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info ping") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743852094406000720/Ping_Command.PNG');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info join") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743852712621375548/Join_Command.PNG');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info kick") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/713356214536503402/743862200812437514/kick_command.PNG');
     }
 })
 
