@@ -89,6 +89,7 @@ client.on('message', msg => {
             .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^ping`, `^ID`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`', true)
+            .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
         msg.channel.send(embed);
     }
 })
