@@ -61,8 +61,8 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^twitter`, `^website`, `^announcement`, `^sever`')
-            .addField('Voice Channel commands:', '`^join`, `^play`, `^leave`', true)
+            .setDescription('`^avatar`, `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `play`, `leave`')
+            .addField('Suggestion Command:', '^suggest @[your tag] {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
     }
 })
