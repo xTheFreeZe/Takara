@@ -88,7 +88,7 @@ client.on('message', msg => {
             .setTitle('🛠^help Developer')
             .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^ping`, `^ID`, `update`, `^talk`', true)
-            .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest, `^info talk', true)
+            .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
             .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
         msg.channel.send(embed);
     }
@@ -115,6 +115,18 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content === "^info kick") {
         msg.channel.send('https://cdn.discordapp.com/attachments/713356214536503402/743862200812437514/kick_command.PNG');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info suggest") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/681060754564448257/761915127082516500/unknown.png');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^info warn") {
+        msg.channel.send('https://cdn.discordapp.com/attachments/681060754564448257/761915361200177152/unknown.png');
     }
 })
 
