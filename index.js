@@ -533,7 +533,7 @@ client.on('message', message => {
                 const member = message.guild.member(user);
                 if (member) {
                     member.ban({
-                        ression: 'You were banned!'
+                        ression: msgArgs
                     }).then(() => {
                         const embed = new MessageEmbed()
                             .setDescription(`:white_check_mark: STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
