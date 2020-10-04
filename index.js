@@ -689,6 +689,18 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "hello") {
+        msg.react('👋');
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "Hello") {
+        msg.react('👋');
+    }
+})
+
 
 
 
