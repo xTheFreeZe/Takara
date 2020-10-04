@@ -465,6 +465,7 @@ client.on('message', message => {
                             .setDescription(`:white_check_mark: STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
                             .setTimestamp()
                         message.reply(embed);
+                        console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
 
@@ -539,7 +540,7 @@ client.on('message', message => {
                             .setColor('#229954')
                             .setTimestamp()
                         message.channel.send(embed);
-                        console.log(`I banned ${user.tag}. Provided reason` + msgArgs);
+                        console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
 
