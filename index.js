@@ -205,6 +205,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
+                .setFooter('halloween is soon 🎃')
             msg.channel.send(embed);
             msg.delete();
 
