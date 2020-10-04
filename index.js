@@ -182,7 +182,7 @@ client.on('message', msg => {
 
             msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
                 messagereaction.react("🔼");
-                messagereaction.react("🔼");
+                messagereaction.react("🔽");
                 msg.delete();
             })
 
