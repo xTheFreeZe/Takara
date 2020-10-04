@@ -536,7 +536,7 @@ client.on('message', message => {
                         ression: 'You were banned!'
                     }).then(() => {
                         const embed = new MessageEmbed()
-                            .setDescription(`:white_check_mark: STT banned  ${member} Reason:**` + msgArgs + "**")
+                            .setDescription(`:white_check_mark: STT banned  ${member} Reason:**` + " " + msgArgs + "**")
                             .setColor('#229954')
                             .setTimestamp()
                         message.channel.send(embed);
