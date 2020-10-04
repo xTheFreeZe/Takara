@@ -539,7 +539,7 @@ client.on('message', message => {
                             .setColor('#229954')
                             .setTimestamp()
                         message.channel.send(embed);
-                        console.log(`I banned ${user.tag}`)
+                        console.log(`I banned ${user.tag}. Provided reason` + msgArgs);
                         message.delete();
 
 
