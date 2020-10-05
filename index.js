@@ -402,7 +402,7 @@ client.on('message', async message => {
                 .setDescription('I joined your voice channel!')
                 .setColor('#15DB1B')
             message.reply(embed);
-            console.log(`I joined a Voice Channel ${setTimestamp}`);
+            console.log(`I joined a Voice Channel`);
             message.react('👍')
 
         } else {
