@@ -402,6 +402,7 @@ client.on('message', async message => {
                 .setDescription('I joined your voice channel!')
                 .setColor('#15DB1B')
             message.reply(embed);
+            console.log(`I joined a Voice Channel`);
             message.react('👍')
 
         } else {
@@ -425,6 +426,7 @@ client.on('message', async message => {
                 .setDescription('I left your voice Channel!')
                 .setColor('#15DB1B')
             message.channel.send(embed);
+            console.log(`I left a Voice Channel`);
             message.react('👍')
         } else {
             const embed = new MessageEmbed()
