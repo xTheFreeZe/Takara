@@ -447,7 +447,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    let msgArgs = args.slice(2).join(" ");
+    let msgArgs = args.slice(0).join(" ");
     if (msg.content.includes("Tournament")) {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
