@@ -447,8 +447,8 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    let msgArgs = args.slice(0).join(" ");
     if (msg.content.includes("Tournament")) {
+        let msgArgs = args.slice(0).join(" ");
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription('I ve spotted `Tournament` in your Sentence:' + " " + '**' + msgArgs + '**')
