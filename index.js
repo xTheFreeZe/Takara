@@ -448,11 +448,10 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content.includes("Tournament")) {
-        let msgArgs = args.slice(0).join(" ");
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('I ve spotted `Tournament` in your Sentence:' + " " + '**' + msgArgs + '**')
-            .addField('The next Tournament is:', 'yet to be announced')
+            .setDescription('I ve spotted `Tournament` in your Sentence')
+            .addField('The next Tournament is:', 'yet to be announced', true)
         msg.reply(embed);
 
     }
