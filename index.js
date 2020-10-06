@@ -446,6 +446,18 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    let msgArgs = args.slice(2).join(" ");
+    if (msg.content.includes("Tournament")) {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('I ve spotted `Tournament` in your Sentence:' + " " + '**' + msgArgs + '**')
+            .addField('The next Tournament is:', 'yet to be announced')
+        msg.reply(embed);
+
+    }
+})
+
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
