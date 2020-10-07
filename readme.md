@@ -25,4 +25,4 @@ Thank you again for using my Bot <3
 <br><br>
 STT Productions
 <br>
-Marwin ♥
+
