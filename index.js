@@ -457,6 +457,19 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content.includes("tournament")) {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setImage(msg.author.displayAvatarURL())
+            .setDescription('I ve spotted `tournament` in your Sentence')
+            .addField('The next Tournament is:', 'yet to be announced', true)
+            .setFooter('For my Info type ^website')
+        msg.reply(embed);
+
+    }
+})
+
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
