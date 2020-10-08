@@ -734,9 +734,15 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-    if (msg.content === "naat") {
-        msg.channel.send('AHHHHHH')
+    if (msg.content.includes("naat")) {
+        msg.channel.send('AHHHHHH');
+
+
+
+
+
     }
+
 })
 
 client.on('message', msg => {
