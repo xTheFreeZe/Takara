@@ -220,6 +220,29 @@ client.on('message', msg => {
 
 
     switch (args[0]) {
+        case "fix":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('#7CFC00')
+                .setTitle(':white_check_mark: Problem fixed')
+                .setDescription("**" + msgArgs + "**")
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
         case "update":
             const user = msg.mentions.users.first();
 
