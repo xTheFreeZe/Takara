@@ -198,7 +198,7 @@ client.on('message', msg => {
 
 
     switch (args[0]) {
-        case "say something to me":
+        case "spit":
             const user = msg.mentions.users.first();
 
             let msgArgs = args.slice(1).join(" ");
