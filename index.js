@@ -226,7 +226,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
                 .setColor('#7CFC00')
-                .setTitle(':white_check_mark: Problem fixed')
+                .setTitle(':white_check_mark: Problem fixed!')
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
             msg.delete();
