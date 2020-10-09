@@ -198,7 +198,7 @@ client.on('message', msg => {
 
 
     switch (args[0]) {
-        case "spit":
+        case "speak":
             const user = msg.mentions.users.first();
 
             let msgArgs = args.slice(1).join(" ");
@@ -274,6 +274,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
+                .setFooter(msg.member.displayAvatarURL(),`${user.tag} has been warned`)
             msg.channel.send(embed);
             msg.delete();
             console.log(`${user.tag} has been warned!`);
