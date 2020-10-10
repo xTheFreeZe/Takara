@@ -277,7 +277,7 @@ client.on('message', msg => {
                 .setFooter(`${user.tag} has been warned`)
             msg.channel.send(embed);
             msg.delete();
-            console.log(`${user.tag} has been warned!`);
+            console.log(`${user.tag} has been warned! Provided Reason:` + " " + msgArgs);
 
             break;
 
