@@ -249,7 +249,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setColor('#7CFC00')
+                .setColor('#FF0000')
                 .setTitle(':small_red_triangle_down: Reported Problem')
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
