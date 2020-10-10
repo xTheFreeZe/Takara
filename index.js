@@ -238,6 +238,29 @@ client.on('message', msg => {
     }
 })
 
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
+        case "bug":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('#7CFC00')
+                .setTitle(':small_red_triangle_down: Reported Problem')
+                .setDescription("**" + msgArgs + "**")
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
