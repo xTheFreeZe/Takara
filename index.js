@@ -768,7 +768,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content.includes("^ID")) {
         let user = msg.mentions.users.first();
-        msg.channel.send("This is your Discord ID: " + user);
+        msg.channel.send(`This is the Discord ID form ${user.tag}: ` + user);
 
 
 
