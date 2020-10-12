@@ -228,7 +228,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription(`You hug ${member}!`)
-                .setImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Facegif.com%2Fgifs-anime-hugs%2F&psig=AOvVaw0x8HdeCdN2UewZknMoxiEw&ust=1602607195170000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCQuaK_r-wCFQAAAAAdAAAAABAD')
+                .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
             msg.channel.send(embed);
             msg.delete();
 
