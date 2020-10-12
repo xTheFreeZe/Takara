@@ -220,6 +220,29 @@ client.on('message', msg => {
 
 
     switch (args[0]) {
+        case "hug":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('RANDOM')
+                .setDescription(`You hug ${member}!`)
+                .setImage('https://tenor.com/view/milk-and-mocha-hug-love-heart-couple-gif-17258498')
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
         case "fix":
             const user = msg.mentions.users.first();
 
