@@ -228,7 +228,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription(`You hug ${member}!`)
-                .setImage('https://tenor.com/view/milk-and-mocha-hug-love-heart-couple-gif-17258498')
+                .setImage('https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134')
             msg.channel.send(embed);
             msg.delete();
 
