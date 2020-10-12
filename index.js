@@ -228,7 +228,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription(`You hug ${member}!`)
-                .setImage('https://acegif.com/wp-content/gif/anime-hug-75.gif')
+                .setImage('https://acegif.com/wp-content/gif/anime-hug-8.gif')
             msg.channel.send(embed);
             msg.delete();
 
