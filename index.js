@@ -222,7 +222,7 @@ client.on('message', msg => {
     switch (args[0]) {
         case "hug":
             const user = msg.mentions.users.first();
-            const member = message.guild.member(user);
+            const member = msg.guild.member(user);
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
