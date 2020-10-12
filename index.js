@@ -228,7 +228,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription(`You hug ${member}!`)
-                .setImage('https://cdn.discordapp.com/attachments/685578353784258570/765240619907809290/anime-hug-38-gap.png')
+                .setImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Facegif.com%2Fgifs-anime-hugs%2F&psig=AOvVaw0x8HdeCdN2UewZknMoxiEw&ust=1602607195170000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCQuaK_r-wCFQAAAAAdAAAAABAD')
             msg.channel.send(embed);
             msg.delete();
 
