@@ -569,7 +569,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setThumbnail(msg.author.displayAvatarURL())
             .setDescription('I ve spotted `Tournament` in your Sentence')
-            .addField('The next Tournament is:', 'yet to be announced', true)
+            .addField('The next Tournament is:', 'Friday, October 30th 2020', true)
             .setFooter('For my Info type ^website')
         msg.reply(embed);
 
@@ -582,7 +582,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setThumbnail(msg.author.displayAvatarURL())
             .setDescription('I ve spotted `tournament` in your Sentence')
-            .addField('The next Tournament is:', 'yet to be announced', true)
+            .addField('The next Tournament is:', 'Friday, October 30th 2020 ', true)
             .setFooter('For my Info type ^website')
         msg.reply(embed);
 
