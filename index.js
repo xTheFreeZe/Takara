@@ -855,6 +855,12 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', mnsg => {
+    if(msg.content === "@Marwin") {
+        msg.react('🌚');
+    }
+})
+
 
 
 
