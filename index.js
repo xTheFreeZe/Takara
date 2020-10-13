@@ -400,6 +400,8 @@ client.on('message', msg => {
             .setAuthor('Temporary outage')
             .setDescription(':yellow_circle: Commands dont seem to work!')
             .setFooter('Please be patient as I am working on it')
+        msg.channel.send(embed);
+        msg.delete()
     }
 })
 
@@ -410,6 +412,8 @@ client.on('message', msg => {
             .setAuthor('Temporary outage')
             .setDescription(':yellow_circle: The bot is having latency problems!')
             .setFooter('Please be patient as I am working on it')
+        msg.channel.send(embed);
+        msg.delete()
     }
 })
 
