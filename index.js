@@ -856,10 +856,11 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if(msg.content === "@Marwin") {
-        msg.react('💣');
+    if (msg.content === "@Marwin") {
+        msg.react('👋');
     }
 })
+
 
 
 
