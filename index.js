@@ -393,6 +393,26 @@ client.on("message", msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^outage commands") {
+        const embed = new MessageEmbed()
+            .setColor('#ffd700')
+            .setAuthor('Temporary outage')
+            .setDescription(':yellow_circle: Commands dont seem to work!')
+            .setFooter('Please be patient as I am working on it')
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^outage ping") {
+        const embed = new MessageEmbed()
+            .setColor('#ffd700')
+            .setAuthor('Temporary outage')
+            .setDescription(':yellow_circle: The bot is having latency problems!')
+            .setFooter('Please be patient as I am working on it')
+    }
+})
+
 
 client.on("message", msg => {
     if (msg.content === "^outage gone") {
