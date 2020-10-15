@@ -783,6 +783,18 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    if (msg.content === "^twitter2") {
+        const embed = new MessageEmbed()
+            .setTitle('Our twitter Team')
+            .setColor('#E42162')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setDescription('Sign up here if you want to be part of our Overwatch Tournaments! Click here (https://www.youtube.com/watch?v=fHI8X4OXluQ&list=RD9wMirJXQEAY&index=3&ab_channel=TheWeekndVEVO)')
+        msg.channel.send(embed);
+
+    }
+})
+
+client.on('message', msg => {
     if (msg.content === "^announcement") {
         const embed = new MessageEmbed()
             .setTitle(':satellite: New Announcement :satellite: ')
