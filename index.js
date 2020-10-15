@@ -600,6 +600,30 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content.includes("SR")) {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(msg.author.displayAvatarURL())
+            .setDescription('I ve spotted `SR` in your Sentence')
+            .addField('You can check SR-Limits in:', '#📋tournament-rules ', true)
+        msg.reply(embed);
+
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content.includes("sr")) {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(msg.author.displayAvatarURL())
+            .setDescription('I ve spotted `sr` in your Sentence')
+            .addField('You can check SR-Limits in:', '#📋tournament-rules ', true)
+        msg.reply(embed);
+
+    }
+})
+
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
