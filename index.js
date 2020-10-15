@@ -788,7 +788,7 @@ client.on('message', msg => {
             .setTitle('Our twitter Team')
             .setColor('#E42162')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
-            .setDescription('Sign up here if you want to be part of our Overwatch Tournaments!')
+            .setDescription('Twitter Accounts of Teams we partner with:')
             .addField('Willy Wonky Wankers', 'https://twitter.com/WWonkyW', true)
         msg.channel.send(embed);
 
