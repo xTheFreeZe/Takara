@@ -571,9 +571,15 @@ client.on('message', async message => {
 });
 
 client.on('message', msg => {
-    if (msg.content === "^play") {
-        msg.reply('That doesnt work yet! We are working hard to get this going 🔧');
+    if (msg.content.includes("^play")) {
+        let user = msg.mentions.users.first();
+        msg.channel.send("This doesn't work yet but we are working on it 🔨 🔧");
+
+
+
+
     }
+
 })
 
 client.on('message', msg => {
