@@ -144,35 +144,8 @@ client.on('message', msg => {
 
 //suggest command: ^suggest {tag} (suggestion)
 
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-
-    switch (args[0]) {
-        case "suggest":
-            const user = msg.mentions.users.first();
-            const embed = new MessageEmbed()
-                .setColor('0xFFC300')
-                .setDescription('^suggest [suggestion] to start a poll')
-
-            if (!args[1]) {
-                msg.channel.send(embed);
-            }
-
-            let msgArgs = args.slice(2).join(" ");
-
-            msg.channel.send("📋 " + `New Suggestion from ${user.tag}:` + "**" + msgArgs + "**").then(messagereaction => {
-                messagereaction.react("👍");
-                messagereaction.react("👎");
-                messagereaction.react("😐");
-                msg.delete();
-            })
-
-            break;
 
 
-
-    }
-})
 //predict command (just the talk command with reactions)
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
