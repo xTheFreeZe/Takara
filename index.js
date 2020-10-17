@@ -73,7 +73,7 @@ client.on('message', msg => {
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
             .setDescription('`^avatar`, `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
-            .addField('Suggestion Command:', '^suggest @[your tag] {suggestion} <-- try ^help suggest for more info!', true)
+            .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
     }
 })
@@ -506,8 +506,7 @@ client.on('message', msg => {
             .setColor('#F613A4')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
             .setDescription('Here is how to use the `^suggest` command:')
-            .addField('Type ^suggest @{your tag } [suggestion ]  to start a poll.', 'Example: ^suggest @Marwin#8376 Is this cool?', true)
-            .setFooter('Please note that it has to be your tag, otherwise it wont work!')
+            .addField('Type ^suggest [suggestion ]  to start a poll.', 'Example: ^suggest Is this cool?', true)
         msg.channel.send(embed);
 
     }
