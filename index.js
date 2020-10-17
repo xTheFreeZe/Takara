@@ -860,6 +860,19 @@ client.on('message', msg => {
 
 })
 
+client.on('message', msg => {
+    if (msg.content.includes("^suggest")) {
+        let user = msg.mentions.users.first();
+        msg.channel.send("This command is temporarily unavailable due to a crashing Problem");
+        msg.delete();
+
+
+
+
+    }
+
+})
+
 
 
 
