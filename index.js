@@ -374,7 +374,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`You tried to fuck ${member}. Melissas dick was way too big :smirk:`)
+                .setDescription(`You tried to fuck ${member}. ${user.tag}'s dick was way too big :smirk:`)
                 .setImage('https://acegif.com/wp-content/gif/disgust-34.gif')
             msg.channel.send(embed);
 
