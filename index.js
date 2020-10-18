@@ -29,17 +29,6 @@ client.on('ready', () => {
     }, 30000);
 });
 
-
-client.on('message', msg => {
-    if (msg.content === "^newtourny") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setTitle('Hell yeah, its time...')
-            .setDescription('Its time for another Syntax Terror Tournament! Sign up here:https://battlefy.com/syntax-terror-tournaments/halloween-horror-bronze-to-plat-by-stt/5f6b4e0d1104cd7a261306e6/info?infoTab=schedule')
-        msg.channel.send(embed);
-        msg.delete();
-    }
-})
 //help command
 
 
@@ -654,6 +643,13 @@ client.on('message', msg => {
         msg.reply(embed);
 
     }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^newtourny") {
+        msg.channel.send(`It's Tournament time! https://battlefy.com/syntax-terror-tournaments/halloween-horror-bronze-to-plat-by-stt/5f6b4e0d1104cd7a261306e6/info?infoTab=details`);
+    }
+
 })
 
 client.on('message', message => {
