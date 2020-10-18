@@ -374,8 +374,8 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`You tried to fuck ${member}. Next time bro :heart:`)
-                .setImage('https://acegif.com/wp-content/gif/angry-30.gif')
+                .setDescription(`You tried to fuck ${member}. It worked and you have a beautiful time!`)
+                .setImage('https://acegif.com/wp-content/gif/heart-eyes-3.gif')
             msg.channel.send(embed);
 
 
