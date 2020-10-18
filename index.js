@@ -245,7 +245,7 @@ client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        case "test":
+        case "speak":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -274,27 +274,6 @@ client.on('message', msg => {
 
 
 
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-
-
-    switch (args[0]) {
-        case "speak":
-            const user = msg.mentions.users.first();
-
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setColor('RANDOM')
-                .setDescription("**" + msgArgs + "**")
-            msg.channel.send(embed);
-            msg.delete();
-
-            break;
-
-
-
-    }
-})
 
 
 client.on('message', msg => {
