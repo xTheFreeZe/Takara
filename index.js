@@ -208,6 +208,8 @@ client.on('message', msg => {
 })
 
 
+
+
 //predict command (just the talk command with reactions)
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
@@ -225,8 +227,8 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-            .setDescription(`You hug ${member}!`)
-            .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
+                .setDescription(`You hug ${member}!`)
+                .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
             msg.channel.send(embed);
 
 
@@ -878,6 +880,17 @@ client.on('message', msg => {
 
 
 )
+
+client.on('message', msg => {
+    if (msg.content === "^support") {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('Please support me ( test ) ')
+
+        msg.channel.send(embed);
+
+    }
+})
 
 
 client.on('message', msg => {
