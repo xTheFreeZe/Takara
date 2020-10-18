@@ -358,6 +358,15 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^fuck") {
+        const embed = new MessageEmbed()
+            .setDescription('You tried at least :smirk:')
+            .setImage('https://tenor.com/view/rickroll-dance-funny-you-music-gif-7755460')
+        msg.channel.send(embed);
+    }
+})
+
 //warn command: ^warn (@member) {reason}
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
