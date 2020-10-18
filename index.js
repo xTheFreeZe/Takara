@@ -259,6 +259,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
+                .setTimestamp()
             msg.channel.send(embed);
             msg.delete();
 
