@@ -220,6 +220,7 @@ client.on('message', msg => {
 
             if (!args[1]) {
                 msg.channel.send('Use ^hug {@person you want to hug} ');
+                msg.delete();
             }
 
             let msgArgs = args.slice(1).join(" ");
