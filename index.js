@@ -363,7 +363,7 @@ client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        case "test":
+        case "warn":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
