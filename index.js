@@ -223,8 +223,8 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription('Success!!! YAY')
-                .setTimestamp()
+            .setDescription(`You hug ${member}!`)
+            .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
             msg.channel.send(embed);
 
 
