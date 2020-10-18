@@ -241,6 +241,37 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "test":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+
+
+            if (!args[1]) {
+                msg.channel.send('Use ^speak {your message} and the bot will re-send your message in en embed ');
+                msg.delete();
+            }
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('RANDOM')
+                .setDescription("**" + msgArgs + "**")
+            msg.channel.send(embed);
+            msg.delete();
+
+
+
+            break;
+
+
+
+    }
+})
+
+
 
 
 client.on('message', msg => {
