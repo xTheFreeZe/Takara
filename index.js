@@ -371,7 +371,7 @@ client.on('message', msg => {
                 msg.delete();
             }
 
-            let msgArgs = args.slice(1).join(" ");
+            let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
