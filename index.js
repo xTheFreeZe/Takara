@@ -387,7 +387,7 @@ client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        case "test":
+        case "report":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -413,29 +413,6 @@ client.on('message', msg => {
     }
 })
 
-
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-
-    switch (args[0]) {
-        case "report":
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
-                .setColor('RANDOM')
-            msg.channel.send(embed);
-            msg.delete();
-            console.log("New Report:" + msgArgs);
-
-            break;
-
-
-
-    }
-})
 
 
 client.on("message", msg => {
