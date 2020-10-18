@@ -575,7 +575,7 @@ client.on('message', async message => {
             const embed = new MessageEmbed()
                 .setDescription('I could not leave this Voice Channel')
                 .setColor('#E8EE17')
-                .setFooter('Questions: - Is the bot in a voice channel with you? If yes and he still doesnt leave please use the ^report feature!')
+                .setFooter('Is the bot in a voice channel with you? If yes and it still doesnt leave please use the ^report feature!')
             message.reply(embed);
             message.react('👎')
         }
