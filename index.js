@@ -213,7 +213,7 @@ client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        case "test":
+        case "hug":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -262,29 +262,6 @@ client.on('message', msg => {
     }
 })
 
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-
-
-    switch (args[0]) {
-        case "hug":
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setColor('RANDOM')
-                .setDescription(`You hug ${member}!`)
-                .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
-            msg.channel.send(embed);
-            msg.delete();
-
-            break;
-
-
-
-    }
-})
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
