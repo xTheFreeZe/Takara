@@ -362,7 +362,7 @@ client.on('message', msg => {
     if (msg.content === "^fuck") {
         const embed = new MessageEmbed()
             .setDescription('You tried at least :smirk:')
-            .setImage('https://tenor.com/view/rickroll-dance-funny-you-music-gif-7755460')
+            .setImage('https://acegif.com/wp-content/gif/angry-5.gif')
         msg.channel.send(embed);
     }
 })
