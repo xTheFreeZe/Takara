@@ -573,9 +573,9 @@ client.on('message', async message => {
             message.react('👍')
         } else {
             const embed = new MessageEmbed()
-                .setDescription('Make sure I am in the same voice channel as you.')
+                .setDescription('I could not leave this Voice Channel')
                 .setColor('#E8EE17')
-                .addField('Comment is buggy?', 'Please DM `@Marwin#8376`.', true)
+                .setFooter('Questions: - Is the bot in a voice channel with you? If yes and he still doesnt leave please use the ^report feature!')
             message.reply(embed);
             message.react('👎')
         }
