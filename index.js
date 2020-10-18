@@ -218,7 +218,7 @@ client.on('message', msg => {
 
 
             if (!args[1]) {
-                msg.channel.send('Use this command to do something');
+                msg.channel.send('Use ^hug {@person you want to hug} ');
             }
 
             let msgArgs = args.slice(1).join(" ");
