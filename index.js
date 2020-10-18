@@ -207,6 +207,38 @@ client.on('message', msg => {
     }
 })
 
+
+//predict command (just the talk command with reactions)
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "test":
+            const user = msg.mentions.users.first();
+
+
+            if (!args[1]) {
+                msg.channel.send('Use this command to do something');
+            }
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setDescription('Success!!! YAY')
+                .setTimestamp()
+            msg.channel.send(embed);
+
+
+
+
+            break;
+
+
+
+    }
+})
+
+
+
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
