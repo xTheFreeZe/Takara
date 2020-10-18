@@ -215,6 +215,7 @@ client.on('message', msg => {
     switch (args[0]) {
         case "test":
             const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
 
 
             if (!args[1]) {
