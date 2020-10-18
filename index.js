@@ -901,13 +901,13 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-    if (msg.content === "hello") {
+    if (msg.content.includes === ("hello")) {
         msg.react('👋');
     }
 })
 
 client.on('message', msg => {
-    if (msg.content === "Hello") {
+    if (msg.content.includes === ("Hello")) {
         msg.react('👋');
     }
 })
