@@ -359,10 +359,41 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "fuck":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+
+
+            if (!args[1]) {
+                msg.channel.send('Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
+                msg.delete();
+            }
+
+            let msgArgs = args.slice(2).join(" ");
+            const embed = new MessageEmbed()
+                .setDescription(`You tried to fuck ${member}. Next time bro :heart:`)
+                .setImage('https://acegif.com/wp-content/gif/angry-30.gif')
+            msg.channel.send(embed);
+
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+
     if (msg.content === "^fuck") {
+        const user = msg.mentions.users.first();
+        const member = msg.guild.member(user);
         const embed = new MessageEmbed()
-            .setDescription('You tried at least :smirk:')
-            .setImage('https://acegif.com/wp-content/gif/angry-5.gif')
+            .setDescription(`You tried to fuck ${member}. Next time bro :heart:`)
+            .setImage('https://acegif.com/wp-content/gif/angry-30.gif')
         msg.channel.send(embed);
     }
 })
