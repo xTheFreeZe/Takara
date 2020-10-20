@@ -391,6 +391,38 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "devwarn":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+
+
+            if (!args[1]) {
+                msg.channel.send('Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
+                msg.delete();
+            }
+
+            let msgArgs = args.slice(2).join(" ");
+            const embed = new MessageEmbed()
+                .setDescription(`:white_check_mark: STT Premium warned ${member} `)
+                .addField('Reason:', msgArgs, true )
+                .setColor('RANDOM')
+                .setFooter(`${user.tag} has been warned`)
+            msg.channel.send(embed);
+            msg.delete();
+            console.log(`${user.tag} has been warned! (developer warning) Provided Reason:` + " " + msgArgs);
+
+
+            break;
+
+
+
+    }
+})
+
 //warn command: ^warn (@member) {reason}
 
 
