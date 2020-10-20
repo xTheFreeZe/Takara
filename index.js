@@ -408,7 +408,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: STT Premium warned ${member} `)
-                .addField('Reason:', msgArgs, true )
+                .addField('Reason:', msgArgs, true)
                 .setColor('RANDOM')
                 .setFooter(`${user.tag} has been warned`)
             msg.channel.send(embed);
