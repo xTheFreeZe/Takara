@@ -877,6 +877,17 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^lite is live") {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('LiteisCool just went live on Twitch!')
+            .setImage('https://acegif.com/wp-content/gif/outerspace-66.gif')
+            .setFooter('Make sure you leave a follow and stay there for a bit!')
+        msg.channel.send(embed);
+    }
+})
+
 
 client.on("message", msg => {
     if (msg.content === "^twitter") {
