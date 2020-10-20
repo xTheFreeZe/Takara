@@ -892,7 +892,8 @@ client.on('message', msg => {
     if (msg.content === "^james is live") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('notGhol just went live on Twitch!')
+            .setDescription('NotGhol just went live on Twitch! https://www.twitch.tv/notghol')
+            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/66592030-e25a-4f35-a250-d3d5a6f7127e-profile_image-70x70.png')
             .setImage('https://acegif.com/wp-content/gif/outerspace-55.gif')
             .setFooter('Make sure you leave a follow and share some love ♥')
         msg.channel.send(embed);
