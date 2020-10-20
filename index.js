@@ -870,7 +870,7 @@ client.on('message', msg => {
     if (msg.content === "^marwin is live") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('Marwin just went live on Twitch! Why not watch it?')
+            .setDescription('Marwin just went live on Twitch!')
             .setImage('https://acegif.com/wp-content/gif/outerspace-43.gif')
             .setFooter('Make sure you leave a follow!')
         msg.channel.send(embed);
