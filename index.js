@@ -902,6 +902,8 @@ client.on('message', msg => {
             .setImage('https://acegif.com/wp-content/gif/outerspace-55.gif')
             .setFooter('Make sure you leave a follow and share some love ♥')
         msg.channel.send(embed);
+        msg.delete();
+
     }
 })
 
