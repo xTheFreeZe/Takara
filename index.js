@@ -874,6 +874,8 @@ client.on('message', msg => {
             .setImage('https://acegif.com/wp-content/gif/outerspace-43.gif')
             .setFooter('Make sure you leave a follow!')
         msg.channel.send(embed);
+        msg.delete();
+        
     }
 })
 
@@ -886,6 +888,8 @@ client.on('message', msg => {
             .setImage('https://acegif.com/wp-content/gif/outerspace-66.gif')
             .setFooter('Make sure you leave a follow and stay there for a bit!')
         msg.channel.send(embed);
+        msg.delete();
+
     }
 })
 
