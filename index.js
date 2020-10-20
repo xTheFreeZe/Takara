@@ -888,6 +888,17 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', msg => {
+    if (msg.content === "^james is live") {
+        const embed = new MessageEmbed()
+            .setColor('RANDOM')
+            .setDescription('notGhol just went live on Twitch!')
+            .setImage('https://acegif.com/wp-content/gif/outerspace-55.gif')
+            .setFooter('Make sure you leave a follow and share some love ♥')
+        msg.channel.send(embed);
+    }
+})
+
 
 client.on("message", msg => {
     if (msg.content === "^twitter") {
