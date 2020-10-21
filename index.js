@@ -646,55 +646,6 @@ client.on('message', msg => {
 
 })
 
-client.on('message', msg => {
-    if (msg.content.includes("Tournament")) {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(msg.author.displayAvatarURL())
-            .setDescription('I ve spotted `Tournament` in your Sentence')
-            .addField('The next Tournament is:', 'Friday, October 30th 2020', true)
-            .setFooter('For my Info type ^website')
-        msg.reply(embed);
-
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content.includes("tournament")) {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(msg.author.displayAvatarURL())
-            .setDescription('I ve spotted `tournament` in your Sentence')
-            .addField('The next Tournament is:', 'Friday, October 30th 2020 ', true)
-            .setFooter('For my Info type ^website')
-        msg.reply(embed);
-
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content.includes("SR")) {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(msg.author.displayAvatarURL())
-            .setDescription('I ve spotted `SR` in your Sentence')
-            .addField('You can check SR-Limits in:', '#📋tournament-rules ', true)
-        msg.reply(embed);
-
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content.includes("sr")) {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(msg.author.displayAvatarURL())
-            .setDescription('I ve spotted `sr` in your Sentence')
-            .addField('You can check SR-Limits in:', '#📋tournament-rules ', true)
-        msg.reply(embed);
-
-    }
-})
 
 client.on('message', msg => {
     if (msg.content === "^newtourny") {
