@@ -1008,6 +1008,18 @@ client.on('message', msg => {
 })
 
 
+client.on('message', msg => {
+    if (msg.content === "STT Premium") {
+        msg.channel.send('This is cool')
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit('This is actually awesome!');
+                }, 3000)
+            });
+    }
+})
+
+
 
 
 
