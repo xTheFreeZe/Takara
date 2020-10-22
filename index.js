@@ -514,14 +514,15 @@ client.on('message', msg => {
     if (msg.content === "^ping") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
-        .setColor('RANDOM')
-        .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
+            .setColor('RANDOM')
+            .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
         msg.channel.send('Checking for ping... Hold on')
             .then((msg) => {
                 setTimeout(function () {
                     msg.edit(embed);
                 }, 4000)
             });
+        msg.delete();
     }
 })
 
