@@ -379,7 +379,12 @@ client.on('message', msg => {
                 .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
-            msg.channel.send(embed);
+            msg.channel.send(`Searching for ${member}... Please wait.`)
+                .then((msg) => {
+                    setTimeout(function () {
+                        msg.edit(embed);
+                    }, 3000)
+                });
             msg.delete();
             console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
 
