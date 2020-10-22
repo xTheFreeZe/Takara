@@ -864,7 +864,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setDescription('sledgy420 just went live on Twitch! https://www.twitch.tv/sledgy420')
             .setThumbnail('https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-70x70.png')
-            .setImage('/acegif.com/wp-content/gif/outerspace-74.gif')
+            .setImage('https://acegif.com/wp-content/gifs/happy-cat-27.gif')
             .setFooter('Make sure you leave a follow and watch him play epic games!')
         msg.channel.send(embed);
         msg.delete();
