@@ -509,17 +509,6 @@ client.on("message", msg => {
 })
 
 
-client.on('message', msg => {
-    if (msg.content === "^ping") {
-        var ping = client.ws.ping;
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
-        msg.channel.send(embed);
-        console.log('Ping command used!')
-        msg.delete();
-    }
-})
 
 client.on('message', msg => {
     if (msg.content === "^ping") {
