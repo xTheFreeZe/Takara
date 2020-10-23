@@ -459,7 +459,12 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
-            msg.channel.send(embed);
+            msg.channel.send("Sending your Message to the Developer, please wait a second!")
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 3000)
+            });
             msg.delete();
             console.log("New Report:" + msgArgs);
 
