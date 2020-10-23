@@ -421,7 +421,13 @@ client.on('message', msg => {
                 .addField('Reason:', msgArgs, true)
                 .setColor('RANDOM')
                 .setFooter(`${user.tag} has been warned`)
-            msg.channel.send(embed);
+            msg.channel.send(`Preparing warning for _${user.tag}_ `)
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 2000)
+            });
+            
             msg.delete();
             console.log(`${user.tag} has been warned! (developer warning) Provided Reason:` + " " + msgArgs);
 
