@@ -18,7 +18,11 @@ const activities_list = [
     "in the Syntax Terror Tournaments",
     "Overwatch with friends",
     "nothing",
-    "Apex Legends"
+    "Apex Legends",
+    "in a three Squad",
+    "Fall Guys",
+    "Hearthstone"
+
 ];
 
 client.on('ready', () => {
