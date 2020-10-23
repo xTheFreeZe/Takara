@@ -459,7 +459,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
-                .setFooter('Time it took to send : "3000ms" ')
+                .setFooter('Time it took to send : 3000ms ')
             msg.channel.send("Sending your Message to the Developer, please wait a second!")
                 .then((msg) => {
                     setTimeout(function () {
