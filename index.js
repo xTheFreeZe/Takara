@@ -51,12 +51,7 @@ client.on('message', msg => {
             .addField('🛠`^help dev`', 'Developer options', true)
             .setFooter('This is the new STT Premium Bot. If you want to use it please DM:Marwin#8376');
 
-        msg.channel.send(`Loading embed, please wait a second :) `)
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit(embed);
-                }, 2000)
-            });
+        msg.channel.send(embed)
         msg.delete();
     }
 })
