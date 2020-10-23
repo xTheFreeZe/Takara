@@ -421,12 +421,12 @@ client.on('message', msg => {
                 .setColor('RANDOM')
                 .setFooter(`${user.tag} has been warned`)
             msg.channel.send(`Preparing warning for _${user.tag}_ `)
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit(embed);
-                }, 2000)
-            });
-            
+                .then((msg) => {
+                    setTimeout(function () {
+                        msg.edit(embed);
+                    }, 2000)
+                });
+
             msg.delete();
             console.log(`${user.tag} has been warned! (developer warning) Provided Reason:` + " " + msgArgs);
 
@@ -459,12 +459,13 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
+                .setFooter('Time it took to send : "3000ms" ')
             msg.channel.send("Sending your Message to the Developer, please wait a second!")
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit(embed);
-                }, 3000)
-            });
+                .then((msg) => {
+                    setTimeout(function () {
+                        msg.edit(embed);
+                    }, 3000)
+                });
             msg.delete();
             console.log("New Report:" + msgArgs);
 
