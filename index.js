@@ -99,6 +99,34 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    if(msg.content  === "^delay 10"){
+        const embed = new MessageEmbed()
+        .setDescription('white_check_mark: Successfully edited!')
+        .setFooter('            }, 1000)')
+        msg.reply('Message edit in 10 seconds')
+        .then((msg) => {
+            setTimeout(function () {
+                msg.edit(embed);
+            }, 10000)
+        });
+    }
+})
+
+client.on('message', msg => {
+    if(msg.content  === "^delay 20"){
+        const embed = new MessageEmbed()
+        .setDescription('white_check_mark: Successfully edited!')
+        .setFooter('            }, 2000)')
+        msg.reply('Message edit in 20 seconds')
+        .then((msg) => {
+            setTimeout(function () {
+                msg.edit(embed);
+            }, 20000)
+        });
+    }
+})
+
+client.on('message', msg => {
     if (msg.content === "^info help") {
         msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743851801878462504/Help_command.PNG');
     }
