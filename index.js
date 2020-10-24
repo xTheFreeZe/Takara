@@ -56,8 +56,7 @@ client.on('message', msg => {
             .setFooter(`DO NOT USE ANY COMMANDS IN DM'S!!! Go back to the server and try them there!`);
 
 
-        msg.reply('I sent you a DM with all Information you need! ')
-        msg.author.send(embed)
+        msg.channel.send(embed)
 
         msg.delete();
     }
