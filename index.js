@@ -99,30 +99,30 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if(msg.content  === "^delay 10"){
+    if (msg.content === "^delay 10") {
         const embed = new MessageEmbed()
-        .setDescription('white_check_mark: Successfully edited!')
-        .setFooter('            }, 1000)')
+            .setDescription(':white_check_mark: Successfully edited!')
+            .setFooter('            }, 1000)')
         msg.reply('Message edit in 10 seconds')
-        .then((msg) => {
-            setTimeout(function () {
-                msg.edit(embed);
-            }, 10000)
-        });
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 10000)
+            });
     }
 })
 
 client.on('message', msg => {
-    if(msg.content  === "^delay 20"){
+    if (msg.content === "^delay 20") {
         const embed = new MessageEmbed()
-        .setDescription('white_check_mark: Successfully edited!')
-        .setFooter('            }, 2000)')
+            .setDescription(':white_check_mark: Successfully edited!')
+            .setFooter('            }, 2000)')
         msg.reply('Message edit in 20 seconds')
-        .then((msg) => {
-            setTimeout(function () {
-                msg.edit(embed);
-            }, 20000)
-        });
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 20000)
+            });
     }
 })
 
