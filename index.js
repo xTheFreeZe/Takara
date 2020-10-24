@@ -53,7 +53,7 @@ client.on('message', msg => {
                 inline: true
             })
             .addField('🛠`^help dev`', 'Developer options', true)
-            .setFooter('This is the new STT Premium Bot. If you want to use it please DM:Marwin#8376');
+            .setFooter(`DO NOT USE ANY COMMANDS IN DM'S!!! Go back to the server and try them there!`);
             
 
             msg.channel.send('I sent you a DM with all Information you need! ')
