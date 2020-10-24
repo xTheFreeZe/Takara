@@ -54,11 +54,11 @@ client.on('message', msg => {
             })
             .addField('🛠`^help dev`', 'Developer options', true)
             .setFooter(`DO NOT USE ANY COMMANDS IN DM'S!!! Go back to the server and try them there!`);
-            
 
-            msg.channel.send('I sent you a DM with all Information you need! ')
-            msg.author.send(embed)
-            
+
+        msg.channel.send('I sent you a DM with all Information you need! ')
+        msg.author.send(embed)
+
         msg.delete();
     }
 })
