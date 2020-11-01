@@ -30,7 +30,7 @@ client.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         client.user.setActivity(activities_list[index]);
-    }, 30000);
+    }, 40000);
 });
 
 //help command
@@ -169,6 +169,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author.send
 
     switch (args[0]) {
         case "suggest":
@@ -183,7 +184,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
 
-            msg.channel.send("📋 " + "New Suggestion:" + " " + "**" + msgArgs + "**").then(messagereaction => {
+            msg.channel.send("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**").then(messagereaction => {
                 messagereaction.react("👍");
                 messagereaction.react("👎");
                 messagereaction.react("😐");
