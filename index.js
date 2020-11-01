@@ -53,9 +53,33 @@ client.on('message', msg => {
                 inline: true
             })
             .addField('🛠`^help dev`', 'Developer options', true)
-            .addField("test field", "test field")
-            .addField("test field", "test field")
-            .setFooter(`DO NOT USE ANY COMMANDS IN DM'S!!! Go back to the server and try them there!`);
+            .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`);
+
+
+        msg.channel.send(embed)
+
+        msg.delete();
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "^help2") {
+        const embed = new MessageEmbed()
+            .setColor('#e2b007')
+            .setTitle('This is the `^help` Command')
+            .setDescription('These are your options:')
+            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .addFields({
+                name: ':joy:`^help fun` ',
+                value: 'Some fun commands',
+                inline: true
+            }, {
+                name: '⚔`^help mod`',
+                value: 'Commands for Staff',
+                inline: true
+            })
+            .addField('🛠`^help dev`', 'Developer options', true)
+            .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`);
 
 
         msg.channel.send(embed)
