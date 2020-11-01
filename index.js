@@ -260,6 +260,7 @@ client.on('message', msg => {
 //predict command (just the talk command with reactions)
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "hug":
@@ -274,7 +275,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`You hug ${member}!`)
+                .setDescription(`${author} hugs ${member}!`)
                 .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
             msg.channel.send(embed);
 
