@@ -802,7 +802,7 @@ client.on('message', message => {
             if (user) {
                 const member = message.guild.member(user);
                 if (member) {
-                    member.ban(msgArgs)({
+                    member.ban({
                         ression: msgArgs
                     }).then(() => {
                         const embed = new MessageEmbed()
