@@ -53,6 +53,8 @@ client.on('message', msg => {
                 inline: true
             })
             .addField('🛠`^help dev`', 'Developer options', true)
+            .addField("test field", "test field")
+            .addField("test field", "test field")
             .setFooter(`DO NOT USE ANY COMMANDS IN DM'S!!! Go back to the server and try them there!`);
 
 
@@ -449,7 +451,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: ${author} warned ${member} `)
+                .setDescription(`:white_check_mark: ${member} has been warned! `)
                 .addField(`Reason`, msgArgs, true)
                 .addField(`Moderator`, `${author}`)
                 .setColor('RANDOM')
