@@ -73,7 +73,7 @@ client.on('message', msg => {
             .addField(':joy:`^help fun`')
             .addField('Some fun commands', true)
 
-            .addField(`⚔^help mod`)
+            .addField('`⚔^help mod`')
             .addField('Commands for staff', true)
 
             .addField('🛠`^help dev`')
