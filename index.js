@@ -798,7 +798,7 @@ client.on('message', message => {
             if (user) {
                 const member = message.guild.member(user);
                 if (member) {
-                    member.ban({
+                    member.ban(msgArgs)({
                         ression: msgArgs
                     }).then(() => {
                         const embed = new MessageEmbed()
