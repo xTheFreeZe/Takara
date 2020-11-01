@@ -790,6 +790,7 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
     let msgArgs = args.slice(2).join(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case 'ban':
@@ -808,6 +809,7 @@ client.on('message', message => {
                             .setDescription(`:white_check_mark: STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
                             .setColor('#229954')
                             .setTimestamp()
+                            .setFooter(`Mod ID: ${author}`)
                         message.channel.send(embed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
@@ -824,6 +826,7 @@ client.on('message', message => {
                                 .setDescription('I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
                             message.reply(embed);
                             message.delete();
+                            console.log(`${author} tried to ban ${member}`);
 
                             console.log(err);
 
@@ -852,6 +855,7 @@ client.on('message', message => {
                     .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}. Make sure I have the right Permissions to ban someone!')
                 message.channel.send(embed);
                 message.delete();
+                console.log(`${author} used the "^ban"`);
 
 
             }
