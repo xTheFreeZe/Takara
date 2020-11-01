@@ -475,6 +475,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "report":
@@ -491,7 +492,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
-                .setFooter('Time it took to send : 3000ms ')
+                .setFooter(`Report from ${author}`)
             msg.channel.send("Sending your Message to the Developer, please wait a second!")
                 .then((msg) => {
                     setTimeout(function () {
@@ -499,7 +500,7 @@ client.on('message', msg => {
                     }, 3000)
                 });
             msg.delete();
-            console.log("New Report:" + msgArgs);
+            console.log(`New Report from ${author}:` + msgArgs);
 
 
             break;
