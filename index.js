@@ -397,6 +397,7 @@ client.on('message', msg => {
 //warn command: ^warn (@member) {reason}
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "warn":
@@ -411,7 +412,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: STT Premium warned ${member} with the Reason:` + "**" + msgArgs + "**")
+                .setDescription(`:white_check_mark: ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(`Searching for ${member}... Please wait.`)
