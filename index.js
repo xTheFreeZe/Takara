@@ -434,6 +434,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "staffwarn":
@@ -448,8 +449,9 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: STT Premium warned ${member} `)
-                .addField('Reason:', msgArgs, true)
+                .setDescription(`:white_check_mark: ${author} warned ${member} `)
+                .addField(`Reason`, msgArgs, true)
+                .addField(`Moderator`, `${author}`)
                 .setColor('RANDOM')
                 .setFooter(`${user.tag} has been warned`)
             msg.channel.send(`Preparing warning for _${user.tag}_ `)
@@ -460,7 +462,7 @@ client.on('message', msg => {
                 });
 
             msg.delete();
-            console.log(`${user.tag} has been warned! (developer warning) Provided Reason:` + " " + msgArgs);
+            console.log(`${user.tag} has been warned! Mod ID : ${author}. (developer warning)     Provided Reason:` + " " + msgArgs);
 
 
             break;
