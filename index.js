@@ -70,13 +70,13 @@ client.on('message', msg => {
             .setDescription('These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
-            .addField(':joy:`^help fun`')
+            .addField(':joy:`^help fun`', true)
             .addField('Used for', 'Some fun commands', true)
 
-            .addField('`⚔^help mod`')
+            .addField('`⚔^help mod`', true)
             .addField('Used for', 'Commands for staff', true)
 
-            .addField('🛠`^help dev`')
+            .addField('🛠`^help dev`', true)
             .addField('Used for', 'Developer options', true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
