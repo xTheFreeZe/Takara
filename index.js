@@ -1075,6 +1075,13 @@ client.on('message', msg => {
     }
 })
 
+client.on('message', (message) => {
+    if (message.content === "^staff") {
+        let user = message.mentions.users.first();
+        message.channel.send(`<@&770312766534975509> A Member needs your help!`);
+    }
+});
+
 
 
 
