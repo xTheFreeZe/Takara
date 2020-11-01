@@ -395,7 +395,9 @@ client.on('message', msg => {
 
 
     }
-}) client.on('message', msg => {
+})
+
+client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
 
