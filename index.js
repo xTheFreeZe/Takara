@@ -503,6 +503,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
     let author = msg.author
+    let channel = msg.channel
 
     switch (args[0]) {
         case "report":
@@ -519,7 +520,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
-                .setFooter(`Report from ${author}`)
+                .setFooter(`Report from ${author} in ${channel}`)
             msg.channel.send("Sending your Message to the Developer, please wait a second!")
                 .then((msg) => {
                     setTimeout(function () {
