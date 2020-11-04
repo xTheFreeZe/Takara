@@ -745,7 +745,6 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
     let msgArgs = args.slice(2).join(" ");
-    let author = msg.author
     let channel = msg.channel
 
     switch (args[0]) {
