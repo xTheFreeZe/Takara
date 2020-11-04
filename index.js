@@ -763,7 +763,6 @@ client.on('message', message => {
                             .setTimestamp()
                         message.reply(embed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
-                        msg.author.send(`Hey, this is STT Premium Logs. You just kicked ${user.username} ${setTimestamp}`)
                         message.delete();
 
 
