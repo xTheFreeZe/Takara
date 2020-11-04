@@ -745,6 +745,8 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
     let msgArgs = args.slice(2).join(" ");
+    let author = msg.author
+    let channel = msg.channel
 
     switch (args[0]) {
         case 'kick':
@@ -763,6 +765,7 @@ client.on('message', message => {
                             .setTimestamp()
                         message.reply(embed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
+                        msg.author.send(`Hey, this is STT Premium Logs. You just kicked ${user.username} in the channel ${channel}  ${setTimestamp}`)
                         message.delete();
 
 
