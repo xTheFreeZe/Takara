@@ -486,7 +486,9 @@ client.on('message', msg => {
     if (msg.content.includes("^warn")) {
         let user = msg.mentions.users.first();
         let author = msg.author
-        msg.channel.send(`This commnd can't be used right now. A fix is being pushed out soon! console.log( ${author} used the ^warn command --> Command not found --> sending error message`);
+        const embed = new MessageEmbed()
+        .setDescription(`This commnd can't be used right now. A fix is being pushed out soon! console.log( ${author} used the warn command --> Command not found --> sending error message`)
+        msg.channel.send(embed);
 
 
     }
