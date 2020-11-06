@@ -395,6 +395,31 @@ client.on('message', msg => {
     }
 })
 
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
+        case "devcommand":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('#FF0000')
+                .setTitle('A command is temporarily unavailable')
+                .setDescription("**" + msgArgs + "**")
+                .setTimestamp();
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
+
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
@@ -425,7 +450,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "warn":
+        case "12345678910":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
