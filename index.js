@@ -483,6 +483,17 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
+    if (msg.content.includes("^warn")) {
+        let user = msg.mentions.users.first();
+        let author = msg.author
+        msg.channel.send(`This commnd can't be used right now. A fix is being pushed out soon! console.log( ${author} used the ^warn command --> Command not found --> sending error message`);
+
+
+    }
+
+})
+
+client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
     let author = msg.author
 
