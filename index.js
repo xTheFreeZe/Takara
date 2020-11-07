@@ -1168,7 +1168,7 @@ client.on('message', msg => {
             .setColor('#FF0000')
             .setTitle('Error Code 5482f4186')
             .setDescription('This code occurs, when there is a problem with the embed')
-            .setFooter('If this embed is green the developer knows about the issue, if not please use the ^report command')
+                .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
         msg.channel.send("Checking for Error Message _5482f4186_ . Please give us a second!")
             .then((msg) => {
                 setTimeout(function () {
