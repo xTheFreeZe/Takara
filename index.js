@@ -37,7 +37,7 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
-    if (msg.content === "^help") {
+    if (msg.content === "^help2") {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
@@ -450,7 +450,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "12345678910":
+        case "warn":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -465,7 +465,7 @@ client.on('message', msg => {
                 .setDescription(`:white_check_mark: ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
-            msg.channel.send(`Searching for ${member}... Please wait.`)
+            msg.channel.send(`Searching ${member}... Please wait.`)
                 .then((msg) => {
                     setTimeout(function () {
                         msg.edit(embed);
@@ -483,12 +483,12 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content.includes("^warn")) {
+    if (msg.content.includes("^help")) {
         let user = msg.mentions.users.first();
         let author = msg.author
         const embed = new MessageEmbed()
-            .setDescription(`console.log( ${author} used the warn command --> Command not found --> sending error message`)
-            .setFooter('If you see this, the command probabl doesnt work. Try again later!')
+            .setDescription(`This command is being updated right now` <br> `--> sending error message --> command not found --> used by ${author}`)
+            .setFooter('If you see this, the command probably doesnt work. Try again later!')
         msg.channel.send(embed);
         msg.delete();
 
