@@ -482,20 +482,6 @@ client.on('message', msg => {
     }
 })
 
-client.on('message', msg => {
-    if (msg.content.includes("^help")) {
-        let user = msg.mentions.users.first();
-        let author = msg.author
-        const embed = new MessageEmbed()
-            .setDescription(`This command is being updated right now       --> sending error message --> command not found --> used by ${author}`)
-            .setFooter('If you see this, the command probably doesnt work. Try again later!')
-        msg.channel.send(embed);
-        msg.delete();
-
-
-    }
-
-})
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
@@ -1156,6 +1142,41 @@ client.on('message', (message) => {
         message.channel.send(`<@&770312766534975509> A Member needs your help!`);
     }
 });
+
+
+
+
+client.on('message', msg => {
+    if (msg.content.includes("^warn")) {
+        let user = msg.mentions.users.first();
+        let author = msg.author
+        const embed = new MessageEmbed()
+            .setDescription(`${author} , Error **5482f4186**`)
+            .setFooter('Type in your Error Code to see what is the Problem')
+        msg.channel.send(embed);
+        msg.delete();
+
+
+    }
+
+})
+
+
+client.on('message', msg => {
+    if (msg.content === "5482f4186") {
+        const embed = new MessageEmbed()
+            .setColor('#FF0000')
+            .setTitle('Error Code 5482f4186')
+            .setDescription('This code occurs, when there is a problem with the embed')
+            .setFooter('If this embed is green the developer knows about the issue, if not please use the ^report command')
+        msg.channel.send("Checking for Error Message _5482f4186_ . Please give us a second!")
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 5000)
+            });
+    }
+})
 
 
 
