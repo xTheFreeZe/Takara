@@ -450,7 +450,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "warn":
+        case "12345678910":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
