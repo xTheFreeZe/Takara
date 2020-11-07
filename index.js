@@ -1151,7 +1151,7 @@ client.on('message', msg => {
         let user = msg.mentions.users.first();
         let author = msg.author
         const embed = new MessageEmbed()
-            .setDescription(`${author} , Error **5482f4186**`)
+            .setDescription(`${author} Error **5482f4186**`)
             .setFooter('Type in your Error Code to see what is the Problem')
         msg.channel.send(embed);
         msg.delete();
