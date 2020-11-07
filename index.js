@@ -487,7 +487,7 @@ client.on('message', msg => {
         let user = msg.mentions.users.first();
         let author = msg.author
         const embed = new MessageEmbed()
-            .setDescription(`This command is being updated right now` <br> `--> sending error message --> command not found --> used by ${author}`)
+            .setDescription(`This command is being updated right now       --> sending error message --> command not found --> used by ${author}`)
             .setFooter('If you see this, the command probably doesnt work. Try again later!')
         msg.channel.send(embed);
         msg.delete();
