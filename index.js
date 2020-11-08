@@ -63,7 +63,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "^help2") {
+    if (msg.content === "^help") {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
@@ -72,7 +72,7 @@ client.on('message', msg => {
 
             .addField(':joy:`^help fun`', 'Fun commands')
 
-            .addField('`🔨^help mod`', 'Commands for staff')
+            .addField('`:⚔^help mod`', 'Commands for staff')
 
             .addField('🛠`^help dev`', 'Developer options')
 
@@ -1183,7 +1183,7 @@ client.on('message', msg => {
             .setColor('#FF0000')
             .setTitle('Error Code 5482f4186')
             .setDescription('This code occurs, when there is a problem with the embed')
-                .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
+            .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
         msg.channel.send("Checking for Error Message _5482f4186_ . Please give us a second!")
             .then((msg) => {
                 setTimeout(function () {
@@ -1199,7 +1199,7 @@ client.on('message', msg => {
             .setColor('#FF0000')
             .setTitle('Error Code 5761fg5t')
             .setDescription(`This code occurs, when the bot can't join the voice channel.`)
-                .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
+            .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
         msg.channel.send("Checking for Error Message _5761fg5t_ . Please give us a second!")
             .then((msg) => {
                 setTimeout(function () {
