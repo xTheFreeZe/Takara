@@ -64,6 +64,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help") {
+        var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
@@ -76,7 +77,7 @@ client.on('message', msg => {
 
             .addField('🛠`^help dev`', 'Developer options')
             
-            .addField('🛠`Test`', 'Test', true)
+            .addField('`Ping:`', `${ping} ms`, true)
             
             .addField('🛠`Test`', 'Test', true)
 
