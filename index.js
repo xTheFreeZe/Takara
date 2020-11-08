@@ -79,7 +79,7 @@ client.on('message', msg => {
             
             .addField('`Ping:`', `${ping} ms`, true)
             
-            .addField('🛠`Test`', 'Test', true)
+            .addField('`Status:`', `:green_circle: online`, true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
