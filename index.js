@@ -75,6 +75,10 @@ client.on('message', msg => {
             .addField('⚔`^help mod`', 'Commands for staff')
 
             .addField('🛠`^help dev`', 'Developer options')
+            
+            .addField('🛠`Test`', 'Test', true)
+            
+            .addField('🛠`Test`', 'Test', true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
