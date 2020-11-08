@@ -702,7 +702,7 @@ client.on('message', msg => {
 
 client.on('message', async message => {
     if (!message.guild) return;
-    if (message.content === '^join') {
+    if (message.content === '^12345678910') {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
             const embed = new MessageEmbed()
@@ -1161,6 +1161,21 @@ client.on('message', msg => {
 
 })
 
+client.on('message', msg => {
+    if (msg.content.includes("^join")) {
+        let user = msg.mentions.users.first();
+        let author = msg.author
+        const embed = new MessageEmbed()
+            .setDescription(`${author} Error **5761fg5t**`)
+            .setFooter('Type in your Error Code to see what is the Problem')
+        msg.channel.send(embed);
+        msg.delete();
+
+
+    }
+
+})
+
 
 client.on('message', msg => {
     if (msg.content === "5482f4186") {
@@ -1170,6 +1185,22 @@ client.on('message', msg => {
             .setDescription('This code occurs, when there is a problem with the embed')
                 .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
         msg.channel.send("Checking for Error Message _5482f4186_ . Please give us a second!")
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 5000)
+            });
+    }
+})
+
+client.on('message', msg => {
+    if (msg.content === "5761fg5t") {
+        const embed = new MessageEmbed()
+            .setColor('#FF0000')
+            .setTitle('Error Code 5761fg5t')
+            .setDescription(`This code occurs, when the bot can't join the voice channel.`)
+                .setFooter('If this embed is green the developer knows about the issue, if not use ^report')
+        msg.channel.send("Checking for Error Message _5761fg5t_ . Please give us a second!")
             .then((msg) => {
                 setTimeout(function () {
                     msg.edit(embed);
