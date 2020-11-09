@@ -35,6 +35,12 @@ client.on('ready', () => {
 
 //help command
 
+client.on("message", msg => {
+    if(msg.content === "testlink") {
+        msg.reply("[Click here] (https://www.twitch.tv/yeatle)");
+    }
+})
+
 
 client.on('message', msg => {
     if (msg.content === "^help2") {
