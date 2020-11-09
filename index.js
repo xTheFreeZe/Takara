@@ -87,7 +87,7 @@ client.on('message', msg => {
 
             .addField('`Status:`', `:green_circle: online`, true)
 
-            .addField("Its mine now", " [Click here](https://discordapp.com/oauth2/authorize?client_id=439778986050977792&scope=bot&permissions=8)", true)
+            .addField("`My Website`", " [Click here](https://sad-spence-0be9ad.netlify.app/8)", true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
