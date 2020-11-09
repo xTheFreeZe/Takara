@@ -81,6 +81,8 @@ client.on('message', msg => {
 
             .addField('`Status:`', `:green_circle: online`, true)
 
+            .addField('`My Website`', `https://sad-spence-0be9ad.netlify.app/`, true)
+
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
 
