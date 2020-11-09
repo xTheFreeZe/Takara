@@ -76,9 +76,9 @@ client.on('message', msg => {
             .addField('⚔`^help mod`', 'Commands for staff')
 
             .addField('🛠`^help dev`', 'Developer options')
-            
+
             .addField('`Ping:`', `${ping} ms`, true)
-            
+
             .addField('`Status:`', `:green_circle: online`, true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
@@ -108,7 +108,7 @@ client.on('message', msg => {
             .setTitle('**⚔^help Moderator**')
             .setDescription('This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`', true)
+            .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`, `^uptime`', true)
             .setFooter('^help ban to get more info on how to ban people')
         msg.channel.send(embed);
 
@@ -565,6 +565,26 @@ client.on('message', msg => {
             break;
 
 
+
+    }
+})
+
+client.on("message", msg => {
+    if (msg.content === "^uptime") {
+        let totalSeconds = (client.uptime / 1000);
+        let days = Math.floor(totalSeconds / 86400);
+        totalSeconds %= 86400;
+        let hours = Math.floor(totalSeconds / 3600);
+        totalSeconds %= 3600;
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = Math.floor(totalSeconds % 60);
+        let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+        const embed = new MessageEmbed()
+            .setDescription(`The bot has been online for ${uptime}`)
+            .setColor('RANDOM')
+            .setFooter('Powered by STT Productions')
+            .setTimestamp()
+        msg.channel.send(embed);
 
     }
 })
