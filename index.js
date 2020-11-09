@@ -343,6 +343,7 @@ client.on('message', msg => {
                 .setColor('#7CFC00')
                 .setTitle(':white_check_mark: Problem fixed!')
                 .setDescription("**" + msgArgs + "**")
+                .setFooter('Test 516981fg')
             msg.channel.send(embed);
             msg.delete();
 
