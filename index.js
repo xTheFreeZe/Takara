@@ -37,7 +37,7 @@ client.on('ready', () => {
 
 client.on("message", msg => {
     if(msg.content === "testlink") {
-        msg.reply("[Click here] (https://www.twitch.tv/yeatle)");
+        msg.reply("[Click Here](https://www.twitch.tv/yeatle)");
     }
 })
 
