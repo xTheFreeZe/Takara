@@ -35,14 +35,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content.includes(`<@!749889822214324236>`)) {
-        let author = msg.author.send
+        let author = msg.author
         const embed = new MessageEmbed()
-            .setDescription('Hey thats me! I am the Auto Moderator for the Syntax Terror Server! I will keep the chat clean.')
+            .setDescription('const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);')
             .addField('If you have any questions:', 'DM <@!420277395036176405>', true)
-            .addField('You can disable the auto-mod with:', '^automod off')
-            .addField('You can enable the auto-mod with', '^automod on')
             .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/770576218131005440/1f44b.png')
-            .setFooter('Only works with (msg.content.includes()) ')
         msg.author.send(embed);
     }
 })
