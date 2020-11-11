@@ -41,6 +41,7 @@ client.on('message', msg => {
             .addField('If you have any questions:', 'DM <@!420277395036176405>', true)
             .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/770576218131005440/1f44b.png')
         msg.author.send(embed);
+        console.log(`I sent ${author} a DM --> He pinged me!`);
     }
 })
 
