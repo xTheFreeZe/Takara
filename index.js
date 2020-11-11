@@ -35,7 +35,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content.includes(`<@!749889822214324236>`)) {
-        let author = msg.author.send
+        let author = msg.author
         const embed = new MessageEmbed()
             .setDescription('const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);')
             .addField('If you have any questions:', 'DM <@!420277395036176405>', true)
