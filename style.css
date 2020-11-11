@@ -35,18 +35,24 @@ body {
     margin-right: 48px;
 }
 
+.logo2 img {
+    width: 100px;
+    margin-top: -7px;
+    margin-right: 48px;
+}
+
 .Home {
-    color: #ffd700  ;
+    color: #ffd700;
     text-decoration: none;
 }
 
 .Contact {
-    color: #ffd700 ;
+    color: #ffd700;
     text-decoration: none;
 }
 
 .Battlefy {
-    color: #ffd700 ;
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -103,11 +109,12 @@ body {
     margin-left: 40px;
 }
 
-@keyframes app-text{
-    0%{
+@keyframes app-text {
+    0% {
         color: black;
         margin-bottom: -40px;
     }
+
     30% {
         letter-spacing: 25px;
         margin-bottom: -40px;
@@ -125,11 +132,12 @@ body {
 
 }
 
-@keyframes app-text{
-    0%{
+@keyframes app-text {
+    0% {
         color: black;
         margin-bottom: -40px;
     }
+
     30% {
         letter-spacing: 25px;
         margin-bottom: -40px;
