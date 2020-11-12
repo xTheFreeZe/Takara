@@ -467,7 +467,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "12345678910":
+        case "warn":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -1184,7 +1184,7 @@ client.on('message', (message) => {
 
 
 client.on('message', msg => {
-    if (msg.content.includes("^warn")) {
+    if (msg.content.includes("^nichtwarnLOL")) {
         let user = msg.mentions.users.first();
         let author = msg.author
         const embed = new MessageEmbed()
