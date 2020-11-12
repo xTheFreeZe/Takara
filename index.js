@@ -810,7 +810,7 @@ client.on('message', message => {
     let msgArgs = args.slice(2).join(" ");
 
     switch (args[0]) {
-        case 'kick':
+        case '12345678910':
 
 
 
@@ -884,7 +884,7 @@ client.on('message', message => {
     let author = message.author
 
     switch (args[0]) {
-        case 'ban':
+        case '123456789':
 
 
 
