@@ -1189,7 +1189,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor("#FFFF00")
             .setDescription(`This command is no longer available!`)
-            .addField(`${author}`, `Permissions don't work yet!`)
+            .addField(`Permissions dont work yet!`, `${author}`)
             .setFooter('Sorry for that!')
         msg.channel.send(embed);
         msg.delete();
@@ -1207,7 +1207,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor("#FFFF00")
             .setDescription(`This command is no longer available!`)
-            .addField(`${author}`, `Permissions don't work yet!`)
+            .addField(`Permissions dont work yet!`, `${author}`)
             .setFooter('Sorry for that!')
         msg.channel.send(embed);
         msg.delete();
