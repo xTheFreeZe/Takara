@@ -30,7 +30,7 @@ client.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         client.user.setActivity(activities_list[index]);
-    }, 4000);
+    }, 40000);
 });
 
 client.on('message', msg => {
