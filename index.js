@@ -7,23 +7,21 @@ const client = new Discord.Client();
 const PREFIX = '^';
 const activities_list = [
     "with friends",
-    //"Overwatch",
-    //"in a Tournament",
-    //"with JavaScript",
-    //"^help",
-    //"with premium",
-    //"games",
-    //"games with friends",
-    //"Overwatch ranked",
-    //"in the Syntax Terror Tournaments",
-    //"Overwatch with friends",
-    //"nothing",
-    //"Apex Legends",
-    //"in a three Squad",
-    //"Fall Guys",
-    "Hearthstone", {
-        type: "WATCHING"
-    }
+    "Overwatch",
+    "in a Tournament",
+    "with JavaScript",
+    "^help",
+    "with premium",
+    "games",
+    "games with friends",
+    "Overwatch ranked",
+    "in the Syntax Terror Tournaments",
+    "Overwatch with friends",
+    "nothing",
+    "Apex Legends",
+    "in a three Squad",
+    "Fall Guys",
+    "Hearthstone"
 
 ];
 
