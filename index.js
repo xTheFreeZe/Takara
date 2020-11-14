@@ -797,13 +797,6 @@ client.on('message', msg => {
 })
 
 
-client.on('message', msg => {
-    if (msg.content === "^newtourny") {
-        msg.channel.send(`It's Tournament time! https://battlefy.com/syntax-terror-tournaments/halloween-horror-bronze-to-plat-by-stt/5f6b4e0d1104cd7a261306e6/info?infoTab=details`);
-    }
-
-})
-
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
