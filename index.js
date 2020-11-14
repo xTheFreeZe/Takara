@@ -982,7 +982,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription('LiteisCool just went live on Twitch! https://www.twitch.tv/liteiscool')
-            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/568fb90d-0c93-4f70-82dd-7c5c3294a313-profile_image-70x70.png')
+            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/0bf1e4ab-665c-4004-bbd4-fc9861ecab60-profile_image-70x70.png')
             .setImage('https://acegif.com/wp-content/gif/outerspace-66.gif')
             .setFooter('Make sure you leave a follow and stay there for a bit!')
         msg.channel.send(embed);
