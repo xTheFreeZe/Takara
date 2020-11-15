@@ -983,7 +983,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setDescription('LiteisCool just went live on Twitch! https://www.twitch.tv/liteiscool')
             .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/0bf1e4ab-665c-4004-bbd4-fc9861ecab60-profile_image-70x70.png')
-            .setImage('https://acegif.com/wp-content/gif/outerspace-66.gif')
+            .setImage('https://media.tenor.com/images/b881b577640aa1aab8f93f4cfc727c99/tenor.gif')
             .setFooter('Make sure you leave a follow and stay there for a bit!')
         msg.channel.send(embed);
         msg.delete();
