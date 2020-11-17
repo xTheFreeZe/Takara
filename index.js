@@ -871,13 +871,15 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-
+    if (message.channel instanceof Discord.DMChannel) return;
+    if (message.author.bot) return;
+    if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
     let args = message.content.substring(PREFIX.length).split(" ");
     let msgArgs = args.slice(2).join(" ");
     let author = message.author
 
     switch (args[0]) {
-        case '123456789':
+        case 'ban':
 
 
 
