@@ -615,6 +615,9 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^uptime") {
+        if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
+        if (msg.channel instanceof Discord.DMChannel) return;
+        if (msg.author.bot) return;
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);
         totalSeconds %= 86400;
@@ -1115,6 +1118,9 @@ client.on('message', msg => {
 
 client.on('message', msg => {
         if (msg.content === "^topic") {
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
+            if (msg.channel instanceof Discord.DMChannel) return;
+            if (msg.author.bot) return;
             const embed = new MessageEmbed()
                 .setTitle('Watch out!')
                 .setColor('#EC0808')
