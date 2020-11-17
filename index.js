@@ -310,7 +310,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "speak":
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
 
@@ -496,7 +496,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
 
@@ -615,7 +615,7 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^uptime") {
-        if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
+        if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
         if (msg.channel instanceof Discord.DMChannel) return;
         if (msg.author.bot) return;
         let totalSeconds = (client.uptime / 1000);
@@ -839,7 +839,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'kick':
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -915,7 +915,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
