@@ -442,6 +442,30 @@ client.on('message', msg => {
 
 
     switch (args[0]) {
+        case "shutdown":
+            const user = msg.mentions.users.first();
+
+            let msgArgs = args.slice(1).join(" ");
+            const embed = new MessageEmbed()
+                .setColor('#FF0000')
+                .setTitle('HARD ERROR')
+                .setDescription("**" + msgArgs + "**")
+                .setTimestamp();
+            msg.channel.send(embed);
+            msg.delete();
+
+            break;
+
+
+
+    }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+
+    switch (args[0]) {
         case "update":
             const user = msg.mentions.users.first();
 
