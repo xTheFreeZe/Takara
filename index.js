@@ -310,6 +310,10 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "speak":
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
+            if (message.channel instanceof Discord.DMChannel) return;
+            if (message.author.bot) return;
+
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
@@ -492,6 +496,10 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
+            if (message.channel instanceof Discord.DMChannel) return;
+            if (message.author.bot) return;
+
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
