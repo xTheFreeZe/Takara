@@ -901,7 +901,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
-            if (!message.member.roles.cache.has('735498148629446657')) return message.reply("You can't use that");
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
