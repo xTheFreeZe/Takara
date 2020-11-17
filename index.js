@@ -827,7 +827,10 @@ client.on('message', message => {
     let msgArgs = args.slice(2).join(" ");
 
     switch (args[0]) {
-        case '12345678910':
+        case 'kick':
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that");
+            if (message.channel instanceof Discord.DMChannel) return;
+            if (message.author.bot) return;
 
 
 
@@ -1198,27 +1201,6 @@ client.on('message', (message) => {
         message.channel.send(`<@&770312766534975509> A Member needs your help!`);
     }
 });
-
-
-
-client.on('message', msg => {
-    if (msg.content.includes("^kick")) {
-        let user = msg.mentions.users.first();
-        let author = msg.author
-        const embed = new MessageEmbed()
-            .setColor("#FFFF00")
-            .setDescription(`This command is no longer available!`)
-            .addField(`Permissions dont work yet!`, `${author}`)
-            .setFooter('Sorry for that!')
-        msg.channel.send(embed);
-        msg.delete();
-
-
-    }
-
-})
-
-
 
 client.on('message', msg => {
     if (msg.content.includes("^nichtwarnLOL")) {
