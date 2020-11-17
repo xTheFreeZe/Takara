@@ -1219,23 +1219,6 @@ client.on('message', msg => {
 })
 
 
-client.on('message', msg => {
-    if (msg.content.includes("^ban")) {
-        let user = msg.mentions.users.first();
-        let author = msg.author
-        const embed = new MessageEmbed()
-            .setColor("#FFFF00")
-            .setDescription(`This command is no longer available!`)
-            .addField(`Permissions dont work yet!`, `${author}`)
-            .setFooter('Sorry for that!')
-        msg.channel.send(embed);
-        msg.delete();
-
-
-    }
-
-})
-
 
 client.on('message', msg => {
     if (msg.content.includes("^nichtwarnLOL")) {
