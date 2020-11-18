@@ -218,6 +218,7 @@ client.on("message", msg => {
         .setDescription^("Welcome to `Ghol's Couch`!")
         .addField('Owner', '<@!409080789435809802>', true)
         .addField('Admin', '<@!420277395036176405>')
+    msg.channel.send(embed);
     }
 })
 
