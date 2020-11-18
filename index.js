@@ -361,7 +361,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
                 .setColor('#7CFC00')
-                .setTitle('<:STT_yes:778545433810173952> Problem fixed!')
+                .setTitle('<a:pepe_light:723577938913656842> Problem fixed!')
                 .setDescription("**" + msgArgs + "**")
                 .setFooter('Test 516981fg')
             msg.channel.send(embed);
