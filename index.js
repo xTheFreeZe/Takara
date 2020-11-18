@@ -77,7 +77,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "^help") {
+    if (msg.content === "12345678910") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
@@ -1169,6 +1169,19 @@ client.on('message', msg => {
     if (msg.content.includes("^talk")) {
         let user = msg.mentions.users.first();
         msg.channel.send("This command doesnt exist anymore. It has been changed!");
+        msg.delete();
+
+
+
+
+    }
+
+})
+
+client.on('message', msg => {
+    if (msg.content.includes("^help")) {
+        let user = msg.mentions.users.first();
+        msg.channel.send("We are working on this comment at the moment, due to Errors and message problems the command will be back soon!");
         msg.delete();
 
 
