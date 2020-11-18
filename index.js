@@ -89,7 +89,7 @@ client.on('message', msg => {
 
             .addField('`^help mod`', 'Commands for staff')
 
-            .addField('`^help dev`', '<:VerifiedBotDeveloper:754668951232839772> Developer options')
+            .addField('`^help dev`', 'Developer options')
 
             .addField('`Ping:`', `${ping} ms`, true)
 
