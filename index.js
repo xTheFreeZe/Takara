@@ -5,33 +5,38 @@ const {
 } = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = '^';
-const activities_list = [
-    "with friends",
-    "Overwatch",
-    "in a Tournament",
-    "with JavaScript",
-    "^help",
-    "with premium",
-    "games",
-    "games with friends",
-    "Overwatch ranked",
-    "in the Syntax Terror Tournaments",
-    "Overwatch with friends",
-    "nothing",
-    "Apex Legends",
-    "in a three Squad",
-    "Fall Guys",
-    "Hearthstone"
+//const activities_list = [
+//"with friends",
+//"Overwatch",
+//"in a Tournament",
+//"with JavaScript",
+//"^help",
+//"with premium",
+//"games",
+//"games with friends",
+//"Overwatch ranked",
+//"in the Syntax Terror Tournaments",
+//"Overwatch with friends",
+//"nothing",
+//"Apex Legends",
+//"in a three Squad",
+//"Fall Guys",
+//"Hearthstone"
 
-];
+//];
 
 client.on('ready', () => {
-    console.log('The bot is online')
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        client.user.setActivity(activities_list[index]);
-    }, 40000);
-});
+    client.user.setActivity('the Syntax Terror Server', {
+        type: "WATCHING"
+    })
+    console.log('The bot is online!');
+})
+
+
+//setInterval(() => {
+//const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+//client.user.setActivity(activities_list[index]);
+//},  40000);
 
 client.on('message', msg => {
     if (msg.content.includes(`<@!749889822214324236>`)) {
