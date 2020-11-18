@@ -215,7 +215,7 @@ client.on("message", msg => {
         const embed = new MessageEmbed()
             .setImage("https://cdn.discordapp.com/attachments/681060754564448257/778525893857378314/cdf09b00aea778cb509aafc4cccc4e77.png")
             .setTitle("Welcome to the Server!")
-            .setDescription ^ ("Welcome to `Ghol's Couch`!")
+            .setDescription("Welcome to `Ghol's Couch`!")
             .addField('Owner', '<@!409080789435809802>', true)
             .addField('Admin', '<@!420277395036176405>', true)
         msg.channel.send(embed);
