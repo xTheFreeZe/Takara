@@ -77,7 +77,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content === "12345678910") {
+    if (msg.content === "^help") {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
@@ -85,17 +85,17 @@ client.on('message', msg => {
             .setDescription('These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
-            .addField('`^help fun`', '<a:PepeLaughers:627151750838878248> Fun commands')
+            .addField('`^help fun`', 'Fun commands')
 
-            .addField('`^help mod`', '<:PES_AngeryDiamondSword:674277791415664680> Commands for staff')
+            .addField('`^help mod`', 'Commands for staff')
 
             .addField('`^help dev`', '<:VerifiedBotDeveloper:754668951232839772> Developer options')
 
-            .addField('`Ping:`', `<:Discord:677260241502470157> ${ping} ms`, true)
+            .addField('`Ping:`', `${ping} ms`, true)
 
-            .addField('`Status:`', `<:online:587501504068321280> online`, true)
+            .addField('`Status:`', `:green_circle: online`, true)
 
-            .addField("`My Website`", "<a:endlessgears:609046319155380231> [Click here](https://sad-spence-0be9ad.netlify.app)", true)
+            .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
@@ -110,7 +110,7 @@ client.on('message', msg => {
     if (msg.content === "^help fun") {
         const embed = new MessageEmbed()
             .setColor('#E16210')
-            .setTitle('**<a:PepeLaughers:627151750838878248> Fun Commands**')
+            .setTitle('**Fun Commands**')
             .setDescription('`^avatar`, `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
@@ -121,7 +121,7 @@ client.on('message', msg => {
     if (msg.content === "^help mod") {
         const embed = new MessageEmbed()
             .setColor('#2E0E81')
-            .setTitle('**<:PES_AngeryDiamondSword:674277791415664680> ^help Moderator**')
+            .setTitle('**^help Moderator**')
             .setDescription('This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`, `^uptime`', true)
@@ -135,7 +135,7 @@ client.on('message', msg => {
     if (msg.content === "^help dev") {
         const embed = new MessageEmbed()
             .setColor('#56E448')
-            .setTitle('<:VerifiedBotDeveloper:754668951232839772> ^help Developer')
+            .setTitle('^help Developer')
             .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^ping`, `^ID`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
@@ -1177,21 +1177,6 @@ client.on('message', msg => {
     }
 
 })
-
-client.on('message', msg => {
-    if (msg.content.includes("^help")) {
-        let user = msg.mentions.users.first();
-        msg.channel.send("We are working on this comment at the moment, due to Errors and message problems the command will be back soon!");
-        msg.delete();
-
-
-
-
-    }
-
-})
-
-
 
 client.on('message', msg => {
     if (msg.content.includes("hello")) {
