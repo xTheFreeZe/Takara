@@ -208,19 +208,6 @@ client.on('message', msg => {
     }
 })
 
-client.on("message", msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let msgArgs = args.slice(1).join(" ");
-    if (msg.content === "^welcome new") {
-        const embed = new MessageEmbed()
-            .setImage("https://cdn.discordapp.com/attachments/681060754564448257/778525893857378314/cdf09b00aea778cb509aafc4cccc4e77.png")
-            .setTitle("Welcome to the Server!")
-            .setDescription("Welcome to `Ghol's Couch`! Thank you for being here!")
-            .addField('Owner', '<@!409080789435809802>', true)
-            .addField('Admin', '<@!420277395036176405>', true)
-        msg.channel.send(embed);
-    }
-})
 
 //suggest command: ^suggest {tag} (suggestion)
 
