@@ -85,17 +85,17 @@ client.on('message', msg => {
             .setDescription('These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
-            .addField('<a:PepeLaughers:627151750838878248>`^help fun`', 'Fun commands')
+            .addField('`^help fun`', '<a:PepeLaughers:627151750838878248> Fun commands')
 
-            .addField('<:PES_AngeryDiamondSword:674277791415664680>`^help mod`', 'Commands for staff')
+            .addField('`^help mod`', '<:PES_AngeryDiamondSword:674277791415664680> Commands for staff')
 
-            .addField('<:VerifiedBotDeveloper:754668951232839772>`^help dev`', 'Developer options')
+            .addField('`^help dev`', '<:VerifiedBotDeveloper:754668951232839772> Developer options')
 
-            .addField('`<:Discord:677260241502470157> Ping:`', `${ping} ms`, true)
+            .addField('`Ping:`', `<:Discord:677260241502470157> ${ping} ms`, true)
 
-            .addField('`<:online:587501504068321280> Status:`', `online`, true)
+            .addField('`Status:`', `<:online:587501504068321280> online`, true)
 
-            .addField("`<a:endlessgears:609046319155380231> My Website`", " [Click here](https://sad-spence-0be9ad.netlify.app)", true)
+            .addField("`My Website`", "<a:endlessgears:609046319155380231> [Click here](https://sad-spence-0be9ad.netlify.app)", true)
 
             .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
 
