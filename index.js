@@ -620,7 +620,6 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^uptime") {
-        if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
         if (msg.channel instanceof Discord.DMChannel) return;
         if (msg.author.bot) return;
         let totalSeconds = (client.uptime / 1000);
