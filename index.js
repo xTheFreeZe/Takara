@@ -26,7 +26,7 @@ const PREFIX = '^';
 //];
 
 client.on('ready', () => {
-    client.user.setActivity('the Syntax Terror Server', {
+    client.user.setActivity('the STT Server', {
         type: "WATCHING"
     })
     console.log('The bot is online!');
