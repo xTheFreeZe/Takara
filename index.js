@@ -791,7 +791,6 @@ client.on('message', async message => {
         } else {
             const embed = new MessageEmbed()
                 .setDescription('<:STT_no:778545452218974209> Please enter a voice channel and try `^join` again!')
-                .addField('Comment is buggy?', 'Please DM `@Marwin#8376`.', true)
                 .setColor('#E8EE17')
             message.reply(embed);
             message.react('👎');
@@ -815,7 +814,6 @@ client.on('message', async message => {
             const embed = new MessageEmbed()
                 .setDescription('<:STT_no:778545452218974209> I could not leave this Voice Channel')
                 .setColor('#E8EE17')
-                .setFooter('Is the bot in a voice channel with you? If yes and it still doesnt leave please use the ^report feature!')
             message.reply(embed);
             message.react('👎')
         }
