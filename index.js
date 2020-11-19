@@ -501,7 +501,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
-            if (!msg.member.roles.cache.has('Staff')) return msg.reply("<:STT_no:778545452218974209> You can't use that!");
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("<:STT_no:778545452218974209> You can't use that!");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
 
