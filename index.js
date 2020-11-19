@@ -315,7 +315,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "speak":
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("<:STT_no:778545452218974209> You can't use that!");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
 
@@ -501,7 +501,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
+            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("<:STT_no:778545452218974209> You can't use that!");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
 
@@ -841,7 +841,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'kick':
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("<:STT_no:778545452218974209> You can't use that!");
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -917,7 +917,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("You can't use that. Soon this will be available for people with a role named `Staff`.");
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply("<:STT_no:778545452218974209> You can't use that!");
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
