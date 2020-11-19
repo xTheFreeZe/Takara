@@ -409,7 +409,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
                 .setColor('#FF0000')
-                .setTitle(':small_red_triangle_down: Reported Problem')
+                .setTitle('<:STT_no:778545452218974209> Reported Problem')
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
             msg.delete();
@@ -510,7 +510,7 @@ client.on('message', msg => {
 
 
             if (!args[1]) {
-                msg.channel.send('Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
+                msg.channel.send('<:STT_no:778545452218974209> Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
                 msg.delete();
             }
 
@@ -548,7 +548,7 @@ client.on('message', msg => {
 
 
             if (!args[1]) {
-                msg.channel.send('Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
+                msg.channel.send('<:STT_no:778545452218974209> Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
                 msg.delete();
             }
 
@@ -592,7 +592,7 @@ client.on('message', msg => {
 
 
             if (!args[1]) {
-                msg.channel.send('Use ^report {your message} and the bot will send your report to the Developer! ');
+                msg.channel.send('<:STT_no:778545452218974209> Use ^report {your message} and the bot will send your report to the Developer! ');
                 msg.delete();
             }
 
@@ -647,7 +647,7 @@ client.on("message", msg => {
         const embed = new MessageEmbed()
             .setColor('#FF0000')
             .setTitle('Bot Outage!')
-            .setDescription('STT Bot is offline! Please be patient as the Developer is trying to fix it!')
+            .setDescription('<:STT_no:778545452218974209> STT Bot is offline! Please be patient as the Developer is trying to fix it!')
             .setFooter('Please take note that this may take some time.')
         msg.channel.send(embed);
         msg.delete();
@@ -660,7 +660,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#ffd700')
             .setAuthor('Temporary outage')
-            .setDescription(':yellow_circle: Commands dont seem to work!')
+            .setDescription('<:STT_no:778545452218974209> Commands dont seem to work!')
             .setFooter('Please be patient as I am working on it')
         msg.channel.send(embed);
         msg.delete()
@@ -672,7 +672,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#ffd700')
             .setAuthor('Temporary outage')
-            .setDescription(':yellow_circle: The bot is having latency problems!')
+            .setDescription('<:STT_no:778545452218974209> The bot is having latency problems!')
             .setFooter('Please be patient as I am working on it')
         msg.channel.send(embed);
         msg.delete()
@@ -778,7 +778,7 @@ client.on('message', msg => {
 
 client.on('message', async message => {
     if (!message.guild) return;
-    if (message.content === '^12345678910') {
+    if (message.content === '^join') {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
             const embed = new MessageEmbed()
@@ -790,7 +790,7 @@ client.on('message', async message => {
 
         } else {
             const embed = new MessageEmbed()
-                .setDescription('Please enter a voice channel and try `^join` again!')
+                .setDescription('<:STT_no:778545452218974209> Please enter a voice channel and try `^join` again!')
                 .addField('Comment is buggy?', 'Please DM `@Marwin#8376`.', true)
                 .setColor('#E8EE17')
             message.reply(embed);
@@ -806,14 +806,14 @@ client.on('message', async message => {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.leave();
             const embed = new MessageEmbed()
-                .setDescription('I left your voice Channel!')
+                .setDescription('<:STT_yes:778545433810173952> I left your voice Channel!')
                 .setColor('#15DB1B')
             message.channel.send(embed);
             console.log(`I left a Voice Channel`);
             message.react('👍')
         } else {
             const embed = new MessageEmbed()
-                .setDescription('I could not leave this Voice Channel')
+                .setDescription('<:STT_no:778545452218974209> I could not leave this Voice Channel')
                 .setColor('#E8EE17')
                 .setFooter('Is the bot in a voice channel with you? If yes and it still doesnt leave please use the ^report feature!')
             message.reply(embed);
@@ -872,7 +872,7 @@ client.on('message', message => {
                     }).catch(err => {
                             const embed = new MessageEmbed()
                                 .setColor('#F1C40F')
-                                .setDescription('I was unable to kick this Person. Missing Permissions:`ADMINISTRATOR,KICK_MEMBERS` ')
+                                .setDescription('<:STT_no:778545452218974209> I was unable to kick this Person. Missing Permissions:`ADMINISTRATOR,KICK_MEMBERS` ')
                             message.reply(embed);
                             message.delete();
 
@@ -951,7 +951,7 @@ client.on('message', message => {
                     }).catch(err => {
                             const embed = new MessageEmbed()
                                 .setColor('#F1C40F')
-                                .setDescription('I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
+                                .setDescription('<:STT_no:778545452218974209> I was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
                             message.reply(embed);
                             message.delete();
                             console.log(`${author} tried to ban ${member}`);
