@@ -82,7 +82,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
-            .setDescription('These are your options:')
+            .setDescription('<:STT_yes:778545433810173952> These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
             .addField('`^help fun`', 'Fun commands')
@@ -385,7 +385,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
                 .setColor('#7CFC00')
-                .setTitle(':white_check_mark: The report you submitted has been read')
+                .setTitle('<:STT_yes:778545433810173952> The report you submitted has been read')
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
             msg.delete();
@@ -516,7 +516,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
+                .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(`Searching ${member}... Please wait.`)
@@ -554,7 +554,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: ${member} has been warned! `)
+                .setDescription(`<:STT_yes:778545433810173952> ${member} has been warned! `)
                 .addField(`Reason`, msgArgs, true)
                 .addField(`Moderator`, `${author}`)
                 .setColor('RANDOM')
@@ -598,7 +598,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`:white_check_mark: Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
+                .setDescription(`<:STT_yes:778545433810173952> Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`Report from ${author} in ${channel}`)
             msg.channel.send("Sending your Message to the Developer, please wait a second!")
@@ -715,7 +715,7 @@ client.on("message", msg => {
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription(':white_check_mark: Syntax Terror Premium bot is online!')
+            .setDescription('<:STT_yes:778545433810173952> Syntax Terror Premium bot is online!')
             .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
         msg.channel.send(embed);
         console.log('Checked if I am online!');
@@ -782,7 +782,7 @@ client.on('message', async message => {
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
             const embed = new MessageEmbed()
-                .setDescription('I joined your voice channel!')
+                .setDescription('<:STT_yes:778545433810173952> I joined your voice channel!')
                 .setColor('#15DB1B')
             message.reply(embed);
             console.log(`I joined a Voice Channel`);
@@ -857,7 +857,7 @@ client.on('message', message => {
                     member.kick(msgArgs).then(() => {
                         const embed = new MessageEmbed()
                             .setColor('#229954')
-                            .setDescription(`:white_check_mark: STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
+                            .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
                             .setTimestamp()
                         message.reply(embed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
@@ -934,7 +934,7 @@ client.on('message', message => {
                         ression: msgArgs
                     }).then(() => {
                         const embed = new MessageEmbed()
-                            .setDescription(`:white_check_mark: STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
+                            .setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
                             .setColor('#229954')
                             .setTimestamp()
                             .setFooter(`Mod ID: ${author}`)
