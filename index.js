@@ -363,7 +363,7 @@ client.on('message', msg => {
                 .setColor('#7CFC00')
                 .setTitle('<a:pepe_light:723577938913656842> Problem fixed!')
                 .setDescription("**" + msgArgs + "**")
-                .setFooter('Test 516981fg')
+                .setFooter('STT Productions')
             msg.channel.send(embed);
             msg.delete();
 
@@ -457,7 +457,7 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
                 .setColor('#FF0000')
-                .setTitle('HARD ERROR')
+                .setTitle('ERROR')
                 .setDescription("**" + msgArgs + "**")
                 .setTimestamp();
             msg.channel.send(embed);
