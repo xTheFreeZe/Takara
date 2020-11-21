@@ -844,7 +844,7 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
     let msgArgs = args.slice(2).join(" ");
-    let author = msg.author
+    let author = message.author
 
     switch (args[0]) {
         case 'kick':
