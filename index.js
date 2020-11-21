@@ -285,7 +285,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "hug":
-            if(!args[1]) return ("Use more Args");
+            if(!args[1]) return msg.reply("Use more Args");
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
