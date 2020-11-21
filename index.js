@@ -848,7 +848,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'kick':
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`);
+            if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`);
             if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
@@ -925,7 +925,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`);
+            if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`);
             if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
