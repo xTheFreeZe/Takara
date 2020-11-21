@@ -217,6 +217,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "suggest":
+            if(!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`);
             const user = msg.mentions.users.first();
             const embed = new MessageEmbed()
                 .setColor('0xFFC300')
@@ -250,6 +251,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "pred":
+            if(!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^pred Team vs Team**`);
             const user = msg.mentions.users.first();
             const embed = new MessageEmbed()
                 .setColor('0xFFC300')
@@ -285,7 +287,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "hug":
-            if(!args[1]) return msg.reply(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
+            if(!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
