@@ -285,7 +285,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "hug":
-            if(!args[1]) return msg.reply("Use more Args");
+            if(!args[1]) return msg.reply(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
 
