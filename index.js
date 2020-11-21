@@ -248,6 +248,7 @@ client.on('message', msg => {
 //predict command (just the talk command with reactions)
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "pred":
