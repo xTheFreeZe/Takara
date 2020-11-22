@@ -960,6 +960,7 @@ client.on('message', message => {
                             const embed = new MessageEmbed()
                                 .setColor('#F1C40F')
                                 .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person.It is missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
+                                .addField('Error:', 'The bot is missing Permissions')
                             message.reply(embed);
                             message.delete();
                             console.log(`${author} tried to ban ${member}`);
