@@ -1177,7 +1177,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content.includes("hello")) {
-        msg.channel.send("<:STT_yes:778545490345459752>")
         let user = msg.mentions.users.first();
         msg.react('👋')
 
