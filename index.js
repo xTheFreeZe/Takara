@@ -38,17 +38,6 @@ client.on('ready', () => {
 //client.user.setActivity(activities_list[index]);
 //},  40000);
 
-client.on('message', msg => {
-    if (msg.content.includes(`<@!749889822214324236>`)) {
-        let author = msg.author
-        const embed = new MessageEmbed()
-            .setDescription('const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);')
-            .addField('If you have any questions:', 'DM <@!420277395036176405>', true)
-            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/770576218131005440/1f44b.png')
-        msg.author.send(embed);
-        console.log(`I sent ${author} a DM --> He pinged me!`);
-    }
-})
 
 client.on('message', msg => {
     if (msg.content === "^help2") {
