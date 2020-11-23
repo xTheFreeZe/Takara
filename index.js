@@ -486,7 +486,7 @@ client.on('message', msg => {
                 .setTitle('New Update!')
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
-                .setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fplanetfreight.com%2Fways-to-show-your-thanks-to-truckers%2Fvector-realistic-isolated-neon-sign-of-thank-you-logo-for-decoration-and-covering-on-the-wall-background%2F&psig=AOvVaw0fyiR-rj_QH_B9QWulBz05&ust=1606225213566000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjuyqvlmO0CFQAAAAAdAAAAABAo")
+                .setImage("https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-lovely-cool-pink-thank-you-english-png-image_508255.jpg")
             msg.channel.send(embed);
             msg.delete();
 
