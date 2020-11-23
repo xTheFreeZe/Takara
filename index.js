@@ -486,7 +486,7 @@ client.on('message', msg => {
                 .setTitle('New Update!')
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
-                .setImage("https://cdn.discordapp.com/attachments/681060754564448257/779683718091898890/unknown.png")
+                .setImage("https://cdn.discordapp.com/attachments/681060754564448257/780425780471529482/danke-zusammensetzung-mit-neonlichtart_23-2147835504.png")
             msg.channel.send(embed);
             msg.delete();
 
