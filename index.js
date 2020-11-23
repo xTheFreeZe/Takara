@@ -1213,7 +1213,7 @@ client.on('message', (message) => {
     if (message.content === "^staff") {
         let user = message.mentions.users.first();
         let author = message.author
-        message.channel.send(`<@&770312766534975509> ${author} needs your help!`);
+        message.channel.send(`<@&770312766534975509>, ${author} needs your help!`);
     }
 });
 
