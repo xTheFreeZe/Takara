@@ -486,7 +486,6 @@ client.on('message', msg => {
                 .setTitle('New Update!')
                 .setColor('RANDOM')
                 .setDescription("**" + msgArgs + "**")
-                .setImage("https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-lovely-cool-pink-thank-you-english-png-image_508255.jpg")
             msg.channel.send(embed);
             msg.delete();
 
