@@ -957,7 +957,7 @@ client.on('message', message => {
                         message.channel.send(embed);
                         let logembed = new MessageEmbed()
                         .setColor("RANDOM")
-                        .setDescription(`${member} got kicked`)
+                        .setDescription(`${member} got banned`)
                         .addField(`Moderator:`, `${author}`)
                         .addField(`Channel: `, `${channel}`)
                         .addField(`Reason:`, msgArgs)
