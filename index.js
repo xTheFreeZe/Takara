@@ -505,6 +505,10 @@ client.on('message', msg => {
 
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
+            let logembed = new MessageEmbed()
+                .setDescription(`${author} warned ${member}`)
+                .addField(`Channel: `, `${channel}`, true)
+                .addField(`Reason:`, msgArgs, true)
 
 
             if (!args[1]) {
@@ -518,7 +522,7 @@ client.on('message', msg => {
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(embed);
-            log_channel.send(`${author} warned ${member} in ${channel} | Provided Reason: `+" "+ msgArgs)
+            log_channel.send(logembed);
             msg.delete();
             console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
 
