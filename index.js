@@ -208,17 +208,18 @@ client.on('message', msg => {
         case "suggest":
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`);
             const user = msg.mentions.users.first();
+            let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setColor('0xFFC300')
-                .setDescription('^suggest [suggestion] to start a poll!')
+            .setDescription("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
+            .setColor("RANDOM")
+
+
 
             if (!args[1]) {
-                msg.channel.send(embed);
+                msg.channel.send("No!");
             }
 
-            let msgArgs = args.slice(1).join(" ");
-
-            msg.channel.send("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**").then(messagereaction => {
+            msg.channel.send(embed).then(messagereaction => {
                 messagereaction.react("👍");
                 messagereaction.react("👎");
                 messagereaction.react("😐");
@@ -231,6 +232,7 @@ client.on('message', msg => {
 
     }
 })
+
 
 
 
