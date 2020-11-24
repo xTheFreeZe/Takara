@@ -844,6 +844,7 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'kick':
+            let channel = message.channel
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`);
             if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
