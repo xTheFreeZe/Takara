@@ -932,6 +932,8 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
+            let channel = message.channel
+            let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`);
             if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
             if (message.channel instanceof Discord.DMChannel) return;
@@ -953,6 +955,14 @@ client.on('message', message => {
                             .setTimestamp()
                             .setFooter(`Mod ID: ${author}`)
                         message.channel.send(embed);
+                        let logembed = new MessageEmbed()
+                        .setColor("RANDOM")
+                        .setDescription(`${member} got kicked`)
+                        .addField(`Moderator:`, `${author}`)
+                        .addField(`Channel: `, `${channel}`)
+                        .addField(`Reason:`, msgArgs)
+                        .setTimestamp()
+                        log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
