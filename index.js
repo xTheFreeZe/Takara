@@ -863,6 +863,8 @@ client.on('message', message => {
                             .setColor('#229954')
                             .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
                             .setTimestamp()
+                        message.reply(embed);
+
                         let logembed = new MessageEmbed()
                             .setColor("RANDOM")
                             .setDescription(`${member} got kicked`)
@@ -870,7 +872,6 @@ client.on('message', message => {
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
                             .setTimestamp()
-                        message.reply(embed);
                         log_channel.send(logembed);
 
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
