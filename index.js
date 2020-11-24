@@ -210,8 +210,8 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-            .setDescription("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
-            .setColor("RANDOM")
+                .setDescription("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
+                .setColor("RANDOM")
 
 
 
@@ -496,10 +496,12 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
+            let log_channel = msg.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^warn @person [reason]**`);
             if (!msg.member.roles.cache.has('714096868178788414')) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You can't use that!`);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
+            let channel = msg.channel
 
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
@@ -516,6 +518,7 @@ client.on('message', msg => {
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(`Searching ${member}... Please wait.`)
+            log_channel.send(`${author} warned ${member} in ${channel}`)
                 .then((msg) => {
                     setTimeout(function () {
                         msg.edit(embed);
