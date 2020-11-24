@@ -517,13 +517,8 @@ client.on('message', msg => {
                 .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
-            msg.channel.send(`Searching ${member}... Please wait.`)
+            msg.channel.send(embed);
             log_channel.send(`${author} warned ${member} in ${channel} | Provided Reason: `+" "+ msgArgs)
-                .then((msg) => {
-                    setTimeout(function () {
-                        msg.edit(embed);
-                    }, 3000)
-                });
             msg.delete();
             console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
 
