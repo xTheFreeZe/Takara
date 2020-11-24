@@ -502,13 +502,10 @@ client.on('message', msg => {
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let channel = msg.channel
+            let logembed = new MessageEmbed()
 
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
-            let logembed = new MessageEmbed()
-                .setDescription(`${author} warned ${member}`)
-                .addField(`Channel: `, `${channel}`, true)
-                .addField(`Reason:`, msgArgs, true)
 
 
             if (!args[1]) {
@@ -522,6 +519,9 @@ client.on('message', msg => {
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(embed);
+            .setDescription(`${author} warned ${member}`)
+            .addField(`Channel: `, `${channel}`, true)
+            .addField(`Reason:`, msgArgs, true)
             log_channel.send(logembed);
             msg.delete();
             console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
