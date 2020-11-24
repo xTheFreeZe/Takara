@@ -514,6 +514,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             let logembed = new MessageEmbed()
+                .setColor("RANDOM")
                 .setDescription(`${member} got warned`)
                 .addField(`Moderator:`, `${author}`)
                 .addField(`Channel: `, `${channel}`)
