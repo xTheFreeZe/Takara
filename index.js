@@ -866,13 +866,12 @@ client.on('message', message => {
                         message.reply(embed);
                         let logembed = new MessageEmbed()
                         .setColor("RANDOM")
-                        .setDescription(`${member} got warned`)
+                        .setDescription(`${member} got kicked`)
                         .addField(`Moderator:`, `${author}`)
                         .addField(`Channel: `, `${channel}`)
                         .addField(`Reason:`, msgArgs)
                         .setTimestamp()
                         log_channel.send(logembed);
-                        log_channel.send("I kicked someone");
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
