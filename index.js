@@ -514,10 +514,11 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(2).join(" ");
             let logembed = new MessageEmbed()
-            .setDescription(`${author} warned ${member}`)
-            .addField(`Channel: `, `${channel}`, true)
-            .addField(`Reason:`, msgArgs)
-            .setTimestamp()
+                .setDescription(`${member} got warned`)
+                .addField(`Moderator:`, `${author}`)
+                .addField(`Channel: `, `${channel}`)
+                .addField(`Reason:`, msgArgs)
+                .setTimestamp()
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
