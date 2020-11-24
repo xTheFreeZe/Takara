@@ -859,16 +859,16 @@ client.on('message', message => {
                 const member = message.guild.member(user);
                 if (member) {
                     member.kick(msgArgs).then(() => {
-                        let logembed = new MessageEmbed()
-                        .setColor("RANDOM")
-                        .setDescription(`${member} got kicked`)
-                        .addField(`Moderator:`, `${author}`)
-                        .addField(`Channel: `, `${channel}`)
-                        .addField(`Reason:`, msgArgs)
-                        .setTimestamp()
                         const embed = new MessageEmbed()
                             .setColor('#229954')
                             .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
+                            .setTimestamp()
+                        let logembed = new MessageEmbed()
+                            .setColor("RANDOM")
+                            .setDescription(`${member} got kicked`)
+                            .addField(`Moderator:`, `${author}`)
+                            .addField(`Channel: `, `${channel}`)
+                            .addField(`Reason:`, msgArgs)
                             .setTimestamp()
                         message.reply(embed);
                         log_channel.send(logembed);
