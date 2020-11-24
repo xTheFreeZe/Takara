@@ -865,12 +865,12 @@ client.on('message', message => {
                             .setTimestamp()
                         message.reply(embed);
                         let logembed = new MessageEmbed()
-                        .setColor("RANDOM")
-                        .setDescription(`${member} got kicked`)
-                        .addField(`Moderator:`, `${author}`)
-                        .addField(`Channel: `, `${channel}`)
-                        .addField(`Reason:`, msgArgs)
-                        .setTimestamp()
+                            .setColor("RANDOM")
+                            .setDescription(`${member} got kicked`)
+                            .addField(`Moderator:`, `${author}`)
+                            .addField(`Channel: `, `${channel}`)
+                            .addField(`Reason:`, msgArgs)
+                            .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
@@ -956,12 +956,12 @@ client.on('message', message => {
                             .setFooter(`Mod ID: ${author}`)
                         message.channel.send(embed);
                         let logembed = new MessageEmbed()
-                        .setColor("RANDOM")
-                        .setDescription(`${member} got banned`)
-                        .addField(`Moderator:`, `${author}`)
-                        .addField(`Channel: `, `${channel}`)
-                        .addField(`Reason:`, msgArgs)
-                        .setTimestamp()
+                            .setColor("RANDOM")
+                            .setDescription(`${member} got banned`)
+                            .addField(`Moderator:`, `${author}`)
+                            .addField(`Channel: `, `${channel}`)
+                            .addField(`Reason:`, msgArgs)
+                            .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
