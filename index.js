@@ -476,7 +476,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setTitle('New Update!')
                 .setColor('RANDOM')
-                .setImage("https://cdn.discordapp.com/attachments/681060754564448257/780527837953261619/unknown.png")
+                .setImage("https://cdn.discordapp.com/attachments/681060754564448257/780800852587315260/unknown.png")
                 .setDescription("**" + msgArgs + "**")
             msg.channel.send(embed);
             msg.delete();
