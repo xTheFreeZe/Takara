@@ -518,7 +518,7 @@ client.on('message', msg => {
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(`Searching ${member}... Please wait.`)
-            log_channel.send(`${author} warned ${member} in ${channel}`)
+            log_channel.send(`${author} warned ${member} in ${channel} | Provided Reason: `+" "+ msgArgs)
                 .then((msg) => {
                     setTimeout(function () {
                         msg.edit(embed);
