@@ -497,7 +497,7 @@ client.on('message', msg => {
     switch (args[0]) {
         case "warn":
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^warn @person [reason]**`);
+            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
             if (!msg.member.roles.cache.has('714096868178788414')) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You can't use that!`);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
