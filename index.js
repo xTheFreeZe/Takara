@@ -836,10 +836,16 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'kick':
+            let argsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
+                .setColor("RANDOM")
             let channel = message.channel
+            let permsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
-            if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`);
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
+            if (!args[1]) return message.channel.send(argsembed);
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -924,10 +930,16 @@ client.on('message', message => {
 
     switch (args[0]) {
         case 'ban':
+            let argsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`)
+                .setColor("RANDOM")
             let channel = message.channel
+            let permsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
-            if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`);
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
+            if (!args[1]) return message.channel.send(argsembed);
+            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -953,11 +965,11 @@ client.on('message', message => {
                             .addField(`Moderator:`, `${author}`)
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
+                            .addField(`Server:`, `${message.guild}`)
                             .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
-
 
 
 
@@ -970,6 +982,7 @@ client.on('message', message => {
                                 .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person.It is missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
                                 .addField('Error:', 'The bot is missing Permissions')
                             message.reply(embed);
+                            log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
                             message.delete();
                             console.log(`${author} tried to ban ${member}`);
 
@@ -997,8 +1010,10 @@ client.on('message', message => {
             } else {
                 const embed = new MessageEmbed()
                     .setColor('#3F2DD2 ')
-                    .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}. Make sure I have the right Permissions to ban someone!')
+                    .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}.')
+                    .addField('Error:', 'Didnt find mention (684sd68)')
                 message.channel.send(embed);
+                log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
                 message.delete();
                 console.log(`${author} used the "^ban"`);
 
