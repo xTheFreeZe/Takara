@@ -1211,7 +1211,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content.includes("65516951")) {
+    if (msg.content.includes("Hello")) {
         let user = msg.mentions.users.first();
         msg.react('👋')
 
@@ -1222,7 +1222,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-    if (msg.content.includes("4584441")) {
+    if (msg.content.includes("hello")) {
         let user = msg.mentions.users.first();
         msg.react('👋')
 
