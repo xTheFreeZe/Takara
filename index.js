@@ -591,26 +591,18 @@ client.on('message', msg => {
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^report [bug]**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
-
-
-            if (!args[1]) {
-                msg.channel.send('<:STT_no:778545452218974209> Use ^report {your message} and the bot will send your report to the Developer! ');
-                msg.delete();
-            }
-
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription(`<:STT_yes:778545433810173952> Your Report has been sent to Marwin:` + " " + "**" + msgArgs + "**")
+                .setDescription(`<:STT_yes:778545433810173952> Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
                 .setColor('RANDOM')
-                .setFooter(`Report from ${author} in ${channel}`)
-            msg.channel.send("Sending your Message to the Developer, please wait a second!")
-                .then((msg) => {
-                    setTimeout(function () {
-                        msg.edit(embed);
-                    }, 3000)
-                });
-            msg.delete();
+            msg.channel.send(embed);
+            msg.channel.send("Connection didn't time out and everything worked! Message got sent to `420277395036176405` !");
+            let report_embed = new MessageEmbed()
+                .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
+                .setColor("RANDOM")
+            client.users.cache.get('420277395036176405').send(report_embed);
             console.log(`New Report from ${author}:` + msgArgs);
+            msg.delete();
 
 
             break;
