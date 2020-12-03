@@ -4,7 +4,10 @@ const {
     MessageEmbed
 } = require('discord.js');
 const client = new Discord.Client();
-const PREFIX = '^';
+const {
+    PREFIX,
+} = require('./config.json');
+
 //const activities_list = [
 //"with friends",
 //"Overwatch",
