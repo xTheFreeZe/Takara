@@ -1253,6 +1253,15 @@ client.on('message', (message) => {
     }
 });
 
+client.on('message', (message) => {
+    if (message.content === "^cute") {
+        if (!message.member.roles.cache.has('768952204509052979')) return message.reply("You dont have the CUTIE Role! <:pepehands:720340479576768552> ");
+        let user = message.mentions.users.first();
+        let author = message.author
+        message.channel.send(`<@&768952204509052979>, ${author} wants some cuties in the chat!!`);
+    }
+});
+
 client.on('message', msg => {
     if (msg.content.includes("^nichtwarnLOL")) {
         let user = msg.mentions.users.first();
