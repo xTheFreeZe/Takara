@@ -1262,6 +1262,25 @@ client.on('message', (message) => {
     }
 });
 
+client.on("message", msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+    let msgArgs = args.slice(1).join(" ");
+    if (msg.content === "^welcome new") {
+        const embed = new MessageEmbed()
+            .setImage("https://cdn.discordapp.com/attachments/681060754564448257/778525893857378314/cdf09b00aea778cb509aafc4cccc4e77.png")
+            .setTitle("Welcome to the Server!")
+            .setDescription(`Welcome to ${msg.guild}! Thank you for being here!`)
+            .addField('Owner', '<@!409080789435809802>', true)
+            .addField('Admin', '<@!420277395036176405> and <@!334681592293490688>', true)
+        msg.channel.send("@everyone")
+        .then((msg) => {
+            setTimeout(function () {
+                msg.edit(embed);
+            }, 1000)
+        });
+    }
+})
+
 
 client.on('message', msg => {
     if (msg.content.includes("^nichtwarnLOL")) {
