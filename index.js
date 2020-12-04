@@ -1233,18 +1233,6 @@ client.on('message', msg => {
 
 })
 
-
-client.on('message', msg => {
-    if (msg.content === "STT Premium") {
-        msg.channel.send('This is cool')
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit('This is actually awesome!');
-                }, 3000)
-            });
-    }
-})
-
 client.on('message', (message) => {
     if (message.content === "^staff") {
         let user = message.mentions.users.first();
@@ -1273,11 +1261,11 @@ client.on("message", msg => {
             .addField('Owner', '<@!409080789435809802>', true)
             .addField('Admin', '<@!420277395036176405> and <@!334681592293490688>', true)
         msg.channel.send("@everyone")
-        .then((msg) => {
-            setTimeout(function () {
-                msg.edit(embed);
-            }, 1000)
-        });
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 1000)
+            });
     }
 })
 
