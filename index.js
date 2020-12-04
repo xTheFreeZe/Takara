@@ -1279,7 +1279,7 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-    if (msg.content.includes("^join")) {
+    if (msg.content.includes("47516544sda")) {
         let user = msg.mentions.users.first();
         let author = msg.author
         const embed = new MessageEmbed()
