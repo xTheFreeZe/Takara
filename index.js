@@ -8,38 +8,35 @@ const {
     PREFIX,
 } = require('./config.json');
 
-//const activities_list = [
-//"with friends",
-//"Overwatch",
-//"in a Tournament",
-//"with JavaScript",
-//"^help",
-//"with premium",
-//"games",
-//"games with friends",
-//"Overwatch ranked",
-//"in the Syntax Terror Tournaments",
-//"Overwatch with friends",
-//"nothing",
-//"Apex Legends",
-//"in a three Squad",
-//"Fall Guys",
-//"Hearthstone"
+const activities_list = [
+    "with friends",
+    "Overwatch",
+    "in a Tournament",
+    "with JavaScript",
+    "^help",
+    "with premium",
+    "games",
+    "games with friends",
+    "Overwatch ranked",
+    "in the Syntax Terror Tournaments",
+    "Overwatch with friends",
+    "nothing",
+    "Apex Legends",
+    "in a three Squad",
+    "Fall Guys",
+    "Hearthstone"
 
-//];
+];
 
 client.on('ready', () => {
-    client.user.setActivity('the STT Server', {
-        type: "WATCHING"
-    })
-    console.log('The bot is online!');
+    console.log("Bot is online!");
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        client.user.setActivity(activities_list[index]);
+    }, 40000);
 })
 
 
-//setInterval(() => {
-//const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-//client.user.setActivity(activities_list[index]);
-//},  40000);
 
 
 client.on('message', msg => {
