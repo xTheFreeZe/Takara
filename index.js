@@ -135,6 +135,7 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^commands") {
+        if (msg.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setTitle("STT Premium")
             .setColor("#e2b007")
