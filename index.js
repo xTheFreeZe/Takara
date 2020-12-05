@@ -41,7 +41,6 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content === "^help2") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
@@ -68,7 +67,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help") {
-        if (message.channel instanceof Discord.DMChannel) return;
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
@@ -99,7 +97,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help fun") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
@@ -111,7 +108,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help mod") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('#2E0E81')
             .setTitle('**^help Moderator**')
@@ -126,7 +122,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help dev") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('#56E448')
             .setTitle('^help Developer')
@@ -167,7 +162,6 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^delay 10") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setDescription(':white_check_mark: Successfully edited!')
             .setFooter('            }, 1000)')
@@ -182,7 +176,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^delay 20") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setDescription(':white_check_mark: Successfully edited!')
             .setFooter('            }, 2000)')
@@ -240,7 +233,6 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "suggest":
-            if (message.channel instanceof Discord.DMChannel) return;
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`);
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
@@ -278,7 +270,6 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "pred":
-            if (message.channel instanceof Discord.DMChannel) return;
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^pred Team vs Team**`);
             const user = msg.mentions.users.first();
             const embed = new MessageEmbed()
@@ -315,7 +306,6 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "hug":
-            if (message.channel instanceof Discord.DMChannel) return;
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
@@ -624,7 +614,6 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "report":
-            if (message.channel instanceof Discord.DMChannel) return;
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^report [bug]**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
@@ -743,7 +732,6 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^online") {
-        if (message.channel instanceof Discord.DMChannel) return;
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('RANDOM')
@@ -756,7 +744,6 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^avatar") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setTitle('Here is your avatar:')
             .setColor('RANDOM')
@@ -788,7 +775,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help suggest") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('#F613A4')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
@@ -801,7 +787,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help ban") {
-        if (message.channel instanceof Discord.DMChannel) return;
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
@@ -814,7 +799,6 @@ client.on('message', msg => {
 client.on('message', async message => {
     if (!message.guild) return;
     if (message.content === '^join') {
-        if (message.channel instanceof Discord.DMChannel) return;
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
             const embed = new MessageEmbed()
@@ -838,7 +822,6 @@ client.on('message', async message => {
 client.on('message', async message => {
     if (!message.guild) return;
     if (message.content === '^leave') {
-        if (message.channel instanceof Discord.DMChannel) return;
         if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.leave();
             const embed = new MessageEmbed()
@@ -860,7 +843,6 @@ client.on('message', async message => {
 
 client.on('message', msg => {
     if (msg.content.includes("^play")) {
-        if (message.channel instanceof Discord.DMChannel) return;
         let user = msg.mentions.users.first();
         msg.channel.send("This doesn't work yet but we are working on it 🔨 🔧");
 
