@@ -333,6 +333,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
 
     switch (args[0]) {
         case "speak":
