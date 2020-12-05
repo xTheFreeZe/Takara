@@ -1085,7 +1085,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setDescription('LiteisCool just went live on Twitch! https://www.twitch.tv/liteiscool')
             .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/0bf1e4ab-665c-4004-bbd4-fc9861ecab60-profile_image-70x70.png')
-            .setImage('https://media.tenor.com/images/b881b577640aa1aab8f93f4cfc727c99/tenor.gif')
+            .setImage('https://i.pinimg.com/originals/09/ee/92/09ee92cc5ef0ed68bd4287c1b350f255.jpg')
             .setFooter('Make sure you leave a follow and stay there for a bit!')
         msg.channel.send(embed);
         msg.delete();
@@ -1098,7 +1098,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription('NotGhol just went live on Twitch! https://www.twitch.tv/notghol')
-            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/66592030-e25a-4f35-a250-d3d5a6f7127e-profile_image-70x70.png')
+            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/9149c745-ecb9-4272-b1ca-83023023e593-profile_image-70x70.png')
             .setImage('https://cdn.discordapp.com/attachments/676043311659614228/735611183205318656/unknown.png')
             .setFooter('Make sure you leave a follow and share some love ♥')
         msg.channel.send(embed);
