@@ -1083,7 +1083,7 @@ client.on('message', msg => {
     if (msg.content === "^lite is live") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('LiteisCool just went live on Twitch! https://www.twitch.tv/liteiscool')
+            .setDescription('LiteisCool just went live on Twitch![Click here](https://www.twitch.tv/notghol)')
             .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/0bf1e4ab-665c-4004-bbd4-fc9861ecab60-profile_image-70x70.png')
             .setImage('https://i.pinimg.com/originals/09/ee/92/09ee92cc5ef0ed68bd4287c1b350f255.jpg')
             .setFooter('Make sure you leave a follow and stay there for a bit!')
@@ -1097,7 +1097,7 @@ client.on('message', msg => {
     if (msg.content === "^james is live") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription('NotGhol just went live on Twitch! https://www.twitch.tv/notghol')
+            .setDescription('NotGhol just went live on Twitch! [Click here](https://www.twitch.tv/notghol)')
             .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/9149c745-ecb9-4272-b1ca-83023023e593-profile_image-70x70.png')
             .setImage('https://cdn.discordapp.com/attachments/676043311659614228/735611183205318656/unknown.png')
             .setFooter('Make sure you leave a follow and share some love ♥')
