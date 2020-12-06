@@ -144,7 +144,7 @@ client.on("message", msg => {
             .addField("Test commands", "`^delay 10` , `^delay 20`")
             .addField("Info commands", "`^info help` , `^info ping` , `^help join` ,`^info kick` , `^info suggest` , `^info warn`")
             .addField("Chat commands", "`^suggest [suggestion]` , `^pred [team vs team ] ` , `^hug [person you want to hug`")
-            .addField("Chat command", "`^speak [your message ] ` ")
+            .addField("Chat commands", "`^speak [your message ] ` ")
             .addField("Staff commands", "`^warn [@member] [reason] ` , `^topic`")
             .addField("Staff commands", "`^kick [@member] [reason] `  `^ban [@member] [reason] `")
             .addField("Bug command", "`^report [your report ] `")
@@ -236,7 +236,7 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription("📋 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
+                .setDescription("📃" + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
                 .setColor("RANDOM")
 
 
