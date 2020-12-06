@@ -236,7 +236,7 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setDescription("📃" + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
+                .setDescription("📃 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
                 .setColor("RANDOM")
 
 
