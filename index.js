@@ -731,6 +731,18 @@ client.on('message', msg => {
     }
 })
 
+
+client.on("message", msg => {
+    if (msg.content === "^memeoftheday") {
+        const embed = new MessageEmbed()
+            .setDescription("Thats that Meme of the Day!")
+            .setColor("RANDOM")
+            .setImage("https://cdn.discordapp.com/attachments/676092873426337826/729210168440520774/VHtNPV2qviWpFP7zW2iXnPBRfTx2eaUKM0NBm8Qv-jQw8Ztd8C6vjQS_I__hoJwB9gl3VdmLKpEkLAw601-h601-p-nd-df.png")
+            .setThumbnail(msg.author.displayAvatarURL())
+        msg.channel.send(embed);
+    }
+})
+
 client.on("message", msg => {
     if (msg.content === "^online") {
         var ping = client.ws.ping;
@@ -1162,7 +1174,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setTitle(':satellite: New Announcement :satellite: ')
             .setColor('#CE3CDF')
-            .setDescription('The `^ping` command is a bit buggy, I am working on it!')
+            .setDescription('Nothing new here... [silence]')
         msg.channel.send(embed);
         msg.delete();
 
