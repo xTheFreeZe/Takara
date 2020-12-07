@@ -100,7 +100,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .setDescription('`^avatar`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
     }
@@ -148,7 +148,7 @@ client.on("message", msg => {
             .addField("Staff commands", "`^warn [@member] [reason] ` , `^topic`")
             .addField("Staff commands", "`^kick [@member] [reason] `  `^ban [@member] [reason] `")
             .addField("Bug command", "`^report [your report ] `")
-            .addField("Fun commands", "`^ping` , `^online` , `^avatar`")
+            .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`")
             .addField("Help staff", "`^help suggest` , `^help ban`")
             .addField("Voice Channel commands", "`^join` , `^leave` , `^play`")
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
