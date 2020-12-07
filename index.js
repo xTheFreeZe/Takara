@@ -735,10 +735,10 @@ client.on('message', msg => {
 client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         const embed = new MessageEmbed()
-            .setTitle("Meme of the Day!")
             .setColor("RANDOM")
             .setImage("https://cdn.discordapp.com/attachments/676092873426337826/729210168440520774/VHtNPV2qviWpFP7zW2iXnPBRfTx2eaUKM0NBm8Qv-jQw8Ztd8C6vjQS_I__hoJwB9gl3VdmLKpEkLAw601-h601-p-nd-df.png")
             .setThumbnail(msg.author.displayAvatarURL())
+            .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
 })
