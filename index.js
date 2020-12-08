@@ -1242,7 +1242,7 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content.includes("^talk")) {
         let user = msg.mentions.users.first();
-        msg.channel.send("This command doesnt exist anymore. It has been changed!");
+        msg.channel.send("This command doesnt exist anymore. It has been changed to ^speak!");
         msg.delete();
 
 
