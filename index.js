@@ -548,7 +548,7 @@ client.on('message', msg => {
                 .addField(`Reason:`, msgArgs)
                 .setTimestamp()
             const embed = new MessageEmbed()
-                .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member} with the Reason:` + "**" + msgArgs + "**")
+                .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member}| Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(embed);
