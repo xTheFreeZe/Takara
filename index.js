@@ -1225,6 +1225,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content.includes("^ID")) {
+        let args = message.content.substring(PREFIX.length).split(" ");
         let user = msg.mentions.users.first();
         let author = msg.author
         if (!args[1]) msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument! Example **^ID [Person]**`);
