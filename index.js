@@ -1224,8 +1224,10 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-    if (msg.content.includes("12345678910")) {
+    if (msg.content.includes("^ID")) {
         let user = msg.mentions.users.first();
+        let author = msg.author
+        if (!args[1]) msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument! Example **^ID [Person]**`);
         msg.channel.send(`This is the Discord ID form ${user.tag}: ` + user);
 
 
