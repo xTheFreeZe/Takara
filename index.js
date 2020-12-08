@@ -750,7 +750,6 @@ client.on("message", msg => {
             .setDescription('<:STT_yes:778545433810173952> Syntax Terror Premium bot is online!')
             .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
         msg.channel.send(embed);
-        console.log('Checked if I am online!');
     }
 })
 
