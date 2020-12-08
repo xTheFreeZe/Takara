@@ -736,7 +736,7 @@ client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutupandtakemymoney.com%2Fentire-world-stay-home-florida-no-i-dont-think-i-will-meme%2F&psig=AOvVaw2tzxcsbgnf1Iwa5j4_NTQ5&ust=1607521103837000&source=images&cd=vfe&ved=0CAIQjRxqGAoTCKi-rfXAvu0CFQAAAAAdAAAAABCWAQ")
+            .setImage("https://images7.memedroid.com/images/UPLOADED715/5d12cc0202a11.jpeg")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
