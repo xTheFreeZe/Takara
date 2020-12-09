@@ -542,10 +542,11 @@ client.on('message', msg => {
             let msgArgs = args.slice(2).join(" ");
             let logembed = new MessageEmbed()
                 .setColor("RANDOM")
-                .setDescription(`${member} got warned`)
+                .setDescription(`**WARN** | ${member}`)
                 .addField(`Moderator:`, `${author}`)
                 .addField(`Channel: `, `${channel}`)
                 .addField(`Reason:`, msgArgs)
+                .setThumbnail(msg.author.displayAvatarURL())
                 .setTimestamp()
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member}| Reason:` + "**" + msgArgs + "**")
@@ -901,10 +902,11 @@ client.on('message', message => {
                         message.reply(embed);
                         let logembed = new MessageEmbed()
                             .setColor("RANDOM")
-                            .setDescription(`${member} got kicked`)
+                            .setDescription(`**KICK** | ${member}`)
                             .addField(`Moderator:`, `${author}`)
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
+                            .setThumbnail(msg.author.displayAvatarURL())
                             .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
@@ -998,11 +1000,12 @@ client.on('message', message => {
                         message.channel.send(embed);
                         let logembed = new MessageEmbed()
                             .setColor("RANDOM")
-                            .setDescription(`${member} got banned`)
+                            .setDescription(`**BAN** | ${member}`)
                             .addField(`Moderator:`, `${author}`)
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
                             .addField(`Server:`, `${message.guild}`)
+                            .setThumbnail(msg.author.displayAvatarURL())
                             .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
