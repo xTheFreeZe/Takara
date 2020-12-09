@@ -736,7 +736,7 @@ client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://images7.memedroid.com/images/UPLOADED715/5d12cc0202a11.jpeg")
+            .setImage("https://i.pinimg.com/originals/13/4e/ba/134ebab3683626b34f23805f71053db9.jpg")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
