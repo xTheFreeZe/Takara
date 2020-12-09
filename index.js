@@ -906,7 +906,7 @@ client.on('message', message => {
                             .addField(`Moderator:`, `${author}`)
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
-                            .setThumbnail(msg.author.displayAvatarURL())
+                            .setThumbnail(message.author.displayAvatarURL())
                             .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
@@ -1005,7 +1005,7 @@ client.on('message', message => {
                             .addField(`Channel: `, `${channel}`)
                             .addField(`Reason:`, msgArgs)
                             .addField(`Server:`, `${message.guild}`)
-                            .setThumbnail(msg.author.displayAvatarURL())
+                            .setThumbnail(message.author.displayAvatarURL())
                             .setTimestamp()
                         log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
