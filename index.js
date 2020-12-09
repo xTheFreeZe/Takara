@@ -1200,10 +1200,11 @@ client.on('message', msg => {
             let channel = msg.channel
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
             let logembed = new MessageEmbed()
-                .setDescription("Topic command used!")
+                .setDescription("**TOPIC**")
                 .addField('Moderator', `${author}`)
                 .addField('Channel', `${channel}`)
                 .setThumbnail(msg.author.displayAvatarURL())
+                .setColor("RANDOM")
                 .setTimestamp()
             log_channel.send(logembed);
             const embed = new MessageEmbed()
