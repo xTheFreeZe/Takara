@@ -1196,6 +1196,14 @@ client.on('message', msg => {
             if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
+            let author = msg.author
+            let log_channel = message.guild.channels.cache.get('780815502997454848');
+            let logembed = new MessageEmbed()
+                .setDescription("Topic command used!")
+                .addField('Moderator', `${author}`)
+                .setThumbnail(msg.author.displayAvatarURL())
+                .setTimestamp()
+            log_channel.send(logembed);
             const embed = new MessageEmbed()
                 .setTitle('Watch out!')
                 .setColor('#EC0808')
