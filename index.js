@@ -1197,10 +1197,12 @@ client.on('message', msg => {
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let author = msg.author
-            let log_channel = message.guild.channels.cache.get('780815502997454848');
+            let channel = msg.channel
+            let log_channel = msg.guild.channels.cache.get('780815502997454848');
             let logembed = new MessageEmbed()
                 .setDescription("Topic command used!")
                 .addField('Moderator', `${author}`)
+                .addField('Channel', `${channel}`)
                 .setThumbnail(msg.author.displayAvatarURL())
                 .setTimestamp()
             log_channel.send(logembed);
