@@ -157,6 +157,16 @@ client.on("message", msg => {
     }
 })
 
+client.on("message", msg => {
+    if (msg.content === "^list") {
+        const embed = new MessageEmbed()
+            .setColor("RANDOM")
+            .setDescription(activities_list)
+            .setFooter("Status updates every 40 seconds!")
+        msg.channel.send(embed);
+    }
+})
+
 client.on('message', msg => {
     if (msg.content === "^delay 10") {
         const embed = new MessageEmbed()
