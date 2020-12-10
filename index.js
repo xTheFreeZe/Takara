@@ -151,7 +151,7 @@ client.on("message", msg => {
             .addField("Voice Channel commands", "`^join` , `^leave` , `^play`")
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
             .addField("ID Command", "`^ID [@member]`")
-            .addField("Thank you for using my Bot!!", "Marwin")
+            .addField("Thanks for not using this piece of shit!", "Marwin")
             .setFooter("Last edit : 05.12.2020")
         msg.channel.send(embed);
     }
