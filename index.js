@@ -160,7 +160,6 @@ client.on("message", msg => {
 client.on("message", msg => {
     if (msg.content === "^list") {
         let author = msg.author
-        if (!msg.member.roles.cache.has('714096868178788414')) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You can't use that!`);
         const embed = new MessageEmbed()
             .setColor("RANDOM")
             .setDescription(activities_list)
