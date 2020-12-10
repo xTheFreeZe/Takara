@@ -747,7 +747,7 @@ client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://i.pinimg.com/originals/13/4e/ba/134ebab3683626b34f23805f71053db9.jpg")
+            .setImage("https://www.wahl.de/wp-content/uploads/images/neuland-meme-article.jpg")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
