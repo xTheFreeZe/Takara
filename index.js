@@ -1333,6 +1333,13 @@ client.on("message", msg => {
 })
 
 
+client.on("message", msg => {
+    if (msg.content === "^serverba") {
+        msg.reply(" join please!!!! :pleading_face: https://discord.gg/FbvCGrF");
+    }
+})
+
+
 client.on('message', msg => {
     if (msg.content.includes("^nichtwarnLOL")) {
         let user = msg.mentions.users.first();
