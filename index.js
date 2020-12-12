@@ -241,12 +241,12 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "suggest":
-            if (!args[1]) return msg.channel.send(argsembed);
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
             let argsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`)
                 .setColor("RANDOM")
+            if (!args[1]) return msg.channel.send(argsembed);
             const embed = new MessageEmbed()
                 .setDescription("📃 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
                 .setColor("RANDOM")
