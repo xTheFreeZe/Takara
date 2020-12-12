@@ -554,7 +554,7 @@ client.on('message', msg => {
                 .setDescription(`**WARN** | ${member}`)
                 .addField(`Moderator:`, `${author}`)
                 .addField(`Channel: `, `${channel}`)
-                .addField(`Reason:`, msgArgs)
+                .addField(`Reason:`, `error`)
                 .setThumbnail(msg.author.displayAvatarURL())
                 .setTimestamp()
             const embed = new MessageEmbed()
