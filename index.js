@@ -746,7 +746,7 @@ client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://memes.cool/minecraft-memes/minecraft-meme-where-did-my-horse-go.jpg")
+            .setImage("https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/c8194f22c0c7a6c1a3195ef0163304efa7be6f9b5c0d8850836e4c9e5db4655f_1.jpg")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
