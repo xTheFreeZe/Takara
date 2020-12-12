@@ -241,9 +241,12 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "suggest":
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`);
+            if (!args[1]) return msg.channel.send(argsembed);
             const user = msg.mentions.users.first();
             let msgArgs = args.slice(1).join(" ");
+            let argsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`)
+                .setColor("RANDOM")
             const embed = new MessageEmbed()
                 .setDescription("📃 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
                 .setColor("RANDOM")
@@ -280,6 +283,9 @@ client.on('message', msg => {
         case "pred":
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^pred Team vs Team**`);
             const user = msg.mentions.users.first();
+            let voteembed = new MessageEmbed()
+                .setDescription("**" + msgArgs + "**")
+                .setColor("RANDOM")
             const embed = new MessageEmbed()
                 .setColor('0xFFC300')
                 .setDescription('^pred {team vs team} and the bot will react with 👍 👎')
@@ -291,7 +297,7 @@ client.on('message', msg => {
 
             let msgArgs = args.slice(1).join(" ");
 
-            msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
+            msg.channel.send(voteembed).then(messagereaction => {
                 messagereaction.react("◀");
                 messagereaction.react("▶");
                 msg.delete();
