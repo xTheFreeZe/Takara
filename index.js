@@ -283,6 +283,7 @@ client.on('message', msg => {
         case "pred":
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^pred Team vs Team**`);
             const user = msg.mentions.users.first();
+            let msgArgs = args.slice(1).join(" ");
             let voteembed = new MessageEmbed()
                 .setDescription("**" + msgArgs + "**")
                 .setColor("RANDOM")
@@ -294,8 +295,6 @@ client.on('message', msg => {
             if (!args[1]) {
                 msg.channel.send(embed);
             }
-
-            let msgArgs = args.slice(1).join(" ");
 
             msg.channel.send(voteembed).then(messagereaction => {
                 messagereaction.react("◀");
