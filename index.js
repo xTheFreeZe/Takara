@@ -292,8 +292,8 @@ client.on('message', msg => {
             let msgArgs = args.slice(1).join(" ");
 
             msg.channel.send("**" + msgArgs + "**").then(messagereaction => {
-                messagereaction.react("👍");
-                messagereaction.react("👎");
+                messagereaction.react("◀");
+                messagereaction.react("▶");
                 msg.delete();
             })
 
