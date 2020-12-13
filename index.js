@@ -902,7 +902,7 @@ client.on('message', message => {
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (!message.member.roles.cache.some(role => role.name === "Staff")) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -998,7 +998,7 @@ client.on('message', message => {
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (!message.member.roles.cache.some(role => role.name === "Staff")) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
