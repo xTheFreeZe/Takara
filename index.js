@@ -537,13 +537,13 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
-            let argsembed = new MessageEmbed()
+            let permsembed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> You cant use that")
                 .addField("Error", 'Role called "Staff" is needed')
                 .setColor("RANDOM")
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(argsembed);
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let channel = msg.channel
@@ -894,6 +894,7 @@ client.on('message', message => {
         case 'kick':
             let argsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
+                .addField("Error", 'Role called "Staff" is needed')
                 .setColor("RANDOM")
             let channel = message.channel
             let permsembed = new MessageEmbed()
@@ -901,7 +902,7 @@ client.on('message', message => {
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(permsembed);
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -993,10 +994,11 @@ client.on('message', message => {
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .addField("Error", 'Role called "Staff" is needed')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!message.member.roles.cache.has('714096868178788414')) return message.reply(permsembed);
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -1214,11 +1216,15 @@ client.on('message', msg => {
 
 client.on('message', msg => {
         if (msg.content === "^topic") {
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply("You can't use that");
-            if (msg.channel instanceof Discord.DMChannel) return;
-            if (msg.author.bot) return;
             let author = msg.author
             let channel = msg.channel
+            let permsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .addField("Error", 'Role called "Staff" is needed')
+                .setColor("RANDOM")
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (msg.channel instanceof Discord.DMChannel) return;
+            if (msg.author.bot) return;
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
             let logembed = new MessageEmbed()
                 .setDescription("**TOPIC**")
