@@ -1041,7 +1041,7 @@ client.on('message', message => {
                                 .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person.It is missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
                                 .addField('Error:', 'The bot is missing Permissions')
                             message.reply(embed);
-                            log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
+                            //log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
                             message.delete();
                             console.log(`${author} tried to ban ${member}`);
 
@@ -1072,7 +1072,7 @@ client.on('message', message => {
                     .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}.')
                     .addField('Error:', 'Didnt find mention (684sd68)')
                 message.channel.send(embed);
-                log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
+                //log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
                 message.delete();
                 console.log(`${author} used the "^ban"`);
 
