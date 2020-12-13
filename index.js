@@ -558,20 +558,20 @@ client.on('message', msg => {
             }
 
             let msgArgs = args.slice(2).join(" ");
-            let logembed = new MessageEmbed()
-                .setColor("RANDOM")
-                .setDescription(`**WARN** | ${member}`)
-                .addField(`Moderator:`, `${author}`)
-                .addField(`Channel: `, `${channel}`)
-                .addField(`Reason:`, `error`)
-                .setThumbnail(msg.author.displayAvatarURL())
-                .setTimestamp()
+            // let logembed = new MessageEmbed()
+            //   .setColor("RANDOM")
+            // .setDescription(`**WARN** | ${member}`)
+            //.addField(`Moderator:`, `${author}`)
+            //.addField(`Channel: `, `${channel}`)
+            //.addField(`Reason:`, `error`)
+            //.setThumbnail(msg.author.displayAvatarURL())
+            //.setTimestamp()
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member}| Reason:` + "**" + msgArgs + "**")
                 .setColor('RANDOM')
                 .setFooter(`${member} has been warned`)
             msg.channel.send(embed);
-            log_channel.send(logembed);
+            //log_channel.send(logembed);
             msg.delete();
             console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
 
@@ -919,15 +919,15 @@ client.on('message', message => {
                             .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
                             .setTimestamp()
                         message.reply(embed);
-                        let logembed = new MessageEmbed()
-                            .setColor("RANDOM")
-                            .setDescription(`**KICK** | ${member}`)
-                            .addField(`Moderator:`, `${author}`)
-                            .addField(`Channel: `, `${channel}`)
-                            .addField(`Reason:`, msgArgs)
-                            .setThumbnail(message.author.displayAvatarURL())
-                            .setTimestamp()
-                        log_channel.send(logembed);
+                        //let logembed = new MessageEmbed()
+                        // .setColor("RANDOM")
+                        //.setDescription(`**KICK** | ${member}`)
+                        //.addField(`Moderator:`, `${author}`)
+                        //.addField(`Channel: `, `${channel}`)
+                        //.addField(`Reason:`, msgArgs)
+                        //.setThumbnail(message.author.displayAvatarURL())
+                        //.setTimestamp()
+                        //log_channel.send(logembed);
                         console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
@@ -1018,16 +1018,16 @@ client.on('message', message => {
                             .setTimestamp()
                             .setFooter(`Mod ID: ${author}`)
                         message.channel.send(embed);
-                        let logembed = new MessageEmbed()
-                            .setColor("RANDOM")
-                            .setDescription(`**BAN** | ${member}`)
-                            .addField(`Moderator:`, `${author}`)
-                            .addField(`Channel: `, `${channel}`)
-                            .addField(`Reason:`, msgArgs)
-                            .addField(`Server:`, `${message.guild}`)
-                            .setThumbnail(message.author.displayAvatarURL())
-                            .setTimestamp()
-                        log_channel.send(logembed);
+                        //let logembed = new MessageEmbed()
+                        //    .setColor("RANDOM")
+                        //   .setDescription(`**BAN** | ${member}`)
+                        //    .addField(`Moderator:`, `${author}`)
+                        //   .addField(`Channel: `, `${channel}`)
+                        //   .addField(`Reason:`, msgArgs)
+                        //    .addField(`Server:`, `${message.guild}`)
+                        //    .setThumbnail(message.author.displayAvatarURL())
+                        //    .setTimestamp()
+                        //log_channel.send(logembed);
                         console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                         message.delete();
 
@@ -1226,14 +1226,14 @@ client.on('message', msg => {
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
-            let logembed = new MessageEmbed()
-                .setDescription("**TOPIC**")
-                .addField('Moderator', `${author}`)
-                .addField('Channel', `${channel}`)
-                .setThumbnail(msg.author.displayAvatarURL())
-                .setColor("RANDOM")
-                .setTimestamp()
-            log_channel.send(logembed);
+            //let logembed = new MessageEmbed()
+            //  .setDescription("**TOPIC**")
+            // .addField('Moderator', `${author}`)
+            //.addField('Channel', `${channel}`)
+            //.setThumbnail(msg.author.displayAvatarURL())
+            //.setColor("RANDOM")
+            //.setTimestamp()
+            //log_channel.send(logembed);
             const embed = new MessageEmbed()
                 .setTitle('Watch out!')
                 .setColor('#EC0808')
