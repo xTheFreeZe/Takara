@@ -680,6 +680,29 @@ client.on("message", msg => {
     }
 })
 
+client.on("message", msg => {
+    if (msg.content === "^system") {
+        let channel = msg.channel
+        let author = msg.author
+        var ping = client.ws.ping;
+        const embed = new MessageEmbed()
+            .setDescription("**Author**")
+            .addField(`Message from:`, `${author}`)
+            .addField(`Channel:`, `${channel}`)
+            .addField(`Server:`, `${msg.guild}`)
+        let botembed = new MessageEmbed()
+            .setDescription("**Bot**")
+            .addField('Ping:', `${ping} ms`)
+            .addField(`Framework:`, `Node.js`)
+            .addField(`Slug size:`, `25.8 MiB`)
+            .addField(`Stack`, `heroku-18`)
+            .setFooter("Heroku-18 is updateable")
+        msg.channel.send(embed);
+        msg.channel.send(botembed);
+
+    }
+})
+
 
 
 client.on("message", msg => {
