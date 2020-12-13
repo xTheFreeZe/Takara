@@ -537,9 +537,13 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "warn":
+            let argsembed = new MessageEmbed()
+                .setDescription("<:STT_no:778545452218974209> You cant use that")
+                .addField("Error", 'Role called "Staff" is needed')
+                .setColor("RANDOM")
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
-            if (!msg.member.roles.cache.has('714096868178788414')) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You can't use that!`);
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(argsembed);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let channel = msg.channel
