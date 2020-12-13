@@ -894,11 +894,10 @@ client.on('message', message => {
         case 'kick':
             let argsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
-                .addField("Error", 'Role called "Staff" is needed')
-                .setColor("RANDOM")
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .addField("Error", 'Role called "Staff" is needed')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
@@ -1233,7 +1232,7 @@ client.on('message', msg => {
             //.setThumbnail(msg.author.displayAvatarURL())
             //.setColor("RANDOM")
             //.setTimestamp()
-            //log_channel.send(logembed);
+            //log_channel.send(logembed);   
             const embed = new MessageEmbed()
                 .setTitle('Watch out!')
                 .setColor('#EC0808')
