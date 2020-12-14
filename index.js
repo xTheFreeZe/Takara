@@ -776,9 +776,10 @@ client.on('message', msg => {
 
 client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
+        let author = msg.author.send
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/c8194f22c0c7a6c1a3195ef0163304efa7be6f9b5c0d8850836e4c9e5db4655f_1.jpg")
+            .setDescription(`${author}`)
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
