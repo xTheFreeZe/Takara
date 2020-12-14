@@ -37,6 +37,9 @@ client.on('ready', () => {
 })
 
 
+client.setMaxListeners(1000);
+
+
 client.on('message', msg => {
     if (msg.content === "^help2") {
         const embed = new MessageEmbed()
