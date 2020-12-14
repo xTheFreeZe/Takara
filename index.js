@@ -782,7 +782,6 @@ client.on("message", msg => {
         let author = msg.author.send
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setDescription(`${author}`)
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
