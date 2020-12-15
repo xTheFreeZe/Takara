@@ -1227,6 +1227,17 @@ client.on('message', msg => {
     }
 })
 
+
+client.on("message", msg => {
+    if (msg.content === "^maintenance") {
+        const embed = new MessageEmbed()
+            .setDescription("Be sure to be informed about the new Update today![Click here] for the Website.(https://sttproductions.statuspage.io/)")
+            .setImage("https://cdn.discordapp.com/attachments/681060754564448257/788348994060550146/unknown.png")
+            .setColor("RANDOM")
+        msg.channel.send(embed);
+    }
+})
+
 client.on('message', msg => {
     if (msg.content === "^server") {
         const embed = new MessageEmbed()
