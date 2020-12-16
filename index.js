@@ -765,6 +765,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
+            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
         msg.channel.send('Checking for ping... Hold on')
             .then((msg) => {
                 setTimeout(function () {
@@ -792,6 +793,7 @@ client.on("message", msg => {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription('<:STT_yes:778545433810173952> Syntax Terror Premium bot is online!')
+            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
             .setFooter("Ping of STT Premium is " + `${ping}` + " ms")
         msg.channel.send(embed);
     }
