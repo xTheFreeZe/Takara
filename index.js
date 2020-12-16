@@ -85,7 +85,7 @@ client.on('message', msg => {
 
             .addField('`Status:`', `:green_circle: online`, true)
 
-            .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
+            .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)")
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
