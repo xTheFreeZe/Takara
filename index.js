@@ -1314,6 +1314,18 @@ client.on('message', msg => {
 
 })
 
+
+client.on("message", msg => {
+    if (msg.content === "owner") {
+        let owner = msg.author.id == '420277395036176405';
+
+        if (!owner) {
+            msg.reply("You are the Owner!");
+            return msg.channel.send(`Only the owner can use this command`);
+        }
+    }
+})
+
 client.on('message', msg => {
     if (msg.content.includes("^talk")) {
         let user = msg.mentions.users.first();
