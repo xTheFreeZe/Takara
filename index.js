@@ -39,26 +39,45 @@ client.on('ready', () => {
 
 client.setMaxListeners(1000);
 
+client.on("guildCreate", guild => {
+    let channelID;
+    let channels = guild.channels.cache;
 
-client.on("message", msg => {
-    if (msg.content === "^inviteLOL") {
-        const permsembed = new MessageEmbed()
-            .setDescription("You cant use that!")
-            .setColor("RANDOM")
-        let owner = msg.author.id == '420277395036176405';
-        if (!owner) return msg.channel.send(permsembed);
-        const embed = new MessageEmbed()
-            .setDescription(`Thanks for inviting me to ${msg.guild}`)
-            .setColor("RANDOM")
-        msg.channel.send("^help")
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit(embed);
-                }, 100)
-            });
-        msg.delete();
-    }
-})
+    channelLoop:
+        for (let key in channels) {
+            let c = channels[key];
+            if (c[1].type === "text") {
+                channelID = c[0];
+                break channelLoop;
+            }
+        }
+
+    let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
+    const embed = new MessageEmbed()
+        .setDescription(`Thanks for inviting me to ${msg.guild}`)
+        .setColor("RANDOM")
+    var ping = client.ws.ping;
+    const helpembed = new MessageEmbed()
+        .setColor('#e2b007')
+        .setTitle('Thanks for inviting me!')
+        .setDescription('<:STT_yes:778545433810173952> These are your options:')
+        .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+
+        .addField('`^help fun`', 'Fun commands')
+
+        .addField('`^help mod`', 'Commands for staff')
+
+        .addField('`^help dev`', 'Developer options')
+
+        .addField('`Ping:`', `${ping} ms`, true)
+
+        .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
+
+        .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
+    channel.send(embed);
+    channel.send(helpembed);
+});
+
 
 client.on('message', msg => {
     if (msg.content === "^help2") {
