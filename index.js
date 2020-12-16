@@ -1344,6 +1344,12 @@ client.on('message', msg => {
         let args = msg.content.substring(PREFIX.length).split(" ");
         let user = msg.mentions.users.first();
         let author = msg.author
+        let owner = msg.author.id == '420277395036176405';
+        const permsembed = new MessageEmbed()
+            .setDescription("This command is under Maintencance!")
+            .setFooter("Owner only [1324]")
+            .setColor("RANDOM")
+        if (!owner) return msg.channel.send(permsembed);
         if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument! Example **^ID [Person]**`);
         msg.channel.send(`This is the Discord ID form ${user.tag}: ` + user);
 
