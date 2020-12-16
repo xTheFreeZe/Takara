@@ -126,7 +126,7 @@ client.on('message', msg => {
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
-            .setFooter("Many Features were made possible by Epicrafter#3685.Thank you!")
+            .setFooter("Many Features were made possible by Epicrafter#3685. Thank you!")
 
 
 
