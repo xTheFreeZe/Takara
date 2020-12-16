@@ -40,6 +40,21 @@ client.on('ready', () => {
 client.setMaxListeners(1000);
 
 
+client.on("message", msg => {
+    if (msg.content === "^invite server") {
+        const embed = new MessageEmbed()
+            .setDescription(`Thanks for inviting me to ${msg.guild}`)
+            .setColor("RANDOM")
+            .addField("Start with", '`^help`')
+        msg.channel.send("^help")
+            .then((msg) => {
+                setTimeout(function () {
+                    msg.edit(embed);
+                }, 20000)
+            });
+    }
+})
+
 client.on('message', msg => {
     if (msg.content === "^help2") {
         const embed = new MessageEmbed()
