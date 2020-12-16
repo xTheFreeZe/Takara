@@ -54,7 +54,7 @@ client.on("guildCreate", guild => {
 
     let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
     const embed = new MessageEmbed()
-        .setDescription(`Thanks for inviting me to ${msg.guild}`)
+        .setDescription(`Thanks for inviting me to your Server!`)
         .setColor("RANDOM")
     var ping = client.ws.ping;
     const helpembed = new MessageEmbed()
