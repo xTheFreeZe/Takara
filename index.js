@@ -782,6 +782,7 @@ client.on("message", msg => {
         let author = msg.author.send
         const embed = new MessageEmbed()
             .setColor("RANDOM")
+            .setImage("https://i.redd.it/7fv7uf0dfc561.jpg")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
