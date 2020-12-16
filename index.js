@@ -558,7 +558,7 @@ client.on('message', msg => {
             const embed = new MessageEmbed()
                 .setTitle('New Update!')
                 .setColor('RANDOM')
-                .setDescription("**" + msgArgs + "**")
+                .setDescription("**" + "<:STT_yes:778545433810173952>" + msgArgs + "**")
             msg.channel.send(embed);
             msg.delete();
 
