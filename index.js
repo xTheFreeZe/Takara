@@ -41,11 +41,15 @@ client.setMaxListeners(1000);
 
 
 client.on("message", msg => {
-    if (msg.content === "^invite server") {
+    if (msg.content === "^inviteLOL") {
+        const permsembed = new MessageEmbed()
+            .setDescription("You cant use that!")
+            .setColor("RANDOM")
+        let owner = msg.author.id == '420277395036176405';
+        if (!owner) return msg.channel.send(permsembed);
         const embed = new MessageEmbed()
             .setDescription(`Thanks for inviting me to ${msg.guild}`)
             .setColor("RANDOM")
-            .addField("Start with", '`^help`')
         msg.channel.send("^help")
             .then((msg) => {
                 setTimeout(function () {
