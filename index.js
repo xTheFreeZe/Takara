@@ -56,6 +56,7 @@ client.on("message", msg => {
                     msg.edit(embed);
                 }, 100)
             });
+        msg.delete();
     }
 })
 
