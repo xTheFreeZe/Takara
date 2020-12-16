@@ -1318,11 +1318,10 @@ client.on('message', msg => {
 client.on("message", msg => {
     if (msg.content === "owner") {
         let owner = msg.author.id == '420277395036176405';
+        if (!owner) return msg.channel.send(`Only the owner can use this command`);
         msg.reply("heyy");
 
-        if (!owner) {
-            return msg.channel.send(`Only the owner can use this command`);
-        }
+
     }
 })
 
