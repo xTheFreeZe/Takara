@@ -83,11 +83,9 @@ client.on('message', msg => {
 
             .addField('`Ping:`', `${ping} ms`, true)
 
-            .addField('`Status:`', `:green_circle: online`, true)
-
             .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
 
-            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)")
+            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
 
 
