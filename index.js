@@ -87,7 +87,8 @@ client.on('message', msg => {
 
             .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
 
-            .setFooter(`DM Marwin#8376 if you want to use the Premium Bot`)
+            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
+
 
 
         msg.channel.send(embed);
