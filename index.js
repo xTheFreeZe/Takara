@@ -50,7 +50,7 @@ client.on("message", msg => {
             .then((msg) => {
                 setTimeout(function () {
                     msg.edit(embed);
-                }, 20000)
+                }, 100)
             });
     }
 })
