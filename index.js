@@ -30,7 +30,7 @@ const activities_list = [
 
 client.on('ready', () => {
     setInterval(() => {
-        targetGuild = client.guilds.cache.get('676092872898117633')
+        targetGuild = client.guilds.cache.get('676092872898117633') 
         if (targetGuild) {
             client.user.setPresence({
                     game: {
@@ -42,8 +42,8 @@ client.on('ready', () => {
                 .then(console.log)
                 .catch(console.error);
         }
-    }, 1000);
-    console.log("Bot is ready!");
+    }, 1000 * 60 * 5);
+console.log("Bot is ready");
 
 });
 
