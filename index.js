@@ -107,12 +107,6 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^help") {
-        let owner = msg.author.id == '420277395036176405';
-        const permsembed = new MessageEmbed()
-            .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [1324]")
-            .setColor("RANDOM")
-        if (!owner) return msg.channel.send(permsembed);
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
