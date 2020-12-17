@@ -29,23 +29,12 @@ const activities_list = [
 ];
 
 client.on('ready', () => {
+    console.log("Bot is online!");
     setInterval(() => {
-        targetGuild = client.guilds.cache.get('676092872898117633') 
-        if (targetGuild) {
-            client.user.setPresence({
-                    game: {
-                        name: targetGuild.memberCount + ' people verifying!',
-                        type: 'WATCHING'
-                    },
-                    status: 'online'
-                })
-                .then(console.log)
-                .catch(console.error);
-        }
-    }, 1000 * 60 * 5);
-console.log("Bot is ready");
-
-});
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        client.user.setActivity(activities_list[index]);
+    }, 40000);
+})
 
 
 client.setMaxListeners(1000);
