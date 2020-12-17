@@ -30,7 +30,7 @@ const activities_list = [
 
 client.on('ready', () => {
     setInterval(() => {
-        targetGuild = client.guilds.get('GUILD ID HERE')
+        targetGuild = client.guilds.get('676092872898117633')
         if (targetGuild) {
             client.user.setPresence({
                     game: {
