@@ -42,7 +42,7 @@ client.on('ready', () => {
                 .then(console.log)
                 .catch(console.error);
         }
-    }, 1000 * 60 * 5);
+    }, 1000);
     console.log("Bot is ready!");
 
 });
