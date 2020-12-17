@@ -1274,7 +1274,7 @@ client.on("message", msg => {
     if (msg.content === "^maintenance") {
         const embed = new MessageEmbed()
             .setDescription("Be sure to be informed about the new Update today! [Click here](https://sttproductions.statuspage.io/)")
-            .setImage("https://cdn.discordapp.com/attachments/681060754564448257/788348994060550146/unknown.png")
+            .setImage("https://cdn.discordapp.com/attachments/681060754564448257/789115373998964777/unknown.png")
             .setColor("RANDOM")
         msg.channel.send(embed);
     }
