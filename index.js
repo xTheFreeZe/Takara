@@ -289,11 +289,11 @@ client.on('message', msg => {
             let author = msg.author
             if (!args[1]) return msg.reply("Please mention someone!")
             const embed = new MessageEmbed()
-                .setDescription(`${user.username} can kick people!`)
+                .setDescription(`<:STT_yes:778545433810173952> ${user.username} can kick people!`)
                 .setFooter(`Request: ${msg.author.username}`)
                 .setColor("#00FF00")
             let permsembed = new MessageEmbed()
-                .setDescription(`${user.username} can not kick people!`)
+                .setDescription(`<:STT_no:778545452218974209> ${user.username} can not kick people!`)
                 .setFooter(`Request: ${msg.author.username}`)
                 .setColor("#FF0000")
             if (!member.hasPermission('KICK_MEMBERS')) return msg.delete(), msg.channel.send(permsembed);
