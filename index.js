@@ -842,7 +842,7 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^avatar") {
-        let member = message.mentions.members.first() || message.author;
+        let member = msg.mentions.members.first() || msg.author;
         let avatar = member.displayAvatarURL({
             format: 'jpg',
             dynamic: true,
