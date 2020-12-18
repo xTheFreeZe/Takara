@@ -142,7 +142,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
     }
