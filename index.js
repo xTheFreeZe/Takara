@@ -842,8 +842,18 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^avatar") {
+        let owner = msg.author.id == '420277395036176405';
+        const permsembed = new MessageEmbed()
+            .setDescription("This command is under Maintenance!")
+            .setFooter("Owner only [1324]")
+            .setColor("RANDOM")
+        if (!owner) return msg.channel.send(permsembed);
         let member = msg.mentions.members.first() || msg.author;
-        let avatar = member.user.displayAvatarURL({ format: 'jpg', dynamic: true, size: 1024 });
+        let avatar = member.user.displayAvatarURL({
+            format: 'jpg',
+            dynamic: true,
+            size: 1024
+        });
 
         let embed = new MessageEmbed()
             .setColor("RANDOM")
