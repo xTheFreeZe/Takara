@@ -842,16 +842,15 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^avatar") {
-        let member = msg.mentions.members.first() || msg.author;
-        let avatar = member.displayAvatarURL({
-            format: 'jpg',
-            dynamic: true,
-            size: 1024
-        });
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
+        let member = msg.mentions.members.first() || message.author;
+        let avatar = member.user.displayAvatarURL({ format: 'jpg', dynamic: true, size: 1024 });
+
+        let embed = new MessageEmbed()
+            .setColor("RANDOM")
             .setImage(avatar)
-        msg.channel.send(embed);
+            .setFooter(`Requested by ${msg.author.username}`)
+
+        msg.channel.send(embed)
         msg.delete();
 
     }
