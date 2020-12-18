@@ -808,12 +808,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
-        msg.channel.send('Checking for ping... Hold on')
-            .then((msg) => {
-                setTimeout(function () {
-                    msg.edit(embed);
-                }, 4000)
-            });
+        msg.channel.send(embed);
         msg.delete();
     }
 })
