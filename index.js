@@ -8,6 +8,8 @@ const {
     PREFIX,
 } = require('./config.json');
 
+const got = require('got');
+
 const activities_list = [
     "with friends",
     "Overwatch",
