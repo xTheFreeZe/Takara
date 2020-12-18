@@ -296,10 +296,10 @@ client.on('message', msg => {
                 .setDescription(`${user.username} can not kick people!`)
                 .setFooter(`Request: ${msg.author.username}`)
                 .setColor("#FF0000")
-            if (!member.hasPermission('KICK_MEMBERS')) return msg.delete(), msg.channel.send(embed)
+            if (!member.hasPermission('KICK_MEMBERS')) return msg.delete(), msg.channel.send(permsembed);
 
 
-            msg.channel.send(permsembed)
+            msg.channel.send(embed);
             msg.delete();
 
     }
