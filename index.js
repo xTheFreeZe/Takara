@@ -842,10 +842,16 @@ client.on("message", msg => {
 
 client.on('message', msg => {
     if (msg.content === "^avatar") {
+        let member = message.mentions.members.first() || message.author;
+        let avatar = member.displayAvatarURL({
+            format: 'jpg',
+            dynamic: true,
+            size: 1024
+        });
         const embed = new MessageEmbed()
             .setTitle('Here is your avatar:')
             .setColor('RANDOM')
-            .setImage(msg.author.displayAvatarURL())
+            .setImage(avatar)
             .setFooter('Powered by STT Productions')
         msg.channel.send(embed);
         msg.delete();
