@@ -845,7 +845,7 @@ client.on('message', msg => {
         let owner = msg.author.id == '420277395036176405';
         const permsembed = new MessageEmbed()
             .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [1324]")
+            .setFooter("Owner only [848]")
             .setColor("RANDOM")
         if (!owner) return msg.channel.send(permsembed);
         let member = msg.mentions.members.first() || msg.author;
