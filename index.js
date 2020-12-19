@@ -284,6 +284,27 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "permskick":
+            let author = msg.author
+            const embed = new MessageEmbed()
+                .setDescription('**Per,issions Check**')
+                .setColor("RANDOM")
+                .addField('Roles', '`^permsroles @Member`')
+                .addField('Kick', '`^permskick @Member`')
+                .setFooter(`Request: ${msg.author.username}`)
+            msg.channel.send(embed);
+
+
+    }
+})
+
+
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+    let author = msg.author
+
+    switch (args[0]) {
+        case "permskick":
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
             let author = msg.author
@@ -303,6 +324,32 @@ client.on('message', msg => {
             msg.delete();
 
     }
+})
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "permsroles":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+            let author = msg.author
+            if (!args[1]) return msg.reply("Please Mention someone!")
+            const embed = new MessageEmbed()
+                .setDescription(`<:STT_yes:778545433810173952> ${user.username} can manage Roles!`)
+                .setFooter(`Request: ${msg.author.username}`)
+                .setColor("#00FF00")
+            let permsembed = new MessageEmbed()
+                .setDescription(`<:STT_no:778545452218974209> ${user.username} can not manage Roles!`)
+                .setFooter(`Request: ${msg.author.username}`)
+                .setColor("#FF0000")
+            if (!member.hasPermission('MANAGE_ROLES')) return msg.delete(), msg.channel.send(permsembed);
+
+            msg.channel.send(embed);
+            msg.delete();
+
+    }
+
 })
 
 
