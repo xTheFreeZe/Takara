@@ -283,7 +283,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "permskick":
+        case "permissions":
             let author = msg.author
             const embed = new MessageEmbed()
                 .setDescription('**Per,issions Check**')
