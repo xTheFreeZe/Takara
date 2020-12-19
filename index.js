@@ -542,7 +542,6 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "devreport":
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^report [bug]**`);
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
             let msgArgs = args.slice(1).join(" ");
