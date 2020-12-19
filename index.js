@@ -294,7 +294,7 @@ client.on('message', msg => {
                 .setColor("RANDOM")
                 .addField('Roles', '`^permsroles @Member`')
                 .addField('Kick', '`^permskick @Member`')
-                .addField('Message', '^permsmsg @Member')
+                .addField('Message', '`^permsmsg @Member`')
                 .setFooter(`Request: ${msg.author.username}`)
             msg.channel.send(embed);
 
