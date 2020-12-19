@@ -537,19 +537,26 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
-
+    let author = msg.author
+    let channel = msg.channel
 
     switch (args[0]) {
         case "devreport":
+            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^report [bug]**`);
             const user = msg.mentions.users.first();
-
+            const member = msg.guild.member(user);
             let msgArgs = args.slice(1).join(" ");
             const embed = new MessageEmbed()
-                .setColor('#7CFC00')
-                .setTitle('<:STT_yes:778545433810173952> The report you submitted has been read')
-                .setDescription("**" + msgArgs + "**")
+                .setDescription(`<:STT_yes:778545433810173952> Your Report has been opened and is being worked on!`)
+                .setFooter("Thank you for making STT Premium a better bot to use!")
+                .setColor('RANDOM')
             msg.channel.send(embed);
+            let report_embed = new MessageEmbed()
+                .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
+                .setColor("RANDOM")
+            client.users.cache.get('420277395036176405').send(embed);
             msg.delete();
+
 
             break;
 
@@ -557,6 +564,7 @@ client.on('message', msg => {
 
     }
 })
+
 
 
 client.on('message', msg => {
