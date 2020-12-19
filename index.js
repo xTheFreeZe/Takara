@@ -287,6 +287,7 @@ client.on('message', msg => {
             let author = msg.author
             let permsembed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> You can not use that!")
+                .addField('Error', 'Missing `MANAGE_MESSAGES`')
                 .setColor("RANDOM")
             if (!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply(permsembed);
             const embed = new MessageEmbed()
@@ -1114,7 +1115,7 @@ client.on('message', message => {
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Missing Permissions!')
+                .addField("Error", 'Missing `KICK_MEMBERS`!')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
@@ -1210,7 +1211,7 @@ client.on('message', message => {
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Missing Permissions!')
+                .addField("Error", 'Missing `BAN_MEMBERS`!')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
