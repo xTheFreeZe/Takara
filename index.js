@@ -288,7 +288,7 @@ client.on('message', msg => {
             let permsembed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> You can not use that!")
                 .setColor("RANDOM")
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply(permsembed);
             const embed = new MessageEmbed()
                 .setDescription('**Permissions Check**')
                 .setColor("RANDOM")
@@ -698,11 +698,11 @@ client.on('message', msg => {
         case "warn":
             let permsembed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> You cant use that")
-                .addField("Error", 'Role called "Staff" is needed')
+                .addField("Error", 'Missing Permissions')
                 .setColor("RANDOM")
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (!msg.member.hasPermission('KICK_MEMBERS')) return msg.reply(permsembed);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let channel = msg.channel
@@ -1114,11 +1114,11 @@ client.on('message', message => {
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Role called "Staff" is needed')
+                .addField("Error", 'Missing Permissions!')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!message.member.roles.cache.some(role => role.name === "Staff")) return message.reply(permsembed);
+            if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -1210,11 +1210,11 @@ client.on('message', message => {
             let channel = message.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Role called "Staff" is needed')
+                .addField("Error", 'Missing Permissions!')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
             if (!args[1]) return message.channel.send(argsembed);
-            if (!message.member.roles.cache.some(role => role.name === "Staff")) return message.reply(permsembed);
+            if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
             if (message.channel instanceof Discord.DMChannel) return;
             if (message.author.bot) return;
 
@@ -1449,7 +1449,7 @@ client.on('message', msg => {
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
                 .addField("Error", 'Missing Permissions!')
                 .setColor("RANDOM")
-            if (!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply(permsembed);
+            if (!msg.member.hasPermission('KICK_MEMBERS')) return msg.reply(permsembed);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
