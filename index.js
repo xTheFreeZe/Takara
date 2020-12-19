@@ -142,7 +142,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^sever`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
         msg.channel.send(embed);
     }
@@ -182,7 +182,7 @@ client.on("message", msg => {
             .setColor("#e2b007")
             .setThumbnail("https://cdn.discordapp.com/attachments/681060754564448257/784713060552146995/STT_BOT_PREMIUM_2.png")
             .setDescription("All Commands :")
-            .addField("Genearl commands ", "`^help` , `^help fun` , `^help mod` , `^help dev`")
+            .addField("General commands ", "`^help` , `^help fun` , `^help mod` , `^help dev`")
             .addField("Test commands", "`^delay 10` , `^delay 20`")
             .addField("Info commands", "`^info help` , `^info ping` , `^help join` ,`^info kick` , `^info suggest` , `^info warn`")
             .addField("Chat commands", "`^suggest [suggestion]` , `^pred [team vs team ] ` , `^hug [person you want to hug`")
@@ -195,7 +195,7 @@ client.on("message", msg => {
             .addField("Voice Channel commands", "`^join` , `^leave` , `^play`")
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
             .addField("ID Command", "`^ID [@member]`")
-            .addField("Thanks for not using this piece of shit!", "Marwin")
+            .addField("Thanks for using my Bot", "Marwin")
             .setFooter("Last edit : 05.12.2020")
         msg.channel.send(embed);
     }
