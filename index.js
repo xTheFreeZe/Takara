@@ -553,7 +553,7 @@ client.on('message', msg => {
             let report_embed = new MessageEmbed()
                 .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
                 .setColor("RANDOM")
-            client.users.cache.get('409080789435809802').send(embed);
+            client.users.cache.get('420277395036176405').send(embed);
             msg.delete();
 
 
