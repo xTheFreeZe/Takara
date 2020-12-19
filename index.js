@@ -1210,7 +1210,7 @@ client.on('message', message => {
                 .setColor("RANDOM")
             let channel = message.channel
             let permsembed = new MessageEmbed()
-                .setDescription(`<:STT_no:778545452218974209> ${msg.author.username} You can't use that!`)
+                .setDescription(`<:STT_no:778545452218974209> ${message.author.username} You can't use that!`)
                 .addField("Error", 'Missing `BAN_MEMBERS`')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
