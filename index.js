@@ -553,7 +553,8 @@ client.on('message', msg => {
             let report_embed = new MessageEmbed()
                 .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
                 .setColor("RANDOM")
-            client.users.cache.get('420277395036176405').send(embed);
+            member.send(embed);
+            console.log(`Answer has been sent to ${user.username}`);
             msg.delete();
 
 
