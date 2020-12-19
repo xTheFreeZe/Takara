@@ -285,7 +285,10 @@ client.on('message', msg => {
     switch (args[0]) {
         case "permissions":
             let author = msg.author
-            if (author.hasPermission('MANAGE_ROLES')) return msg.reply("You can not use that!");
+            let permsembed = new MessageEmbed()
+                .setDescription("<:STT_no:778545452218974209> You can not use that!")
+                .setColor("RANDOM")
+            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
             const embed = new MessageEmbed()
                 .setDescription('**Per,issions Check**')
                 .setColor("RANDOM")
