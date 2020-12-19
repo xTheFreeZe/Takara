@@ -285,6 +285,7 @@ client.on('message', msg => {
     switch (args[0]) {
         case "permissions":
             let author = msg.author
+            if (author.hasPermission('MANAGE_ROLES')) return msg.reply("You can not use that!");
             const embed = new MessageEmbed()
                 .setDescription('**Per,issions Check**')
                 .setColor("RANDOM")
