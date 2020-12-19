@@ -290,7 +290,7 @@ client.on('message', msg => {
                 .setColor("RANDOM")
             if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
             const embed = new MessageEmbed()
-                .setDescription('**Per,issions Check**')
+                .setDescription('**Permissions Check**')
                 .setColor("RANDOM")
                 .addField('Roles', '`^permsroles @Member`')
                 .addField('Kick', '`^permskick @Member`')
