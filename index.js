@@ -1447,9 +1447,9 @@ client.on('message', msg => {
             let channel = msg.channel
             let permsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Role called "Staff" is needed')
+                .addField("Error", 'Missing Permissions!')
                 .setColor("RANDOM")
-            if (!msg.member.roles.cache.some(role => role.name === "Staff")) return msg.reply(permsembed);
+            if (!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply(permsembed);
             if (msg.channel instanceof Discord.DMChannel) return;
             if (msg.author.bot) return;
             let log_channel = msg.guild.channels.cache.get('780815502997454848');
