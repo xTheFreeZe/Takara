@@ -1114,7 +1114,7 @@ client.on('message', message => {
                 .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
             let channel = message.channel
             let permsembed = new MessageEmbed()
-                .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
+                .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
                 .addField("Error", 'Missing `KICK_MEMBERS`')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
@@ -1210,7 +1210,7 @@ client.on('message', message => {
                 .setColor("RANDOM")
             let channel = message.channel
             let permsembed = new MessageEmbed()
-                .setDescription(`<:STT_no:778545452218974209> ${message.author.username} You can't use that!`)
+                .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
                 .addField("Error", 'Missing `BAN_MEMBERS`')
                 .setColor("RANDOM")
             let log_channel = message.guild.channels.cache.get('780815502997454848');
