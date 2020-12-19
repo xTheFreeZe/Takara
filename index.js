@@ -330,6 +330,31 @@ client.on('message', msg => {
     }
 })
 
+
+client.on('message', msg => {
+    let args = msg.content.substring(PREFIX.length).split(" ");
+
+    switch (args[0]) {
+        case "permsmsg":
+            const user = msg.mentions.users.first();
+            const member = msg.guild.member(user);
+            let author = msg.author
+            if (!args[1]) return msg.reply("Please mention someone!");
+            const embed = new MessageEmbed()
+                .setDescription(`${user.username} can manage Messages!`)
+                .setFooter(`Request: ${msg.author.username}`)
+                .setColor("#00FF00")
+            let permsembed = new MessageEmbed()
+                .setDescription(`${user.username} can not manage Messages!`)
+                .setFooter(`Request: ${msg.author.username}`)
+                .setColor("#FF0000")
+            if (!member.hasPermission('MANAGE_MESSAGES')) return msg.delete(), msg.channel.send(permsembed);
+
+            msg.channel.send(embed);
+
+    }
+})
+
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
 
