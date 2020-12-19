@@ -554,7 +554,6 @@ client.on('message', msg => {
                 .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
                 .setColor("RANDOM")
             client.users.cache.get('409080789435809802').send(embed);
-            console.log("Message has been sent!");
             msg.delete();
 
 
