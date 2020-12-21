@@ -924,6 +924,7 @@ client.on('message', msg => {
             .setColor('RANDOM')
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
+            .setFooter("TEST")
         msg.channel.send(embed);
         msg.delete();
     }
