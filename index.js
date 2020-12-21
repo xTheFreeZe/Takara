@@ -109,17 +109,6 @@ client.on("guildCreate", guild => {
 
 
 client.on('message', msg => {
-    if (msg.content === "^help fun") {
-        const embed = new MessageEmbed()
-            .setColor('#E16210')
-            .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
-            .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
-        msg.channel.send(embed);
-    }
-})
-
-client.on('message', msg => {
     if (msg.content === "^help mod") {
         const embed = new MessageEmbed()
             .setColor('#2E0E81')
