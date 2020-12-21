@@ -10,7 +10,7 @@ module.exports = {
         let channel = message.channel
         let args = message.content.substring(PREFIX.length).split(" ");
 
-        if (!args[0]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
+        if (!args[1]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
         let msgArgs = args.slice(1).join(" ");
