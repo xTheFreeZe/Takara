@@ -41,6 +41,34 @@ client.on('ready', () => {
 
 client.setMaxListeners(1000);
 
+const { Collection } = require("discord.js");
+
+client.commands = new Collection();
+
+["command"].forEach(handler => {
+    require(`./handler/${handler}`)(client);
+});
+
+client.on('message', async message => {
+  
+  let PREFIX = '^';
+
+  if(!message.guild) return;
+    if(!message.content.startsWith(prefix)) return;  
+
+    const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
+    const cmd = args.shift().toLowerCase();
+
+    if(cmd.length === 0) return;
+
+    let command = client.commands.get(cmd);
+    if(!command) command = client.commands.get(client.aliases.get(cmd));   
+
+    if(command)
+    command.run(client, message, args);
+
+})
+
 client.on("guildCreate", guild => {
     let channelID;
     let channels = guild.channels.cache;
