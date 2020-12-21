@@ -6,7 +6,7 @@ module.exports = {
         let author = message.author
         let channel = message.channel
 
-        if (!args[1]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
+        if (!args[0]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
         const user = msg.mentions.users.first();
         const member = msg.guild.member(user);
         let msgArgs = args.slice(1).join(" ");
