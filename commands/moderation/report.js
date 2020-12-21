@@ -5,7 +5,7 @@ module.exports = {
     name: "report",
     category: "moderation",
     description: "Sends a report to the developer",
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         let author = message.author
         let channel = message.channel
         let args = msg.content.substring(PREFIX.length).split(" ");

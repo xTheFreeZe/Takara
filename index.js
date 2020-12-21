@@ -814,37 +814,6 @@ client.on('message', msg => {
 //warn command: ^warn (@member) {reason}
 
 
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let author = msg.author
-    let channel = msg.channel
-
-    switch (args[0]) {
-        case "notnoiusahda  ":
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^report [bug]**`);
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setDescription(`<:STT_yes:778545433810173952> Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
-                .setColor('RANDOM')
-            msg.channel.send(embed);
-            msg.channel.send("Connection didn't time out and everything worked! Message got sent to `420277395036176405` !");
-            let report_embed = new MessageEmbed()
-                .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
-                .setColor("RANDOM")
-            client.users.cache.get('420277395036176405').send(report_embed);
-            console.log(`New Report from ${author}:` + msgArgs);
-            msg.delete();
-
-
-            break;
-
-
-
-    }
-})
-
 client.on("message", msg => {
     if (msg.content === "^uptime") {
         if (msg.channel instanceof Discord.DMChannel) return;
