@@ -9,7 +9,10 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let author = message.author
-        if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
+        const argsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`)
+            .setColor("RANDOM")
+        if (!args[1]) return message.channel.send(argsembed);
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
 
