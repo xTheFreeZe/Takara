@@ -10,6 +10,18 @@ module.exports = {
     category: "information",
     description: "General Info command",
     run: async (client, message, PREFIX) => {
+        let author = message.author
+        let channel = message.channel
+        let args = message.content.substring(PREFIX.length).split(" ");
+        const funembed = new MessageEmbed()
+            .setColor('#E16210')
+            .setTitle('**Fun Commands**')
+            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
+        msg.channel.send(embed);
+        if (args[0] == 'fun') {
+            message.channel.send(funembed)
+        }
         var ping = client.ws.ping;
         const embed = new MessageEmbed()
             .setColor('#e2b007')
