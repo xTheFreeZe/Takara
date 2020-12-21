@@ -3,6 +3,7 @@ const {
     Message
 } = require('discord.js');
 
+
 module.exports = {
     name: "help fun",
     category: "information",
@@ -14,6 +15,6 @@ module.exports = {
             .setTitle('**Fun Commands**')
             .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
-        msg.channel.send(embed);
+        message.channel.send(embed);
     }
 }
