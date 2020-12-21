@@ -8,7 +8,7 @@ module.exports = {
     run: async (client, message) => {
         let author = message.author
         let channel = message.channel
-        let args = msg.content.substring(PREFIX.length).split(" ");
+        let args = message.content.substring(PREFIX.length).split(" ");
 
         if (!args[0]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
         const user = message.mentions.users.first();
