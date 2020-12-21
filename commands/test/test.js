@@ -1,3 +1,6 @@
+const {
+    MessageEmbed
+} = require('discord.js');
 module.exports = {
     name: "test",
     category: "test",
