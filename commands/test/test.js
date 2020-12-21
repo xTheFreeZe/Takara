@@ -7,8 +7,8 @@ module.exports = {
         let channel = message.channel
 
         if (!args[0]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
-        const user = msg.mentions.users.first();
-        const member = msg.guild.member(user);
+        const user = message.mentions.users.first();
+        const member = message.guild.member(user);
         let msgArgs = args.slice(1).join(" ");
         const embed = new MessageEmbed()
             .setDescription(`:STT_yes: Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
