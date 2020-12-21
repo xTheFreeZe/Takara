@@ -43,7 +43,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setDescription(`<:STT_yes:778545433810173952> ${author} warned ${member}| Reason:` + "**" + msgArgs + "**")
             .setColor('RANDOM')
-            .setFooter(`${member} has been warned`)
+            .setFooter(`STT Premium | Moderation`)
         message.channel.send(embed);
         //log_channel.send(logembed);
         message.delete();

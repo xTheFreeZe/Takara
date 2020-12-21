@@ -17,8 +17,8 @@ module.exports = {
         const embed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
             .setColor('RANDOM')
+            .setFooter("STT Premium | Moderation")
         message.channel.send(embed);
-        message.channel.send("Connection didn't time out and everything worked! Message got sent to `420277395036176405` !");
         let report_embed = new MessageEmbed()
             .setDescription(`New Report from ${author} in ${channel} from ${message.guild}:` + " " + msgArgs)
             .setColor("RANDOM")
