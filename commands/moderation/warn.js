@@ -9,6 +9,7 @@ module.exports = {
     category: "moderation",
     description: "Warns a Member",
     run: async (client, message, PREFIX) => {
+        let args = message.content.substring(PREFIX.length).split(" ");
         let permsembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You cant use that")
             .addField("Error", 'Missing Permissions')
