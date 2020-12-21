@@ -41,7 +41,9 @@ client.on('ready', () => {
 
 client.setMaxListeners(1000);
 
-const { Collection } = require("discord.js");
+const {
+    Collection
+} = require("discord.js");
 
 client.commands = new Collection();
 
@@ -50,21 +52,21 @@ client.commands = new Collection();
 });
 
 client.on('message', async message => {
-  
-  let PREFIX = '^';
 
-  if(!message.guild) return;
-    if(!message.content.startsWith(PREFIX)) return;  
+    let PREFIX = '^';
+
+    if (!message.guild) return;
+    if (!message.content.startsWith(PREFIX)) return;
 
     const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
-    if(cmd.length === 0) return;
+    if (cmd.length === 0) return;
 
     let command = client.commands.get(cmd);
 
-    if(command)
-    command.run(client, message, args);
+    if (command)
+        command.run(client, message, args);
 
 })
 
@@ -106,6 +108,18 @@ client.on("guildCreate", guild => {
     channel.send(embed);
     channel.send(helpembed);
 });
+
+
+client.on("message", msg => {
+    if (msg.content === "^help fun") {
+        const embed = new MessageEmbed()
+            .setColor('#E16210')
+            .setTitle('**Fun Commands**')
+            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
+        message.channel.send(embed);
+    }
+})
 
 
 client.on('message', msg => {
@@ -656,7 +670,7 @@ client.on('message', msg => {
     let author = msg.author
 
     switch (args[0]) {
-        case "warn":
+        case "warn2541":
             let permsembed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> You cant use that")
                 .addField("Error", 'Missing Permissions')
