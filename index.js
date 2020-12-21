@@ -54,7 +54,7 @@ client.on('message', async message => {
   let PREFIX = '^';
 
   if(!message.guild) return;
-    if(!message.content.startsWith(prefix)) return;  
+    if(!message.content.startsWith(PREFIX)) return;  
 
     const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
