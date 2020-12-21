@@ -630,21 +630,6 @@ client.on("message", msg => {
 })
 
 
-
-client.on('message', msg => {
-    if (msg.content === "^ping") {
-        var ping = client.ws.ping;
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
-            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
-            .setFooter("TEST")
-        msg.channel.send(embed);
-        msg.delete();
-    }
-})
-
-
 client.on("message", msg => {
     if (msg.content === "^memeoftheday") {
         let author = msg.author.send
