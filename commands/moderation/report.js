@@ -2,9 +2,9 @@ const {
     MessageEmbed
 } = require('discord.js');
 module.exports = {
-    name: "test",
-    category: "test",
-    description: "description",
+    name: "report",
+    category: "moderation",
+    description: "Sends a report to the developer",
     run: async (client, message, args) => {
         let author = message.author
         let channel = message.channel
