@@ -117,7 +117,7 @@ client.on("message", msg => {
             .setTitle('**Fun Commands**')
             .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
-        message.channel.send(embed);
+        msg.channel.send(embed);
     }
 })
 
