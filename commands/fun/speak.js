@@ -10,7 +10,10 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let author = message.author
-        if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument! Example **^speak [your message]**`);
+        const argsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please provide text to speak.`)
+            .setColor("RANDOM")
+        if (!args[1]) return message.channel.send(argsembed);
         //if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;

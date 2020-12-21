@@ -11,8 +11,8 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         let msgArgs = args.slice(1).join(" ");
-        let argsembed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`)
+        const argsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please provide a suggestion.`)
             .setColor("RANDOM")
         if (!args[1]) return message.channel.send(argsembed);
         const embed = new MessageEmbed()
