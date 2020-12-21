@@ -358,41 +358,6 @@ client.on('message', msg => {
 })
 
 
-
-
-//predict command (just the talk command with reactions)
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let author = msg.author
-
-    switch (args[0]) {
-        case "hug":
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^hug @someone**`);
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-
-
-            if (!args[1]) {
-                msg.channel.send('Use ^hug {@person you want to hug} ');
-                msg.delete();
-            }
-
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setDescription(`${author} hugs ${member}!`)
-                .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
-            msg.channel.send(embed);
-
-
-
-
-            break;
-
-
-
-    }
-})
-
 client.on('message', msg => {
     let args = msg.content.substring(PREFIX.length).split(" ");
     let author = msg.author
