@@ -24,5 +24,6 @@ module.exports = {
             .setDescription(`${author} hugs ${member}!`)
             .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
         message.channel.send(embed);
+        message.delete();
     }
 }
