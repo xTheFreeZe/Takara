@@ -17,7 +17,10 @@ module.exports = {
         let log_channel = message.guild.channels.cache.get('780815502997454848');
         let author = message.author
         let channel = message.channel
-        if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
+        const argsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone and provide a reason.`)
+            .setColor("RANDOM")
+        if (!args[1]) return message.channel.send(argsembed);
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;

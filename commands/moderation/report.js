@@ -9,8 +9,10 @@ module.exports = {
         let author = message.author
         let channel = message.channel
         let args = message.content.substring(PREFIX.length).split(" ");
-
-        if (!args[1]) return message.channel.send(`:STT_no: ${author} You need to use a second argument. Example **^report [bug]**`);
+        const argsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please provide a bug to report.`)
+            .setColor("RANDOM")
+        if (!args[1]) return message.channel.send(argsembed);
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
         let msgArgs = args.slice(1).join(" ");

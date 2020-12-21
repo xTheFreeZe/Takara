@@ -12,7 +12,7 @@ module.exports = {
         let author = message.author
 
         let argsembed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to kick and (optional) provide a reason.`)
         let channel = message.channel
         let permsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)

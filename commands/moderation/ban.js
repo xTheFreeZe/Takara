@@ -12,7 +12,7 @@ module.exports = {
         let msgArgs = args.slice(2).join(" ");
         let author = message.author
         let argsembed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^ban @person [reason]**`)
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and (optional) provide a reason. `)
             .setColor("RANDOM")
         let channel = message.channel
         let permsembed = new MessageEmbed()
