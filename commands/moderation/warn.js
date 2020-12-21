@@ -15,11 +15,12 @@ module.exports = {
             .addField("Error", 'Missing Permissions')
             .setColor("RANDOM")
         let log_channel = message.guild.channels.cache.get('780815502997454848');
+        let author = message.author
+        let channel = message.channel
         if (!args[1]) return message.channel.send(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments. Example **^warn @person [reason]**`);
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
-        let channel = message.channel
 
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
