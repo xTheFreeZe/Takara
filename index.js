@@ -1106,7 +1106,7 @@ client.on('message', message => {
     let author = message.author
 
     switch (args[0]) {
-        case 'kick':
+        case 'no':
             let argsembed = new MessageEmbed()
                 .setDescription(`<:STT_no:778545452218974209> ${author} You need to use 3 Arguments! Example **^kick @person [reason]**`)
             let channel = message.channel
