@@ -29,7 +29,7 @@ module.exports = {
             messagereaction.react("👍");
             messagereaction.react("👎");
             messagereaction.react("😐");
-            msg.delete();
+            message.delete();
         })
     }
 }
