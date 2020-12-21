@@ -358,43 +358,6 @@ client.on('message', msg => {
 })
 
 
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let author = msg.author
-
-    switch (args[0]) {
-        case "speak":
-            if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument! Example **^speak [your message]**`);
-            //if (!msg.member.roles.cache.has('714096868178788414')) return msg.reply(`<:STT_no:778545452218974209> ${author} You can't use that!`);
-            if (msg.channel instanceof Discord.DMChannel) return;
-            if (msg.author.bot) return;
-
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-
-
-            if (!args[1]) {
-                msg.channel.send('Use ^speak {your message} and the bot will re-send your message in en embed ');
-                msg.delete();
-            }
-
-            let msgArgs = args.slice(1).join(" ");
-            const embed = new MessageEmbed()
-                .setColor('RANDOM')
-                .setDescription("**" + msgArgs + "**")
-                .setTimestamp()
-            msg.channel.send(embed);
-            msg.delete();
-
-
-
-            break;
-
-
-
-    }
-})
-
 
 
 
