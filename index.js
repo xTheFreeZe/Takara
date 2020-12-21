@@ -112,20 +112,6 @@ client.on("guildCreate", guild => {
 
 
 client.on('message', msg => {
-    if (msg.content === "^help mod") {
-        const embed = new MessageEmbed()
-            .setColor('#2E0E81')
-            .setTitle('**^help Moderator**')
-            .setDescription('This is only ment for Staff Members!')
-            .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`, `^uptime`', true)
-            .setFooter('^help ban to get more info on how to ban people')
-        msg.channel.send(embed);
-
-    }
-})
-
-client.on('message', msg => {
     if (msg.content === "^help dev") {
         const embed = new MessageEmbed()
             .setColor('#56E448')
