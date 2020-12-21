@@ -320,45 +320,6 @@ client.on('message', msg => {
 
 
 
-//suggest command: ^suggest {tag} (suggestion)
-
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let author = msg.author
-
-    switch (args[0]) {
-        case "suggest":
-            const user = msg.mentions.users.first();
-            let msgArgs = args.slice(1).join(" ");
-            let argsembed = new MessageEmbed()
-                .setDescription(`<:STT_no:778545452218974209> ${author} You need to use a second argument. Example **^suggest [suggestion]**`)
-                .setColor("RANDOM")
-            if (!args[1]) return msg.channel.send(argsembed);
-            const embed = new MessageEmbed()
-                .setDescription("📃 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
-                .setColor("RANDOM")
-
-
-
-            if (!args[1]) {
-                msg.channel.send("No!");
-            }
-
-            msg.channel.send(embed).then(messagereaction => {
-                messagereaction.react("👍");
-                messagereaction.react("👎");
-                messagereaction.react("😐");
-                msg.delete();
-            })
-
-            break;
-
-
-
-    }
-})
-
-
 
 
 //predict command (just the talk command with reactions)
