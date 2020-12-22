@@ -44,7 +44,7 @@ module.exports = {
         //.setThumbnail(msg.author.displayAvatarURL())
         //.setTimestamp()
         const embed = new MessageEmbed()
-            .setDescription(`<:STT_yes:778545433810173952> ${message.author.username} warned ${message.member.username}`)
+            .setDescription(`<:STT_yes:778545433810173952> ${message.author.username} warned ${member}`)
             .addField('Reason:', "**" + msgArgs + "**")
             .setColor('RANDOM')
             .setFooter(`STT Premium | Moderation`)
