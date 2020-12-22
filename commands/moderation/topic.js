@@ -14,7 +14,7 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} You can't use that!`)
             .addField("Error", 'Missing Permissions!')
             .setColor("RANDOM")
-        if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
+        if (!message.member.hasPermission('KICK_MEMBERS')) return message.delete(), message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
         //let log_channel = message.guild.channels.cache.get('780815502997454848');
