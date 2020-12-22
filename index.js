@@ -1025,41 +1025,6 @@ client.on('message', msg => {
 })
 
 client.on('message', msg => {
-        if (msg.content === "^topic") {
-            let author = msg.author
-            let channel = msg.channel
-            let permsembed = new MessageEmbed()
-                .setDescription(`<:STT_no:778545452218974209> ${author} You can't use that!`)
-                .addField("Error", 'Missing Permissions!')
-                .setColor("RANDOM")
-            if (!msg.member.hasPermission('KICK_MEMBERS')) return msg.reply(permsembed);
-            if (msg.channel instanceof Discord.DMChannel) return;
-            if (msg.author.bot) return;
-            let log_channel = msg.guild.channels.cache.get('780815502997454848');
-            //let logembed = new MessageEmbed()
-            //  .setDescription("**TOPIC**")
-            // .addField('Moderator', `${author}`)
-            //.addField('Channel', `${channel}`)
-            //.setThumbnail(msg.author.displayAvatarURL())
-            //.setColor("RANDOM")
-            //.setTimestamp()
-            //log_channel.send(logembed);   
-            const embed = new MessageEmbed()
-                .setTitle('Watch out!')
-                .setColor('#EC0808')
-                .setDescription('Please change the topic or make sure your conversation is relevant to the current channel!')
-            msg.channel.send(embed);
-            msg.delete();
-
-
-        }
-    }
-
-
-
-)
-
-client.on('message', msg => {
     if (msg.content === "^support") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
