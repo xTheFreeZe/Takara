@@ -2,6 +2,7 @@ const {
     MessageEmbed
 } = require('discord.js');
 const Discord = require('discord.js');
+const got = require('got');
 module.exports = {
     name: "meme",
     category: "fun",
