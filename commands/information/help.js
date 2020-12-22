@@ -18,7 +18,7 @@ module.exports = {
         const funembed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('**Fun Commands**')
-            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`,  `^twitter`, `^website`, `^announcement`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
+            .setDescription('`^avatar`, `^meme`, `^memeoftheday`,  `^hug`, `^website`, `^server`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
 
         const modembed = new MessageEmbed()
