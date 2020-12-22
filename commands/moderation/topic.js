@@ -11,7 +11,7 @@ module.exports = {
         let author = message.author
         let channel = message.channel
         let permsembed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} You can't use that!`)
+            .setDescription(`<:STT_no:778545452218974209> ${message.author.username} you can't use that!`)
             .addField("Error", 'Missing Permissions!')
             .setColor("RANDOM")
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.delete(), message.reply(permsembed);
