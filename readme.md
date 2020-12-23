@@ -1,8 +1,8 @@
 <b>
-Hello this is STT Productions with the new STT Premium Bot.
+Hello this is Marwin with the new STT Premium Bot.
 <br> <br>
 </b>
-This time the bot comes with a lot of commands and a user-friendly interface.
+I really hope you like this Bot! It comes with simply to use commands and much more!
 <br><br>
 <b>
 The Prefix for STT Premium is ^  
@@ -19,4 +19,4 @@ That is all for this Markdown file.
 Marwin
 <br>
 </b>
-Discord Marwin#8376
+Discord Marwin#0001
