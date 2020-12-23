@@ -91,7 +91,7 @@ client.on("guildCreate", guild => {
     const helpembed = new MessageEmbed()
         .setColor('#e2b007')
         .setTitle('Get started with:')
-        .setDescription('<:STT_yes:778545433810173952> My prefix is `^`:')
+        .setDescription('<:STT_yes:778545433810173952> My prefix is `^`')
         .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
         .addField('`^help fun`', 'Fun commands')
