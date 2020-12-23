@@ -1035,6 +1035,13 @@ client.on('message', msg => {
     }
 })
 
+//let owner = msg.author.id == '420277395036176405';
+//const permsembed = new MessageEmbed()
+//  .setDescription("This command is under Maintenance!")
+// .setFooter("Owner only [1082]")
+// .setColor("RANDOM")
+//if (!owner) return msg.channel.send(permsembed);
+
 
 client.on('message', msg => {
     if (msg.content.includes("^ID")) {
@@ -1042,12 +1049,6 @@ client.on('message', msg => {
         let user = msg.mentions.users.first();
         let author = msg.author
         const member = msg.guild.member(user);
-        let owner = msg.author.id == '420277395036176405';
-        const permsembed = new MessageEmbed()
-            .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [1082]")
-            .setColor("RANDOM")
-        if (!owner) return msg.channel.send(permsembed);
         if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> ${author} You need to use a second Argument!`);
         msg.channel.send(`This is the Discord ID form ${member}: ` + user);
 
