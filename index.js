@@ -1049,7 +1049,10 @@ client.on('message', msg => {
         let author = msg.author
         const member = msg.guild.member(user);
         if (!args[1]) return msg.channel.send(`<:STT_no:778545452218974209> Please mention someone ${msg.author.username}`);
-        msg.channel.send(`This is the Discord ID form ${member}: ` + user);
+        const embed = new MessageEmbed()
+            .setDescription(`This is the Discord ID form ${member}: ` + user)
+            .setColor("RANDOM")
+        msg.channel.send(embed);
 
 
 
