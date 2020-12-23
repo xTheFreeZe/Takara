@@ -12,7 +12,7 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let permsembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You cant use that")
-            .addField("Error", 'Missing Permissions')
+            .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
         let log_channel = message.guild.channels.cache.get('780815502997454848');
         let author = message.author

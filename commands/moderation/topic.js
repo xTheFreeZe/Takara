@@ -12,7 +12,7 @@ module.exports = {
         let channel = message.channel
         let permsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} you can't use that!`)
-            .addField("Error", 'Missing Permissions!')
+            .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.delete(), message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
