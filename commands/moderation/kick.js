@@ -59,7 +59,7 @@ module.exports = {
                 }).catch(err => {
                         const embed = new MessageEmbed()
                             .setColor('#F1C40F')
-                            .setDescription('<:STT_no:778545452218974209> The bot was unable to kick this Person.It is missing Permissions:`ADMINISTRATOR,KICK_MEMBERS` ')
+                            .setDescription('<:STT_no:778545452218974209> The bot was unable to kick this Person. Missing Permissions:`ADMINISTRATOR,KICK_MEMBERS` ')
                             .addField('Error:', 'The bot is missing Permissions')
                         message.reply(embed);
                         message.delete();
