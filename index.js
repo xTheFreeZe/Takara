@@ -90,7 +90,7 @@ client.on("guildCreate", guild => {
     var ping = client.ws.ping;
     const helpembed = new MessageEmbed()
         .setColor('#e2b007')
-        .setTitle('Thanks for inviting me!')
+        .setTitle('Get started with:')
         .setDescription('<:STT_yes:778545433810173952> These are your options:')
         .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
 
@@ -100,11 +100,6 @@ client.on("guildCreate", guild => {
 
         .addField('`^help dev`', 'Developer options')
 
-        .addField('`Ping:`', `${ping} ms`, true)
-
-        .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
-
-        .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
     channel.send(embed);
     channel.send(helpembed);
 });
