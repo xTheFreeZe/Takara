@@ -1,12 +1,13 @@
 const {
     MessageEmbed
 } = require('discord.js');
+const Discord = require('discord.js');
 
 module.exports = {
     name: "uptime",
     category: "information",
     description: "Uptime of the bot",
-    run: async(client, message, PREFIX, Discord) => {
+    run: async (client, message, PREFIX) => {
         let author = message.author
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
