@@ -1043,30 +1043,6 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-    if (msg.content.includes("^ID")) {
-        let args = msg.content.substring(PREFIX.length).split(" ");
-        let user = msg.mentions.users.first();
-        let author = msg.author
-        const member = msg.guild.member(user);
-        let argsembed = new MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription(`<:STT_no:778545452218974209> Please mention someone ${msg.author.username}`)
-        if (!args[1]) return msg.channel.send(argsembed);
-        const embed = new MessageEmbed()
-            .setDescription(`This is the Discord ID form ${member}: ` + " " + "**" + user + "**")
-            .setColor("RANDOM")
-        msg.channel.send(embed);
-
-
-
-
-
-    }
-
-})
-
-
-client.on('message', msg => {
     if (msg.content.includes("^talk")) {
         let user = msg.mentions.users.first();
         msg.channel.send("This command doesnt exist anymore. It has been changed to ^speak!");
