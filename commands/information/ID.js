@@ -3,7 +3,7 @@ const {
 } = require('discord.js');
 
 module.exports = {
-    name: "ID",
+    name: "id",
     category: "information",
     description: "shows Discord ID of someone",
     run: async (client, message, PREFIX) => {
