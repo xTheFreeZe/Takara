@@ -26,14 +26,14 @@ module.exports = {
             .setTitle('**^help Moderator**')
             .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^warn`,`^topic`, `^ID`, `^ping`, `^uptime`', true)
+            .addField('General Chat Commands:', '`^warn`,`^topic`, `^id`, `^ping`, `^uptime`', true)
             .setFooter('^help ban to get more info on how to ban people')
 
         const devembed = new MessageEmbed()
             .setColor('#56E448')
             .setTitle('^help Developer')
             .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
-            .addField('Basic commands:', '`^ping`, `^ID`, `^update`, `^talk`', true)
+            .addField('Basic commands:', '`^ping`, `^id`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
             .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
 
