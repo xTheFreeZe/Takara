@@ -13,7 +13,7 @@ Try out the help command by saying
 ^help
 </b>.
 <br><br>
-That is all for this Markdown file.
+That's all for now!
 <br><br><br>
 <b>
 Marwin
