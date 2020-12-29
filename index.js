@@ -41,7 +41,7 @@ client.on('ready', () => {
     client.user.setPresence({
         status: 'online',
         activity: {
-            name: 'Happy Christmas!',
+            name: 'Happy new Year!',
             type: 'STREAMING',
             url: 'https://www.google.com/'
         }
