@@ -11,6 +11,7 @@ module.exports = {
     description: "General Info command",
     run: async (client, message, args, PREFIX) => {
 
+
         let author = message.author
         let channel = message.channel
         var ping = client.ws.ping;
@@ -36,6 +37,8 @@ module.exports = {
             .addField('Basic commands:', '`^ping`, `^id`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
             .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
+
+
 
         const embed = new MessageEmbed()
             .setColor('#e2b007')
@@ -74,6 +77,7 @@ module.exports = {
             return message.channel.send(devembed)
 
         }
+
 
     }
 }
