@@ -122,6 +122,24 @@ client.on("guildCreate", guild => {
 
 
 client.on("message", msg => {
+    if (msg.content === "^help ban err") {
+        let author = msg.author
+        let channel = msg.channel
+        const embed = new MessageEmbed()
+            .setColor("RANDOM")
+            .setTitle("Troubleshooting")
+            .setDescription("**Ban Error:**")
+            .addField('1.)', 'Make sure the bot has the permissions to ban someone.')
+            .addField(' 2.)', 'Make sure you have a role that can ban people.')
+            .addField("Available info:", '`BOT PERMISSIONS [549]` > `MESSAGE RETURNED [549]` > `SENT INTO LOGS[587]`')
+            .setFooter(`STT Premium | Troubleshooting | ${msg.author.username}`)
+            .setTimestamp()
+        msg.reply(embed)
+    }
+})
+
+
+client.on("message", msg => {
     if (msg.content === "^list") {
         let author = msg.author
         const embed = new MessageEmbed()
