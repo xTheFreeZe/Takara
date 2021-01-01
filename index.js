@@ -663,8 +663,8 @@ client.on('message', msg => {
     if (msg.content === "^avatar") {
         let owner = msg.author.id == '420277395036176405';
         const permsembed = new MessageEmbed()
-            .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [848]")
+            .setDescription("Something went wrong")
+            .setFooter("Error [667]")
             .setColor("RANDOM")
         if (!owner) return msg.channel.send(permsembed);
         let member = msg.mentions.members.first() || msg.author;
