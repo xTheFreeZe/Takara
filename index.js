@@ -104,7 +104,7 @@ client.on("guildCreate", guild => {
         .setColor('#e2b007')
         .setTitle('Get started with:')
         .setDescription('<:STT_yes:778545433810173952> My prefix is `^`')
-        .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+        .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
 
         .addField('`^help fun`', 'Fun commands')
 
@@ -707,7 +707,7 @@ client.on('message', msg => {
     if (msg.content === "^help suggest") {
         const embed = new MessageEmbed()
             .setColor('#F613A4')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
             .setDescription('Here is how to use the `^suggest` command:')
             .addField('Type ^suggest [suggestion ]  to start a poll.', 'Example: ^suggest Is this cool?', true)
         msg.channel.send(embed);
@@ -719,7 +719,7 @@ client.on('message', msg => {
     if (msg.content === "^help ban") {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
             .setDescription('Here is how to use the `^ban` command:')
             .addField('Type `^ban @[member] {reason}`', 'Example: `^ban @Marwin#8376 Dont use this word!`', true)
         msg.channel.send(embed);
@@ -863,7 +863,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setTitle(':wrench: This our Battlefy Page :tools:')
             .setColor('#E42162')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
             .setDescription('Sign up here if you want to be part of our Overwatch Tournaments! https://battlefy.com/syntax-terror-tournaments')
         msg.channel.send(embed);
 
@@ -875,7 +875,7 @@ client.on('message', msg => {
         const embed = new MessageEmbed()
             .setTitle('Our twitter Team')
             .setColor('#E42162')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
             .setDescription('Twitter Accounts of Teams we partner with:')
             .addField('Willy Wonky Wankers', 'https://twitter.com/WWonkyW', true)
         msg.channel.send(embed);

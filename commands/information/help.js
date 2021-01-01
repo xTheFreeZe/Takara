@@ -41,7 +41,7 @@ module.exports = {
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
             .setDescription('<:STT_yes:778545433810173952> These are your options:')
-            .setThumbnail('https://cdn.discordapp.com/attachments/685794100112392212/750020815034122350/STT_BOT_PREMIUM_2.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
 
             .addField('`^help fun`', 'Fun commands')
 

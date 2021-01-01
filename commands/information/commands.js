@@ -10,7 +10,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle("STT Premium")
             .setColor("#e2b007")
-            .setThumbnail("https://cdn.discordapp.com/attachments/681060754564448257/784713060552146995/STT_BOT_PREMIUM_2.png")
+            .setThumbnail("https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg")
             .setDescription("All Commands :")
             .addField("General commands ", "`^help` , `^help fun` , `^help mod` , `^help dev`")
             .addField("Test commands", "`^delay 10` , `^delay 20`")
