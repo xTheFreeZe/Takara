@@ -23,8 +23,9 @@ module.exports = {
         let argsembed = new MessageEmbed()
             .setColor("RANDOM")
             .setDescription("Ask something so I can answer...**Dummy** <:dumb:703735803905572944>")
+            .addField('Usage:', '^8ball [question]')
 
-        if (!args[0]) return message.channel.send(argsembed)
+        if (!args[1]) return message.channel.send(argsembed)
 
         const embed = new MessageEmbed()
             .setColor("RANDOM")
