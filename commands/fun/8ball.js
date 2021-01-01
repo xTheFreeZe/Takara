@@ -24,7 +24,7 @@ module.exports = {
             .setColor("RANDOM")
             .setDescription("Ask something so I can answer...**Dummy** <:dumb:703735803905572944>")
 
-        if (!args[1]) return message.channel.send(argsembed)
+        if (!args[0]) return message.channel.send(argsembed)
 
         const embed = new MessageEmbed()
             .setColor("RANDOM")
