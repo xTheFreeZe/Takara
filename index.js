@@ -112,7 +112,7 @@ client.on("guildCreate", guild => {
 
         .addField('`^help dev`', 'Developer options')
 
-        .addField('STT Premium', 'Marwin | 2020')
+        .addField('STT Premium', 'Marwin | 2021')
 
         .setFooter('Type ^help for more information')
 
