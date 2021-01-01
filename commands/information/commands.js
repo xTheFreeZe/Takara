@@ -20,7 +20,7 @@ module.exports = {
             .addField("Staff commands", "`^warn [@member] [reason] ` , `^topic`")
             .addField("Staff commands", "`^kick [@member] [reason] `  `^ban [@member] [reason] `")
             .addField("Bug command", "`^report [your report ] `")
-            .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`")
+            .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`, `^8ball`, `^meme`")
             .addField("Help staff", "`^help suggest` , `^help ban`")
             .addField("Voice Channel commands", "`^join` , `^leave` , `^play`")
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
