@@ -26,7 +26,7 @@ module.exports = {
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
             .addField("ID Command", "`^ID [@member]`")
             .addField("Thanks for using my Bot", "Marwin")
-            .setFooter("Last edit : 05.12.2020")
+            .setFooter("Last edit : 01.1.2021")
         message.channel.send(embed)
     }
 }
