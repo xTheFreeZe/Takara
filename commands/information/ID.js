@@ -18,3 +18,8 @@ module.exports = {
         message.channel.send(embed);
     }
 }
+
+//let argsembed = new MessageEmbed()
+//.setColor("RANDOM")
+//.setDescription(`<:STT_no:778545452218974209> Please mention someone ${message.author.username}`)
+//if (!args[1]) return message.channel.send(argsembed);
