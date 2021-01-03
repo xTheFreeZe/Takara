@@ -10,7 +10,7 @@ module.exports = {
         let author = message.author
 
         const messages = [
-            `${message.author.username} kills ${user.username} with a knif 🔪 🩸 `,
+            `${message.author.username} kills ${user.username} with a knife 🔪 🩸 `,
             `${user.username} dies because of a car accident 🚗`,
             `During a party ${user.username} had a heart attack and died because if it... sagde ☹`,
             `Bruh...${user.username} just died...☠`,
@@ -18,6 +18,13 @@ module.exports = {
             `Looks like ${user.username} played too much fortnite and just died because of it 💻`,
             `Someone did drink too much juice and ${user.username} passed out and died 🥤`,
             `${message.author.username} kills ${user.username} during an intense gun battle 🧨 🔫`,
+            `A plane landed on ${user.username}... Sounds dumb but is true! ✈`,
+            `A car didnt stop and crashed into ${user.username} but ${message.author.username} also dies because he laughed too hard...`,
+            `STT Premium was too bored of thinking of a cool kill message so the bot just kills ${user.username} 🤖`,
+            `A huge rock hit ${user.username} 😂`,
+            `${user.username} got soooo old and died 🧓`,
+            `${user.username} didn't look under the bed and got killed by a huge monster with long hairs 👹`,
+
         ]
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
