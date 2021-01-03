@@ -43,7 +43,7 @@ module.exports = {
             .setTitle("Utilities")
             .setDescription("<:STT_yes:778545433810173952> Useful commands for everybody.")
             .addField('Nothing', 'nothing as well')
-            .setColor("#ffffff")
+            .setColor("#FCFEFE")
 
 
         const embed = new MessageEmbed()
