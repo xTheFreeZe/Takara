@@ -20,7 +20,7 @@ module.exports = {
             .setColor('#E16210')
             .setTitle('Fun Commands')
             .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^meme`, `^memeoftheday`, `^8ball`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
-            .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
+            .setFooter("STT Premium | Information")
 
         const modembed = new MessageEmbed()
             .setColor('#2E0E81')
@@ -28,7 +28,7 @@ module.exports = {
             .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^warn`,`^topic`, `^id`, `^ping`, `^uptime`', true)
-            .setFooter('^help ban to get more info on how to ban people')
+            .setFooter("STT Premium | Information")
 
         const devembed = new MessageEmbed()
             .setColor('#56E448')
@@ -36,14 +36,14 @@ module.exports = {
             .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^ping`, `^id`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
-            .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
+            .setFooter("STT Premium | Information")
 
 
         const utilitieembed = new MessageEmbed()
             .setTitle("Utilities")
-            .setDescription("<:STT_yes:778545433810173952> Useful commands for everybody.")
-            .addField('Nothing', 'nothing as well')
+            .setDescription('<:STT_yes:778545433810173952> `^uptime`, `^id`, `^report`, `^list`, `^permissions`, `^system`')
             .setColor("#FCFEFE")
+            .setFooter("STT Premium | Information")
 
 
         const embed = new MessageEmbed()
@@ -57,6 +57,8 @@ module.exports = {
             .addField('`^help mod`', 'Commands for staff')
 
             .addField('`^help dev`', 'Developer options')
+
+            .addField(`^help util`, 'Utilitie Commands')
 
             .addField('`Ping:`', `${ping} ms`, true)
 
