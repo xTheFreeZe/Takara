@@ -21,7 +21,7 @@ module.exports = {
             `A plane landed on ${user.username}... Sounds dumb but is true! ✈`,
             `A car didnt stop and crashed into ${user.username} but ${message.author.username} also dies because he laughed too hard...`,
             `STT Premium was too bored of thinking of a cool kill message so the bot just kills ${user.username} 🤖`,
-            `A huge rock hit ${user.username} 😂`,
+            `A huge rock hits ${user.username} 😂`,
             `${user.username} got soooo old and died 🧓`,
             `${user.username} didn't look under the bed and got killed by a huge monster with long hairs 👹`,
 
