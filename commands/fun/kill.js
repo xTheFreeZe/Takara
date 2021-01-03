@@ -7,7 +7,7 @@ module.exports = {
     description: "Sends a funny way of killing someone...",
 
     run: async (client, message, PREFIX) => {
-        const user = message.mentions.users.first() || msg.author;
+        const user = message.mentions.users.first() || message.author;
 
         const messages = [
             `${message.author.username} kills ${user.username} with a knif 🔪 🩸 `,
