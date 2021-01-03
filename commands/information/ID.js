@@ -11,10 +11,6 @@ module.exports = {
         let user = message.mentions.users.first();
         let author = message.author
         let member = message.mentions.members.first() || message.author
-        let argsembed = new MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription(`<:STT_no:778545452218974209> Please mention someone ${message.author.username}`)
-        if (!args[1]) return message.channel.send(argsembed);
         const embed = new MessageEmbed()
             .setDescription(`This is the Discord ID from ${member}: ` + " " + "**" + user + "**")
             .setFooter("STT Premium | Information")
