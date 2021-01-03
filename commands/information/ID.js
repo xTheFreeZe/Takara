@@ -10,7 +10,7 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let user = message.mentions.users.first();
         let author = message.author
-        const member = message.guild.member(user);
+        let member = message.mentions.members.first() || message.author
         let argsembed = new MessageEmbed()
             .setColor("RANDOM")
             .setDescription(`<:STT_no:778545452218974209> Please mention someone ${message.author.username}`)
