@@ -58,7 +58,7 @@ module.exports = {
 
             .addField('`^help dev`', 'Developer options')
 
-            .addField(`^help util`, 'Utilitie Commands')
+            .addField('`^help util`', 'Utilitie Commands')
 
             .addField('`Ping:`', `${ping} ms`, true)
 
