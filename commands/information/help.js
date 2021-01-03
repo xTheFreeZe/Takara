@@ -18,13 +18,13 @@ module.exports = {
 
         const funembed = new MessageEmbed()
             .setColor('#E16210')
-            .setTitle('**Fun Commands**')
+            .setTitle('Fun Commands')
             .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^meme`, `^memeoftheday`, `^8ball`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`, `^report`')
             .addField('Suggestion Command:', '^suggest {suggestion} <-- try ^help suggest for more info!', true)
 
         const modembed = new MessageEmbed()
             .setColor('#2E0E81')
-            .setTitle('**^help Moderator**')
+            .setTitle('Staff Commands')
             .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^warn`,`^topic`, `^id`, `^ping`, `^uptime`', true)
@@ -32,12 +32,18 @@ module.exports = {
 
         const devembed = new MessageEmbed()
             .setColor('#56E448')
-            .setTitle('^help Developer')
+            .setTitle('Developer Commands')
             .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^ping`, `^id`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
             .setFooter('All info commands are pictures from the STT Bot, not from the STT Premium Bot!')
 
+
+        const utilitieembed = new MessageEmbed()
+            .setTitle("Utilities")
+            .setDescription("<:STT_yes:778545433810173952> Useful commands for everybody.")
+            .addField('Nothing', 'nothing as well')
+            .setColor("#ffffff")
 
 
         const embed = new MessageEmbed()
@@ -76,6 +82,9 @@ module.exports = {
 
             return message.channel.send(devembed)
 
+        } else if (args[0] == 'util') {
+
+            return message.channel.send(utilitieembed)
         }
 
 
