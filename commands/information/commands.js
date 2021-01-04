@@ -20,13 +20,13 @@ module.exports = {
             .addField("Staff commands", "`^warn [@member] [reason] ` , `^topic`")
             .addField("Staff commands", "`^kick [@member] [reason] `  `^ban [@member] [reason] `")
             .addField("Bug command", "`^report [your report ] `")
-            .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`, `^8ball`, `^meme`")
+            .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`, `^8ball`, `^meme`, `^kill`")
             .addField("Help staff", "`^help suggest` , `^help ban`")
             .addField("Voice Channel commands", "`^join` , `^leave` , `^play`")
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
             .addField("ID Command", "`^ID [@member]`")
             .addField("Thanks for using my Bot", "Marwin")
-            .setFooter("Last edit : 01.1.2021")
+            .setFooter("Last edit : 04.1.2021")
         message.channel.send(embed)
     }
 }
