@@ -650,33 +650,6 @@ client.on("message", msg => {
     }
 })
 
-client.on('message', msg => {
-    if (msg.content === "^avatar") {
-        let owner = msg.author.id == '420277395036176405';
-        const permsembed = new MessageEmbed()
-            .setDescription("Something went wrong")
-            .setFooter("Error [667]")
-            .setColor("RANDOM")
-        if (!owner) return msg.channel.send(permsembed);
-        let member = msg.mentions.members.first() || msg.author;
-        let avatar = member.user.displayAvatarURL({
-            format: 'jpg',
-            dynamic: true,
-            size: 1024
-        });
-
-        let embed = new MessageEmbed()
-            .setColor("RANDOM")
-            .setImage(avatar)
-            .setFooter(`Requested by ${msg.author.username}`)
-
-        msg.channel.send(embed)
-        msg.delete();
-
-    }
-})
-
-
 
 
 
