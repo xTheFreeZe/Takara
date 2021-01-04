@@ -24,6 +24,8 @@ module.exports = {
             `A huge rock hits ${user.username} 😂`,
             `${user.username} got soooo old and died 🧓`,
             `${user.username} didn't look under the bed and got killed by a huge monster with long hairs 👹`,
+            `Did you know you can die from being mad at a videogame? Because ${user.username} just died 💀`,
+            `${user.username} thought he would be cool and strong enough to fight against a gang! He wasnt strong enough <:pepega:728525939293814785>`
 
         ]
 
