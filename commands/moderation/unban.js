@@ -5,7 +5,7 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        const member = args[0]
+        const member = args[1]
 
 
         if (!member) {
