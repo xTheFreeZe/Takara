@@ -17,7 +17,7 @@ module.exports = {
             .addField("Info commands", "`^info help` , `^info ping` , `^help join` ,`^info kick` , `^info suggest` , `^info warn`")
             .addField("Chat commands", "`^suggest [suggestion]` , `^pred [team vs team ] ` , `^hug [person you want to hug`")
             .addField("Chat commands", "`^speak [your message ] ` ")
-            .addField("Staff commands", "`^warn [@member] [reason] ` , `^topic`")
+            .addField("Staff commands", "`^unban`, `^warn [@member] [reason] ` , `^topic`")
             .addField("Staff commands", "`^kick [@member] [reason] `  `^ban [@member] [reason] `")
             .addField("Bug command", "`^report [your report ] `")
             .addField("Fun commands", "`^ping` , `^online` , `^avatar`, `^memeoftheday`, `^8ball`, `^meme`, `^kill`")
@@ -26,7 +26,7 @@ module.exports = {
             .addField("Socials", "`^twitter` , `^twitter2` ,  `^website`")
             .addField("ID Command", "`^ID [@member]`")
             .addField("Thanks for using my Bot", "Marwin")
-            .setFooter("Last edit : 04.1.2021")
+            .setFooter("Last edit : 05.1.2021")
         message.channel.send(embed)
     }
 }
