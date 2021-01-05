@@ -1,3 +1,7 @@
+const {
+    MessageEmbed
+} = require('discord.js');
+
 module.exports = {
     name: "unban",
     category: "moderation",
@@ -9,7 +13,10 @@ module.exports = {
 
 
         if (!member) {
-            return message.channel.send("Please enter a valid user ID!");
+            const embed = new MessageEmbed()
+                .setDescription("Please enter a valid user ID!")
+                .setColor("#3342FF")
+            return message.channel.send(embed);
 
         }
 
@@ -17,10 +24,17 @@ module.exports = {
             message.guild.fetchBans().then(bans => {
                 message.guild.members.unban(member)
             })
-            await message.channel.send(`${member} has been unbanned`);
+            const unbanembed = new MessageEmbed()
+                .setDescription(`${member} has been unbanned`)
+                .setColor("#7CFC00")
+            await message.channel.send(unbanembed);
 
         } catch (e) {
-            return message.channel.send("Something has happened and I could not unban this Member");
+            const errembed = new MessageEmbed()
+                .setDescription("Something has happened and I could not unban this Member")
+                .setColor("#DC143C")
+
+            return message.channel.send(errembed);
         }
 
     }
