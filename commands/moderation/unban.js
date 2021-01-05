@@ -3,7 +3,8 @@ module.exports = {
     category: "moderation",
     description: "unbans a member from a guild",
 
-    run: async (client, message, PREFIX, args) => {
+    run: async (client, message, PREFIX) => {
+        let args = message.content.substring(PREFIX.length).split(" ");
         const member = args[0]
 
 
