@@ -9,6 +9,12 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
+        let owner = message.author.id == '420277395036176405';
+        const ownerembed = new MessageEmbed()
+            .setDescription("This command is under Maintenance!")
+            .setFooter("Owner only [1082]").setColor("RANDOM")
+        if (!owner) return message.channel.send(ownerembed);
+
         let permsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
             .addField("Error", 'Missing `BAN_MEMBERS`')
