@@ -17,7 +17,7 @@ module.exports = {
         const user = args[1]
 
 
-        if (!member) {
+        if (!user) {
             const embed = new MessageEmbed()
                 .setDescription("Please enter a valid user ID!")
                 .setColor("#3342FF")
