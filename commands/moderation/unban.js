@@ -10,9 +10,10 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let owner = message.author.id == '420277395036176405';
+        let author = message.author
         const ownerembed = new MessageEmbed()
             .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [1082]").setColor("RANDOM")
+            .setFooter("Owner only [0015]").setColor("RANDOM")
         if (!owner) return message.channel.send(ownerembed);
 
         let permsembed = new MessageEmbed()
@@ -39,6 +40,7 @@ module.exports = {
                 .setDescription(`${user} has been unbanned`)
                 .setColor("#7CFC00")
             await message.channel.send(unbanembed);
+            console.log(`${user} got unbanned --> Author: ${message.author.username}`);
 
         } catch (e) {
             const errembed = new MessageEmbed()
