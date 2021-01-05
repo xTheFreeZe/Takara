@@ -24,7 +24,11 @@ module.exports = {
             embed.setImage(memeImage)
             embed.setColor('RANDOM')
             embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`)
-            message.channel.send(embed);
+            message.channel.send(embed).then(messagereaction => {
+                messagereaction.react("😂");
+                messagereaction.react("🤨");
+                messagereaction.react("😒");
+            })
         })
     }
 
