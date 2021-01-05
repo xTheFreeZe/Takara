@@ -19,13 +19,18 @@ module.exports = {
             `Someone did drink too much juice and ${user.username} passed out and died 🥤`,
             `${message.author.username} kills ${user.username} during an intense gun battle 🧨 🔫`,
             `A plane landed on ${user.username}... Sounds dumb but is true! ✈`,
-            `A car didnt stop and crashed into ${user.username} but ${message.author.username} also dies because he laughed too hard...`,
+            `A car didnt stop and crashed into ${user.username} but ${message.author.username} also dies because they laughed too hard...`,
             `STT Premium was too bored of thinking of a cool kill message so the bot just kills ${user.username} 🤖`,
             `A huge rock hits ${user.username} 😂`,
             `${user.username} got soooo old and died 🧓`,
             `${user.username} didn't look under the bed and got killed by a huge monster with long hairs 👹`,
             `Did you know you can die from being mad at a videogame? Because ${user.username} just died 💀`,
-            `${user.username} thought he would be cool and strong enough to fight against a gang! He wasnt strong enough <:pepega:728525939293814785>`
+            `${user.username} thought they would be cool and strong enough to fight against a gang! They weren't strong enough <:pepega:728525939293814785>`,
+            `${user.username} tried to swim in Lava 🔥`,
+            `${user.username} experienced kinetic energy`,
+            `${user.username} drowned!`,
+            `${user.username} was squashed by a falling anvil`,
+            `${user.username}died because the enemy reinhard didnt unbind his shift key`
 
         ]
 
