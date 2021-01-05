@@ -27,7 +27,7 @@ module.exports = {
             .setTitle('Staff Commands')
             .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^warn`,`^topic`, `^id`, `^ping`, `^uptime`', true)
+            .addField('General Chat Commands:', '`^unban`, `^warn`, `^topic`, `^id`, `^ping`, `^uptime`', true)
             .setFooter("STT Premium | Information")
 
         const devembed = new MessageEmbed()
