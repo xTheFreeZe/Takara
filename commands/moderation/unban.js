@@ -9,7 +9,12 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        const member = args[1]
+        let permsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
+            .addField("Error", 'Missing `BAN_MEMBERS`')
+            .setColor("RANDOM")
+        if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
+        const user = args[1]
 
 
         if (!member) {
@@ -22,10 +27,10 @@ module.exports = {
 
         try {
             message.guild.fetchBans().then(bans => {
-                message.guild.members.unban(member)
+                message.guild.members.unban(user)
             })
             const unbanembed = new MessageEmbed()
-                .setDescription(`${member} has been unbanned`)
+                .setDescription(`${user} has been unbanned`)
                 .setColor("#7CFC00")
             await message.channel.send(unbanembed);
 
