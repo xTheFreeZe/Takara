@@ -565,8 +565,7 @@ client.on("message", msg => {
             .addField('Ping:', `${ping} ms`)
             .addField(`Framework:`, `Node.js`)
             .addField(`Slug size:`, `25.8 MiB`)
-            .addField(`Stack`, `heroku-18`)
-            .setFooter("Heroku-18 is updateable")
+            .addField(`Stack`, `heroku-20`)
         msg.channel.send(embed);
         msg.channel.send(botembed);
 
