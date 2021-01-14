@@ -838,17 +838,6 @@ client.on('message', msg => {
     }
 })
 
-client.on('message', msg => {
-    if (msg.content === "^support") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription('Please support me ( test ) ')
-
-        msg.channel.send(embed);
-
-    }
-})
-
 //let owner = msg.author.id == '420277395036176405';
 //const permsembed = new MessageEmbed()
 //  .setDescription("This command is under Maintenance!")
@@ -856,19 +845,6 @@ client.on('message', msg => {
 // .setColor("RANDOM")
 //if (!owner) return msg.channel.send(permsembed);
 
-
-client.on('message', msg => {
-    if (msg.content.includes("^talk")) {
-        let user = msg.mentions.users.first();
-        msg.channel.send("This command doesnt exist anymore. It has been changed to ^speak!");
-        msg.delete();
-
-
-
-
-    }
-
-})
 
 client.on('message', msg => {
     if (msg.content.includes("Hello")) {
