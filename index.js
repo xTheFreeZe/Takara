@@ -564,7 +564,7 @@ client.on("message", msg => {
             .setDescription("**Bot**")
             .addField('Ping:', `${ping} ms`)
             .addField(`Framework:`, `Node.js`)
-            .addField(`Slug size:`, `25.8 MiB`)
+            .addField(`Slug size:`, `26.1 MiB`)
             .addField(`Stack`, `heroku-20`)
         msg.channel.send(embed);
         msg.channel.send(botembed);
@@ -746,39 +746,9 @@ client.on('message', msg => {
 
 })
 
-
-client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
-
-    if (!channel) return;
-
-    channel.send(`Welcome to the server, ${member}. Make sure you read the rules. We hope you enjoy your stay on our Server! `);
-});
-
-
-client.on('message', msg => {
-    if (msg.content === "^marwin is live") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription('Marwin just went live on Twitch!')
-            .setImage('https://acegif.com/wp-content/gif/outerspace-43.gif')
-            .setFooter('Make sure you leave a follow!')
-        msg.channel.send(embed);
-        msg.delete();
-
-    }
-})
-
 client.on('message', msg => {
     if (msg.content === "^lite is live") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription('LiteisCool just went live on Twitch!')
-            .addField("Link:", "[Click here](https://www.twitch.tv/liteiscool)")
-            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/0bf1e4ab-665c-4004-bbd4-fc9861ecab60-profile_image-70x70.png')
-            .setImage('https://i.pinimg.com/originals/09/ee/92/09ee92cc5ef0ed68bd4287c1b350f255.jpg')
-            .setFooter('Make sure you leave a follow and stay there for a bit!')
-        msg.channel.send(embed);
+        msg.channel.send("No longer supported!");
         msg.delete();
 
     }
@@ -786,14 +756,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^james is live") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription('NotGhol just went live on Twitch!')
-            .addField("Link:", "[Click here](https://www.twitch.tv/notghol)")
-            .setThumbnail('https://static-cdn.jtvnw.net/jtv_user_pictures/9149c745-ecb9-4272-b1ca-83023023e593-profile_image-70x70.png')
-            .setImage('https://cdn.discordapp.com/attachments/676043311659614228/735611183205318656/unknown.png')
-            .setFooter('Make sure you leave a follow and share some love ♥')
-        msg.channel.send(embed);
+        msg.channel.send("No longer supported!");
         msg.delete();
 
     }
@@ -801,13 +764,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === "^sledgy is live") {
-        const embed = new MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription('sledgy420 just went live on Twitch! https://www.twitch.tv/sledgy420')
-            .setThumbnail('https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-70x70.png')
-            .setImage('https://acegif.com/wp-content/gifs/happy-cat-27.gif')
-            .setFooter('Make sure you leave a follow and watch him play epic games!')
-        msg.channel.send(embed);
+        msg.channel.send("No longer supported!");
         msg.delete();
 
     }
