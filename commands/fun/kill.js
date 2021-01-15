@@ -45,7 +45,7 @@ module.exports = {
         } else if (args[0] == 'me') {
 
             return message.channel.send("Dont kill yourself...")
-        } else if (args[1]) {
+        } else if (!args[1]) {
 
             return message.channel.send(randomMessage)
         }
