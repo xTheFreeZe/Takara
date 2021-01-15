@@ -14,7 +14,7 @@ module.exports = {
             `${user.username} dies because of a car accident 🚗`,
             `During a party ${user.username} had a heart attack and died because if it... sagde ☹`,
             `Bruh...${user.username} just died...☠`,
-            `${user.username} fell from a high place 🏙`,
+            `${user.username} fell from a high place 🏙 !`,
             `Looks like ${user.username} played too much fortnite and just died because of it 💻`,
             `Someone did drink too much juice and ${user.username} passed out and died 🥤`,
             `${message.author.username} kills ${user.username} during an intense gun battle 🧨 🔫`,
