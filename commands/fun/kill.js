@@ -32,7 +32,6 @@ module.exports = {
             `${user.username} was squashed by a falling anvil`,
             `${user.username}died because the enemy reinhard didnt unbind his shift key`,
             `${user.username} died 😄`,
-            ``
 
         ]
 
@@ -48,11 +47,11 @@ module.exports = {
 
         } else if (args[0] == 'me') {
 
-            return message.channel.send("Dont kill yourself...")
+            return message.channel.send("Don't kill yourself...")
 
         } else if (args[0] == 'yourself') {
 
-            return message.channel.send("Dont kill yourself...")
+            return message.channel.send("Don't say that lmao")
 
         } else if (!args[1]) {
 
