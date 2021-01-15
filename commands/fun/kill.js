@@ -30,7 +30,7 @@ module.exports = {
             `${user.username} experienced kinetic energy`,
             `${user.username} drowned!`,
             `${user.username} was squashed by a falling anvil`,
-            `${user.username}died because the enemy reinhard didnt unbind his shift key`,
+            `${user.username} died because the enemy reinhard didnt unbind his shift key`,
             `${user.username} died 😄`,
 
         ]
