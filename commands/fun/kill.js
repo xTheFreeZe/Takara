@@ -5,7 +5,7 @@ module.exports = {
     name: "kill",
     category: "fun",
     description: "Sends a funny way of killing someone...",
-    run: async (client, message, PREFIX) => {
+    run: async (client, message, args, PREFIX) => {
         const user = message.mentions.users.first() || message.author;
         let author = message.author
 
@@ -30,12 +30,25 @@ module.exports = {
             `${user.username} experienced kinetic energy`,
             `${user.username} drowned!`,
             `${user.username} was squashed by a falling anvil`,
-            `${user.username}died because the enemy reinhard didnt unbind his shift key`
+            `${user.username}died because the enemy reinhard didnt unbind his shift key`,
+            `${user.username} died 😄`,
+            ``
 
         ]
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-        message.channel.send(randomMessage)
+        if (!args[0]) {
+
+            return message.channel.send("Tag someone...")
+
+        } else if (args[0] == 'me') {
+
+            return message.channel.send("Dont kill yourself...")
+        } else if (args[1]) {
+
+            return message.channel.send(randomMessage)
+        }
+
     }
 }
