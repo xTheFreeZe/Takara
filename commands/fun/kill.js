@@ -38,16 +38,25 @@ module.exports = {
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
+        const argsembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
+            .setColor("RANDOM")
+
         if (!args[0]) {
 
-            return message.channel.send("Tag someone...")
+            return message.channel.send(argsembed)
 
         } else if (args[0] == 'me') {
 
             return message.channel.send("Dont kill yourself...")
+
         } else if (!args[1]) {
 
             return message.channel.send(randomMessage)
+
+        } else if (args[0] == 'yourself') {
+
+            return message.channel.send("<:STT_no:778545452218974209> Dont say that lmao!")
         }
 
     }
