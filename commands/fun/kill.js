@@ -50,13 +50,14 @@ module.exports = {
 
             return message.channel.send("Dont kill yourself...")
 
+        } else if (args[0] == 'yourself') {
+
+            return message.channel.send("Dont kill yourself...")
+
         } else if (!args[1]) {
 
             return message.channel.send(randomMessage)
 
-        } else if (args[0] == 'yourself') {
-
-            return message.channel.send("<:STT_no:778545452218974209> Dont say that lmao!")
         }
 
     }
