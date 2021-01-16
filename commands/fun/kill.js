@@ -8,7 +8,6 @@ module.exports = {
     run: async (client, message, args, PREFIX) => {
         const user = message.mentions.users.first() || message.author;
         let author = message.author
-        if (user == message.author) return message.channel.send("Dont tag yourself...");
 
         const messages = [
             `${message.author.username} kills ${user.username} with a knife 🔪 🩸 `,
@@ -59,6 +58,8 @@ module.exports = {
             return message.channel.send(randomMessage)
 
         }
+
+        if (user == message.author) return message.channel.send("Dont tag yourself...");
 
     }
 }
