@@ -37,6 +37,12 @@ module.exports = {
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
+        const argsembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
+            .setFooter("Also, don't mention yourself.")
+            .setColor("RANDOM")
+        if (user == message.author) return message.channel.send(argsembed)
+
         if (!args[0]) {
 
             return message.channel.send("Something went wrong! Code: kijs42")
@@ -55,11 +61,6 @@ module.exports = {
 
         }
 
-        const argsembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
-            .setFooter("Also, don't mention yourself.")
-            .setColor("RANDOM")
-        if (user == message.author) return message.channel.send(argsembed)
 
 
     }
