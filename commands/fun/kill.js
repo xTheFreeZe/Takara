@@ -8,6 +8,11 @@ module.exports = {
     run: async (client, message, args, PREFIX) => {
         const user = message.mentions.users.first() || message.author;
         let author = message.author
+        const argsembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
+            .setFooter("Also, don't mention yourself.")
+            .setColor("RANDOM")
+        if (user == message.author) return message.channel.send(argsembed)
 
         const messages = [
             `${message.author.username} kills ${user.username} with a knife 🔪 🩸 `,
@@ -37,9 +42,6 @@ module.exports = {
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-        const argsembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
-            .setColor("RANDOM")
 
         if (!args[0]) {
 
