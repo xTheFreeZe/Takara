@@ -394,7 +394,7 @@ client.on('message', msg => {
                 .setDescription(`<:STT_yes:778545433810173952> Your Report has been opened and is being worked on!`)
                 .setFooter("Thank you for making STT Premium a better bot to use!")
                 .setColor('RANDOM')
-            msg.channel.send(embed);
+            msg.channel.send("Okay!");
             let report_embed = new MessageEmbed()
                 .setDescription(`New Report from ${author} in ${channel} from ${msg.guild}:` + " " + msgArgs)
                 .setColor("RANDOM")

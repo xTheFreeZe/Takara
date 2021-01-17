@@ -16,7 +16,7 @@ module.exports = {
             .setColor("RANDOM")
         if (!args[1]) return message.channel.send(argsembed);
         const embed = new MessageEmbed()
-            .setDescription("📃 " + `New Suggestion from ${author}:` + " " + "**" + msgArgs + "**")
+            .setDescription("📃 " + `New Suggestion from ${message.author.username}:` + " " + "**" + msgArgs + "**")
             .setColor("RANDOM")
 
 
