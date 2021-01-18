@@ -62,7 +62,7 @@ module.exports = {
 
             .addField('`Ping:`', `${ping} ms`, true)
 
-            .addField("`My Website`", "[Click here](https://sad-spence-0be9ad.netlify.app)", true)
+            .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)", true)
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
