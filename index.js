@@ -10,17 +10,32 @@ const {
 
 const got = require('got');
 
-const activities = [
-    `${client.guilds.cache.size} servers!`,
-    `${client.channels.cache.size} channels!`,
-    `${client.users.cache.size} users!`
-]
+const activities_list = [
+    "with friends",
+    "Overwatch",
+    "in a Tournament",
+    "with JavaScript",
+    "^help",
+    "with premium",
+    "games",
+    "games with friends",
+    "Overwatch ranked",
+    "in the Syntax Terror Tournaments",
+    "Overwatch with friends",
+    "nothing",
+    "Apex Legends",
+    "in a three Squad",
+    "Fall Guys",
+    "Hearthstone"
+
+];
+
 
 client.on('ready', () => {
     console.log("STT Premium is ready!")
     setInterval(() => {
-        const index = Math.floor(Math.random() * (activities.length - 1) + 1);
-        client.user.setActivity("on" + activities[index]);
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        client.user.setActivity(activities_list[index]);
     }, 40000);
 });
 
