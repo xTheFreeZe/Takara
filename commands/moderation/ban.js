@@ -42,17 +42,8 @@ module.exports = {
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.channel.send(embed);
-                    //let logembed = new MessageEmbed()
-                    //    .setColor("RANDOM")
-                    //   .setDescription(`**BAN** | ${member}`)
-                    //    .addField(`Moderator:`, `${author}`)
-                    //   .addField(`Channel: `, `${channel}`)
-                    //   .addField(`Reason:`, msgArgs)
-                    //    .addField(`Server:`, `${message.guild}`)
-                    //    .setThumbnail(message.author.displayAvatarURL())
-                    //    .setTimestamp()
-                    //log_channel.send(logembed);
-                    console.log(`I banned ${member} on ${message.guild}. Provided Reason:` + msgArgs);
+                    message.channel.send(embed);
+                    console.log(`I banned ${member}. Provided Reason:` + msgArgs);
                     message.delete();
 
 
