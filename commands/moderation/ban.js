@@ -24,13 +24,12 @@ module.exports = {
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
-        const user = args[1]
 
 
 
-        const member = message.mentions.users.first() || user;
+        const user = message.mentions.users.first();
 
-        if (member) {
+        if (user) {
             const member = message.guild.member(user);
             if (member) {
                 member.ban({
@@ -42,8 +41,17 @@ module.exports = {
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.channel.send(embed);
-                    message.channel.send(embed);
-                    console.log(`I banned ${member}. Provided Reason:` + msgArgs);
+                    //let logembed = new MessageEmbed()
+                    //    .setColor("RANDOM")
+                    //   .setDescription(`**BAN** | ${member}`)
+                    //    .addField(`Moderator:`, `${author}`)
+                    //   .addField(`Channel: `, `${channel}`)
+                    //   .addField(`Reason:`, msgArgs)
+                    //    .addField(`Server:`, `${message.guild}`)
+                    //    .setThumbnail(message.author.displayAvatarURL())
+                    //    .setTimestamp()
+                    //log_channel.send(logembed);
+                    console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
                     message.delete();
 
 
@@ -80,13 +88,7 @@ module.exports = {
 
 
             } else {
-                const embed = new MessageEmbed()
-                    .setColor('#F1C40F')
-                    .setDescription('<:STT_no:778545452218974209> Something went wrong!')
-                    .addField('For more info use :', '^help ban err')
-                message.channel.send(embed);
-                message.delete();
-                console.log(`${author} used the "^ban"`);
+                message.reply("That user isnt  on the Server")
 
             }
         } else {
