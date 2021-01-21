@@ -68,7 +68,7 @@ module.exports = {
                         message.reply(embed);
                         //log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
                         message.delete();
-                        console.log(`${author} tried to ban ${member}`);
+                        console.log(`${message.author.username} tried to ban ${member}`);
 
                         console.log(err);
 
@@ -99,7 +99,7 @@ module.exports = {
             message.channel.send(embed);
             //log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
             message.delete();
-            console.log(`${author} used the "^ban"`);
+            console.log(`${message.authorh.username} used ^ban on ${message.guild}`);
 
 
         }
