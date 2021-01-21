@@ -41,17 +41,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.channel.send(embed);
-                    //let logembed = new MessageEmbed()
-                    //    .setColor("RANDOM")
-                    //   .setDescription(`**BAN** | ${member}`)
-                    //    .addField(`Moderator:`, `${author}`)
-                    //   .addField(`Channel: `, `${channel}`)
-                    //   .addField(`Reason:`, msgArgs)
-                    //    .addField(`Server:`, `${message.guild}`)
-                    //    .setThumbnail(message.author.displayAvatarURL())
-                    //    .setTimestamp()
-                    //log_channel.send(logembed);
-                    console.log(`I banned ${user.tag}. Provided Reason:` + msgArgs);
+                    console.log(`I banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
 
 
@@ -63,11 +53,11 @@ module.exports = {
                         const embed = new MessageEmbed()
                             .setColor('#F1C40F')
                             .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
-                            .setFooter("Try ^help ban err for more info!")
-                        message.reply(embed);
+                            .setFooter("Try ^help ban err or more info!")
+                        message.reply(embed);f
                         //log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
                         message.delete();
-                        console.log(`${message.author.username} tried to ban ${member}`);
+                        console.log(`${message.author.username} tried to ban ${member} on ${message.guild}`);
 
                         console.log(err);
 
