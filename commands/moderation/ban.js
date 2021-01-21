@@ -99,7 +99,7 @@ module.exports = {
             message.channel.send(embed);
             //log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
             message.delete();
-            console.log(`${message.authorh.username} used ^ban on ${message.guild}`);
+            console.log(`${message.author.username} used ^ban on ${message.guild}`);
 
 
         }
