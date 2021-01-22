@@ -1,4 +1,6 @@
-const { MessageEmbed } = require('discord.js');
+const {
+    MessageEmbed
+} = require('discord.js');
 
 module.exports = {
     name: "lock",
@@ -19,9 +21,8 @@ module.exports = {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: true
                 }).then(() => {
-                        channel.setName(channel.name.replace('🔒', ''))
-                    }
-                )
+                    channel.setName(channel.name.replace('🔒', ''))
+                })
             })
             return message.channel.send('unlocked all channels')
         }
