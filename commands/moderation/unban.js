@@ -10,7 +10,7 @@ module.exports = {
             timeout: 5000
         }));
 
-        if (!args[0]) return message.channel.send('please enter a users id to unban!').then(m => m.delete({
+        if (!args[0]) return message.channel.send('Please enter a users ID to unban!').then(m => m.delete({
             timeout: 5000
         }));
 
@@ -45,7 +45,7 @@ module.exports = {
                     .addField('Unbanned Reason', reason)
                 message.guild.members.unban(user.user.id, reason).then(() => message.channel.send(embed))
             } else {
-                embed.setTitle(`User ${member.tag} isn't banned!`)
+                embed.setTitle(`${member.tag} isn't banned!`)
                     .setColor('#ff0000')
                 message.channel.send(embed)
             }
