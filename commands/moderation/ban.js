@@ -24,13 +24,11 @@ module.exports = {
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
-
-
-
         const user = message.mentions.users.first();
+        const member = message.guild.member(user);
+        if (user == message.author) return message.channel.send("Do not ban yourself!");
 
         if (user) {
-            const member = message.guild.member(user);
             if (member) {
                 member.ban({
                     ression: msgArgs
