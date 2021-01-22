@@ -3,52 +3,57 @@ const {
 } = require('discord.js');
 
 module.exports = {
-    name: "unban",
-    category: "moderation",
-    description: "unbans a member from a guild",
+    name: 'unban',
+    run: async (client, message, args) => {
 
-    run: async (client, message, PREFIX) => {
-        let args = message.content.substring(PREFIX.length).split(" ");
-        let owner = message.author.id == '420277395036176405';
-        let author = message.author
-        const ownerembed = new MessageEmbed()
-            .setDescription("This command is under Maintenance!")
-            .setFooter("Owner only [0015]").setColor("RANDOM")
-        if (!owner) return message.channel.send(ownerembed);
+        if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send('You are missing **BAN_MEMBERS** permission!').then(m => m.delete({
+            timeout: 5000
+        }));
 
-        let permsembed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
-            .addField("Error", 'Missing `BAN_MEMBERS`')
-            .setColor("RANDOM")
-        if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
-        const user = args[1]
+        if (!args[0]) return message.channel.send('please enter a users id to unban!').then(m => m.delete({
+            timeout: 5000
+        }));
 
-
-        if (!user) {
-            const embed = new MessageEmbed()
-                .setDescription("Please enter a valid user ID!")
-                .setColor("#3342FF")
-            return message.channel.send(embed);
-
-        }
+        let member;
 
         try {
-            message.guild.fetchBans().then(bans => {
-                message.guild.members.unban(user)
-            })
-            const unbanembed = new MessageEmbed()
-                .setDescription(`${user} has been unbanned`)
-                .setColor("#7CFC00")
-            await message.channel.send(unbanembed);
-            console.log(`${user} got unbanned --> Author: ${message.author.username}`);
-
+            member = await client.users.fetch(args[0])
         } catch (e) {
-            const errembed = new MessageEmbed()
-                .setDescription("Something has happened and I could not unban this Member")
-                .setColor("#DC143C")
-
-            return message.channel.send(errembed);
+            console.log(e)
+            return message.channel.send('Not a valid user!').then(m => m.delete({
+                timeout: 5000
+            }));
         }
+
+        const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
+
+        const embed = new MessageEmbed()
+            .setFooter(`${message.author.tag} | ${message.author.id}`, message.author.displayAvatarURL({
+                dynamic: true
+            }));
+
+        message.guild.fetchBans().then(bans => {
+
+            const user = bans.find(ban => ban.user.id === member.id);
+
+            if (user) {
+                embed.setTitle(`Successfully Unbanned ${user.user.tag}`)
+                    .setColor('#00ff00')
+                    .addField('User ID', user.user.id, true)
+                    .addField('user Tag', user.user.tag, true)
+                    .addField('Banned Reason', user.reason != null ? user.reason : 'no reason')
+                    .addField('Unbanned Reason', reason)
+                message.guild.members.unban(user.user.id, reason).then(() => message.channel.send(embed))
+            } else {
+                embed.setTitle(`User ${member.tag} isn't banned!`)
+                    .setColor('#ff0000')
+                message.channel.send(embed)
+            }
+
+        }).catch(e => {
+            console.log(e)
+            message.channel.send('An error has occurred!')
+        });
 
     }
 }
