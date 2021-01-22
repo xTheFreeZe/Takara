@@ -26,7 +26,10 @@ module.exports = {
         if (message.author.bot) return;
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
-        if (user == message.author) return message.channel.send("Do not ban yourself!");
+        const selfbanembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
+            .setColor("RANDOM")
+        if (user == message.author) return message.channel.send(selfbanembed);
 
         if (user) {
             if (member) {
