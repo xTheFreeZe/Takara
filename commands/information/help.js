@@ -27,14 +27,14 @@ module.exports = {
             .setTitle('Staff Commands')
             .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^unban`, `^warn`, `^topic`, `^id`, `^ping`, `^uptime`', true)
+            .addField('General Chat Commands:', '`^lock on/off`, `^unban`, `^warn`, `^topic`, `^id`, `^ping`, `^uptime`', true)
             .setFooter("STT Premium | Information")
 
         const devembed = new MessageEmbed()
             .setColor('#56E448')
             .setTitle('Developer Commands')
             .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
-            .addField('Basic commands:', '`^ping`, `^id`, `^update`, `^talk`', true)
+            .addField('Basic commands:', '`^restart`, `^ping`, `^id`, `^update`, `^talk`', true)
             .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
             .setFooter("STT Premium | Information")
 
