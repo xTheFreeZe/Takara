@@ -22,7 +22,10 @@ module.exports = {
                     channel.setName(channel.name += `🔒`)
                 })
             })
-            return message.channel.send('Locked all channels');
+            const lockembed = new MessageEmbed()
+                .setDescription('<:STT_yes:778545433810173952> Locked all channels!')
+                .setColor('#229954')
+            return message.channel.send(lockembed);
         } else if (args[0] === 'off') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
@@ -31,7 +34,10 @@ module.exports = {
                     channel.setName(channel.name.replace('🔒', ''))
                 })
             })
-            return message.channel.send('Unlocked all channels')
+            const unlockembed = new MessageEmbed()
+                .setDescription('<:STT_yes:778545433810173952> Unlocked all channels!')
+                .setColor('#229954')
+            return message.channel.send(unlockembed);
         }
     }
 }
