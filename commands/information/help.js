@@ -19,7 +19,7 @@ module.exports = {
         const funembed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('Fun Commands')
-            .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^meme`, `^memeoftheday`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
+            .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^covid`, `^meme`, `^memeoftheday`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
             .setFooter("STT Premium | Information")
 
         const modembed = new MessageEmbed()
