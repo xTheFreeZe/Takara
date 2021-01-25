@@ -19,9 +19,13 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
             .addField("Error", 'Missing `BAN_MEMBERS`')
             .setColor("RANDOM")
+        const reembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please provide a reason!")
+            .setColor("RANDOM")
         let log_channel = message.guild.channels.cache.get('780815502997454848');
-        if (!args[1]) return message.channel.send(argsembed);
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
+        if (!args[1]) return message.channel.send(argsembed);
+        if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
         const user = message.mentions.users.first();
