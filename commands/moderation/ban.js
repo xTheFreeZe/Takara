@@ -38,6 +38,7 @@ module.exports = {
         if (user) {
             if (member) {
                 member.ban({
+                    reason: (`${message.author.username} banned ${user.username} with the Reason: ` + msgArgs),
                     ression: msgArgs
                 }).then(() => {
                     const embed = new MessageEmbed()
