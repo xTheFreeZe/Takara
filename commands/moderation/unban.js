@@ -44,6 +44,7 @@ module.exports = {
                     .addField('Banned Reason', user.reason != null ? user.reason : 'no reason')
                     .addField('Unbanned Reason', reason)
                 message.guild.members.unban(user.user.id, reason).then(() => message.channel.send(embed))
+                console.log(`${message.author.username} unbanned ${user.user.tag} on ${message.guild}.`)
             } else {
                 embed.setTitle(`${member.tag} isn't banned!`)
                     .setColor('#ff0000')
