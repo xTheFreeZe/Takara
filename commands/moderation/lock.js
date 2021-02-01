@@ -14,6 +14,7 @@ module.exports = {
             .addField("Error", 'Missing `MANAGE_MESSAGES`')
             .setColor("RANDOM")
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
+        if(!args) return message.channel.send("On or off!");
         if (args[0] === 'on') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
