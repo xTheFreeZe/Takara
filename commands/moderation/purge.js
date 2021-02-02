@@ -32,7 +32,6 @@
 
           const embed = new MessageEmbed()
               .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
-              .setFooter(message.author.username, message.author.displayAvatarURL())
               .setColor('#f2f2f2')
           await message.channel.send(embed)
       }
