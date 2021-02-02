@@ -17,7 +17,7 @@ module.exports = {
         const member = message.guild.member(user);
         let msgArgs = args.slice(1).join(" ");
         const embed = new MessageEmbed()
-            .setDescription(`<:STT_no:778545452218974209> Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
+            .setDescription(`<:STT_yes:778545433810173952> Your Report has been sent to <@!420277395036176405> :` + " " + "**" + msgArgs + "**")
             .setColor('RANDOM')
             .setFooter("STT Premium | Moderation")
         message.channel.send(embed);

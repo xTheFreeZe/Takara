@@ -15,7 +15,7 @@
               );
           if (!args[0]) {
               const purgeembed = new MessageEmbed()
-                  .setDescription("Please enter an amount of Messages you want to purge!")
+                  .setDescription("<:STT_no:778545452218974209> Please enter an amount of Messages you want to purge!")
                   .setColor("RANDOM")
               return message.channel.send(purgeembed)
           }
@@ -31,9 +31,7 @@
           await message.channel.bulkDelete(deleteAmount, true);
 
           const embed = new MessageEmbed()
-              .setTitle(`${message.author.username}`)
-              .setThumbnail(message.author.displayAvatarURL())
-              .setDescription(`successfully deleted ${deleteAmount}`)
+              .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
               .setFooter(message.author.username, message.author.displayAvatarURL())
               .setColor('#f2f2f2')
           await message.channel.send(embed)
