@@ -18,11 +18,15 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
             .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
+        const selfbanembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
+            .setColor("RANDOM")
         let log_channel = message.guild.channels.cache.get('780815502997454848');
         if (!args[1]) return message.channel.send(argsembed);
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
+        if (user == message.author) return message.channel.send(selfbanembed);
 
 
 
