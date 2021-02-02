@@ -10,6 +10,8 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let msgArgs = args.slice(2).join(" ");
         let author = message.author
+        const user = message.mentions.users.first();
+        const member = message.guild.member(user);
 
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to kick and provide a reason.`)
@@ -28,12 +30,7 @@ module.exports = {
         if (message.author.bot) return;
         if (user == message.author) return message.channel.send(selfbanembed);
 
-
-
-        const user = message.mentions.users.first();
-
         if (user) {
-            const member = message.guild.member(user);
             if (member) {
                 member.kick(msgArgs).then(() => {
                     const embed = new MessageEmbed()
