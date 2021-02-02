@@ -2,7 +2,7 @@
       MessageEmbed
   } = require('discord.js')
   module.exports = {
-      name: "clear",
+      name: "purge",
       category: "moderation",
       run: async (client, message, args) => {
           let permsembed = new MessageEmbed()
@@ -14,7 +14,10 @@
                   permsembed // returns this message to user with no perms
               );
           if (!args[0]) {
-              return message.channel.send(`Please enter a amount 1 to 100`)
+              const purgeembed = new MessageEmbed()
+                  .setDescription("Please enter an amount of Messages you want to purge!")
+                  .setColor("RANDOM")
+              return message.channel.send(purgeembed)
           }
 
           let deleteAmount;
