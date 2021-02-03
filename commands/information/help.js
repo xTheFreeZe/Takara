@@ -25,9 +25,9 @@ module.exports = {
         const modembed = new MessageEmbed()
             .setColor('#2E0E81')
             .setTitle('Staff Commands')
-            .setDescription('<:STT_yes:778545433810173952> This is only ment for Staff Members!')
+            .setDescription('<:STT_yes:778545433810173952> This is only meant for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
-            .addField('General Chat Commands:', '`^lock on/off`, `^purge`, `^unban`, `^warn`, `^topic`, `^id`, `^ping`, `^uptime`', true)
+            .addField('General Chat Commands:', '`^lock on/off`, `^purge`, `^unban`, `^warn`, `^topic`', true)
             .setFooter("STT Premium | Information")
 
         const devembed = new MessageEmbed()
