@@ -28,28 +28,32 @@ module.exports = {
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
 
+        const userembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please mention someone!")
+            .setColor("RANDOM")
 
-        if (!args[1]) {
-            message.channel.send('<:STT_no:778545452218974209> Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
-            message.delete();
-        }
+        if (!user) return message.channel.send(userembed)
 
         let msgArgs = args.slice(2).join(" ");
-        // let logembed = new MessageEmbed()
-        //   .setColor("RANDOM")
-        // .setDescription(`**WARN** | ${member}`)
-        //.addField(`Moderator:`, `${author}`)
-        //.addField(`Channel: `, `${channel}`)
-        //.addField(`Reason:`, `error`)
-        //.setThumbnail(msg.author.displayAvatarURL())
-        //.setTimestamp()
+
+        if (!msgArgs) return message.channel.send('`Reason is required!`');
+
         const embed = new MessageEmbed()
-            .setDescription(`<:STT_yes:778545433810173952> ${message.author.username} warned ${member}`)
+            .setDescription(`<:STT_yes:778545433810173952> ${message.author.username} warned ${user.username}`)
             .addField('Reason:', "**" + msgArgs + "**")
             .setColor('RANDOM')
             .setFooter(`STT Premium | Moderation`)
         message.channel.send(embed);
-        //log_channel.send(logembed);
+
+        const DMembed = new MessageEmbed()
+            .setDescription('<:STT_yes:778545433810173952> You have been warned!')
+            .addField('Server:', `${message.guild}`)
+            .addField('Moderator:', `${message.author.username}`)
+            .addField('Reason:', msgArgs)
+            .setColor("RANDOM")
+            .setTimestamp()
+        user.send(DMembed);
+       
         message.delete();
         console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
     }
