@@ -28,6 +28,12 @@ module.exports = {
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
 
+        const selfwarnembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> You can not warn yourself!")
+            .setColor("RANDOM")
+
+        if (user == message.author) return message.channel.send(selfwarnembed);
+
         const userembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please mention someone!")
             .setColor("RANDOM")
@@ -53,7 +59,7 @@ module.exports = {
             .setColor("RANDOM")
             .setTimestamp()
         user.send(DMembed);
-       
+
         message.delete();
         console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
     }
