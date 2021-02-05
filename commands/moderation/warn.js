@@ -45,9 +45,10 @@ module.exports = {
         if (!msgArgs) return message.channel.send('`Reason is required!`');
 
         const embed = new MessageEmbed()
-            .setDescription(`<:STT_yes:778545433810173952> ${message.author.username} warned ${user.username}`)
-            .addField('Reason:', "**" + msgArgs + "**")
+            .setDescription(`** ${user.tag} || WARNING **`)
+            .addField('Reason:', msgArgs)
             .setColor('RANDOM')
+            .setTimestamp()
             .setFooter(`STT Premium | Moderation`)
         message.channel.send(embed);
 
