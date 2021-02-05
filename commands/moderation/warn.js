@@ -45,7 +45,7 @@ module.exports = {
         if (!msgArgs) return message.channel.send('`Reason is required!`');
 
         const embed = new MessageEmbed()
-            .setDescription(`** ${user.tag} || WARNING **`)
+            .setDescription(`** WARNING || ${user.tag} **`)
             .addField('Reason:', msgArgs)
             .setColor('RANDOM')
             .setTimestamp()
