@@ -7,6 +7,7 @@ module.exports = {
     description: "Sends a funny way of killing someone...",
     run: async (client, message, args, PREFIX) => {
         const user = message.mentions.users.first() || message.author;
+        if (user == bot) return messages.channel.send("Dont kill a Bot! :(")
         let author = message.author
 
         const messages = [
