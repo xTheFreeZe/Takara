@@ -8,7 +8,6 @@ const {
 module.exports = {
     name: "help",
     category: "information",
-    alias: ['hp', 'hlp'],
     description: "General Info command",
     run: async (client, message, args, PREFIX) => {
 
