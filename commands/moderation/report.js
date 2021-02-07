@@ -7,11 +7,11 @@ module.exports = {
     category: "moderation",
     description: "Sends a report to the developer",
     run: async (client, message, PREFIX) => {
-        if (talkedRecently.has(msg.author.id)) {
+        if (talkedRecently.has(message.author.id)) {
             const timemebed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> This command is on cooldown || 1 Minute")
                 .setColor("#FF0000")
-            msg.channel.send(timemebed);
+            message.channel.send(timemebed);
 
         } else {
 
@@ -40,10 +40,10 @@ module.exports = {
             message.delete();
 
             // Adds the user to the set so that they can't talk for a minute
-            talkedRecently.add(msg.author.id);
+            talkedRecently.add(message.author.id);
             setTimeout(() => {
                 // Removes the user from the set after a minute
-                talkedRecently.delete(msg.author.id);
+                talkedRecently.delete(message.author.id);
             }, 60000);
         }
 
