@@ -42,8 +42,12 @@ module.exports = {
             .setFooter("Also, don't mention yourself.")
             .setColor("RANDOM")
 
+        const selfkillembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Don't kill yourself!")
+            .setColor("RANDOM")
+
         if (!user) return message.channel.send(argsembed);
-        if (user == message.author) return message.channel.send(argsembed);
+        if (user == message.author) return message.channel.send(selfkillembed);
 
         if (!args[0]) {
 
