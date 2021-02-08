@@ -9,6 +9,18 @@ module.exports = {
         const user = message.mentions.users.first();
         let author = message.author
 
+        const argsembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
+            .setFooter("Also, don't mention yourself.")
+            .setColor("RANDOM")
+
+        const selfkillembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Don't kill yourself!")
+            .setColor("RANDOM")
+
+        if (!user) return message.channel.send(argsembed);
+        if (user == message.author) return message.channel.send(selfkillembed);
+
         const messages = [
             `${message.author.username} kills ${user.username} with a knife 🔪 🩸 `,
             `${user.username} dies because of a car accident 🚗`,
@@ -36,18 +48,6 @@ module.exports = {
         ]
 
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-        const argsembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
-            .setFooter("Also, don't mention yourself.")
-            .setColor("RANDOM")
-
-        const selfkillembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Don't kill yourself!")
-            .setColor("RANDOM")
-
-        if (!user) return message.channel.send(argsembed);
-        if (user == message.author) return message.channel.send(selfkillembed);
 
         message.channel.send(randomMessage);
 
