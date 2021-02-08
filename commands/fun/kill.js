@@ -6,7 +6,7 @@ module.exports = {
     category: "fun",
     description: "Sends a funny way of killing someone...",
     run: async (client, message, args, PREFIX) => {
-        const user = message.mentions.users.first() || message.author;
+        const user = message.mentions.users.first();
         let author = message.author
 
         const messages = [
