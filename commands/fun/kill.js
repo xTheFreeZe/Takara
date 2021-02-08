@@ -49,23 +49,7 @@ module.exports = {
         if (!user) return message.channel.send(argsembed);
         if (user == message.author) return message.channel.send(selfkillembed);
 
-        if (!args[0]) {
-
-            return message.channel.send("Something went wrong! Code: kijs42")
-
-        } else if (args[0] == 'me') {
-
-            return message.channel.send("Don't kill yourself...")
-
-        } else if (args[0] == 'yourself') {
-
-            return message.channel.send("Don't say that lmao")
-
-        } else if (!args[1]) {
-
-            return message.channel.send(randomMessage)
-
-        }
+        message.channel.send(randomMessage);
 
 
 
