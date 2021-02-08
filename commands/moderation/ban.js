@@ -27,6 +27,15 @@ module.exports = {
         const selfbanembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
             .setColor("RANDOM")
+
+        const DMembed = new MessageEmbed()
+            .setDescription("<:STT_yes:778545433810173952> You have been banned!")
+            .addField('Server :', `${message.guild}`)
+            .addField('Moderator :', `${message.author.tag}`)
+            .addField('Reason :', msgArgs)
+            .setThumbnail(`${message.guild.iconURL()}`)
+            .setTimestamp()
+
         let log_channel = message.guild.channels.cache.get('780815502997454848');
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
         if (!args[1]) return message.channel.send(argsembed);
@@ -47,6 +56,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.channel.send(embed);
+                    member.send(DMembed);
                     console.log(`I banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
 
