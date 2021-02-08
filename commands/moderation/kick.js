@@ -52,6 +52,17 @@ module.exports = {
                     //.setThumbnail(message.author.displayAvatarURL())
                     //.setTimestamp()
                     //log_channel.send(logembed);
+
+                    const DMembed = new MessageEmbed()
+                        .setDescription("<:STT_yes:778545433810173952> You have been kicked!")
+                        .addField('Server :', `${message.guild}`)
+                        .addField(`Channel :`, `${channel}`)
+                        .addField('Reason :', msgArgs)
+                        .setThumbnail(`${message.guild.iconURL()}`)
+                        .setTimestamp()
+
+                    member.send(DMembed);
+
                     console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                     message.delete();
 
