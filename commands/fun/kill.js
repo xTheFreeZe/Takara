@@ -41,7 +41,9 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Please mention someone you want to kill!")
             .setFooter("Also, don't mention yourself.")
             .setColor("RANDOM")
-        if (user == message.author) return message.channel.send(argsembed)
+
+        if (!user) return message.channel.send(argsembed);
+        if (user == message.author) return message.channel.send(argsembed);
 
         if (!args[0]) {
 
