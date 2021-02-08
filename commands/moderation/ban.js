@@ -56,6 +56,7 @@ module.exports = {
                         .addField('Reason :', msgArgs)
                         .setThumbnail(`${message.guild.iconURL()}`)
                         .setTimestamp()
+                        .setColor("RANDOM")
 
                     member.send(DMembed);
                     console.log(`I banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);

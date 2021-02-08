@@ -60,6 +60,7 @@ module.exports = {
                         .addField('Reason :', msgArgs)
                         .setThumbnail(`${message.guild.iconURL()}`)
                         .setTimestamp()
+                        .setColor("RANDOM")
 
                     member.send(DMembed);
 
