@@ -18,8 +18,8 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Don't kill yourself!")
             .setColor("RANDOM")
 
-        if (!user) return message.channel.send(argsembed);
-        if (user == message.author) return message.channel.send(selfkillembed);
+        if (!user) return message.delete(), message.channel.send(argsembed);
+        if (user == message.author) return message.delete(), message.channel.send(selfkillembed);
 
         const messages = [
             `${message.author.username} kills ${user.username} with a knife 🔪 🩸 `,
