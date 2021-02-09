@@ -573,32 +573,6 @@ client.on("message", msg => {
 })
 
 
-
-client.on("message", msg => {
-    if (msg.content === "^outage") {
-        const embed = new MessageEmbed()
-            .setColor('#FF0000')
-            .setTitle('Bot Outage!')
-            .setDescription('<:STT_no:778545452218974209> STT Bot is offline! Please be patient as the Developer is trying to fix it!')
-            .setFooter('Please take note that this may take some time.')
-        msg.channel.send(embed);
-        msg.delete();
-
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^outage commands") {
-        const embed = new MessageEmbed()
-            .setColor('#ffd700')
-            .setAuthor('Temporary outage')
-            .setDescription('<:STT_no:778545452218974209> Commands dont seem to work!')
-            .setFooter('Please be patient as I am working on it')
-        msg.channel.send(embed);
-        msg.delete()
-    }
-})
-
 client.on('message', msg => {
     if (msg.content === "^outage ping") {
         const embed = new MessageEmbed()
@@ -630,7 +604,7 @@ client.on("message", msg => {
         let author = msg.author.send
         const embed = new MessageEmbed()
             .setColor("RANDOM")
-            .setImage("https://i.redd.it/7fv7uf0dfc561.jpg")
+            .setDescription("No longer supported!")
             .setFooter("Meme of the Day!")
         msg.channel.send(embed);
     }
