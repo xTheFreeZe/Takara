@@ -40,7 +40,7 @@ module.exports = {
                 embed.setTitle(`Successfully Unbanned ${user.user.tag}`)
                     .setColor('#00ff00')
                     .addField('User ID', user.user.id, true)
-                    .addField('user Tag', user.user.tag, true)
+                    .addField('User Tag', user.user.tag, true)
                     .addField('Banned Reason', user.reason != null ? user.reason : 'no reason')
                     .addField('Unbanned Reason', reason)
                 message.guild.members.unban(user.user.id, reason).then(() => message.channel.send(embed))
