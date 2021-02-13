@@ -12,23 +12,32 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
 
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to kick and provide a reason.`)
         let channel = message.channel
+
         let permsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
             .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
+
         const selfkickembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You can't kick yourself!")
             .setColor("RANDOM")
+
         const reembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please provide a reason!")
             .setColor("RANDOM")
-        let log_channel = message.guild.channels.cache.get('780815502997454848');
-        if (!args[1]) return message.channel.send(argsembed);
+
+        const nologembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
+            .setColor("RANDOM")
+
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
+        if (!log_channel) return message.channel.send(nologembed);
+        if (!args[1]) return message.channel.send(argsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
         if (!msgArgs) return message.channel.send(reembed), message.delete();
@@ -43,15 +52,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.reply(embed);
-                    //let logembed = new MessageEmbed()
-                    // .setColor("RANDOM")
-                    //.setDescription(`**KICK** | ${member}`)
-                    //.addField(`Moderator:`, `${author}`)
-                    //.addField(`Channel: `, `${channel}`)
-                    //.addField(`Reason:`, msgArgs)
-                    //.setThumbnail(message.author.displayAvatarURL())
-                    //.setTimestamp()
-                    //log_channel.send(logembed);
+
 
                     const DMembed = new MessageEmbed()
                         .setDescription("<:STT_yes:778545433810173952> You have been kicked!")
@@ -62,6 +63,16 @@ module.exports = {
                         .setColor("RANDOM")
 
                     member.send(DMembed);
+
+                    const logembed = new MessageEmbed()
+                        .setColor("RANDOM")
+                        .setTitle(`KICK || ${user.tag}`)
+                        .addField('Moderator', `${message.author.tag}`)
+                        .addField('Channel', `${message.channel}`)
+                        .addField('Reason', msgArgs)
+                        .setTimestamp()
+
+                    log_channel.send(logembed);
 
                     console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
                     message.delete();
