@@ -36,7 +36,7 @@ module.exports = {
 
         if (user) {
             if (member) {
-                member.kick(msgArgs + `|| Moderator : ${message.author.tag}`).then(() => {
+                member.kick(msgArgs + " " + `|| Moderator : ${message.author.tag}`).then(() => {
                     const embed = new MessageEmbed()
                         .setColor('#229954')
                         .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
