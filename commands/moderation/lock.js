@@ -32,7 +32,7 @@ module.exports = {
 
             const logembed1 = new MessageEmbed()
                 .setColor("RANDOM")
-                .setTitle(`PURGE`)
+                .setTitle(`LOCK`)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
                 .setTimestamp()
