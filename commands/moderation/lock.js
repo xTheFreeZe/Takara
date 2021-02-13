@@ -51,17 +51,11 @@ module.exports = {
                 })
             })
 
-            const logembed2 = new MessageEmbed()
-                .setColor("RANDOM")
-                .setTitle(`UNLOCK`)
-                .addField('Moderator', `${message.author.tag}`)
-                .addField('Channel', `${message.channel}`)
-                .setTimestamp()
 
             const unlockembed = new MessageEmbed()
                 .setDescription('<:STT_yes:778545433810173952> Unlocked all channels!')
                 .setColor('#229954')
-            return message.channel.send(unlockembed), log_channel.send(logembed2);
+            return message.channel.send(unlockembed)
         }
     }
 }
