@@ -29,7 +29,7 @@ module.exports = {
             const lockembed = new MessageEmbed()
                 .setDescription('<:STT_yes:778545433810173952> Locked all channels!')
                 .setColor('#229954')
-            return message.channel.send(lockembed), log_channel.send(logembed1);
+            return message.channel.send(lockembed);
         } else if (args[0] === 'off') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
