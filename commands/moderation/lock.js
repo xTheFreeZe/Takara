@@ -35,7 +35,6 @@ module.exports = {
                 .setTitle(`PURGE`)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
-                .addField('Amount', `${deleteAmount}`)
                 .setTimestamp()
 
 
