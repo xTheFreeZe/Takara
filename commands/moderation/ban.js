@@ -13,7 +13,6 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
-        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and provide a reason. `)
             .setColor("RANDOM")
@@ -29,13 +28,8 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
             .setColor("RANDOM")
 
-        const nologembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
-            .setColor("RANDOM")
-
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
         if (!args[1]) return message.channel.send(argsembed);
-        if (!log_channel) return message.channel.send(nologembed);
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;

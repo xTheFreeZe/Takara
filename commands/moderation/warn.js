@@ -10,17 +10,22 @@ module.exports = {
     description: "Warns a Member",
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
         let permsembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You cant use that")
             .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
-        let log_channel = message.guild.channels.cache.get('780815502997454848');
+        const nologembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
+            .setColor("RANDOM")
+
         let author = message.author
         let channel = message.channel
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone and provide a reason.`)
             .setColor("RANDOM")
         if (!args[1]) return message.channel.send(argsembed);
+        if (!log_channel) return message.channel.send(nologembed);
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
