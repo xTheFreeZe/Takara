@@ -13,6 +13,7 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'Logs')
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and provide a reason. `)
             .setColor("RANDOM")
@@ -28,7 +29,12 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
             .setColor("RANDOM")
 
+        const nologembed = new MessageEmbed()
+            .setDescription("<:STT_no:778545452218974209> Please create a channel called `Logs` before using this command!")
+            .setColor("RANDOM")
+
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
+        if (!log_channel) return message.channel.send(nologembed);
         if (!args[1]) return message.channel.send(argsembed);
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (message.channel instanceof Discord.DMChannel) return;
@@ -57,6 +63,16 @@ module.exports = {
                         .setColor("RANDOM")
 
                     member.send(DMembed);
+
+                    const logembed = new MessageEmbed()
+                        .setTitle(`BAN || ${user.tag}`)
+                        .addField('Moderator', `${message.author.tag}`)
+                        .addField('Channel', `${message.channel}`)
+                        .addField('Reason', msgArgs)
+                        .setTimestamp()
+
+                    log_channel.send(logembed);
+
                     console.log(`I banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
 
