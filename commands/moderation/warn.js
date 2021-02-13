@@ -66,6 +66,16 @@ module.exports = {
             .setTimestamp()
         user.send(DMembed);
 
+        const logembed = new MessageEmbed()
+            .setColor("RANDOM")
+            .setTitle(`KICK || ${user.tag}`)
+            .addField('Moderator', `${message.author.tag}`)
+            .addField('Channel', `${message.channel}`)
+            .addField('Reason', msgArgs)
+            .setTimestamp()
+
+        log_channel.send(logembed);
+
         message.delete();
         console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
     }
