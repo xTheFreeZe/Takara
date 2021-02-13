@@ -63,7 +63,7 @@ module.exports = {
                         .setColor("RANDOM")
 
                     member.send(DMembed);
-
+                    
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
                         .setTitle(`BAN || ${user.tag}`)
