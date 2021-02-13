@@ -13,7 +13,7 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
-        const log_channel = message.guild.channels.cache.find(r => r.name === 'Logs')
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and provide a reason. `)
             .setColor("RANDOM")
@@ -30,7 +30,7 @@ module.exports = {
             .setColor("RANDOM")
 
         const nologembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please create a channel called `Logs` before using this command!")
+            .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);

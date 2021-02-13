@@ -10,13 +10,13 @@ module.exports = {
     description: "Warns a Member",
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        const log_channel = message.guild.channels.cache.find(r => r.name === 'Logs')
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
         let permsembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You cant use that")
             .addField("Error", 'Missing `KICK_MEMBERS`')
             .setColor("RANDOM")
         const nologembed = new MessageEmbed()
-            .setDescription("<:STT_no:778545452218974209> Please create a channel called `Logs` before using this command!")
+            .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
         let author = message.author
