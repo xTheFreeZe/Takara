@@ -68,7 +68,7 @@ module.exports = {
 
         const logembed = new MessageEmbed()
             .setColor("RANDOM")
-            .setTitle(`KICK || ${user.tag}`)
+            .setTitle(`WARNING || ${user.tag}`)
             .addField('Moderator', `${message.author.tag}`)
             .addField('Channel', `${message.channel}`)
             .addField('Reason', msgArgs)
