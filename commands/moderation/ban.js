@@ -63,7 +63,7 @@ module.exports = {
                         .setColor("RANDOM")
 
                     member.send(DMembed);
-                    
+
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
                         .setTitle(`BAN || ${user.tag}`)
@@ -74,7 +74,7 @@ module.exports = {
 
                     log_channel.send(logembed);
 
-                    console.log(`I banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
+                    console.log(`${message.author.tag} banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
 
 
