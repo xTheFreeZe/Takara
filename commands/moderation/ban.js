@@ -90,6 +90,7 @@ module.exports = {
                         message.reply(embed);
 
                         const errbanembed = new MessageEmbed()
+                            .setColor('#F1C40F')
                             .setDescription(`<:STT_no:778545452218974209> Bot failed to ban ${user}!`)
                             .addField('Moderator', `${message.author.tag}`)
                             .addField('Channel', `${message.channel}`)
@@ -124,7 +125,13 @@ module.exports = {
                 .setColor('#3F2DD2 ')
                 .setDescription('You need to specify a Person! You need to use ^ban @[member] {reason}.')
             message.channel.send(embed);
-            //log_channel.send(`${author} used ^ban but didnt mention a person that is on this server! _returned_`)
+
+            const nonmentionembed = new MessageEmbed()
+                .setColor('#F1C40F')
+                .setDescription(`<:STT_no:778545452218974209> Command was triggered but noone was mentioned!`)
+                .addField('Moderator', `${message.author.tag}`)
+                .addField('Channel', `${message.channel}`)
+            log_channel.send(nonmentionembed);
             message.delete();
             console.log(`${message.author.username} used ^ban on ${message.guild}`);
 
