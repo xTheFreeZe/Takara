@@ -91,10 +91,12 @@ module.exports = {
 
                         const errbanembed = new MessageEmbed()
                             .setColor('#F1C40F')
+                            .setTitle('BAN')
                             .setDescription(`<:STT_no:778545452218974209> Bot failed to ban ${user}!`)
                             .addField('Moderator', `${message.author.tag}`)
                             .addField('Channel', `${message.channel}`)
                             .setFooter(`Command returned before banning ${user}`)
+                            .setTimestamp()
                         log_channel.send(errbanembed);
                         message.delete();
                         console.log(`${message.author.username} tried to ban ${member} on ${message.guild}`);
@@ -128,9 +130,11 @@ module.exports = {
 
             const nonmentionembed = new MessageEmbed()
                 .setColor('#F1C40F')
+                .setTitle('BAN')
                 .setDescription(`<:STT_no:778545452218974209> Command was triggered but noone was mentioned!`)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
+                .setTimestamp()
             log_channel.send(nonmentionembed);
             message.delete();
             console.log(`${message.author.username} used ^ban on ${message.guild}`);
