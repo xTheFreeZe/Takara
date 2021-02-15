@@ -11,6 +11,7 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let msgArgs = args.slice(2).join(" ");
         let author = message.author
+        let channel = message.channel
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
