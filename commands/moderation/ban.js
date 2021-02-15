@@ -95,7 +95,6 @@ module.exports = {
                             .setDescription(`<:STT_no:778545452218974209> Bot failed to ban ${user}!`)
                             .addField('Moderator', `${message.author.tag}`)
                             .addField('Channel', `${message.channel}`)
-                            .setFooter(`Command returned before banning ${user}`)
                             .setTimestamp()
                         log_channel.send(errbanembed);
                         message.delete();
