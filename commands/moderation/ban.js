@@ -88,7 +88,6 @@ module.exports = {
                             .setDescription(`<:STT_no:778545452218974209> Bot could not ban ${user.tag}`)
                             .setFooter("Try ^help ban err or more info!")
                         message.reply(embed);
-                        message.channel.send(err);
 
                         const errbanembed = new MessageEmbed()
                             .setColor('#F1C40F')
