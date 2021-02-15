@@ -35,6 +35,7 @@ module.exports = {
 
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
         if (!log_channel) return message.channel.send(nologembed);
+        if (channel == log_channel) return ('Please use another channel!');
         if (!args[1]) return message.channel.send(argsembed);
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (message.channel instanceof Discord.DMChannel) return;
