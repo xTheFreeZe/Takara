@@ -88,7 +88,13 @@ module.exports = {
                             .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
                             .setFooter("Try ^help ban err or more info!")
                         message.reply(embed);
-                        //log_channel.send(`Bot was unable to ban after request from ${author}. For more information type "^help ban err". _returned_`)
+
+                        const errbanembed = new MessageEmbed()
+                            .setDescription(`<:STT_no:778545452218974209> Bot failed to ban ${user}!`)
+                            .addField('Moderator', `${message.author.tag}`)
+                            .addField('Channel', `${message.channel}`)
+                            .setFooter(`Command returned before banning ${user}`)
+                        log_channel.send(errbanembed);
                         message.delete();
                         console.log(`${message.author.username} tried to ban ${member} on ${message.guild}`);
 
