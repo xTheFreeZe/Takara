@@ -85,9 +85,10 @@ module.exports = {
                 }).catch(err => {
                         const embed = new MessageEmbed()
                             .setColor('#F1C40F')
-                            .setDescription('<:STT_no:778545452218974209> The bot was unable to ban this Person. Missing Permissions:`ADMINISTRATOR,BAN_MEMBERS` ')
+                            .setDescription(`<:STT_no:778545452218974209> Bot could not ban ${user.tag}`)
                             .setFooter("Try ^help ban err or more info!")
                         message.reply(embed);
+                        message.channel.send(err);
 
                         const errbanembed = new MessageEmbed()
                             .setColor('#F1C40F')
