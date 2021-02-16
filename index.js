@@ -243,7 +243,8 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
             let author = msg.author
-            if (!args[1]) return msg.reply("Please mention someone!")
+            if (!args[1]) return msg.reply("Please mention someone!");
+            if (!user) return message.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${user.username} can kick people!`)
                 .setFooter(`Request: ${msg.author.username}`)
@@ -271,6 +272,7 @@ client.on('message', msg => {
             const member = msg.guild.member(user);
             let author = msg.author
             if (!args[1]) return msg.reply("Please mention someone!");
+            if (!user) return message.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`${user.username} can manage Messages!`)
                 .setFooter(`Request: ${msg.author.username}`)
@@ -294,7 +296,8 @@ client.on('message', msg => {
             const user = msg.mentions.users.first();
             const member = msg.guild.member(user);
             let author = msg.author
-            if (!args[1]) return msg.reply("Please Mention someone!")
+            if (!args[1]) return msg.reply("Please Mention someone!");
+            if (!user) return message.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${user.username} can manage Roles!`)
                 .setFooter(`Request: ${msg.author.username}`)
