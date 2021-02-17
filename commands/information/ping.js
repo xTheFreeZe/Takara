@@ -13,7 +13,7 @@ module.exports = {
             .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
         message.channel.send(embed);
-        if (ping > 150) message.channel.send('High Ping detected!');
+        if (ping > 100) message.channel.send('High Ping detected!');
         message.delete();
     }
 }
