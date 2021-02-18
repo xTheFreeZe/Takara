@@ -11,7 +11,7 @@ module.exports = {
 
         var ping = client.ws.ping;
 
-        let highping = ping > 150;
+        let highping = ping > 100;
 
         const embed = new MessageEmbed()
             .setColor('RANDOM')
