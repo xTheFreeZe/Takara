@@ -33,12 +33,32 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
+        //checks if author has permissions to ban people. If false, the message will return
+
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(permsembed);
+
+        //checks if there is a channel called 'logs'
+
         if (!log_channel) return message.channel.send(nologembed);
+
+        // if there is no argument given, the message will return
+
         if (!args[1]) return message.channel.send(argsembed);
+
+        //checks if user provides a reason
+
         if (!msgArgs) return message.channel.send(reembed), message.delete();
+
+        //if command is being used in a DM channel, it will return
+
         if (message.channel instanceof Discord.DMChannel) return;
+
+        //if command gets triggered by a bot, it will return
+
         if (message.author.bot) return;
+
+        //checks if mentioned person is the author.If true, the message will return
+
         if (user == message.author) return message.channel.send(selfbanembed);
 
         if (user) {
