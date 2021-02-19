@@ -84,6 +84,8 @@ module.exports = {
 
                     member.send(DMembed);
 
+                    if (!member.send(DMembed)) return message.channel.send("Bot was unable to send the DM embed!");
+
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
                         .setTitle(`BAN || ${user.tag}`)
@@ -94,7 +96,7 @@ module.exports = {
 
                     log_channel.send(logembed);
 
-                    break;
+
 
                     console.log(`${message.author.tag} banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
