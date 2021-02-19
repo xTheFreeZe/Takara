@@ -58,7 +58,6 @@ module.exports = {
                         .setDescription("<:STT_yes:778545433810173952> You have been kicked!")
                         .addField('Server :', `${message.guild}`)
                         .addField('Reason :', msgArgs)
-                        .setThumbnail(`${message.guild.iconURL()}`)
                         .setTimestamp()
                         .setColor("RANDOM")
 

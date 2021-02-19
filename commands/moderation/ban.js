@@ -78,13 +78,10 @@ module.exports = {
                         .setDescription("<:STT_yes:778545433810173952> You have been banned!")
                         .addField('Server :', `${message.guild}`)
                         .addField('Reason :', msgArgs)
-                        .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/812359368049295420/dev_emojy.png')
                         .setTimestamp()
                         .setColor("RANDOM")
 
                     member.send(DMembed);
-
-                    if (!member.send(DMembed)) return message.channel.send("Bot was unable to send the DM embed!");
 
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
