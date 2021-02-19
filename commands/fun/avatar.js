@@ -20,7 +20,7 @@ module.exports = {
                 dynamic: true,
                 size: 1024
             }))
-        if (client.user.avatarURL() == dynamic) return message.channel.send("no");
+        if (user.displayAvatarURL() == dynamic) return message.channel.send("no");
         message.channel.send(embed);
     }
 }
