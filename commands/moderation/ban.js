@@ -94,6 +94,8 @@ module.exports = {
 
                     log_channel.send(logembed);
 
+                    break;
+
                     console.log(`${message.author.tag} banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
                     message.delete();
 
