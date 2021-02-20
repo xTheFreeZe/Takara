@@ -7,7 +7,7 @@ module.exports = {
     run: async (client, message, args) => {
         if (message.author.id !== '420277395036176405') {
             const permsembed = new MessageEmbed()
-                .setDescription('<:STT_no:778545452218974209> Only <@!42027739503617640> can use this command!')
+                .setDescription('<:STT_no:778545452218974209> Only Marwin#0001 can use this command!')
                 .setColor("RANDOM")
 
             return message.channel.send(permsembed)
