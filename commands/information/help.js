@@ -70,7 +70,7 @@ module.exports = {
 
         if (!args[0]) {
 
-            if (ping > 150) message.channel.send('High Ping detected! This could lead to slow messages. If the ping isnt at 90 - 110 in an Hour, please check out the Statuspage of the Bot to see if everything is normal!')
+            if (ping > 100) message.channel.send('High Ping detected! This could lead to slow messages. If the ping isnt at 90 - 110 in an Hour, please check out the Statuspage of the Bot to see if everything is normal!')
             return message.channel.send(embed)
 
         } else if (args[0] == 'fun') {
