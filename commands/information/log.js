@@ -6,7 +6,7 @@ module.exports = {
     category: "information",
     description: "checks if a log channel is there",
     run: async (client, message, args) => {
-        const log_channel = message.guild.channels.cache.find(r => r.name === 'log')
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
 
         const logyes = new MessageEmbed()
             .setColor('#00FF00')
