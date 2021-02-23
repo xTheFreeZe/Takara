@@ -68,7 +68,8 @@ module.exports = {
                     ression: msgArgs
                 }).then(() => {
                     const embed = new MessageEmbed()
-                        .setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
+                        //.setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
+                        .setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member}` + reason)
                         .setColor('#229954')
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
