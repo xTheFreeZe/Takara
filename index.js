@@ -112,8 +112,6 @@ client.on("guildCreate", guild => {
         .setColor("RANDOM")
 
 
-
-
     channel.send(embed);
     channel.send(helpembed);
     channel.send(logembed);
