@@ -107,8 +107,13 @@ client.on("guildCreate", guild => {
 
         .setFooter('Type ^help for more information')
 
+    const logembed = new MessageEmbed()
+        .setDescription('Please create a channel called `logs` so you can use all mod commands!')
+        .setColor("RANDOM")
+
     channel.send(embed);
     channel.send(helpembed);
+    channel.send(logembed);
 });
 
 
