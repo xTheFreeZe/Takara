@@ -34,8 +34,7 @@ module.exports = {
             .setColor('#56E448')
             .setTitle('Developer Commands')
             .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
-            .addField('Basic commands:', '`^restart`, `^ping`, `^id`, `^update`, `^talk`', true)
-            .addField('Coding commands:', '`^info help`, `^info ping`, `^info join`, `^info kick`, `^info suggest`, `^info warn`', true)
+            .addField('Basic commands:', '`^restart`, `^ping`, `^id`', true)
             .setFooter("STT Premium | Information")
 
 
