@@ -13,6 +13,7 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
+        const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and provide a reason. `)
