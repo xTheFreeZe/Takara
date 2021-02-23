@@ -175,42 +175,6 @@ client.on('message', msg => {
     }
 })
 
-client.on('message', msg => {
-    if (msg.content === "^info help") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743851801878462504/Help_command.PNG');
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^info ping") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743852094406000720/Ping_Command.PNG');
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^info join") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/743816369706893454/743852712621375548/Join_Command.PNG');
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^info kick") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/713356214536503402/743862200812437514/kick_command.PNG');
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^info suggest") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/681060754564448257/761915127082516500/unknown.png');
-    }
-})
-
-client.on('message', msg => {
-    if (msg.content === "^info warn") {
-        msg.channel.send('https://cdn.discordapp.com/attachments/681060754564448257/761915361200177152/unknown.png');
-    }
-})
-
 
 
 client.on('message', msg => {
