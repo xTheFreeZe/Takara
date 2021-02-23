@@ -6,6 +6,14 @@ module.exports = {
     category: "information",
     description: "checks if a log channel is there",
     run: async (client, message, args) => {
+
+        let permsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
+            .addField("Error", 'Missing `MANAGE_MESSAGES`')
+            .setColor("RANDOM")
+
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
+
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
 
         const logyes = new MessageEmbed()
@@ -21,7 +29,7 @@ module.exports = {
         if (!log_channel) return message.channel.send(logno);
 
         log_channel.send(`This is a test message, see ${message.channel}!`);
-        
+
         message.channel.send(logyes);
     }
 }
