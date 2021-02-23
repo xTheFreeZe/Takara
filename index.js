@@ -87,6 +87,7 @@ client.on("guildCreate", guild => {
         }
 
     let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
+    const log_channel = message.guild.channels.cache.find(r => r.name === 'logs')
     const embed = new MessageEmbed()
         .setDescription(`Thanks for inviting me to your Server!`)
         .setColor("RANDOM")
@@ -111,9 +112,16 @@ client.on("guildCreate", guild => {
         .setDescription('Please create a channel called `logs` so you can use all mod commands!')
         .setColor("RANDOM")
 
+    const logyes = new MessageEmbed()
+        .setDescription('There is a log channel! All mod commands can be used!')
+        .setColor("RANDOM")
+
+
+
     channel.send(embed);
     channel.send(helpembed);
-    channel.send(logembed);
+    if (!log_channel) return channel.send(logembed);
+    channel.send(logyes);
 });
 
 
