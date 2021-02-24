@@ -62,6 +62,7 @@ module.exports = {
 
         if (user == message.author) return message.channel.send(selfbanembed);
 
+        
         if (user) {
             if (member) {
                 member.ban({
