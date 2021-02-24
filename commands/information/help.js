@@ -16,6 +16,7 @@ module.exports = {
         let channel = message.channel
         var ping = client.ws.ping;
 
+
         const funembed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('Fun Commands')
