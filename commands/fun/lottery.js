@@ -18,7 +18,7 @@ module.exports = {
         let winningnumber = "2";
 
         const winningembed = new MessageEmbed()
-            .setTitle('You won 🏆 <a:pepe_light:723577938913656842>')
+            .setTitle('YOU WON! 🏆 <a:pepe_light:723577938913656842>')
             .setDescription('Congratulations for winning the Lottery!')
             .addField('Winning Number', `${winningnumber}`)
             .setColor('#32CD32')
@@ -33,8 +33,7 @@ module.exports = {
 
             if (msgArgs) return message.channel.send(`Ehm, no! Numbers are random. Your Number **${usermessage} ** does nothing :joy:`)
 
-            if (randomNumber == winningnumber) return message.channel.send(winningembed);
-            if (randomNumber == winningnumber) console.log(`${message.author.username} just won the lottery! POG`);
+            if (randomNumber == winningnumber) return message.channel.send(winningembed), console.log(`${message.author.username} just won the lottery! POG`);
 
             message.channel.send(`**${randomNumber}** isn't it!`);
 
