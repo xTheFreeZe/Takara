@@ -13,9 +13,9 @@ module.exports = {
 
         let usermessage = msgArgs
 
-        var randomNumber = Math.floor(Math.random() * 3);
+        var randomNumber = Math.floor(Math.random() * 10000);
 
-        let winningnumber = "2";
+        let winningnumber = "8927";
 
         const winningembed = new MessageEmbed()
             .setTitle('YOU WON! 🏆 <a:pepe_light:723577938913656842>')
