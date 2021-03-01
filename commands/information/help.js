@@ -15,12 +15,13 @@ module.exports = {
         let author = message.author
         let channel = message.channel
         var ping = client.ws.ping;
+        const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
 
 
         const funembed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('Fun Commands')
-            .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^covid`, `^meme`, `^memeoftheday`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
+            .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^covid`, `^lottery`, `^meme`, `^memeoftheday`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
             .setFooter("STT Premium | Information")
 
         const modembed = new MessageEmbed()
@@ -68,6 +69,16 @@ module.exports = {
 
             .setFooter("Many Features were made possible by Epicrafter#3685. Thank you!")
 
+        const nologchannel = new MessageEmbed()
+            .setTitle('No Log channel!')
+            .setDescription('<:STT_no:778545452218974209> Create a channel called `logs` so you can use all mod commands!')
+            .setColor('#FF0000')
+
+        const yeslogchannel = new MessageEmbed()
+            .setDescription('<:STT_yes:778545433810173952> You have a log channel!')
+            .setFooter('All Mod commands can be used!')
+            .setColor('#00FF00')
+
         if (!args[0]) {
 
             if (ping > 150) message.channel.send('High Ping detected! This could lead to slow messages. If the ping isnt at 90 - 110 in an Hour, please check out the Statuspage of the Bot to see if everything is normal!')
@@ -79,6 +90,8 @@ module.exports = {
 
         } else if (args[0] == 'mod') {
 
+            if (!log_channel) message.channel.send(nologchannel)
+            if (log_channel) message.channel.send(yeslogchannel)
             return message.channel.send(modembed)
 
         } else if (args[0] == 'dev') {
