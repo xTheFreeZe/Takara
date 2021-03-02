@@ -65,7 +65,7 @@ module.exports = {
                 .setTitle(`UNBAN  || ${user.user.tag} `)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
-                .addField('Reason', user.reason != null ? user.reason : 'no reason')
+                .addField('Unbanned Reason', reason)
                 .setTimestamp()
 
             log_channel.send(logembed);
