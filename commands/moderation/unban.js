@@ -62,9 +62,10 @@ module.exports = {
 
             const logembed = new MessageEmbed()
                 .setColor("RANDOM")
-                .setTitle(`UNBAN ${user.user.tag} `)
+                .setTitle(`UNBAN  || ${user.user.tag} `)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
+                .addField('Reason', user.reason != null ? user.reason : 'no reason')
                 .setTimestamp()
 
             log_channel.send(logembed);
