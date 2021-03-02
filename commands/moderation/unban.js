@@ -65,6 +65,7 @@ module.exports = {
                 .setTitle(`UNBAN  || ${user.user.tag} `)
                 .addField('Moderator', `${message.author.tag}`)
                 .addField('Channel', `${message.channel}`)
+                .addField('Banned Reason', user.reason)
                 .addField('Unbanned Reason', reason)
                 .setTimestamp()
 
