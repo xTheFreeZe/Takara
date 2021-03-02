@@ -29,7 +29,7 @@ module.exports = {
             member = await client.users.fetch(args[0])
         } catch (e) {
             console.log(e)
-            return message.channel.send('Not a valid user!').then(m => m.delete({
+            return message.channel.send('Not a valid user!', 'Error:' + " " + e).then(m => m.delete({
                 timeout: 5000
             }));
         }
