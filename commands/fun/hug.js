@@ -14,9 +14,10 @@ module.exports = {
             .setColor("RANDOM")
         if (!args[1]) return message.channel.send(argsembed);
         const user = message.mentions.users.first();
-        const member = message.guild.member(user);
 
         if (!user) return message.channel.send(argsembed);
+
+        if (user == author) return message.channel.send("umarmen tust du dich nicht du trauriger!");
 
         let msgArgs = args.slice(1).join(" ");
         const embed = new MessageEmbed()
