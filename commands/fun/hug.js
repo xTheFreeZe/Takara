@@ -21,7 +21,7 @@ module.exports = {
 
         let msgArgs = args.slice(1).join(" ");
         const embed = new MessageEmbed()
-            .setDescription(`${author} hugs ${user.username}!`)
+            .setDescription(`${message.author.username} hugs ${user.username}!`)
             .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
         message.channel.send(embed);
         message.delete();
