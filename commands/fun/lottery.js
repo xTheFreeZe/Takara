@@ -31,11 +31,12 @@ module.exports = {
             .addField('Winning Number', `${winningnumber}`)
             .setColor('#32CD32')
 
-        if (!owner) return message.channel.send(permsembed);
+        //if (!owner) return message.channel.send(permsembed);
 
         if (talkedRecently.has(message.author.id)) {
             const timemebed = new MessageEmbed()
-                .setDescription("<:STT_no:778545452218974209> Please wait `3` seconds before using this command again!" + " " + `|| ${message.author.username}`)
+                .setDescription("<:STT_no:778545452218974209> Please wait `5` seconds before using this command again!" + " " + `|| ${message.author.username}`)
+                .setFooter('Due to ping issues, the cooldown is a bit higher than normal!')
                 .setColor("#FF0000")
             message.channel.send(timemebed);
 
@@ -50,7 +51,7 @@ module.exports = {
             talkedRecently.add(message.author.id);
             setTimeout(() => {
                 talkedRecently.delete(message.author.id);
-            }, 3000);
+            }, 5000);
         }
 
 
