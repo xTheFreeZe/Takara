@@ -61,8 +61,6 @@ module.exports = {
 
             .addField('`^help util`', 'Utilitie Commands')
 
-            .addField('`Ping:`', `${ping} ms`, true)
-
             .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)", true)
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
