@@ -65,9 +65,9 @@ module.exports = {
 
             .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)", true)
 
-            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)")
+            .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
-            .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)", true)
+            .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)")
 
             .setFooter("Many Features were made possible by Epicrafter#3685. Thank you!")
 
