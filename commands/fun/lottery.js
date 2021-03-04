@@ -17,11 +17,21 @@ module.exports = {
 
         let winningnumber = "8927";
 
+        let owner = message.author.id == '420277395036176405';
+
+
+        const permsembed = new MessageEmbed()
+            .setDescription("This command is under Maintenance!")
+            .setFooter("Owner only [1082]")
+            .setColor("RANDOM")
+
         const winningembed = new MessageEmbed()
             .setTitle('YOU WON! 🏆 <a:pepe_light:723577938913656842>')
             .setDescription('Congratulations for winning the Lottery!')
             .addField('Winning Number', `${winningnumber}`)
             .setColor('#32CD32')
+
+        if (!owner) return message.channel.send(permsembed);
 
         if (talkedRecently.has(message.author.id)) {
             const timemebed = new MessageEmbed()
