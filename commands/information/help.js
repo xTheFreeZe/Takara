@@ -65,7 +65,7 @@ module.exports = {
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
-            .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)")
+            .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)", true)
 
             .setFooter("Many Features were made possible by Epicrafter#3685. Thank you!")
 
