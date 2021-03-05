@@ -61,11 +61,11 @@ module.exports = {
 
             .addField('`^help util`', 'Utilitie Commands')
 
-            .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)", true)
+            .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)")
 
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
-            .addField("`Report Bugs`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)")
+            .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)")
 
             .setFooter("Many Features were made possible by Epicrafter#3685. Thank you!")
 
