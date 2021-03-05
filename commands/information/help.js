@@ -63,6 +63,8 @@ module.exports = {
 
             .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)")
 
+            .addField("`My Ping`", `${ping}`, true)
+
             .addField("`My Status`", "[Click here](https://sttproductions.statuspage.io/)", true)
 
             .addField("`Report a Bug`", "[Click here](https://github.com/xTheFreeZe/STT-Premium/issues)", true)
