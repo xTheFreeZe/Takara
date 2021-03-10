@@ -13,9 +13,9 @@ module.exports = {
 
         let usermessage = msgArgs
 
-        var randomNumber = Math.floor(Math.random() * 10);
+        var randomNumber = Math.floor(Math.random() * 10000);
 
-        let winningnumber = "5";
+        let winningnumber = "6476";
 
         let owner = message.author.id == '420277395036176405';
 
@@ -35,7 +35,7 @@ module.exports = {
 
         if (talkedRecently.has(message.author.id)) {
             const timemebed = new MessageEmbed()
-                .setDescription("<:STT_no:778545452218974209> Please wait `5` seconds before using this command again!" + " " + `|| ${message.author.username}`)
+                .setDescription("<:STT_no:778545452218974209> Please wait `3` seconds before using this command again!" + " " + `|| ${message.author.username}`)
                 .setFooter('Due to ping issues, the cooldown is a bit higher than normal!')
                 .setColor("#FF0000")
             message.channel.send(timemebed);
