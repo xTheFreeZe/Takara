@@ -16,13 +16,13 @@
               .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
               .setColor("RANDOM")
 
-          /* if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
-               return message.channel.send(
-                   permsembed // returns this message to user with no perms
-               );
-               */
-        
-         // if (!log_channel) return message.channel.send(nologembed);
+          if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
+              return message.channel.send(
+                  permsembed // returns this message to user with no perms
+              );
+
+
+          if (!log_channel) return message.channel.send(nologembed);
           if (!args[0]) {
               const purgeembed = new MessageEmbed()
                   .setDescription("<:STT_no:778545452218974209> Please enter an amount of Messages you want to purge!")
@@ -53,6 +53,6 @@
               .addField('Amount', `${deleteAmount}`)
               .setTimestamp()
 
-         // log_channel.send(logembed);
+          log_channel.send(logembed);
       }
   }
