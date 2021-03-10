@@ -21,7 +21,8 @@
                    permsembed // returns this message to user with no perms
                );
                */
-          if (!log_channel) return message.channel.send(nologembed);
+        
+         // if (!log_channel) return message.channel.send(nologembed);
           if (!args[0]) {
               const purgeembed = new MessageEmbed()
                   .setDescription("<:STT_no:778545452218974209> Please enter an amount of Messages you want to purge!")
@@ -52,6 +53,6 @@
               .addField('Amount', `${deleteAmount}`)
               .setTimestamp()
 
-          log_channel.send(logembed);
+         // log_channel.send(logembed);
       }
   }
