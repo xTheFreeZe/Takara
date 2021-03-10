@@ -51,7 +51,7 @@ module.exports = {
             talkedRecently.add(message.author.id);
             setTimeout(() => {
                 talkedRecently.delete(message.author.id);
-            }, 5000);
+            }, 3000);
         }
 
 
