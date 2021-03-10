@@ -13,9 +13,9 @@ module.exports = {
 
         let usermessage = msgArgs
 
-        var randomNumber = Math.floor(Math.random() * 10000);
+        var randomNumber = Math.floor(Math.random() * 10);
 
-        let winningnumber = "8927";
+        let winningnumber = "5";
 
         let owner = message.author.id == '420277395036176405';
 
