@@ -10,6 +10,7 @@ const {
 
 const got = require('got');
 
+/*
 const activities_list = [
     "with friends",
     "Overwatch",
@@ -29,14 +30,18 @@ const activities_list = [
     "Hearthstone"
 
 ];
+*/
 
 
 client.on('ready', () => {
     console.log("STT Premium is ready!")
+    client.user.setActivity('^help')
+    /*
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         client.user.setActivity(activities_list[index]);
     }, 40000);
+    */
 });
 
 
