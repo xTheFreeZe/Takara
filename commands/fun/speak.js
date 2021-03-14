@@ -10,6 +10,13 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let author = message.author
+
+        let owner = message.author.id == '420277395036176405';
+        const permsembed = new MessageEmbed()
+            .setDescription("Du darfst diesen command nicht benutzen du Fisch 🐟")
+            .setColor("RANDOM")
+        if (!owner) return message.channel.send(permsembed);
+
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please provide text to speak.`)
             .setColor("RANDOM")
