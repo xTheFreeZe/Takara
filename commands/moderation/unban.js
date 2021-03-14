@@ -29,9 +29,7 @@ module.exports = {
             member = await client.users.fetch(args[0])
         } catch (e) {
             console.log(e)
-            return message.channel.send('Not a valid user!'), message.channel.send('Error:' + " " + e).then(m => m.delete({
-                timeout: 5000
-            }));
+            return message.channel.send('Not a valid user!'), message.channel.send('Error:' + " " + e)
         }
 
         const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
