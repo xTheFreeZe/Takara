@@ -134,7 +134,7 @@ client.on('guildCreate', (guild) => {
         }))
         .setColor('RANDOM')
 
-    let joinreportchannel = client.channels.cache.get('815945302971645952');
+    let joinreportchannel = client.channels.cache.get('821393308378464287');
 
     joinreportchannel.send(embed);
 
