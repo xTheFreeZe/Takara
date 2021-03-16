@@ -122,6 +122,25 @@ client.on("guildCreate", guild => {
     channel.send(logembed);
 });
 
+client.on('guildCreate', (guild) => {
+
+    const embed = new MessageEmbed()
+        .setTitle('Joined new server')
+        .addField('Guild Info', `${guild.name} (${guild.id}) **${guild.memberCount} members**`)
+
+
+        .setThumbnail(guild.iconURL({
+            dynamic: true
+        }))
+        .setColor('RANDOM')
+
+    let joinreportchannel = client.channels.cache.get('815945302971645952');
+
+    joinreportchannel.send(embed);
+
+})
+
+
 
 client.on("message", msg => {
     if (msg.content === "^help ban err") {
