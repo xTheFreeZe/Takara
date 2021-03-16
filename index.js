@@ -129,7 +129,7 @@ client.on('guildCreate', (guild) => {
         .addField('Guild Info', `${guild.name}`)
         .addField('Server ID', `${guild.id}`)
         .addField('Members', `This Server has **${guild.memberCount}** members`)
-        .addField('Owner', `${guild.owner} --> ${guild.owner.id}`)
+        .addField('Owner', `${guild.owner.user.tag}`)
 
 
         .setThumbnail(guild.iconURL({
