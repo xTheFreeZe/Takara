@@ -126,7 +126,10 @@ client.on('guildCreate', (guild) => {
 
     const embed = new MessageEmbed()
         .setTitle('Joined new server')
-        .addField('Guild Info', `${guild.name} (${guild.id}) **${guild.memberCount} members**`)
+        .addField('Guild Info', `${guild.name}`)
+        .addField('Server ID', `${guild.id}`)
+        .addField('Members', `This Server has **${guild.memberCount}** members`)
+        .addField('Owner', `${guild.owner} --> ${guild.owner.id}`)
 
 
         .setThumbnail(guild.iconURL({
