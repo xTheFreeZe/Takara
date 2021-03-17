@@ -21,13 +21,13 @@ module.exports = {
         const funembed = new MessageEmbed()
             .setColor('#E16210')
             .setTitle('Fun Commands')
-            .setDescription('<:STT_yes:778545433810173952> `^avatar`, `^covid`, `^lottery`, `^meme`, `^memeoftheday`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
+            .setDescription('`^avatar`, `^covid`, `^lottery`, `^meme`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
             .setFooter("STT Premium | Information")
 
         const modembed = new MessageEmbed()
             .setColor('#2E0E81')
             .setTitle('Staff Commands')
-            .setDescription('<:STT_yes:778545433810173952> This is only meant for Staff Members!')
+            .setDescription('This is only meant for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^lock on/off`, `^purge`, `^unban`, `^warn`, `^topic`', true)
             .setFooter("STT Premium | Information")
@@ -35,14 +35,14 @@ module.exports = {
         const devembed = new MessageEmbed()
             .setColor('#56E448')
             .setTitle('Developer Commands')
-            .setDescription('<:STT_yes:778545433810173952> Everybody can use these commands, they are only here to give the Developer Info about certain things!')
+            .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^restart`, `^ping`, `^id`', true)
             .setFooter("STT Premium | Information")
 
 
         const utilitieembed = new MessageEmbed()
             .setTitle("Utilities")
-            .setDescription('<:STT_yes:778545433810173952> `^severinfo`, `^uptime`, `^id`, `^report`, `^permissions`, `^system`')
+            .setDescription('`^severinfo`, `^uptime`, `^id`, `^report`, `^permissions`, `^system`')
             .setColor("#FCFEFE")
             .setFooter("STT Premium | Information")
 
@@ -50,7 +50,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
-            .setDescription('<:STT_yes:778545433810173952> These are your options:')
+            .setDescription('These are your options:')
             .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
 
             .addField('`^help fun`', 'Fun commands')
@@ -60,7 +60,7 @@ module.exports = {
             .addField('`^help dev`', 'Developer options')
 
             .addField('`^help util`', 'Utilitie Commands')
-            
+
             .addField("`My Ping`", `${ping}`)
 
             .addField("`My Website`", "[Click here](https://gifted-williams-0e90d5.netlify.app/)", true)

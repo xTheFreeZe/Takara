@@ -162,16 +162,6 @@ client.on("message", msg => {
 })
 
 
-client.on("message", msg => {
-    if (msg.content === "^list") {
-        let author = msg.author
-        const embed = new MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription(activities_list)
-            .setFooter("Status updates every 40 seconds!")
-        msg.channel.send(embed);
-    }
-})
 
 client.on('message', msg => {
     if (msg.content === "^delay 10") {
@@ -507,48 +497,6 @@ client.on('message', msg => {
 })
 
 
-
-client.on('message', msg => {
-    let args = msg.content.substring(PREFIX.length).split(" ");
-    let author = msg.author
-
-    switch (args[0]) {
-        case "staffwarn":
-            const user = msg.mentions.users.first();
-            const member = msg.guild.member(user);
-
-
-            if (!args[1]) {
-                msg.channel.send('<:STT_no:778545452218974209> Use ^warn {@person} (reason) and `STT Premium` will warn the Person you mentioned.  ');
-                msg.delete();
-            }
-
-            let msgArgs = args.slice(2).join(" ");
-            const embed = new MessageEmbed()
-                .setDescription(`<:STT_yes:778545433810173952> ${member} has been warned! `)
-                .addField(`Reason`, msgArgs, true)
-                .addField(`Moderator`, `${author}`)
-                .setColor('RANDOM')
-                .setFooter(`${user.tag} has been warned`)
-            msg.channel.send(`Preparing warning for _${user.tag}_ `)
-                .then((msg) => {
-                    setTimeout(function () {
-                        msg.edit(embed);
-                    }, 2000)
-                });
-
-            msg.delete();
-            console.log(`${user.tag} has been warned! Mod ID : ${author}. (developer warning)     Provided Reason:` + " " + msgArgs);
-
-
-            break;
-
-
-
-    }
-})
-
-
 client.on("message", msg => {
     if (msg.content === "^system") {
         let channel = msg.channel
@@ -594,18 +542,6 @@ client.on("message", msg => {
             .setFooter('Thank you for your patience.')
         msg.channel.send(embed);
         msg.delete();
-    }
-})
-
-
-client.on("message", msg => {
-    if (msg.content === "^memeoftheday") {
-        let author = msg.author.send
-        const embed = new MessageEmbed()
-            .setColor("RANDOM")
-            .setDescription("No longer supported!")
-            .setFooter("Meme of the Day!")
-        msg.channel.send(embed);
     }
 })
 
