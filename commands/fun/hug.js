@@ -25,12 +25,11 @@ module.exports = {
         const url = 'https://some-random-api.ml/animu/hug';
 
         let response, data;
-
         try {
             response = await axios.get(url);
             data = response.data;
         } catch (e) {
-            return message.channel.send('An error has occured : ' + e);
+            return message.channel.send(`An error occured!`)
         }
 
 
