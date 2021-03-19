@@ -2,7 +2,7 @@ const {
     MessageEmbed
 } = require('discord.js');
 module.exports = {
-    name: "leave",
+    name: "exit",
     category: "owner",
     description: "Makes the Bot leave from the current Guild!",
 
