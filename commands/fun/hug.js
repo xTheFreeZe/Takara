@@ -21,9 +21,6 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone you want to hug.`)
             .setColor("RANDOM")
 
-        const errorembed = new MessageEmbed()
-            .setDescription('An Error has occured!')
-            .setColor('RED')
 
         const url = 'https://some-random-api.ml/animu/hug';
 
@@ -33,7 +30,7 @@ module.exports = {
             response = await axios.get(url);
             data = response.data;
         } catch (e) {
-            return message.channel.send(errorembed);
+            return message.channel.send('An error has occured : ' + e);
         }
 
 
