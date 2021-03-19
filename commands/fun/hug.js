@@ -15,7 +15,7 @@ module.exports = {
 
         const user = message.mentions.users.first();
 
-        const STTPremium = message.guild.me;
+        const STTPremium = client.users.cache.get('749889822214324236')
 
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone you want to hug.`)
