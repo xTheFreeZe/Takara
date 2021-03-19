@@ -1,6 +1,11 @@
 const {
     MessageEmbed
 } = require('discord.js');
+
+const {
+    axios
+} = require('axios');
+
 module.exports = {
     name: "hug",
     category: "fun",
@@ -9,21 +14,41 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let author = message.author
+
+        const user = message.mentions.users.first();
+
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone you want to hug.`)
             .setColor("RANDOM")
+
+        const errorembed = new MessageEmbed()
+            .setDescription('An Error has occured!')
+            .setColor('RED')
+
+        const url = 'https://some-random-api.ml/animu/hug';
+
+        let response, data;
+
+        try {
+            response = await axios.get(url);
+            data = response.data;
+        } catch (e) {
+            return message.channel.send(errorembed);
+        }
+
+
         if (!args[1]) return message.channel.send(argsembed);
-        const user = message.mentions.users.first();
+
 
         if (!user) return message.channel.send(argsembed);
 
-        if (user == author) return message.channel.send("umarmen tust du dich nicht du trauriger!");
+        if (user == author) return message.channel.send("You are hugging your self right now! PepeHands...");
 
-        let msgArgs = args.slice(1).join(" ");
-        const embed = new MessageEmbed()
-            .setDescription(`${message.author.username} hugs ${user.username}!`)
-            .setImage('https://acegif.com/wp-content/gif/anime-hug-38.gif')
-        message.channel.send(embed);
-        message.delete();
+        const hugembed = new MessageEmbed()
+            .setTitle(`${message.author.username} hugs ${user.username}`)
+            .setImage(data.link)
+
+        await message.channel.send(hugembed);
+
     }
 }
