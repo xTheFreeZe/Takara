@@ -18,6 +18,8 @@ module.exports = {
 
         var server = message.guild
 
+        message.channel.send('Leaving... Bye!')
+
         console.log(`Bot left ${message.guild.name} `)
 
         server.leave()
