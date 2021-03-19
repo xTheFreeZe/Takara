@@ -27,6 +27,7 @@ module.exports = {
         const reembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please provide a reason!")
             .setColor("RANDOM")
+
         const selfbanembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You can't ban yourself!")
             .setColor("RANDOM")
@@ -36,7 +37,7 @@ module.exports = {
             .setColor("RANDOM")
 
         const STTbanembed = new MessageEmbed()
-            .setDescription('<:STT_no:778545452218974209> You can not ban STT Premium with this command!')
+            .setDescription('<:STT_no:778545452218974209> You can not ban the Bot with this command!')
             .setColor('RED')
 
         //checks if author has permissions to ban people. If false, the message will return

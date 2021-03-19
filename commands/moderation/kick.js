@@ -13,6 +13,7 @@ module.exports = {
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
+        const STTPremium = client.users.cache.get('749889822214324236')
 
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to kick and provide a reason.`)
@@ -35,6 +36,10 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
+        const STTbanembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> You can not ban the Bot with this command!')
+            .setColor('RED')
+
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
         if (!log_channel) return message.channel.send(nologembed);
         if (!args[1]) return message.channel.send(argsembed);
@@ -42,6 +47,7 @@ module.exports = {
         if (message.author.bot) return;
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (user == message.author) return message.channel.send(selfkickembed);
+        if (user = STTPremium) return message.channel.send(STTbanembed);
 
         if (user) {
             if (member) {
