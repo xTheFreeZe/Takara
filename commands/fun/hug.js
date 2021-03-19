@@ -15,6 +15,8 @@ module.exports = {
 
         const user = message.mentions.users.first();
 
+        const STTPremium = message.guild.me;
+
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone you want to hug.`)
             .setColor("RANDOM")
@@ -37,6 +39,8 @@ module.exports = {
         if (!user) return message.channel.send(argsembed);
 
         if (user == author) return message.channel.send("You are hugging your self right now! PepeHands...");
+
+        if (user == STTPremium) return message.channel.send('Do not hug STT Premium');
 
         const hugembed = new MessageEmbed()
             .setTitle(`${message.author.username} hugs ${user.username}`)
