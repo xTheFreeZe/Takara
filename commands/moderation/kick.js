@@ -47,7 +47,7 @@ module.exports = {
         if (message.author.bot) return;
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (user == message.author) return message.channel.send(selfkickembed);
-        if (user = STTPremium) return message.channel.send(STTbanembed);
+        if (user == STTPremium) return message.channel.send(STTbanembed);
 
         if (user) {
             if (member) {
