@@ -21,6 +21,10 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone you want to hug.`)
             .setColor("RANDOM")
 
+        let pepega = '<:pepega:728525939293814785>';
+
+        let pog = '<:pogchamp:713671100034187304>';
+
 
         const url = 'https://some-random-api.ml/animu/hug';
 
@@ -38,9 +42,9 @@ module.exports = {
 
         if (!user) return message.channel.send(argsembed);
 
-        if (user == author) return message.channel.send("You are hugging your self right now! PepeHands...");
+        if (user == author) return message.channel.send(`I am sure you have someone else to hug ${pog}`);
 
-        if (user == STTPremium) return message.channel.send('Do not hug STT Premium');
+        if (user == STTPremium) return message.channel.send(`Come on, don't hug the Bot ${pepega}`);
 
         const hugembed = new MessageEmbed()
             .setTitle(`${message.author.username} hugs ${user.username}`)
