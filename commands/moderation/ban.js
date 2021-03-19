@@ -15,6 +15,7 @@ module.exports = {
         const member = message.guild.member(user);
         const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
+        const STTPremium = client.users.cache.get('749889822214324236')
         let argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please mention someone to ban and provide a reason. `)
             .setColor("RANDOM")
@@ -33,6 +34,10 @@ module.exports = {
         const nologembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
+
+        const STTbanembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> You can not ban STT Premium with this command!')
+            .setColor('RED')
 
         //checks if author has permissions to ban people. If false, the message will return
 
@@ -58,11 +63,14 @@ module.exports = {
 
         if (message.author.bot) return;
 
+        //if the mentioned user is STT Premium, the message will return
+
+        if (user == STTPremium) return message.channel.send(STTbanembed);
         //checks if mentioned person is the author.If true, the message will return
 
         if (user == message.author) return message.channel.send(selfbanembed);
 
-        
+
         if (user) {
             if (member) {
                 member.ban({
