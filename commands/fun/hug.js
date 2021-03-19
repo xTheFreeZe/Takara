@@ -2,9 +2,7 @@ const {
     MessageEmbed
 } = require('discord.js');
 
-const {
-    axios
-} = require('axios');
+const axios = require('axios');
 
 module.exports = {
     name: "hug",
