@@ -12,13 +12,14 @@ module.exports = {
                 .setDescription('<:STT_no:778545452218974209> Only Marwin#0001 can use this command!')
                 .setColor("RANDOM")
 
-            return message.channel.send(permsembed)
+            return message.channel.send(permsembed);
         }
 
 
         var server = message.guild
 
-        message.channel.send('Leaving... Bye!')
+        message.channel.send('Leaving... Bye!');
+        message.delete();
 
         console.log(`Bot left ${message.guild.name} `)
 
