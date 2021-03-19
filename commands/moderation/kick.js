@@ -37,7 +37,7 @@ module.exports = {
             .setColor("RANDOM")
 
         const STTbanembed = new MessageEmbed()
-            .setDescription('<:STT_no:778545452218974209> You can not ban the Bot with this command!')
+            .setDescription('<:STT_no:778545452218974209> You can not kick the Bot with this command!')
             .setColor('RED')
 
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply(permsembed);
