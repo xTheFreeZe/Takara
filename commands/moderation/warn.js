@@ -8,7 +8,7 @@ module.exports = {
     name: "warn",
     category: "moderation",
     description: "Warns a Member",
-    run: async (client, message, PREFIX) => {
+    run: async (client, message, PREFIX, STTPremium) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
         let permsembed = new MessageEmbed()
@@ -18,6 +18,10 @@ module.exports = {
         const nologembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
+
+        const STTwarnembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> You can not warn the Bot with this command!')
+            .setColor('RED')
 
         let author = message.author
         let channel = message.channel
@@ -44,6 +48,8 @@ module.exports = {
             .setColor("RANDOM")
 
         if (!user) return message.channel.send(userembed)
+
+        if (user == STTPremium) return message.channel.send(STTwarnembed);
 
         let msgArgs = args.slice(2).join(" ");
 

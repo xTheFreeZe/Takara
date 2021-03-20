@@ -10,6 +10,8 @@ const {
 
 const got = require('got');
 
+const STTPremium = client.users.cache.get('749889822214324236')
+
 /*
 const activities_list = [
     "with friends",

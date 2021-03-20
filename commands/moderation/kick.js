@@ -36,7 +36,7 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
-        const STTbanembed = new MessageEmbed()
+        const STTkickembed = new MessageEmbed()
             .setDescription('<:STT_no:778545452218974209> You can not kick the Bot with this command!')
             .setColor('RED')
 
@@ -47,7 +47,7 @@ module.exports = {
         if (message.author.bot) return;
         if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (user == message.author) return message.channel.send(selfkickembed);
-        if (user == STTPremium) return message.channel.send(STTbanembed);
+        if (user == STTPremium) return message.channel.send(STTkickembed);
 
         if (user) {
             if (member) {
