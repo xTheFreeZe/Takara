@@ -8,7 +8,7 @@ module.exports = {
     name: "warn",
     category: "moderation",
     description: "Warns a Member",
-    run: async (client, message, PREFIX, STTPremium) => {
+    run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
         let permsembed = new MessageEmbed()
@@ -36,6 +36,7 @@ module.exports = {
 
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
+        const STTPremium = client.users.cache.get('749889822214324236')
 
         const selfwarnembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You can not warn yourself!")
