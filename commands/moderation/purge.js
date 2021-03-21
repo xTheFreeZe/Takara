@@ -38,13 +38,14 @@
               deleteAmount = parseInt(args[0]);
           }
 
+          if (deleteAmount == 0) return message.channel.send('no');
+
           await message.channel.bulkDelete(deleteAmount, true);
 
           const embed = new MessageEmbed()
               .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
               .setColor('#f2f2f2')
 
-          if (deleteAmount == 0) return message.channel.send('no');
 
           await message.channel.send(embed)
 
