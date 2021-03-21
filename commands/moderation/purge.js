@@ -38,12 +38,8 @@
               deleteAmount = parseInt(args[0]);
           }
 
-          if (parseInt.isNaN) {
-              return console.log('No');
-          } else {
-              console.log('yes');
-          }
-
+        
+        if (deleteAmount = 1) embed.setDescription('You deleted one message!');
 
           await message.channel.bulkDelete(deleteAmount, true);
 
