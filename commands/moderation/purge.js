@@ -17,7 +17,7 @@
               .setColor("RANDOM")
 
           const zeroembed = new MessageEmbed()
-              .setDescription('int value should be greater than or equal to 1')
+              .setDescription('<:STT_no:778545452218974209> int value should be greater than or equal to 1')
               .setColor('RED')
 
           if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
