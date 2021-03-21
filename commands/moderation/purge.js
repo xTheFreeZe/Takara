@@ -38,10 +38,7 @@
               deleteAmount = parseInt(args[0]);
           }
 
-
           await message.channel.bulkDelete(deleteAmount, true);
-
-          if (deleteAmount = 0 ) return message.channel.send('Thats not possible!'); 
 
           const embed = new MessageEmbed()
               .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
