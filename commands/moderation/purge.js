@@ -44,8 +44,8 @@
           const embed = new MessageEmbed()
               .setColor('#f2f2f2')
 
-          if (deleteAmount = 1) embed.setDescription('<:STT_yes:778545433810173952> Successfully deleted `1` Message');
-          if (deleteAmount > 1) embed.setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
+          if (deleteAmount = 1) message.channel.send(embed.setDescription('<:STT_yes:778545433810173952> Successfully deleted `1` Message'));
+          if (deleteAmount > 1) message.channel.send(embed.setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`));
 
           const logembed = new MessageEmbed()
               .setColor("RANDOM")
