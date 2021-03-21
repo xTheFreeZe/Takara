@@ -41,11 +41,12 @@
 
           await message.channel.bulkDelete(deleteAmount, true);
 
-          const embed = new MessageEmbed()
-              .setColor('#f2f2f2')
+          if (deleteAmount = 0 ) return message.channel.send('Thats not possible!'); 
 
-          if (deleteAmount = 1) message.channel.send(embed.setDescription('<:STT_yes:778545433810173952> Successfully deleted `1` Message'));
-          if (deleteAmount > 1) message.channel.send(embed.setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`));
+          const embed = new MessageEmbed()
+              .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
+              .setColor('#f2f2f2')
+          await message.channel.send(embed)
 
           const logembed = new MessageEmbed()
               .setColor("RANDOM")
