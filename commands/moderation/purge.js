@@ -16,6 +16,10 @@
               .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
               .setColor("RANDOM")
 
+          const zeroembed = new MessageEmbed()
+              .setDescription('int value should be greater than or equal to 1')
+              .setColor('RED')
+
           if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
               return message.channel.send(
                   permsembed // returns this message to user with no perms
@@ -38,7 +42,7 @@
               deleteAmount = parseInt(args[0]);
           }
 
-          if (deleteAmount == 0) return message.channel.send('no');
+          if (deleteAmount == 0) return message.channel.send(zeroembed);
 
           await message.channel.bulkDelete(deleteAmount, true);
 
