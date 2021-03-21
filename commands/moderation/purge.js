@@ -38,6 +38,8 @@
               deleteAmount = parseInt(args[0]);
           }
 
+          if (deleteAmount.isNaN) return message.channel.send('This is not a number!');
+
           await message.channel.bulkDelete(deleteAmount, true);
 
           const embed = new MessageEmbed()
