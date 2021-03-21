@@ -41,7 +41,9 @@
 
           await message.channel.bulkDelete(deleteAmount, true);
 
-          if (deleteAmount.isNaN) return message.channel.send('This is not a number!');
+        let number = deleteAmount
+
+          if (number.isNaN) return message.channel.send('This is not a number!');
 
           const embed = new MessageEmbed()
               .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
