@@ -20,10 +20,6 @@
               .setDescription('<:STT_no:778545452218974209> int value should be greater than or equal to 1')
               .setColor('RED')
 
-          const embed = new MessageEmbed()
-              .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
-              .setColor('#f2f2f2')
-
           if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
               return message.channel.send(
                   permsembed // returns this message to user with no perms
@@ -49,6 +45,11 @@
           if (deleteAmount == 0) return message.channel.send(zeroembed);
 
           await message.channel.bulkDelete(deleteAmount, true);
+
+          const embed = new MessageEmbed()
+              .setDescription(`<:STT_yes:778545433810173952> Successfully deleted ${deleteAmount} Messages`)
+              .setColor('#f2f2f2')
+
 
           if (deleteAmount == 1) message.channel.send(embed.setDescription('<:STT_yes:778545433810173952> Successfully deleted 1 Message!'))
 
