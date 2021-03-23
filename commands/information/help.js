@@ -50,12 +50,10 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
-            .setDescription('These are your options:')
+            .setDescription('Being Staff gives more options!')
             .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
 
             .addField('`^help fun`', 'Fun commands')
-
-            .addField('`^help mod`', 'Commands for staff')
 
             .addField('`^help dev`', 'Developer options')
 
@@ -84,6 +82,7 @@ module.exports = {
         if (!args[0]) {
 
             if (ping > 150) message.channel.send('High Ping detected! This could lead to slow messages. If the ping isnt at 90 - 110 in an Hour, please check out the Statuspage of the Bot to see if everything is normal!')
+            if (message.member.permissions.has("MANAGE_MESSAGES")) embed.addField('`^help mod`', 'Commands for staff'), embed.setDescription('<:STT_yes:778545433810173952> You are a Staff Member!');
             return message.channel.send(embed)
 
         } else if (args[0] == 'fun') {
