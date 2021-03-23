@@ -67,6 +67,7 @@ module.exports = {
         //if the mentioned user is STT Premium, the message will return
 
         if (user == STTPremium) return message.channel.send(STTbanembed);
+       
         //checks if mentioned person is the author.If true, the message will return
 
         if (user == message.author) return message.channel.send(selfbanembed);
