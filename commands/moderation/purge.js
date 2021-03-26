@@ -20,6 +20,14 @@
               .setDescription('<:STT_no:778545452218974209> int value should be greater than or equal to 1')
               .setColor('RED')
 
+          const highembed = new MessageEmbed()
+              .setDescription('<:STT_no:778545452218974209> Your provided value was too high to delete. You deleted `100` Messages')
+              .setColor('RED')
+
+          const nonnumberembed = new MessageEmbed()
+              .setDescription('<:STT_no:778545452218974209> int value should be a number')
+              .setColor('RED')
+
           if (!message.member.permissions.has("MANAGE_MESSAGES")) // sets the permission
               return message.channel.send(
                   permsembed // returns this message to user with no perms
@@ -37,10 +45,15 @@
           let deleteAmount;
 
           if (parseInt(args[0]) > 100) {
+              message.channel.send(highembed);
               deleteAmount = 100;
           } else {
               deleteAmount = parseInt(args[0]);
           }
+
+          let checknumber = parseInt(args[0]);
+
+          if (isNaN(checknumber)) return message.channel.send(nonnumberembed);
 
           if (deleteAmount == 0) return message.channel.send(zeroembed);
 
