@@ -9,7 +9,7 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        let msgArgs = args.slice(1).join(" ");
+        let msgArgs = args.slice(2).join(" ");
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
@@ -80,7 +80,7 @@ module.exports = {
                     ression: msgArgs
                 }).then(() => {
                     const embed = new MessageEmbed()
-                        .setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member} Reason:**` + " " + msgArgs + "**")
+                        .setDescription(`<:STT_yes:778545433810173952> STT Premium banned  ${member} Reason:**` + " " + reason + "**")
                         .setColor('#229954')
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
@@ -89,7 +89,7 @@ module.exports = {
                     const DMembed = new MessageEmbed()
                         .setDescription("<:STT_yes:778545433810173952> You have been banned!")
                         .addField('Server :', `${message.guild}`)
-                        .addField('Reason :', msgArgs)
+                        .addField('Reason :', reason)
                         .setTimestamp()
                         .setColor("RANDOM")
 
@@ -100,14 +100,14 @@ module.exports = {
                         .setTitle(`BAN || ${user.tag}`)
                         .addField('Moderator', `${message.author.tag}`)
                         .addField('Channel', `${message.channel}`)
-                        .addField('Reason', msgArgs)
+                        .addField('Reason', reason)
                         .setTimestamp()
 
                     log_channel.send(logembed);
 
 
 
-                    console.log(`${message.author.tag} banned ${user.tag} on ${message.guild}. Provided Reason:` + msgArgs);
+                    console.log(`${message.author.tag} banned ${user.tag} on ${message.guild}. Provided Reason:` + reason);
                     message.delete();
 
 
