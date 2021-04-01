@@ -9,7 +9,7 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        let msgArgs = args.slice(2).join(" ");
+        let msgArgs = args.slice(1).join(" ");
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
