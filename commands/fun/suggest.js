@@ -11,19 +11,16 @@ module.exports = {
         let author = message.author
         const user = message.mentions.users.first();
         let msgArgs = args.slice(1).join(" ");
+        let messagelength = msgArgs.length
         const argsembed = new MessageEmbed()
             .setDescription(`<:STT_no:778545452218974209> ${message.author.username} please provide a suggestion.`)
             .setColor("RANDOM")
-        if (!args[1]) return message.channel.send(argsembed);
+        if (!msgArgs) return message.channel.send(argsembed);
+        if (messagelength < 5) return message.channel.send('Your suggestion must at least contain 5 letters!');
         const embed = new MessageEmbed()
-            .setDescription("📃 " + `New Suggestion from ${message.author.username}:` + " " + "**" + msgArgs + "**")
+            .setTitle(`📜 New Suggestion from ${message.author.username}!`)
+            .addField('Suggestion', msgArgs)
             .setColor("RANDOM")
-
-
-
-        if (!args[1]) {
-            message.channel.send("No!");
-        }
 
         message.channel.send(embed).then(messagereaction => {
             messagereaction.react("👍");

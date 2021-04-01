@@ -8,13 +8,26 @@ module.exports = {
 
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
 
+        let permsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
+            .addField("Error", 'Missing `BAN_MEMBERS`')
+            .setColor("RANDOM")
+
         const nologembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please create a channel called `logs` before using this command!")
             .setColor("RANDOM")
 
-        if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send('You are missing **BAN_MEMBERS** permission!').then(m => m.delete({
-            timeout: 5000
-        }));
+        const nonnumberembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> int value should be a number')
+            .addField('ERROR', 'Value is not snowflake!')
+            .setColor('RED')
+
+        const searchembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> Not a valid user!')
+            .setColor('RED')
+            .addField('ERROR', 'Unknown User')
+
+        if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(permsembed);
 
         if (!args[0]) return message.channel.send('Please enter a users ID to unban!').then(m => m.delete({
             timeout: 5000
@@ -22,14 +35,19 @@ module.exports = {
 
         if (!log_channel) return message.channel.send(nologembed);
 
+        let checknumber = parseInt(args[0]);
+
+        let numberlength = parseInt(args[0]).length;
+
+        if (isNaN(checknumber)) return message.channel.send(nonnumberembed);
+
 
         let member;
 
         try {
             member = await client.users.fetch(args[0])
         } catch (e) {
-            console.log(e)
-            return message.channel.send('Not a valid user!'), message.channel.send('Error:' + " " + e)
+            return message.channel.send(searchembed);
         }
 
         const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
@@ -55,7 +73,7 @@ module.exports = {
             } else {
                 embed.setTitle(`${member.tag} isn't banned!`)
                     .setColor('#ff0000')
-                message.channel.send(embed)
+                return message.channel.send(embed)
             }
 
             const logembed = new MessageEmbed()
