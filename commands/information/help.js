@@ -42,7 +42,7 @@ module.exports = {
 
         const utilitieembed = new MessageEmbed()
             .setTitle("Utilities")
-            .setDescription('`^severinfo`, `^uptime`, `^id`, `^report`, `^permissions`, `^system`')
+            .setDescription('`^info`, `^severinfo`, `^uptime`, `^id`, `^report`, `^permissions`, `^system`')
             .setColor("#FCFEFE")
             .setFooter("STT Premium | Information")
 
