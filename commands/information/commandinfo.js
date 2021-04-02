@@ -12,7 +12,7 @@ module.exports = {
         const givencommand = args.slice(1).join(' ');
 
 
-        const commands = [
+        var commands = [
             'ban',
             /*'kick',
             'lock',
