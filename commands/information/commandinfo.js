@@ -14,13 +14,14 @@ module.exports = {
 
         const commands = [
             'ban',
-            'kick',
+            /*'kick',
             'lock',
             'purge',
             'report',
             'topic',
             'unban',
             'warn'
+            */
         ]
 
         const errorembed = new MessageEmbed()
