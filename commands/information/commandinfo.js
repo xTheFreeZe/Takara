@@ -44,6 +44,59 @@ module.exports = {
             .addField('Cooldown', 'No Cooldown')
 
 
+        const purgeembed = new MessageEmbed()
+            .setTitle('Information: Purge')
+            .addField('Name', '^purge')
+            .addField('Category', 'moderation')
+            .addField('Description', 'Deletes an amount of text messages')
+            .addField('Usage', '^purge `number of messages`')
+            .addField('Cooldown', 'No Cooldown')
+
+
+        const reportembed = new MessageEmbed()
+            .setTitle('Information: Report')
+            .addField('Name', '^report')
+            .addField('Category', 'moderation')
+            .addField('Description', 'Send a Message to the Developer')
+            .addField('Usage', '^report `message`')
+            .addField('Cooldown', '5 Minutes')
+
+
+        const topicembed = new MessageEmbed()
+            .setTitle('Information: Topic')
+            .addField('Name', '^topic')
+            .addField('Category', 'moderation')
+            .addField('Description', 'Can be used when topic is inappropriate')
+            .addField('Usage', '^topic')
+            .addField('Cooldown', 'No Cooldown')
+
+
+
+        const unbanembed = new MessageEmbed()
+            .setTitle('Information: Unban')
+            .addField('Name', '^unban')
+            .addField('Category', 'moderation')
+            .addField('Description', 'Unbans a member from a guild')
+            .addField('Usage', '^unban `discord id`')
+            .addField('Usefull', 'Use ^id @member to get the discord ID')
+            .addField('Cooldown', 'No Cooldown')
+
+
+        const warnembed = new MessageEmbed()
+            .setTitle('Information: Warn')
+            .addField('Name', '^warn')
+            .addField('Category', 'moderation')
+            .addField('Description', 'Warns a member, warning gets logged')
+            .addField('Usage', '^warn `@member reason`')
+            .addField('Cooldown', 'No Cooldown')
+
+
+
+
+
+
+
+
 
 
 
@@ -62,6 +115,26 @@ module.exports = {
         } else if (args[0] == 'lock') {
 
             return message.channel.send(lockembed);
+
+        } else if (args[0] == 'purge') {
+
+            return message.channel.send(purgeembed);
+
+        } else if (args[0] == 'report') {
+
+            return message.channel.send(reportembed);
+
+        } else if (args[0] == 'topic') {
+
+            return message.channel.send(topicembed);
+
+        } else if (args[0] == 'unban') {
+
+            return message.channel.send(unbanembed);
+
+        } else if (args[0] == 'warn') {
+
+            return message.channel.send(warnembed);
 
         }
 
