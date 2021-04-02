@@ -9,6 +9,8 @@ module.exports = {
     description: "Gives info about the selected command!",
     run: async (client, message, args) => {
 
+        const givencommand = args.slice(1).join(' ');
+
 
         const commands = [
             'ban',
@@ -27,7 +29,7 @@ module.exports = {
             .setFooter('Type "^info" to see all available commands')
             .setColor('RED')
 
-        if (!args[0] === commands) return message.channel.send(errorembed);
+        if (!givencommand == commands) return message.channel.send(errorembed);
 
         const infoembed = new MessageEmbed()
             .setTitle('Information Command')
