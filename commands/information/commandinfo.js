@@ -27,7 +27,7 @@ module.exports = {
             .setFooter('Type "^info" to see all available commands')
             .setColor('RED')
 
-        if (!args[0] == commands) return message.channel.send(errorembed);
+        if (!args[0] === commands) return message.channel.send(errorembed);
 
         const infoembed = new MessageEmbed()
             .setTitle('Information Command')
