@@ -87,7 +87,7 @@ module.exports = {
                     message.channel.send(embed);
 
                     const DMembed = new MessageEmbed()
-                        .setDescription("<:STT_yes:778545433810173952> You have been banned!")
+                        .setTitle("<:STT_yes:778545433810173952> You have been banned!")
                         .addField('Server :', `${message.guild}`)
                         .addField('Reason :', msgArgs)
                         .setTimestamp()

@@ -61,7 +61,7 @@ module.exports = {
 
 
                     const DMembed = new MessageEmbed()
-                        .setDescription("<:STT_yes:778545433810173952> You have been kicked!")
+                        .setTitle("<:STT_yes:778545433810173952> You have been kicked!")
                         .addField('Server :', `${message.guild}`)
                         .addField('Reason :', msgArgs)
                         .setTimestamp()

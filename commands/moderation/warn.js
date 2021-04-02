@@ -65,7 +65,7 @@ module.exports = {
         message.channel.send(embed);
 
         const DMembed = new MessageEmbed()
-            .setDescription('<:STT_yes:778545433810173952> You have been warned!')
+            .setTitle("<:STT_yes:778545433810173952> You have been warned!")
             .addField('Server:', `${message.guild}`)
             .addField('Moderator:', `${message.author.username}`)
             .addField('Reason:', msgArgs)
