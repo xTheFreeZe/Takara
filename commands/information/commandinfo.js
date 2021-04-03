@@ -9,29 +9,32 @@ module.exports = {
     description: "Gives info about the selected command!",
     run: async (client, message, args) => {
 
-        const givencommand = args.slice(1).join(' ');
-
         /*
-                var commands = [
-                    'ban',
-                    'kick',
-                    'lock',
-                    'purge',
-                    'report',
-                    'topic',
-                    'unban',
-                    'warn'
-                ]
+            const givencommand = args.slice(1).join(' ');
 
-                const errorembed = new MessageEmbed()
-                    .setTitle('Error')
-                    .setDescription('<:STT_no:778545452218974209> Unkown Command')
-                    .setFooter('Type "^info" to see all available commands')
-                    .setColor('RED')
-
-                if (!givencommand == commands) return message.channel.send(errorembed);
             
+                    var commands = [
+                        'ban',
+                        'kick',
+                        'lock',
+                        'purge',
+                        'report',
+                        'topic',
+                        'unban',
+                        'warn'
+                    ]
+
+                    const errorembed = new MessageEmbed()
+                        .setTitle('Error')
+                        .setDescription('<:STT_no:778545452218974209> Unkown Command')
+                        .setFooter('Type "^info" to see all available commands')
+                        .setColor('RED')
+
+                    if (!givencommand === commands) return message.channel.send(errorembed);
+
             */
+
+
 
         const infoembed = new MessageEmbed()
             .setTitle('Information Command')
