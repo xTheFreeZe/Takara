@@ -17,6 +17,11 @@ module.exports = {
         var ping = client.ws.ping;
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
 
+        const errorembed = new MessageEmbed()
+            .setTitle('ERROR')
+            .setDescription('<:STT_no:778545452218974209> Oh, you messed up... Unkown Command!')
+            .setFooter('Type ^help to see all available help commands')
+
 
         const funembed = new MessageEmbed()
             .setColor('#E16210')
@@ -103,6 +108,11 @@ module.exports = {
         } else if (args[0] == 'util') {
 
             return message.channel.send(utilitieembed)
+
+        } else {
+
+            return message.channel.send(errorembed);
+
         }
 
 
