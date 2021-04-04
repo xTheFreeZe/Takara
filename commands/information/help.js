@@ -20,7 +20,7 @@ module.exports = {
         const errorembed = new MessageEmbed()
             .setTitle('ERROR')
             .setColor('RED')
-            .setDescription('<:STT_no:778545452218974209> Oh, you messed up... Unkown Command!')
+            .setDescription('<:STT_no:778545452218974209> Oh, you messed up... Unknown Command!')
             .setFooter('Type ^help to see all available help commands')
 
 

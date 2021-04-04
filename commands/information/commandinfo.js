@@ -12,7 +12,7 @@ module.exports = {
 
         const errorembed = new MessageEmbed()
             .setTitle('Error')
-            .setDescription('<:STT_no:778545452218974209> Unkown Command')
+            .setDescription('<:STT_no:778545452218974209> Unknown Command')
             .setFooter('Type ^info to see all available commands')
             .setColor('RED')
 
