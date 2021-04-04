@@ -110,6 +110,10 @@ module.exports = {
 
             return message.channel.send(utilitieembed)
 
+        } else if (args[0] == 'ban err') {
+
+            return console.log(`The help message for ^ban has been sent to ${message.author.username}`);
+
         } else {
 
             return message.channel.send(errorembed);
