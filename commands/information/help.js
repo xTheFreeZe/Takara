@@ -112,7 +112,7 @@ module.exports = {
 
         } else if (args[0] == 'ban err') {
 
-            return console.log(`The help message for ^ban has been sent to ${message.author.username}`);
+            return console.log(`The help message for ^ban has been sent to ${message.author.username}.`);
 
         } else {
 
