@@ -24,6 +24,11 @@ module.exports = {
             .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
             .addField("Error", 'Missing `BAN_MEMBERS`')
             .setColor("RANDOM")
+
+        const nopersonembed = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> Please mention someone!')
+            .setColor('RANDOM')
+
         const reembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> Please provide a reason!")
             .setColor("RANDOM")
@@ -51,6 +56,10 @@ module.exports = {
         // if there is no argument given, the message will return
 
         if (!args[1]) return message.channel.send(argsembed);
+
+        //checks if you mentioned a person
+
+        if (!user) return message.channel.send(nopersonembed);
 
         //checks if user provides a reason
 
