@@ -143,6 +143,8 @@ client.on('guildCreate', (guild) => {
 
 })
 
+/* 
+
 client.on('guildMemberAdd', member => {
 
     const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
@@ -151,7 +153,7 @@ client.on('guildMemberAdd', member => {
 
     const content = [
         `**Welcome to the server ${member}!** `,
-        `**Remember to read the rules in <#753238962050695228>.**`,
+        `**Remember to read the rules in <#753238962050695228>.**`,2
         `*You can assign yourself the roles you want in <#822811391240962048>*`
 
     ]
@@ -166,6 +168,8 @@ client.on('guildMemberAdd', member => {
 
 
 })
+
+*/
 
 
 
