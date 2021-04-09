@@ -150,8 +150,9 @@ client.on('guildMemberAdd', member => {
     if (!channel) return console.log('welcome return.')
 
     const welcomeembed = new MessageEmbed()
-        .setTitle(`Welcome to ${message.guild.name}`)
-        .setDescription(`Welcome to the server ${member}`)
+        .setTitle(`Welcome ${member}`)
+        .setDescription(`Hopefully you like it here!`)
+        .setImage('./STT_background.png')
         .setColor('RANDOM')
 
     channel.send(welcomeembed);
