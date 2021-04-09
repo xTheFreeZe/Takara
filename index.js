@@ -152,7 +152,7 @@ client.on('guildMemberAdd', member => {
     const welcomeembed = new MessageEmbed()
         .setTitle(`Welcome ${member}`)
         .setDescription(`Hopefully you like it here!`)
-        .setImage('./STT_background.png')
+        .setImage('https://cdn.discordapp.com/attachments/821393051561361493/830127085414252565/2ez_banner_3.png')
         .setColor('RANDOM')
 
     channel.send(welcomeembed);
