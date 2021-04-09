@@ -149,9 +149,16 @@ client.on('guildMemberAdd', member => {
 
     if (!channel) return console.log('welcome return.')
 
+    const content = [
+        `**Welcome to the server ${member}!** `,
+        `**Remember to read the rules in <#753238962050695228>.**`,
+        `*You can assign yourself the roles you want in <#822811391240962048>*`
+
+    ]
+
     const welcomeembed = new MessageEmbed()
-        .setTitle(`Welcome ${member}`)
-        .setDescription(`Hopefully you like it here!`)
+        .setTitle(`Welcome to the 2ez Community Server`)
+        .setDescription(content)
         .setImage('https://cdn.discordapp.com/attachments/821393051561361493/830127085414252565/2ez_banner_3.png')
         .setColor('RANDOM')
 
