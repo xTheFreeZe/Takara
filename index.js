@@ -172,6 +172,31 @@ client.on('guildMemberAdd', member => {
 */
 
 
+client.on('guildMemberAdd', async member => {
+
+    const channel = client.channels.cache.get('821393308378464287');
+
+    if (!channel) return console.log('welcome returned.')
+
+    const content = [
+        `Remember to read the rules in <#753238962050695228>.`,
+        ` `,
+        `You can assign yourself the roles you want in <#822811391240962048>`
+
+    ]
+
+    const welcomeembed = new MessageEmbed()
+        .setTitle(`Welcome to the 2ez Community Server!`)
+        .setDescription(content)
+        .setImage('https://cdn.discordapp.com/attachments/821393051561361493/830127085414252565/2ez_banner_3.png')
+        .setColor('RANDOM')
+
+    channel.send(`Welcome to the Server ${member}!`, welcomeembed);
+
+
+})
+
+
 
 client.on("message", msg => {
     if (msg.content === "^help ban err") {
