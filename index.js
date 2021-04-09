@@ -170,7 +170,7 @@ client.on('guildMemberAdd', member => {
 })
 
 */
-
+/*
 
 client.on('guildMemberAdd', async member => {
 
@@ -195,6 +195,8 @@ client.on('guildMemberAdd', async member => {
 
 
 })
+
+*/
 
 
 
