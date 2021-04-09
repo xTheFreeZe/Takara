@@ -143,6 +143,22 @@ client.on('guildCreate', (guild) => {
 
 })
 
+client.on('guildMemberAdd', member => {
+
+    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
+
+    if (!channel) return console.log('welcome return.')
+
+    const welcomeembed = new MessageEmbed()
+        .setTitle(`Welcome to ${message.guild.name}`)
+        .setDescription(`Welcome to the server ${member}`)
+        .setColor('RANDOM')
+
+    channel.send(welcomeembed);
+
+
+})
+
 
 
 client.on("message", msg => {
