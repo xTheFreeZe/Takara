@@ -118,9 +118,15 @@ client.on("guildCreate", guild => {
         .setColor("RANDOM")
 
 
-    channel.send(embed);
-    channel.send(helpembed);
-    channel.send(logembed);
+    channel.send(embed).catch((e) => {
+        return console.log('Message returned! Error :' + e);
+    })
+    channel.send(helpembed).catch(() => {
+        return;
+    })
+    channel.send(logembed).catch(() => {
+        return;
+    })
 });
 
 client.on('guildCreate', (guild) => {
