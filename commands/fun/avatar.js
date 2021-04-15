@@ -1,6 +1,8 @@
 const {
     MessageEmbed
 } = require('discord.js');
+
+
 module.exports = {
     name: "avatar",
     category: "fun",
