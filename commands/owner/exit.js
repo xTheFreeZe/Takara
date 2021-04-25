@@ -18,17 +18,17 @@ module.exports = {
 
         var server = message.guild
 
-        message.channel.send('Leaving... Bye!').catch((e) => {
+        message.channel.send('Leaving... Bye!');
+        message.delete();
+
+        console.log(`Bot left ${message.guild.name} `)
+
+        server.leave().catch((e) => {
 
             //catches error when leaving a server
 
             console.log(e);
 
         })
-        message.delete();
-
-        console.log(`Bot left ${message.guild.name} `)
-
-        server.leave()
     }
 }
