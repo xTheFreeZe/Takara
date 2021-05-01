@@ -9,11 +9,10 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        let msgArgs = args[1] ? args.slice(2).join(" ") : 'no reason';
+        let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
-        const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
         const STTPremium = client.users.cache.get('749889822214324236')
         let argsembed = new MessageEmbed()
