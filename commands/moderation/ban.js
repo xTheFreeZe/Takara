@@ -9,7 +9,7 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        let msgArgs = args.slice(2).join(" ");
+        let msgArgs = args[1] ? args.slice(2).join(" ") : 'no reason';
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
@@ -63,7 +63,7 @@ module.exports = {
 
         //checks if user provides a reason
 
-        if (!msgArgs) return message.channel.send(reembed), message.delete();
+        //if (!msgArgs) return message.channel.send(reembed), message.delete();
 
         //if command is being used in a DM channel, it will return
 
