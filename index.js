@@ -287,9 +287,6 @@ client.on('message', msg => {
         case "permskick":
             const user = msg.mentions.users.first() || msg.author;
             const member = msg.guild.member(user);
-            let author = msg.author
-            if (!args[1]) return msg.reply("Please mention someone!");
-            if (!user) return msg.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${user.username} can kick people!`)
                 .setFooter(`Request: ${msg.author.username}`)
