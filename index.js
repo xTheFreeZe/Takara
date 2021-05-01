@@ -310,11 +310,8 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "permsmsg":
-            const user = msg.mentions.users.first();
+            const user = msg.mentions.users.first() || msg.author;
             const member = msg.guild.member(user);
-            let author = msg.author
-            if (!args[1]) return msg.reply("Please mention someone!");
-            if (!user) return msg.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`${user.username} can manage Messages!`)
                 .setFooter(`Request: ${msg.author.username}`)
@@ -335,11 +332,8 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "permsroles":
-            const user = msg.mentions.users.first();
+            const user = msg.mentions.users.first() || msg.author;
             const member = msg.guild.member(user);
-            let author = msg.author
-            if (!args[1]) return msg.reply("Please Mention someone!");
-            if (!user) return msg.channel.send('error');
             const embed = new MessageEmbed()
                 .setDescription(`<:STT_yes:778545433810173952> ${user.username} can manage Roles!`)
                 .setFooter(`Request: ${msg.author.username}`)
