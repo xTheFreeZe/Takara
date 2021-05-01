@@ -285,7 +285,7 @@ client.on('message', msg => {
 
     switch (args[0]) {
         case "permskick":
-            const user = msg.mentions.users.first();
+            const user = msg.mentions.users.first() || author;
             const member = msg.guild.member(user);
             let author = msg.author
             if (!args[1]) return msg.reply("Please mention someone!");
