@@ -8,7 +8,7 @@ module.exports = {
     description: "Kicks a Member from a Guild",
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
-        let msgArgs = args.slice(2).join(" ");
+        let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
@@ -45,7 +45,6 @@ module.exports = {
         if (!args[1]) return message.channel.send(argsembed);
         if (message.channel instanceof Discord.DMChannel) return;
         if (message.author.bot) return;
-        if (!msgArgs) return message.channel.send(reembed), message.delete();
         if (user == message.author) return message.channel.send(selfkickembed);
         if (user == STTPremium) return message.channel.send(STTkickembed);
 
