@@ -53,7 +53,7 @@ module.exports = {
                 member.kick(msgArgs + " " + `|| Moderator : ${message.author.tag}`).then(() => {
                     const embed = new MessageEmbed()
                         .setColor('#229954')
-                        .setDescription(`<:STT_yes:778545433810173952> STT Premium kicked ${member} Reason:` + " " + "**" + msgArgs + "**")
+                        .setDescription(`<:STT_yes:778545433810173952> Kicked ${member} | Reason:` + " " + "**" + msgArgs + "**")
                         .setTimestamp()
                         .setFooter('STT Premium | Moderation')
                     message.reply(embed);
@@ -66,7 +66,6 @@ module.exports = {
                         .setTimestamp()
                         .setColor("RANDOM")
 
-                    member.send(DMembed);
 
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
@@ -77,8 +76,11 @@ module.exports = {
                         .setTimestamp()
 
                     log_channel.send(logembed);
+                    member.send(DMembed).catch(() => {
+                        message.channel.send('An unexpected Error occured!');
+                    })
 
-                    console.log(`I kicked ${user.tag}. Provided Reason:` + msgArgs);
+                    console.log(`Kick ${user.tag}. Provided Reason:` + msgArgs);
                     message.delete();
 
 

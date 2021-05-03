@@ -101,7 +101,6 @@ module.exports = {
                         .setTimestamp()
                         .setColor("RANDOM")
 
-                    member.send(DMembed);
 
                     const logembed = new MessageEmbed()
                         .setColor("RANDOM")
@@ -112,6 +111,9 @@ module.exports = {
                         .setTimestamp()
 
                     log_channel.send(logembed);
+                    member.send(DMembed).catch(() => {
+                        message.channel.send('An unexpected Error occured!');
+                    })
 
 
 
