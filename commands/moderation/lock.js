@@ -48,22 +48,6 @@ module.exports = {
                 .setColor('#229954')
             return message.channel.send(unlockembed)
 
-        } else if (args[0] === 'spam') {
-            channels.forEach(channel => {
-                channel.updateOverwrite(message.guild.roles.everyone, {
-                    SEND_MESSAGES: false
-                }).then(() => {
-                    channel.setName(channel.name += `🔒`)
-                })
-
-                const spamembed = new MessageEmbed()
-                    .setDescription('<:STT_yes:778545433810173952> Locked all channels!')
-                    .addField('Reason', 'Due to spam, this channel is currently locked!')
-                    .setColor('#229954')
-
-                return message.channel.send(spamembed);
-            })
-
         }
     }
 }
