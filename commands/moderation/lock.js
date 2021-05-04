@@ -18,7 +18,12 @@ module.exports = {
 
 
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
-        if (args[0] === 'on') {
+
+        if (!args[0]) {
+
+            message.channel.send('No');
+
+        } else if (args[0] === 'on') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: false
@@ -27,12 +32,15 @@ module.exports = {
                 })
             })
 
-
             const lockembed = new MessageEmbed()
                 .setDescription('<:STT_yes:778545433810173952> Locked all channels!')
                 .addField('Reason', reason)
                 .setColor('#229954')
+
             return message.channel.send(lockembed);
+
+
+
         } else if (args[0] === 'off') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
