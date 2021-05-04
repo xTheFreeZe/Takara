@@ -16,6 +16,11 @@ module.exports = {
             .addField("Error", 'Missing `MANAGE_MESSAGES`')
             .setColor("RANDOM")
 
+        let errorembed = new MessageEmbed()
+            .setTitle('Error')
+            .setDescription('<:STT_no:778545452218974209> Unknown Command!')
+            .setColor('RED')
+
 
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
 
@@ -55,6 +60,10 @@ module.exports = {
                 .setDescription('<:STT_yes:778545433810173952> Unlocked all channels!')
                 .setColor('#229954')
             return message.channel.send(unlockembed)
+
+        } else {
+
+            return message.channel.send(errorembed);
 
         }
     }
