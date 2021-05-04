@@ -11,6 +11,19 @@ module.exports = {
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
         let reason = args[1] ? args.slice(1).join(" ") : 'no reason';
+
+        const desccontentfirstembed = [
+            "**Using the** `lock` **command**",
+            " ",
+            " ",
+            "`^lock on` to lock all channels",
+            " ",
+            "`^lock off` to unlock all channels!",
+            " ",
+            " ",
+            `STT Premium | Information | ${message.author.username} `
+        ]
+
         let permsembed = new MessageEmbed()
             .setDescription("<:STT_no:778545452218974209> You cant use that")
             .addField("Error", 'Missing `MANAGE_MESSAGES`')
@@ -19,21 +32,26 @@ module.exports = {
         let errorembed = new MessageEmbed()
             .setTitle('Error')
             .setDescription('<:STT_no:778545452218974209> Unknown Command!')
+            .addField(`Don't know what to use?`, 'Try `^lock on` or `^lock off`')
             .setColor('RED')
+
+        let firstmessageembed = new MessageEmbed()
+            .setDescription(desccontentfirstembed)
+            .setColor('YELLOW')
 
 
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
 
         if (!args[0]) {
 
-            message.channel.send('No');
+            message.channel.send(firstmessageembed);
 
         } else if (args[0] === 'on') {
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: false
                 }).then(() => {
-                    channel.setName(channel.name += `🔒`)
+                    channel.setName(channel.name += `🔐`)
                 })
             })
 
@@ -51,7 +69,7 @@ module.exports = {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: true
                 }).then(() => {
-                    channel.setName(channel.name.replace('🔒', ''))
+                    channel.setName(channel.name.replace('🔐', ''))
                 })
             })
 
