@@ -53,7 +53,7 @@ module.exports = {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: false
                 }).then(() => {
-                    channel.setName(channel.name.replace('🔒', ''))
+                    channel.setName(channel.name += `🔒`)
                 })
 
                 const spamembed = new MessageEmbed()
