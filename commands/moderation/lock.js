@@ -3,6 +3,8 @@ const {
     MessageFlags
 } = require('discord.js');
 
+const checkiflocked = new Set;
+
 module.exports = {
     name: "lock",
     category: "moderation",
@@ -47,6 +49,11 @@ module.exports = {
             message.channel.send(firstmessageembed);
 
         } else if (args[0] === 'on') {
+
+            if (checkiflocked.has(message.author.id)) {
+
+                return message.channel.send('You already locked all channels! Type `^lock off` to undo this!');
+            }
             channels.forEach(channel => {
                 channel.updateOverwrite(message.guild.roles.everyone, {
                     SEND_MESSAGES: false
@@ -54,6 +61,9 @@ module.exports = {
                     channel.setName(channel.name += `🔐`)
                 })
             })
+
+            checkiflocked.add(message.author.id);
+            console.log('Added ID');
 
             const lockembed = new MessageEmbed()
                 .setDescription('<:STT_yes:778545433810173952> Locked all channels!')
@@ -73,11 +83,14 @@ module.exports = {
                 })
             })
 
+            checkiflocked.delete(message.author.id);
+            console.log('Deleted ID');
 
             const unlockembed = new MessageEmbed()
                 .setDescription('<:STT_yes:778545433810173952> Unlocked all channels!')
                 .setColor('#229954')
             return message.channel.send(unlockembed)
+
 
         } else {
 
