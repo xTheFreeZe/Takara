@@ -21,14 +21,15 @@ module.exports = {
         message.channel.send('Leaving... Bye!');
         message.delete();
 
-        console.log(`Bot left ${message.guild.name} `)
 
-        server.leave().catch((e) => {
+        await server.leave().catch((e) => {
 
             //catches error when leaving a server
 
             console.log(e);
 
-        })
+        });
+
+        console.log(`Bot left ${message.guild.name} `);
     }
 }
