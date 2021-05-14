@@ -31,7 +31,7 @@ module.exports = {
             .addField("Error", 'Missing `MANAGE_MESSAGES`')
             .setColor("RANDOM")
 
-        let STTpermsions = new MessageEmbed()
+        let STTpermissions = new MessageEmbed()
             .setDescription('<:STT_no:778545452218974209> Please give the Bot Permissions to do this!')
             .addField('Needed', '`MANAGE_CHANNELS`')
             .setColor('RED')
@@ -52,7 +52,7 @@ module.exports = {
 
         if (!message.guild.me.hasPermission('MANAGE_CHANNELS')) {
 
-            return message.channel.send(STTpermsions);
+            return message.channel.send(STTpermissions);
 
         }
 
