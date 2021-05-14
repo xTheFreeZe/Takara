@@ -51,8 +51,6 @@ module.exports = {
         }
 
 
-        if (!member) return message.channel.send('An unxecpted error occured!');
-
         const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
 
         const embed = new MessageEmbed()
@@ -91,8 +89,7 @@ module.exports = {
             log_channel.send(logembed);
 
         }).catch(e => {
-            console.log(e)
-            message.channel.send('An error has occurred!')
+            message.channel.send('An error has occurred! Check if the Person is on this Server!')
         });
 
     }
