@@ -31,6 +31,12 @@ module.exports = {
             .addField("Error", 'Missing `MANAGE_MESSAGES`')
             .setColor("RANDOM")
 
+        let STTpermsions = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> Please give the Bot Permissions to do this!')
+            .addField('Needed', '`MANAGE_CHANNELS`')
+            .setColor('RED')
+
+
         let errorembed = new MessageEmbed()
             .setTitle('Error')
             .setDescription('<:STT_no:778545452218974209> Unknown Command!')
@@ -43,6 +49,12 @@ module.exports = {
 
 
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(permsembed);
+
+        if (!message.guild.me.hasPermission('MANAGE_CHANNELS')) {
+
+            return message.channel.send(STTpermsions);
+
+        }
 
         if (!args[0]) {
 
