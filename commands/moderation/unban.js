@@ -89,7 +89,7 @@ module.exports = {
             log_channel.send(logembed);
 
         }).catch(e => {
-            message.channel.send('An error has occurred! Check if the Person is on this Server!')
+            message.channel.send('An error has occurred! ')
         });
 
     }
