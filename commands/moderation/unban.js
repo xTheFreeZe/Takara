@@ -27,6 +27,11 @@ module.exports = {
             .setColor('RED')
             .addField('ERROR', 'Unknown User')
 
+        let STTpermissions = new MessageEmbed()
+            .setDescription('<:STT_no:778545452218974209> Please give the Bot Permissions to do this!')
+            .addField('Needed', '`BAN_MEMBERS`')
+            .setColor('RED')
+
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(permsembed);
 
         if (!args[0]) return message.channel.send('Please enter a users ID to unban!').then(m => m.delete({
@@ -40,6 +45,13 @@ module.exports = {
         let numberlength = parseInt(args[0]).length;
 
         if (isNaN(checknumber)) return message.channel.send(nonnumberembed);
+
+
+        if (!message.guild.me.hasPermission('BAN_MEMBERS')) {
+
+            return message.channel.send(STTpermissions);
+
+        }
 
 
         let member;
