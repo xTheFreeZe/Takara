@@ -50,6 +50,9 @@ module.exports = {
             return message.channel.send(searchembed);
         }
 
+
+        if (!member) return message.channel.send('An unxecpted error occured!');
+
         const reason = args[1] ? args.slice(1).join(' ') : 'no reason';
 
         const embed = new MessageEmbed()
