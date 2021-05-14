@@ -112,7 +112,7 @@ module.exports = {
 
                     log_channel.send(logembed);
                     member.send(DMembed).catch(() => {
-                        message.channel.send('An unexpected Error occured!');
+                        message.channel.send('An unexpected Error occured! The user probably had DMs disabled!');
                     })
 
 
