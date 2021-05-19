@@ -63,17 +63,6 @@ module.exports = {
             .setFooter(`STT Premium | Moderation`)
         message.channel.send(embed);
 
-        const DMembed = new MessageEmbed()
-            .setTitle("<:STT_yes:778545433810173952> You have been warned!")
-            .addField('Server:', `${message.guild}`)
-            .addField('Moderator:', `${message.author.username}`)
-            .addField('Reason:', msgArgs)
-            .setColor("RANDOM")
-            .setTimestamp()
-        user.send(DMembed).catch((e) => {
-            message.channel.send('An unexpected error occured! See : ' + " " + e);
-        })
-
         const logembed = new MessageEmbed()
             .setColor("RANDOM")
             .setTitle(`WARNING || ${user.tag}`)
@@ -83,6 +72,18 @@ module.exports = {
             .setTimestamp()
 
         log_channel.send(logembed);
+
+        const DMembed = new MessageEmbed()
+            .setTitle("<:STT_yes:778545433810173952> You have been warned!")
+            .addField('Server:', `${message.guild}`)
+            .addField('Moderator:', `${message.author.username}`)
+            .addField('Reason:', msgArgs)
+            .setColor("RANDOM")
+            .setTimestamp()
+        user.send(DMembed).catch((e) => {
+            message.channel.send('An unexpected error occured! See : ' + " " + e);
+            log_channel.send('DM was not sent! The user may have disabled DMs or the user was a Bot!');
+        })
 
         message.delete();
         console.log(`${member} has been warned! Provided Reason:` + " " + msgArgs);
