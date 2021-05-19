@@ -54,7 +54,6 @@ module.exports = {
 
         let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
 
-        if (!msgArgs) return message.channel.send('`Reason is required!`');
 
         const embed = new MessageEmbed()
             .setDescription(`** WARNING || ${user.tag} **`)
@@ -71,7 +70,9 @@ module.exports = {
             .addField('Reason:', msgArgs)
             .setColor("RANDOM")
             .setTimestamp()
-        user.send(DMembed);
+        user.send(DMembed).catch((e) => {
+            message.channel.send('An unexpected error occured! See : ' + " " + e);
+        })
 
         const logembed = new MessageEmbed()
             .setColor("RANDOM")
