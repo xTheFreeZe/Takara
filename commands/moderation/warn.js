@@ -52,7 +52,7 @@ module.exports = {
 
         if (user == STTPremium) return message.channel.send(STTwarnembed);
 
-        let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
+        let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason' || args[3] ? args.slice(3).join(" ") : 'no reason3';
 
 
         const embed = new MessageEmbed()
