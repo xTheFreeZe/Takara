@@ -52,7 +52,7 @@ module.exports = {
 
         if (user == STTPremium) return message.channel.send(STTwarnembed);
 
-        let msgArgs = args.slice(2).join(" ");
+        let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
 
         if (!msgArgs) return message.channel.send('`Reason is required!`');
 
