@@ -11,7 +11,6 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
         let checkifID = args.slice(1).join(" ");
-        let IDuser = await client.users.fetch(args[1]);
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
@@ -60,7 +59,7 @@ module.exports = {
 
         //only sends in case you actually provide an ID
 
-        if (checkifID == IDuser) message.channel.send('It appears like you provided an ID! It is not possible to ban member with IDs yet! I am working on it!');
+        if (checkifID == await client.users.fetch(args[1])) message.channel.send('It appears like you provided an ID! It is not possible to ban member with IDs yet! I am working on it!');
 
         //checks if you mentioned a person
 
