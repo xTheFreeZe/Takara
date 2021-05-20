@@ -57,10 +57,6 @@ module.exports = {
 
         if (!args[1]) return message.channel.send(argsembed);
 
-        //only sends in case you actually provide an ID
-
-        if (checkifID == await client.users.fetch(args[1])) message.channel.send('It appears like you provided an ID! It is not possible to ban member with IDs yet! I am working on it!');
-
         //checks if you mentioned a person
 
         if (!user) return message.channel.send(nopersonembed);
