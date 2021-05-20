@@ -57,13 +57,13 @@ module.exports = {
 
         if (!args[1]) return message.channel.send(argsembed);
 
-        //checks if you mentioned a person
-
-        if (!user) return message.channel.send(nopersonembed);
-
         //only sends in case you actually provide an ID
 
         if (checkifID.length = 18) message.channel.send('It appears like you provided an ID! It is not possible to ban member with IDs yet! I am working on it!');
+
+        //checks if you mentioned a person
+
+        if (!user) return message.channel.send(nopersonembed);
 
         //checks if user provides a reason
 
