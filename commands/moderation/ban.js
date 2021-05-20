@@ -12,7 +12,9 @@ module.exports = {
         let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
         let author = message.author
         const IDuser = await client.users.fetch(args[1]);
-        const user = message.mentions.users.first() || IDuser;
+        const user = message.mentions.users.first() || IDuser.catch(() => {
+            return message.channel.send('An error occured!')
+        })
         const member = message.guild.member(user);
         const log_channel = message.guild.channels.cache.find(r => r.name === 'logs');
         const STTPremium = client.users.cache.get('749889822214324236')
