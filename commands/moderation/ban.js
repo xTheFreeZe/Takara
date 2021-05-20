@@ -10,6 +10,7 @@ module.exports = {
     run: async (client, message, PREFIX) => {
         let args = message.content.substring(PREFIX.length).split(" ");
         let msgArgs = args[2] ? args.slice(2).join(" ") : 'no reason';
+        let checkifID = args.slice(1).join(" ");
         let author = message.author
         const user = message.mentions.users.first();
         const member = message.guild.member(user);
@@ -59,6 +60,10 @@ module.exports = {
         //checks if you mentioned a person
 
         if (!user) return message.channel.send(nopersonembed);
+
+        //only sends in case you actually provide an ID
+
+        if (checkifID.length = 18) message.channel.send('It appears like you provided an ID! It is not possible to ban member with IDs yet! I am working on it!');
 
         //checks if user provides a reason
 
