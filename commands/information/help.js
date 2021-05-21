@@ -42,7 +42,7 @@ module.exports = {
             .setColor('#56E448')
             .setTitle('Developer Commands')
             .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
-            .addField('Basic commands:', '`^restart`', '`^exit`', '`^timer`', true)
+            .addField('Basic commands:', '`^restart`, `^exit`, `^timer`', true)
             .setFooter("STT Premium | Information")
 
 
