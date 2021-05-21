@@ -26,7 +26,7 @@ module.exports = {
             .setDescription("Time remaining:" + " " + days + " " + "Days" + " " + "and" + " " + hours + " " + "Hours ")
             .setColor('BLUE')
 
-        message.channe.send(embed);
+        message.channel.send(embed);
         console.log(distance);
 
     }
