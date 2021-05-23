@@ -48,7 +48,7 @@ module.exports = {
             .setDescription("<:STT_no:778545452218974209> Please mention someone!")
             .setColor("RANDOM")
 
-        if (!user) return message.channel.send(userembed)
+        if (!user) return message.channel.send(userembed);
 
         if (user == STTPremium) return message.channel.send(STTwarnembed);
 
