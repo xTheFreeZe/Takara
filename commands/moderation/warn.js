@@ -54,6 +54,8 @@ module.exports = {
 
         let msgArgs = args.slice(2).join(" ");
 
+        if (!msgArgs) return message.channel.send(argsembed);
+
 
         const embed = new MessageEmbed()
             .setDescription(`** WARNING || ${user.tag} **`)
