@@ -225,7 +225,7 @@ client.on("message", msg => {
 client.on('message', msg => {
     if (msg.content === "^delay 10") {
         const embed = new MessageEmbed()
-            .setDescription(':white_check_mark: Successfully edited!')
+            .setDescription(':white_check_mark: Successfully edited.')
             .setFooter('            }, 1000)')
         msg.reply('Message edit in 10 seconds')
             .then((msg) => {
