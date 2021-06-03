@@ -19,11 +19,13 @@ module.exports = {
         }
 
 
-        var timeend = new Date("May 24, 2021").getTime();
+        var timeend = new Date("June 25, 2020").getTime();
 
         var now = new Date().getTime();
 
         var distance = timeend - now;
+
+        if (distance < 0) return message.channel.send('An error occurd. The timer is below 0!')
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
