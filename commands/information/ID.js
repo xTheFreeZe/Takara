@@ -13,7 +13,7 @@ module.exports = {
         let member = message.mentions.members.first() || message.author;
         const embed = new MessageEmbed()
             .setDescription(`This is the Discord ID from ${member}: ` + " " + "**" + user + "**")
-            .setFooter("STT Premium | Information")
+            .setFooter("Takara | Information")
             .setColor("RANDOM")
         message.channel.send(embed);
     }

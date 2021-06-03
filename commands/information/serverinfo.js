@@ -16,7 +16,7 @@ module.exports = {
             .addField("Roles Count", `This server has ${message.guild.roles.cache.size} roles`)
             .addField("Emoji Count", `This server has ${message.guild.emojis.cache.size} emojis`)
             .setThumbnail(`${message.guild.iconURL()}`)
-            .setFooter('STT Premium | Information')
+            .setFooter('Takara | Information')
         message.channel.send(embed);
     }
 }

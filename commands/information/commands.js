@@ -8,7 +8,7 @@ module.exports = {
     description: "List of all Commands",
     run: async (client, message) => {
         const embed = new MessageEmbed()
-            .setTitle("STT Premium")
+            .setTitle("Takara")
             .setColor("#e2b007")
             .setThumbnail("https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg")
             .setDescription("All Commands :")

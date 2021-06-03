@@ -28,7 +28,7 @@ module.exports = {
             .setColor('#E16210')
             .setTitle('Fun Commands')
             .setDescription('`^avatar`, `^covid`, `^lottery`, `^meme`, `^8ball`, `^kill`, `^hug`, `^suggest`, `^join`, `^play`, `^leave`')
-            .setFooter("STT Premium | Information")
+            .setFooter("Takara | Information")
 
         const modembed = new MessageEmbed()
             .setColor('#2E0E81')
@@ -36,28 +36,28 @@ module.exports = {
             .setDescription('This is only meant for Staff Members!')
             .addField('kick/ban command:', '`^kick/^ban [@member]`', true)
             .addField('General Chat Commands:', '`^lock on/off`, `^purge`, `^unban`, `^warn`, `^topic`', true)
-            .setFooter("STT Premium | Information")
+            .setFooter("Takara | Information")
 
         const devembed = new MessageEmbed()
             .setColor('#56E448')
             .setTitle('Developer Commands')
             .setDescription('Everybody can use these commands, they are only here to give the Developer Info about certain things!')
             .addField('Basic commands:', '`^restart`, `^exit`, `^timer`', true)
-            .setFooter("STT Premium | Information")
+            .setFooter("Takara| Information")
 
 
         const utilitieembed = new MessageEmbed()
             .setTitle("Utilities")
             .setDescription('`^info`, `^severinfo`, `^uptime`, `^id`, `^report`, `^permissions`, `^system`')
             .setColor("#FCFEFE")
-            .setFooter("STT Premium | Information")
+            .setFooter("Takara | Information")
 
 
         const embed = new MessageEmbed()
             .setColor('#e2b007')
             .setTitle('This is the `^help` Command')
             .setDescription('These are your options:')
-            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
+            .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/841419896797528064/unknown.png')
 
             .addField('`^help fun`', 'Fun commands')
 

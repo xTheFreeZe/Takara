@@ -30,7 +30,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor("RANDOM")
             .setDescription(randomreplyMessage + "**" + randomMessage + "**" + " " + randomreplyeomoji)
-            .setFooter("STT Premium | Fun")
+            .setFooter("Takara | Fun")
 
         message.channel.send(embed);
     }

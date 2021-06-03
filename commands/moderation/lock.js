@@ -23,7 +23,7 @@ module.exports = {
             "`^lock off` to unlock all channels!",
             " ",
             " ",
-            `STT Premium | Information | ${message.author.username} `
+            `Takara | Information | ${message.author.username} `
         ]
 
         let permsembed = new MessageEmbed()

@@ -15,7 +15,7 @@ module.exports = {
         let embed = new MessageEmbed()
             .setColor("RANDOM")
             .setTimestamp()
-            .setFooter("STT Premium | Fun", client.user.avatarURL())
+            .setFooter("Takara | Fun", client.user.avatarURL())
             .setTitle(`${user.tag}'s avatar:`)
             .setImage(user.displayAvatarURL({
                 format: 'png',

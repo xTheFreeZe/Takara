@@ -22,7 +22,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setDescription(`The bot has been online for ${uptime}`)
             .setColor('RANDOM')
-            .setFooter('STT Premium | Information')
+            .setFooter('Takara | Information')
             .setTimestamp()
         message.channel.send(embed);
     }

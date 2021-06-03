@@ -15,7 +15,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setColor('RANDOM')
-            .setDescription(":ping_pong: Ping of STT Premium is `" + `${ping}` + " ms`")
+            .setDescription(":ping_pong: Ping of Takara is `" + `${ping}` + " ms`")
             .addField("`My Statuspage`", "[Click here](https://sttproductions.statuspage.io/)", true)
         message.channel.send(embed);
         if (highping) message.channel.send('High Ping detected! This could lead to slow messages. If the ping isnt at 90 - 110 in an Hour, please check out the Statuspage of the Bot to see if everything is normal!');

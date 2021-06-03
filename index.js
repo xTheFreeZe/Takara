@@ -101,7 +101,7 @@ client.on("guildCreate", guild => {
         .setColor('#e2b007')
         .setTitle('Get started with:')
         .setDescription('My prefix is `^`')
-        .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/794509069867286528/stt-premium-logo.jpg')
+        .setThumbnail('https://cdn.discordapp.com/attachments/681060754564448257/841419896797528064/unknown.png')
 
         .addField('`^help fun`', 'Fun commands')
 
@@ -109,7 +109,7 @@ client.on("guildCreate", guild => {
 
         .addField('`^help dev`', 'Developer options')
 
-        .addField('STT Premium', 'Marwin | 2021')
+        .addField('Takara', 'Marwin | 2021')
 
         .setFooter('Type ^help for more information')
 
@@ -214,7 +214,7 @@ client.on("message", msg => {
             .addField('1.)', 'Make sure the bot has the permissions to ban someone.')
             .addField(' 2.)', 'Make sure you have a role that can ban people.')
             .addField("Available info:", '`BOT PERMISSIONS [549]` > `MESSAGE RETURNED [549]` > `SENT INTO LOGS[587]`')
-            .setFooter(`STT Premium | Troubleshooting | ${msg.author.username}`)
+            .setFooter(`Takara | Troubleshooting | ${msg.author.username}`)
             .setTimestamp()
         msg.reply(embed)
     }
