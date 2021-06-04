@@ -35,8 +35,8 @@ const activities_list = [
 
 
 client.on('ready', () => {
-    console.log("STT Premium is ready!")
-    client.user.setActivity('^help')
+    console.log("Takara is ready!")
+    //client.user.setActivity('^help')
     /*
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
