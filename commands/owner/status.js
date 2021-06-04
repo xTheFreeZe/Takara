@@ -11,10 +11,13 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
 
-        if (message.author.id !== '420277395036176405') {
-            const permsembed = new MessageEmbed()
-                .setDescription('<:STT_no:778545452218974209> Only Marwin#0001 can use this command!')
-                .setColor("RANDOM")
+        if (message.author.id == '420277395036176405') {
+
+            client.user.setActivity('^help').catch(() => {
+                console.log('Error while switching to default Status!');
+            })
+            message.channel.send('Reset to default!');
+
 
             return message.channel.send(permsembed);
         }
