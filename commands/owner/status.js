@@ -7,7 +7,7 @@ module.exports = {
     name: "status",
     description: "change the status of the bot",
 
-    run: async (client, message) => {
+    run: async (client, message, PREFIX) => {
 
         if (message.author.id !== '420277395036176405') {
             const permsembed = new MessageEmbed()
