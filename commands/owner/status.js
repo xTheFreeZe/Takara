@@ -20,6 +20,11 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ");
         let newStatus = args.slice(1).join(" ");
 
+        const newStatusembed = new MessageEmbed()
+            .setTitle('Success!')
+            .setDescription('<:STT_yes:778545433810173952>  Changed status to' + " " + newStatus)
+            .setColor('GREEN')
+
         if (!newStatus) return message.channel.send('Please provide a status!');
 
 
@@ -27,6 +32,8 @@ module.exports = {
         client.user.setActivity(newStatus).catch(() => {
             return message.channel.send('A random error occured!');
         })
+
+        message.channel.send(newStatusembed);
 
     }
 }
