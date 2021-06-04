@@ -51,7 +51,7 @@ module.exports = {
 
             servercheck.add(message.guild.id);
             setTimeout(() => {
-                talkedRecently.delete(message.guild.id);
+                servercheck.delete(message.guild.id);
             }, 300000);
 
         }
