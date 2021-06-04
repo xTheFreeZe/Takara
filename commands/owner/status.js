@@ -22,7 +22,7 @@ module.exports = {
 
         const newStatusembed = new MessageEmbed()
             .setTitle('Success!')
-            .setDescription('<:STT_yes:778545433810173952>  Changed status to' + " " + newStatus)
+            .setDescription('<:STT_yes:778545433810173952>  Changed status to playing' + " " + "**" + newStatus+ "**")
             .setColor('GREEN')
 
         if (!newStatus) return message.channel.send('Please provide a status!');
