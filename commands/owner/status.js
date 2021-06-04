@@ -16,10 +16,11 @@ module.exports = {
             client.user.setActivity('^help').catch(() => {
                 console.log('Error while switching to default Status!');
             })
-            message.channel.send('Reset to default!');
+
+            return message.channel.send('Reset to default!');
 
 
-            return message.channel.send(permsembed);
+
         }
 
         if (servercheck.has(message.guild.id)) {
