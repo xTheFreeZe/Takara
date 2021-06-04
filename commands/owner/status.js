@@ -21,7 +21,7 @@ module.exports = {
 
         if (servercheck.has(message.guild.id)) {
             const timemebed = new MessageEmbed()
-                .setDescription("<:STT_no:778545452218974209> To prevent issus, this command has a **5 Minute** Cooldown!")
+                .setDescription("<:STT_no:778545452218974209> To prevent issues, this command has a **5 Minute** Cooldown!")
                 .setColor("#FF0000")
             message.channel.send(timemebed);
 
