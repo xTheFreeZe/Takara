@@ -52,6 +52,7 @@ module.exports = {
             servercheck.add(message.guild.id);
             setTimeout(() => {
                 servercheck.delete(message.guild.id);
+                client.user.setActivity('^help');
             }, 300000);
 
         }
