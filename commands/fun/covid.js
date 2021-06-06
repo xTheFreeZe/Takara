@@ -29,6 +29,7 @@ module.exports = {
                     let recovered = data.recovered.value.toLocaleString()
                     let deaths = data.deaths.value.toLocaleString()
                     let lastUpdate = data.lastUpdate.toLocaleString()
+                    let picture = data.image.toLocaleString()
 
                     const embed = new MessageEmbed()
                         .setTitle(`Worldwide COVID-19 Stats 🌍`)
@@ -36,6 +37,7 @@ module.exports = {
                         .addField('Recouvered', recovered)
                         .addField('Deaths', deaths)
                         .addField('Last Updated', lastUpdate)
+                        .setThumbnail(picture)
 
                     message.channel.send(embed)
 
@@ -48,6 +50,7 @@ module.exports = {
                     let recovered = data.recovered.value.toLocaleString()
                     let deaths = data.deaths.value.toLocaleString()
                     let lastUpdate = data.lastUpdate.toLocaleString()
+                    let picture = data.image.toLocaleString()
 
                     const embed = new MessageEmbed()
                         .setTitle(`COVID-19 Stats for **${countries}** 💉`)
@@ -55,6 +58,7 @@ module.exports = {
                         .addField('Recouvered', recovered)
                         .addField('Deaths', deaths)
                         .addField('Last Updated', lastUpdate)
+                        .setThumbnail(picture)
 
                     message.channel.send(embed)
 
