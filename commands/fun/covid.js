@@ -58,7 +58,8 @@ module.exports = {
                         .addField('Recouvered', recovered)
                         .addField('Deaths', deaths)
                         .addField('Last Updated', lastUpdate)
-                        .setImage(picture)
+                        .setThumbnail(picture)
+
 
                     message.channel.send(embed)
 
