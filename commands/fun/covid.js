@@ -28,12 +28,14 @@ module.exports = {
                     let confirmed = data.confirmed.value.toLocaleString()
                     let recovered = data.recovered.value.toLocaleString()
                     let deaths = data.deaths.value.toLocaleString()
+                    let lastUpdate = data.lastUpdate.value.toLocaleString()
 
                     const embed = new MessageEmbed()
                         .setTitle(`Worldwide COVID-19 Stats 🌍`)
                         .addField('Confirmed Cases', confirmed)
                         .addField('Recouvered', recovered)
                         .addField('Deaths', deaths)
+                        .addField('Last Updated', lastUpdate)
 
                     message.channel.send(embed)
 
@@ -45,12 +47,14 @@ module.exports = {
                     let confirmed = data.confirmed.value.toLocaleString()
                     let recovered = data.recovered.value.toLocaleString()
                     let deaths = data.deaths.value.toLocaleString()
+                    let lastUpdate = data.lastUpdate.toLocaleString()
 
                     const embed = new MessageEmbed()
                         .setTitle(`COVID-19 Stats for **${countries}** 💉`)
                         .addField('Confirmed Cases', confirmed)
                         .addField('Recouvered', recovered)
                         .addField('Deaths', deaths)
+                        .addField('Last Updated', lastUpdate)
 
                     message.channel.send(embed)
 
