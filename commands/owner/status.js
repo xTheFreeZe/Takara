@@ -11,18 +11,6 @@ module.exports = {
 
     run: async (client, message, PREFIX) => {
 
-        if (message.author.id == '420277395036176405') {
-
-            client.user.setActivity('^help').catch(() => {
-                console.log('Error while switching to default Status!');
-            })
-
-            return message.channel.send('Reset to default!');
-
-
-
-        }
-
         if (servercheck.has(message.guild.id)) {
             const timemebed = new MessageEmbed()
                 .setDescription("<:STT_no:778545452218974209> To prevent issues, this command has a **5 Minute** Cooldown!")
