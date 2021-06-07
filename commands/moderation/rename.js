@@ -55,7 +55,7 @@ module.exports = {
             .setFooter('Takara | Moderation')
 
         member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
-            message.channel.send('error');
+            return message.channel.send('error');
         })
 
         message.channel.send(successembed)
