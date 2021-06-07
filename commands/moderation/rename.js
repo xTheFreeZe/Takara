@@ -66,8 +66,8 @@ module.exports = {
             .setTimestamp()
             .setFooter('Takara | Moderation')
 
-        await member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch((e) => {
-            return message.channel.send('error');
+        member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch((e) => {
+            return message.channel.send('error : ' + " " + e);
         })
 
 
