@@ -10,6 +10,7 @@ module.exports = {
     run: async (client, message, PREFIX) => {
 
         const user = message.mentions.users.first();
+        const member = message.guild.member(user);
         let args = message.content.substring(PREFIX.length).split(" ");
         let newName = args.slice(2).join(" ");
 
@@ -46,7 +47,7 @@ module.exports = {
 
         }
 
-        user.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
+        member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
             message.channel.send('error');
         })
 
