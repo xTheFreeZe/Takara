@@ -54,11 +54,11 @@ module.exports = {
             .setTimestamp()
             .setFooter('Takara | Moderation')
 
-        member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
+        await member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
             return message.channel.send('error');
         })
 
-        message.channel.send(successembed)
+        message.channel.send(successembed);
 
     }
 }
