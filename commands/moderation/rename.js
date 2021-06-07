@@ -47,9 +47,18 @@ module.exports = {
 
         }
 
+        const successembed = new MessageEmbed()
+            .setColor('GREEN')
+            .setTitle('Success!')
+            .setDescription(`<:STT_yes:778545433810173952> Successfully renamed ${user.username} to ${newName}`)
+            .setTimestamp()
+            .setFooter('Takara | Moderation')
+
         member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
             message.channel.send('error');
         })
+
+        message.channel.send(successembed)
 
     }
 }
