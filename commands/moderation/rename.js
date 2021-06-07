@@ -29,6 +29,18 @@ module.exports = {
             .setColor('RED')
             .setDescription('<:STT_no:778545452218974209> Please provide a new Nickname!')
 
+        const permsembed = new MessageEmbed()
+            .setDescription(`<:STT_no:778545452218974209> You can't use that ${message.author.username}!`)
+            .addField("Error", 'Missing `MANAGE_NICKNAMES`')
+            .setColor("RED")
+
+
+        if (!message.member.hasPermission('MANAGE_NICKNAMES')) {
+
+            return message.reply(permsembed);
+
+        }
+
         if (!args[1]) {
 
             return message.channel.send(noArgsone);
@@ -54,9 +66,10 @@ module.exports = {
             .setTimestamp()
             .setFooter('Takara | Moderation')
 
-        await member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch(() => {
+        await member.setNickname(newName, `${message.author.username} renamed ${user.username} with ^rename`).catch((e) => {
             return message.channel.send('error');
         })
+
 
         message.channel.send(successembed);
 
