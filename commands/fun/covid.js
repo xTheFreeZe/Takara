@@ -54,7 +54,7 @@ module.exports = {
                     const embed = new MessageEmbed()
                         .setTitle(`COVID-19 Stats for **${countries}** 💉`)
                         .addField('Confirmed Cases', confirmed)
-                        .addField('Recouvered', recovered)
+                        .addField('Recovered', recovered)
                         .addField('Deaths', deaths)
                         .addField('Last Updated', lastUpdate)
 
