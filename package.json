@@ -13,7 +13,7 @@
     "axios": "^0.21.1",
     "discord.js": "^12.5.1",
     "got": "^11.8.1",
-    "normalize-url": "^4.5.0",
+    "normalize-url": "^4.5.1",
     "ws": "^7.4.6"
   }
 }
