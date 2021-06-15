@@ -6,7 +6,7 @@ module.exports = {
     name: "report",
     category: "moderation",
     description: "Sends a report to the developer",
-    alias : "request",
+    aliases : "request",
     run: async (client, message, PREFIX) => {
         if (talkedRecently.has(message.author.id)) {
             const timemebed = new MessageEmbed()
