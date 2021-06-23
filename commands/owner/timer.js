@@ -31,7 +31,7 @@ module.exports = {
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-        if (days <= 1) {
+        if (days = 1) {
 
             const newtimeembed = new MessageEmbed()
                 .setDescription("Time remaining:" + " " + days + " " + "Days" + " " + "and" + " " + hours + " " + "Hours ")
