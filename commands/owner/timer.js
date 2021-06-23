@@ -1,5 +1,6 @@
 const {
-    MessageEmbed
+    MessageEmbed,
+    NewsChannel
 } = require('discord.js');
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
     run: async (client, message) => {
 
         if (message.author.id !== '420277395036176405') {
-            
+
             const permsembed = new MessageEmbed()
                 .setDescription('<:STT_no:778545452218974209> Only Marwin#0001 can use this command!')
                 .setColor("RANDOM")
@@ -29,6 +30,15 @@ module.exports = {
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        if (days <= 1) {
+
+            const newtimeembed = new MessageEmbed()
+                .setDescription("Time remaining:" + " " + days + " " + "Days" + " " + "and" + " " + hours + " " + "Hours ")
+                .setColor('BLUE')
+
+            return message.channel.send(newtimeembed)
+        }
 
 
 
